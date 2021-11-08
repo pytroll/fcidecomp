@@ -47,6 +47,8 @@ build windows:
     - mkdir -p conda-channel
   script:
     - conda build $BUILD_OPTS fcidecomp-conda-recipe
+    - cp C:\Users\Admin\miniconda3\conda-bld\win-64\fcidecomp* conda-channel
+    - conda build purge 
   artifacts:
     paths:
       - conda-channel
