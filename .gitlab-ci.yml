@@ -14,7 +14,7 @@
 
 variables: &variables
   BUILD_OPTS: "--output-folder conda-channel"
-  CONDABIN: "C:\Miniconda3;C:\Miniconda3\Library\mingw-w64\bin;C:\Miniconda3\Library\usr\bin;C:\Miniconda3\Library\bin;C:\Miniconda3\Scripts"
+  CONDABIN: 'C:\Miniconda3;C:\Miniconda3\Library\mingw-w64\bin;C:\Miniconda3\Library\usr\bin;C:\Miniconda3\Library\bin;C:\Miniconda3\Scripts'
 
 stages:
   - build
