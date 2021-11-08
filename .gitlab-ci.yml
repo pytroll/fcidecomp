@@ -39,7 +39,9 @@ build windows:
     - windows
   stage: build
   before_script:
+    - echo %CONDABIN%
     - $env:Path = "$env:CONDABIN;$env:Path"
+    - echo %Path%
     - conda install -y conda-build
   script:
     - conda build $BUILD_OPTS fcidecomp-conda-recipe
