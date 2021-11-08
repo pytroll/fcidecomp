@@ -24,6 +24,7 @@ build fcidecomp-conda:
     - linux
   stage: build
   script:
+    - conda install conda-build
     - conda build $BUILD_OPTS fcidecomp-conda-recipe
   artifacts:
     paths:
