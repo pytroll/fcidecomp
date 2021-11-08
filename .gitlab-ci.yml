@@ -27,6 +27,7 @@ build linux:
   before_script:
     - conda install conda-build
     - conda install git
+    - mkdir -p conda-channel
   script:
     - conda build $BUILD_OPTS fcidecomp-conda-recipe
   artifacts:
@@ -43,6 +44,7 @@ build windows:
     - $env:Path = "$env:CONDABIN;$env:Path"
     - echo $env:Path
     - conda install -y conda-build
+    - mkdir -p conda-channel
   script:
     - conda build $BUILD_OPTS fcidecomp-conda-recipe
   artifacts:
