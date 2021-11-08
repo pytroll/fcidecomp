@@ -23,8 +23,10 @@ build fcidecomp-conda:
   tags:
     - linux
   stage: build
-  script:
+  before_script:
     - conda install conda-build
+    - conda install git
+  script:
     - conda build $BUILD_OPTS fcidecomp-conda-recipe
   artifacts:
     paths:
