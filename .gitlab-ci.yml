@@ -27,7 +27,7 @@ build linux:
   before_script:
     - conda install conda-build
     - conda install git
-    - cmake --version
+    - conda list
     - mkdir -p conda-channel
   script:
     - conda build $BUILD_OPTS fcidecomp-conda-recipe
