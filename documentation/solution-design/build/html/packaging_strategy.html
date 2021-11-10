@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Packaging strategy &#8212; EUMETSAT WP FCIDECOMP - Solution design  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Deployment" href="deployment.html" />
+    <link rel="prev" title="Support and integration with external tools" href="support_and_integration.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="packaging-strategy">
+<h1>Packaging strategy<a class="headerlink" href="#packaging-strategy" title="Permalink to this headline">¶</a></h1>
+<p>In the following paragraphs outlines of the strategy to build and package the FCIDECOMP software in order to ensure
+support for and integration with all the required systems are reported.</p>
+<section id="supported-platforms">
+<span id="id1"></span><h2>Supported platforms<a class="headerlink" href="#supported-platforms" title="Permalink to this headline">¶</a></h2>
+<p>Based on the <a class="reference internal" href="introduction.html#fcidecomp-wpd"><span class="std std-ref">Work Package Description</span></a> and not considering OS that already have reached their
+End of Life, the FCIDECOMP software will support the following platforms:</p>
+<ul class="simple">
+<li><p>Windows 10, 32 and 64 bit</p></li>
+<li><p>Ubuntu 18.04, Ubuntu 20.04 64 bit</p></li>
+<li><p>CentOS 7 64 bit</p></li>
+</ul>
+</section>
+<section id="building-the-binaries">
+<h2>Building the binaries<a class="headerlink" href="#building-the-binaries" title="Permalink to this headline">¶</a></h2>
+<p>The build system for the software binaries will be initially drawn from the one used in the
+<a class="reference internal" href="introduction.html#fcidecomp-latest"><span class="std std-ref">FCIDECOMP v1.0.2 source code</span></a>, and adapted from there to guarantee support for all the
+required systems.</p>
+</section>
+<section id="packaging-as-a-conda-package">
+<h2>Packaging as a Conda package<a class="headerlink" href="#packaging-as-a-conda-package" title="Permalink to this headline">¶</a></h2>
+<p>Packages will be built using Conda, as it provides standardised environments with a large set of pre-compiled packages.
+From the point of view of Conda, the operating systems listed in the <a class="reference internal" href="#supported-platforms"><span class="std std-ref">Supported platforms</span></a>
+paragraph can be considered as two groups of OS: in Conda standardised environment it is enough to build the package for
+one Linux distribution in order to make it compatible with other Linux distributions. So two conda packages will be
+released: one for Linux distributions, and one for Windows 10.</p>
+<p>These conda packages will install both the FCIDECOMP libraries and its Python bindings. As a blueprint for the
+conda recipes, the <a class="reference internal" href="introduction.html#fcidecomp-conda"><span class="std std-ref">Conda recipe</span></a> for the packaging of FCIDECOMP mantained by Martin Raspaud
+from the Swedish Meteorological and Hydrological Institute will be used.</p>
+<p>The initial aim will be to support HDF5 1.10, and then the use of <a class="reference internal" href="introduction.html#conda-variants"><span class="std std-ref">conda variants</span></a> will be
+explored to support multiple versions on the same build platform.</p>
+<p>Conda packages will be uploaded to EUMETSAT Anaconda repository.</p>
+</section>
+<section id="ci-cd-pipelines">
+<h2>CI/CD pipelines<a class="headerlink" href="#ci-cd-pipelines" title="Permalink to this headline">¶</a></h2>
+<p>We will implement simple CI/CD pipelines to compile, build, test and possibly upload the conda packages to the conda
+repository.</p>
+<p>At least two GitLab runners will be implemented, one with a Docker executor on Linux and the other on Windows.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/eumetsat.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="index.html">EUMETSAT WP FCIDECOMP - Solution design</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="document_info.html">Document Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="canonical_repository.html">Creation of canonical repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support_and_integration.html">Support and integration with external tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Packaging strategy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#supported-platforms">Supported platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-binaries">Building the binaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packaging-as-a-conda-package">Packaging as a Conda package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ci-cd-pipelines">CI/CD pipelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="support_and_integration.html" title="previous chapter">Support and integration with external tools</a></li>
+      <li>Next: <a href="deployment.html" title="next chapter">Deployment</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020-2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT).
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/packaging_strategy.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,24 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Document Information}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Introduction}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Purpose}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Reference Documents}{3}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Creation of canonical repository}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Repository initialization}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Test suite}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Test data}{5}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Support and integration with external tools}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Integration with HDF tools based on netCDF\sphinxhyphen {}C}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Integration with Python}{7}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Integration with EUMETSAT Data\sphinxhyphen {}Tailor}{8}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Integration with tools based on netCDF\sphinxhyphen {}Java}{8}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Packaging strategy}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Supported platforms}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Building the binaries}{9}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Packaging as a Conda package}{9}{section.5.3}%
+\contentsline {section}{\numberline {5.4}CI/CD pipelines}{10}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Deployment}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}CI/CD pipelines}{11}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Appendix 1 \sphinxhyphen {} Traceability matrix}{13}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Appendix 2 \sphinxhyphen {} List of users and developers currently using FCIDECOMP}{15}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Appendix 3 \sphinxhyphen {} Design justifications}{17}{chapter.9}%
