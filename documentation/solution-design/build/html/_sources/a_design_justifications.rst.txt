@@ -1,5 +1,7 @@
-Appendix 3 - Design justifications
-----------------------------------
+.. _design_justifications:
+
+Appendix - Design justifications
+--------------------------------
 
 
 

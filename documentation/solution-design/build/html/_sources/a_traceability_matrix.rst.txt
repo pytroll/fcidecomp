@@ -1,3 +1,3 @@
-Appendix 1 - Traceability matrix
---------------------------------
+Appendix - Traceability matrix
+------------------------------
 
