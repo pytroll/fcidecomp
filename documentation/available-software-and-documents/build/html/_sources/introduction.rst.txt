@@ -1,0 +1,25 @@
+Introduction
+------------
+
+Purpose
+~~~~~~~
+
+The document reports an analysis of the software repositories, links and documents related to the current
+implementations of the FCIDECOMP software, for which updates will be needed.
+
+Reference Documents
+~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: Reference documents.
+  :header-rows: 1
+  :class: longtable
+  :widths: 23 42 35
+
+  * - #
+    - Title
+    - Reference
+
+  * - [FCIDECOMP_v102]
+      .. _[FCIDECOMP_v102]:
+    - EUMETSAT Atmospheric Composition Data Cube - Execution Plan
+    - `epct-plugin-acdc/project-docs/execution-plan <../../../execution-plan/_build/html/index.html>`_
