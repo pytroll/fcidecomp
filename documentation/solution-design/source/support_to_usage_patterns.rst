@@ -7,16 +7,21 @@ Introduction
 This section describes the strategies adopted to ensure that the FCIDECOMP software supports the required usage
 patterns.
 
+**[NOTA: questo l'ho spostato qui da Packaging and deployment]**
+
+As a baseline, the FCIDEOCOMP software supports HDF5 1.10. Strategies to grant support for multiple versions of HDF5
+described in the `Further developments appendix <further_developments`.
+
 Integration with tools based on netCDF-C
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[NOTA per Maurizio: mi sembra che questa parte stia meglio in un ulteriore sottoparagrafo invece che nell'intro,
-ma se non sei d'accordo la sposto su e tolgo questo paragrafo]
+**[NOTA: mi sembra che questa parte stia meglio in un ulteriore sottoparagrafo invece che nell'intro,
+ma se non sei d'accordo la sposto su e tolgo questo paragrafo]**
 
 The current implementation of the FCIDECOMP software (:ref:`v1.0.2 <[FCIDECOMP_LATEST]>`) which, as mentioned in the
 :ref:`Repository initialization <repository_initialization>` paragraph serves as blueprint for the software codebase,
 already satisfies the HDF5 filters interface. Given this, integration with utilities relying on the ``netcdf-c``
-library provided that (see :ref:`here <[NETCDF_C]>`), provided that:
+library (:ref:`[NETCDF-C] <[NETCDF_C]>`) is ensured, provided that:
 
 - the location of the FCIDECOMP filter library is specified in a specific environment variable, ``HDF5_PLUGIN_PATH``;
 - the correct filter id (32018 for FCIDECOMP), if required by the utility, is specified;

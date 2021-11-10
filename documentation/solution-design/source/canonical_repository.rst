@@ -6,7 +6,7 @@ Introduction
 
 A canonical repository is established on the EUMETSAT GitLab service at https://gitlab.eumetsat.int/sepdssme/fcidecomp
 for development purposes. Each time a new release is produced, the corresponding code is synchronized to the public
-EUMETSAT Open Source repository at XXX [TODO: add reference].
+EUMETSAT Open Source repository at **XXX [NOTE: abbiamo una reference?]**.
 
 .. _repository_initialization:
 
@@ -23,7 +23,7 @@ Test suite
 ~~~~~~~~~~
 
 An initial test suite (at least against nominal conditions) is implemented following the V&V strategy defined in
-[TODO: add reference]. Most tests are implemented as automated tests against the Python interface.
+**[TODO: add reference]**. Most tests are implemented as automated tests against the Python interface.
 
 Test data
 ~~~~~~~~~
