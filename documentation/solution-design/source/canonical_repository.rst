@@ -8,6 +8,8 @@ A canonical repository is established on the EUMETSAT GitLab service at https://
 for development purposes. Each time a new release is produced, the corresponding code is synchronized to the public
 EUMETSAT Open Source repository at XXX [TODO: add reference].
 
+.. _repository_initialization:
+
 Repository initialization
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

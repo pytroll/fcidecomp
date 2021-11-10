@@ -1,22 +1,32 @@
-Support and integration with external tools
--------------------------------------------
+Support to required usage patterns
+-----------------------------------
 
-This section describes the strategy to ensure that the FCIDECOMP software supports the required
-systems and usage patterns are reported.
+Introduction
+~~~~~~~~~~~~
 
-Integration with HDF tools based on netCDF-C
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This section describes the strategies adopted to ensure that the FCIDECOMP software supports the required usage
+patterns.
 
-The current implementation of the FCIDECOMP software (:ref:`v1.0.2 <[FCIDECOMP_LATEST]>`) already satisfies the HDF5
-filters interface. So, once installed, it can easily be invoked by utilities relying on the ``netcdf-c`` library (such
-as ``nccopy``), provided that:
+Integration with tools based on netCDF-C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- the location of the filter is specified in a specific environment variable, ``HDF5_PLUGIN_PATH``;
-- the correct filter id, if required by the utility, is specified (32018 for FCIDECOMP);
-- any other parameter requested by the utility is also specified.
+[NOTA per Maurizio: mi sembra che questa parte stia meglio in un ulteriore sottoparagrafo invece che nell'intro,
+ma se non sei d'accordo la sposto su e tolgo questo paragrafo]
 
-In order to provide a baseline support for CLI usage of the FCIDECOMP software, we will focus on its integration with
-``nccopy``. To foster such integration, we will:
+The current implementation of the FCIDECOMP software (:ref:`v1.0.2 <[FCIDECOMP_LATEST]>`) which, as mentioned in the
+:ref:`Repository initialization <repository_initialization>` paragraph serves as blueprint for the software codebase,
+already satisfies the HDF5 filters interface. Given this, integration with utilities relying on the ``netcdf-c``
+library provided that (see :ref:`here <[NETCDF_C]>`), provided that:
+
+- the location of the FCIDECOMP filter library is specified in a specific environment variable, ``HDF5_PLUGIN_PATH``;
+- the correct filter id (32018 for FCIDECOMP), if required by the utility, is specified;
+
+Usage as CLI tool
+~~~~~~~~~~~~~~~~~
+
+In order to provide a baseline support for CLI usage of the FCIDECOMP software, ``nccopy`` (software utility of the
+``netcdf-c`` library) is chosen as reference standard CLI tool.
+To foster integration with ``nccopy``, we will:
 
 - have the FCIDECOMP software package install the filter's library to a specific path at installation
 - have the ``HDF5_PLUGIN_PATH`` environment variable automatically set each time a conda environment where FCIDECOMP is installed get activated

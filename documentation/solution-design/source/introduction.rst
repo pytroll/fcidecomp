@@ -62,6 +62,13 @@ Reference Documents
     - HDFView Software
     - `https://www.hdfgroup.org/downloads/hdfview/ <https://www.hdfgroup.org/downloads/hdfview/>`_
 
+  * - [NETCDF_C]
+
+      .. _[NETCDF_C]:
+    - Unidata - NetCDF-C
+    - `https://docs.unidata.ucar.edu/netcdf-c/current/ <https://docs.unidata.ucar.edu/netcdf-c/current/>`_
+
+
   * - [NETCDF_JAVA]
 
       .. _[NETCDF_JAVA]:
