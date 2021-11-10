@@ -62,6 +62,12 @@ Reference Documents
     - HDFView Software
     - `https://www.hdfgroup.org/downloads/hdfview/ <https://www.hdfgroup.org/downloads/hdfview/>`_
 
+  * - [MTG4AFRICA]
+
+      .. _[MTG4AFRICA]:
+    - EUMETSAT Data Tailor mtg4africa plugin
+    - `https://gitlab.eumetsat.int/data-tailor/support-to-mtg/mtg4africa <https://gitlab.eumetsat.int/data-tailor/support-to-mtg/mtg4africa>`_
+
   * - [NETCDF_C]
 
       .. _[NETCDF_C]:

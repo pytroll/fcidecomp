@@ -45,35 +45,25 @@ filter interface to ``h5py``.
 See the :ref:`Integration with hdf5plugin appendix <integration_with_hdf5plugin>` for details on the integration with the widely used :ref:`hdf5plugin <[HDF5PLUGIN]>` package and interation
 with its maintainers' community.
 
-Integration with EUMETSAT Data-Tailor
+Integration with EUMETSAT Data Tailor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 At the moment, the Data Tailor supports reading compressed FCI L1C products through the optional
-``epct_plugin_mtg4africa`` customisation plugin, which in turns install FCIDECOMP by installing with ``pip`` the
-``hdf5plugin`` package. Note that the same Data Tailor plugin also uses the FCICOMP software to compress output data,
-and that such compressor is built when building the Data Tailor plugin package. This has potential fo dependency
-conflicts, as the compressor and the decompressor rely in part on the same dependencies.
+``epct_plugin_mtg4africa`` :ref:`customisation plugin <[MTG4AFRICA]>`, which in turns install FCIDECOMP by installing
+with ``pip`` the ``hdf5plugin`` package.
 
-The approach to integrate the described solution with the Data Tailor will therefore include a revision of the current
-build and installation approach for the ``epct_plugin_mtg4africa`` customisation plugin. The most promising
-direction is having the plugin install FCIDECOMP from the conda package, so that dependency conflicts are to some
-extent managed by conda.
+The approach to integrate the described solution with the Data Tailor includes a revision of the current
+build and installation approach for the ``epct_plugin_mtg4africa`` customisation plugin, so that it
+installs the FCIDECOMP support through the Python package described above and its dependencies.
 
 Integration with tools based on netCDF-Java
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use of the FCIDECOMP decompressor in Java may be complex to address. There is evidence that Unidata netCDF-Java based
-tools may work with HDF5 dynamic filters, but it is less clear whether they can still be used with non-Unidata
-applications based on NetCDF-Java (e.g. panoply). The main problem is related to the fact NetCDF-Java is essentially
-independent from HDF-Java (while NetCDF-C is based on HDF-C), and while HDF-Java can use HDF dynamically loaded filters
-as NetCDF-C based applications do, NetCDF-Java cannot.
+:ref:`Panoply <[PANOPLY]>` and :ref:`HDFView <[HDFVIEW]>` have been identified as the key software based on netCDF-Java
+to support. The integration of the FCIDECOMP software in these applications can be achieved by instructing them
+to use the netCDF-C library (instead of netCDF-Java) to read netCDF files
+(see related :ref:`github issue <[NETCDF_JAVA_GITHUB]>`). Support is then granted by describing the aforementioned
+procedure in the FCIDECOMP software documentation.
 
-A promising solution (see this :ref:`github issue <[NETCDF_JAVA_GITHUB]>`) consists in instructing NetCDF-Java based
-applications to read files using the NetCDF-C library, via a simple tweak to a configuration file. A preliminary test
-showed that, in the considered environment, the described solution is able to let :ref:`Panoply <[PANOPLY]>` (one of the
-most used NetCDF-Java based applications) decompress NetCDFs using the FCIDECOMP plugin. We will explore how the
-solution behaves with other notable NetCDF-Java based applications, such as :ref:`HDFView <[HDFVIEW]>` and
-:ref:`ToolsUI <[NETCDF_JAVA]>`.
-
-In the case this solution is adopted, it will only require to be documented as an effective work-around to use the
-FCIDECOMP plugin with NetCDF-Java based applications.
+The issue of a generic integration with :ref:`Unidata Netcdf-Java <[NETCDF_JAVA]>` is discussed in the
+:ref:`Design justification appendix <design_justifications>`.
