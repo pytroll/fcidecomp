@@ -1,3 +1,5 @@
+.. _a_users_using_fcidecomp:
+
 Appendix - List of users and developers currently using FCIDECOMP
 -----------------------------------------------------------------
 
