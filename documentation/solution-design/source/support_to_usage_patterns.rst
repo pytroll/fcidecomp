@@ -25,27 +25,25 @@ Usage as CLI tool
 ~~~~~~~~~~~~~~~~~
 
 In order to provide a baseline support for CLI usage of the FCIDECOMP software, ``nccopy`` (software utility of the
-``netcdf-c`` library) is chosen as reference standard CLI tool.
-To foster integration with ``nccopy``, we will:
+``netcdf-c`` library) is chosen as reference standard CLI tool. To foster integration with ``nccopy``, the FCIDECOMP
+software provides to:
 
-- have the FCIDECOMP software package install the filter's library to a specific path at installation
+- put the filter's library to a specific path at installation
 - have the ``HDF5_PLUGIN_PATH`` environment variable automatically set each time a conda environment where FCIDECOMP is installed get activated
-- document how to call ``nccopy`` to decompress files using the FCIDECOMP filter
+
+The FCIDECOMP software documentation also provides instructions on how to call ``nccopy`` to decompress files using the
+FCIDECOMP filter.
 
 Integration with Python
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-HDF5 filters are typically used in Python programs by invoking the ``h5py`` library, which may in turn require
-additional packages to provide specific filters. An example of such additional packages is the ``hdf5plugin`` library,
-which makes the FCIDECOMP filter, among others, available to ``h5py``.
+Integration with Python is provided by a small Python package developed ad hoc, which satisfies the required ``h5py``
+interface to make the FCIDECOMP filter available for Python applications. Such package, based upon a stripped-down
+version of the :ref:`hdf5plugin <[HDF5PLUGIN]>` package, is essentially composed of an ``__init__.py`` defining the
+filter interface to ``h5py``.
 
-To grant integration with Python we will develop a package specific for the FCIDECOMP filter, initially as a
-stripped-down version of :ref:`hdf5plugin <[HDF5PLUGIN]>`. We will also try to contact maintainers of the ``hdf5plugin``
-package to evaluate synergies and reduce conflicts. In this direction, Initial proposal is to have a small package which
-only includes the FCIDECOMP plugin support from ``hdf5plugin``, and to propose the ``hdf5plugin`` maintainers to use it
-as a sub-module dependency in ``hdf5plugin`` in order not to break their interfaces and not to duplicate effort; in
-this case, this small python package would be maintained by B-Open (for the duration of the contract) on behalf of
-EUMETSAT.
+See the :ref:`Integration with hdf5plugin appendix <integration_with_hdf5plugin>` for details on the integration with the widely used :ref:`hdf5plugin <[HDF5PLUGIN]>` package and interation
+with its maintainers' community.
 
 Integration with EUMETSAT Data-Tailor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

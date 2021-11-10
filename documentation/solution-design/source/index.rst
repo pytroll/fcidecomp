@@ -20,3 +20,4 @@ EUMETSAT WP FCIDECOMP - Solution design
    a_users_using_fcidecomp
    a_design_justifications
    a_preservation_of_dependencies
+   a_integration_with_hdf5plugin
