@@ -22,15 +22,15 @@ to foster integration of the new FCIDECOMP software.
 
   * - Daniel Lee (EUMETSAT)
     - daniel.lee@eumetsat.int
-    - Aggregate all FCIDECOMP software distribution locations to the canonical repository (see :ref:`list <fcidecomp_distribution_locations>` below)
+    - Aggregate all FCIDECOMP software distribution locations to the canonical repository (see :ref:`fcidecomp_distribution_locations`)
 
   * - Daniel Lee (EUMETSAT)
     - daniel.lee@eumetsat.int
-    - Update all documentation referring to the FCIDECOMP software (see :ref:`list <fcidecomp_documentation>` below)
+    - Update all documentation referring to the FCIDECOMP software (see :ref:`fcidecomp_documentation`)
 
   * - Martin Raspaud
     - martin.raspaud@smhi.se
-    - Arrange acknowledgment of his work as developer of the fcidecomp-conda-recipe (:ref:`[FCIDECOMP_CONDA] <[FCIDECOMP_CONDA]>`) package
+    - Arrange acknowledgment of his work as developer of the :ref:`fcidecomp-conda-recipe <[FCIDECOMP_CONDA]>` package
 
   * - HDF Group
     - help@hdfgroup.org

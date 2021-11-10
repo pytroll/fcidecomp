@@ -10,7 +10,7 @@ patterns.
 **[NOTA: questo l'ho spostato qui da Packaging and deployment]**
 
 As a baseline, the FCIDEOCOMP software supports HDF5 1.10. Strategies to grant support for multiple versions of HDF5
-described in the :ref:`Further developments <further_developments>` appendix.
+described in :ref:`further_developments`.
 
 .. _integration_with_netcdf_c:
 
@@ -21,7 +21,7 @@ Integration with tools based on netCDF-C
 ma se non sei d'accordo la sposto su e tolgo questo paragrafo]**
 
 The current implementation of the FCIDECOMP software (:ref:`v1.0.2 <[FCIDECOMP_LATEST]>`) which, as mentioned in the
-:ref:`Repository initialization <repository_initialization>` paragraph serves as blueprint for the software codebase,
+:ref:`repository_initialization` paragraph serves as blueprint for the software codebase,
 already satisfies the HDF5 filters interface. Given this, integration with utilities relying on the ``netcdf-c``
 library (:ref:`[NETCDF-C] <[NETCDF_C]>`) is ensured, provided that:
 
@@ -51,8 +51,8 @@ interface to make the FCIDECOMP filter available for Python applications. Such p
 version of the :ref:`hdf5plugin package <[HDF5PLUGIN]>`, is essentially composed of an ``__init__.py`` defining the
 filter interface to ``h5py``.
 
-See the :ref:`Integration with hdf5plugin <integration_with_hdf5plugin>` appendix for details on the integration with
-the widely used ``hdf5plugin`` package and interaction with its maintainers' community.
+See :ref:`integration_with_hdf5plugin` for details on the integration with the widely used ``hdf5plugin`` package and
+interaction with its maintainers' community.
 
 .. _integration_with_data_tailor:
 
@@ -78,5 +78,5 @@ to use the netCDF-C library (instead of netCDF-Java) to read netCDF files
 (see related :ref:`github issue <[NETCDF_JAVA_GITHUB]>`). Support is then granted by describing the aforementioned
 procedure in the FCIDECOMP software documentation.
 
-The issue of a generic integration with :ref:`Unidata Netcdf-Java <[NETCDF_JAVA]>` is discussed in the
-:ref:`Design justification <design_justifications>` appendix.
+The issue of a generic integration with :ref:`Unidata Netcdf-Java <[NETCDF_JAVA]>` is discussed in
+:ref:`design_justifications`.
