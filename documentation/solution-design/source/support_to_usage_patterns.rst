@@ -1,6 +1,11 @@
 Support to required usage patterns
 -----------------------------------
 
+**[NOTA: da qualche parte (forse qui?) non andrebbe menzionato il fatto che il software supporterà CharLS 1.0, mettendo
+in :ref:`further_developments` che si prevede di provare a supportare anche il 2.0? Non dovremmo anche dire COME
+integriamo CharLS 1.0, i.e. src integrato, clone from github (come faccio ora), ecc. Su questo non abbiamo preso una
+decisione.]**
+
 Introduction
 ~~~~~~~~~~~~
 
