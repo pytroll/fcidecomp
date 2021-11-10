@@ -1,3 +1,5 @@
+.. _creation_of_canonical_repository:
+
 Creation of canonical repository
 --------------------------------
 

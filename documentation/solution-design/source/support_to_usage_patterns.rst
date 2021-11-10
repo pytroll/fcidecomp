@@ -12,6 +12,8 @@ patterns.
 As a baseline, the FCIDEOCOMP software supports HDF5 1.10. Strategies to grant support for multiple versions of HDF5
 described in the `Further developments appendix <further_developments`.
 
+.. _integration_with_netcdf_c:
+
 Integration with tools based on netCDF-C
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -25,6 +27,8 @@ library (:ref:`[NETCDF-C] <[NETCDF_C]>`) is ensured, provided that:
 
 - the location of the FCIDECOMP filter library is specified in a specific environment variable, ``HDF5_PLUGIN_PATH``;
 - the correct filter id (32018 for FCIDECOMP), if required by the utility, is specified;
+
+.. _usage_as_cli_tool:
 
 Usage as CLI tool
 ~~~~~~~~~~~~~~~~~
@@ -50,6 +54,8 @@ filter interface to ``h5py``.
 See the :ref:`Integration with hdf5plugin appendix <integration_with_hdf5plugin>` for details on the integration with the widely used :ref:`hdf5plugin <[HDF5PLUGIN]>` package and interation
 with its maintainers' community.
 
+.. _integration_with_data_tailor:
+
 Integration with EUMETSAT Data Tailor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -60,6 +66,8 @@ with ``pip`` the ``hdf5plugin`` package.
 The approach to integrate the described solution with the Data Tailor includes a revision of the current
 build and installation approach for the ``epct_plugin_mtg4africa`` customisation plugin, so that it
 installs the FCIDECOMP support through the Python package described above and its dependencies.
+
+.. _integration_with_netcdf_java:
 
 Integration with tools based on netCDF-Java
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
