@@ -16,6 +16,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Appendix - Further developments" href="a_further_developments.html" />
     <link rel="prev" title="Appendix - Long-term preservation of dependencies" href="a_preservation_of_dependencies.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -35,6 +36,12 @@
             
   <section id="appendix-integration-with-hdf5plugin">
 <span id="integration-with-hdf5plugin"></span><h1>Appendix - Integration with <code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code><a class="headerlink" href="#appendix-integration-with-hdf5plugin" title="Permalink to this headline">¶</a></h1>
+<p><strong>[NOTA: parlando di un plan, in che tempo va espresso? futuro? o sempre come un cosa che è già stata fatta?]</strong></p>
+<p>Integration with the <code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code> Python package (<a class="reference internal" href="introduction.html#hdf5plugin"><span class="std std-ref">[HDF5PLUGIN]</span></a>) requires communication with the
+package maintainers (see <a class="reference internal" href="a_users_using_fcidecomp.html#a-users-using-fcidecomp"><span class="std std-ref">Appendix - List of users and developers currently using FCIDECOMP</span></a>).</p>
+<p>Such interaction is initiated in the early stage of the solution development process. The proposed solution is to have
+a small package including only the FCIDECOMP plugin support (developed and maintained by B-Open) separated from the main
+<code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code> package, and to have <code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code> use it as a sub-module dependency.</p>
 </section>
 
 
@@ -63,13 +70,13 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="canonical_repository.html">Creation of canonical repository</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support_to_usage_patterns.html">Support to required usage patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packaging_strategy.html">Packaging strategy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a_traceability_matrix.html">Appendix - Traceability matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packaging_and_deployment.html">Packaging and deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a_requirement_trace.html">Appendix - Requirement Trace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_users_using_fcidecomp.html">Appendix - List of users and developers currently using FCIDECOMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_design_justifications.html">Appendix - Design justifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_preservation_of_dependencies.html">Appendix - Long-term preservation of dependencies</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Appendix - Integration with <code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="a_further_developments.html">Appendix - Further developments</a></li>
 </ul>
 
 <div class="relations">
@@ -77,6 +84,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="a_preservation_of_dependencies.html" title="previous chapter">Appendix - Long-term preservation of dependencies</a></li>
+      <li>Next: <a href="a_further_developments.html" title="next chapter">Appendix - Further developments</a></li>
   </ul></li>
 </ul>
 </div>

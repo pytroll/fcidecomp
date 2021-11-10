@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Appendix - Design justifications" href="a_design_justifications.html" />
-    <link rel="prev" title="Appendix - Traceability matrix" href="a_traceability_matrix.html" />
+    <link rel="prev" title="Appendix - Requirement Trace" href="a_requirement_trace.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,7 +35,65 @@
           <div class="body" role="main">
             
   <section id="appendix-list-of-users-and-developers-currently-using-fcidecomp">
-<h1>Appendix - List of users and developers currently using FCIDECOMP<a class="headerlink" href="#appendix-list-of-users-and-developers-currently-using-fcidecomp" title="Permalink to this headline">¶</a></h1>
+<span id="a-users-using-fcidecomp"></span><h1>Appendix - List of users and developers currently using FCIDECOMP<a class="headerlink" href="#appendix-list-of-users-and-developers-currently-using-fcidecomp" title="Permalink to this headline">¶</a></h1>
+<p>In the following table, a list of all users and developers involved in the maintenance of software or documentation
+referring to the FCIDECOMP decompression software is reported, along with their contact and actions to be carried out
+to foster integration of the new FCIDECOMP software.</p>
+<table class="colwidths-given longtable docutils align-default" id="id1">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Users involved in the maintenance of software or documentation referring to the FCIDECOMP software</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>User</p></th>
+<th class="head"><p>Contact</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code> maintainers</p></td>
+<td><p><a class="reference external" href="mailto:silx&#37;&#52;&#48;esrf&#46;fr">silx<span>&#64;</span>esrf<span>&#46;</span>fr</a></p></td>
+<td><p>Arrange forking and maintenance of the dedicate FCIDECOMP plugin</p></td>
+</tr>
+<tr class="row-odd"><td><p>Daniel Lee (EUMETSAT)</p></td>
+<td><p><a class="reference external" href="mailto:daniel&#46;lee&#37;&#52;&#48;eumetsat&#46;int">daniel<span>&#46;</span>lee<span>&#64;</span>eumetsat<span>&#46;</span>int</a></p></td>
+<td><p>Aggregate all FCIDECOMP software distribution locations to the canonical repository (see <a class="reference internal" href="#fcidecomp-distribution-locations"><span class="std std-ref">List of FCIDECOMP software distribution locations hosted by EUMETSAT</span></a>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Daniel Lee (EUMETSAT)</p></td>
+<td><p><a class="reference external" href="mailto:daniel&#46;lee&#37;&#52;&#48;eumetsat&#46;int">daniel<span>&#46;</span>lee<span>&#64;</span>eumetsat<span>&#46;</span>int</a></p></td>
+<td><p>Update all documentation referring to the FCIDECOMP software (see <a class="reference internal" href="#fcidecomp-documentation"><span class="std std-ref">List of documents maintained by EUMETSAT referring to the FCIDECOMP software</span></a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Martin Raspaud</p></td>
+<td><p><a class="reference external" href="mailto:martin&#46;raspaud&#37;&#52;&#48;smhi&#46;se">martin<span>&#46;</span>raspaud<span>&#64;</span>smhi<span>&#46;</span>se</a></p></td>
+<td><p>Arrange acknowledgment of his work as developer of the <a class="reference internal" href="introduction.html#fcidecomp-conda"><span class="std std-ref">fcidecomp-conda-recipe</span></a> package</p></td>
+</tr>
+<tr class="row-even"><td><p>HDF Group</p></td>
+<td><p><a class="reference external" href="mailto:help&#37;&#52;&#48;hdfgroup&#46;org">help<span>&#64;</span>hdfgroup<span>&#46;</span>org</a></p></td>
+<td><p>Update information regarding the FCIDECOMP filter exposed at <a class="reference external" href="https://portal.hdfgroup.org/display/support/Filters">https://portal.hdfgroup.org/display/support/Filters</a></p></td>
+</tr>
+</tbody>
+</table>
+<section id="list-of-fcidecomp-software-distribution-locations-hosted-by-eumetsat">
+<span id="fcidecomp-distribution-locations"></span><h2>List of FCIDECOMP software distribution locations hosted by EUMETSAT<a class="headerlink" href="#list-of-fcidecomp-software-distribution-locations-hosted-by-eumetsat" title="Permalink to this headline">¶</a></h2>
+<p>This is a list of all the identified FCIDECOMP software distribution locations currently active, to be aggregated in the
+new canonical repository:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://sftp.eumetsat.int/public/folder/UsCVknVOOkSyCdgpMimJNQ/User-Materials/Test-Data/MTG/MTG_FCI_L1C_Enhanced-NonN_TD-272_May2020/FCI_Decompression_Software_V1.0.2/EUMETSAT-FCIDECOMP_V1.0.2.tar.gz">https://sftp.eumetsat.int/public/folder/UsCVknVOOkSyCdgpMimJNQ/User-Materials/Test-Data/MTG/MTG_FCI_L1C_Enhanced-NonN_TD-272_May2020/FCI_Decompression_Software_V1.0.2/EUMETSAT-FCIDECOMP_V1.0.2.tar.gz</a></p></li>
+<li><p><a class="reference external" href="ftp://ftp.eumetsat.int/pub/OPS/out/test-data/Test-data-for-External-Users/MTG_FCI_Test-Data/FCI_Decompression_Software_V1.0.2/EUMETSAT-FCIDECOMP_V1.0.2.tar.gz">ftp://ftp.eumetsat.int/pub/OPS/out/test-data/Test-data-for-External-Users/MTG_FCI_Test-Data/FCI_Decompression_Software_V1.0.2/EUMETSAT-FCIDECOMP_V1.0.2.tar.gz</a></p></li>
+<li><p><a class="reference external" href="ftp://ftp.eumetsat.int/pub/OPS/out/test-data/Test-data-for-External-Users/MTG_FCI_L1c_Compressed-Datasets_and_Decompression-Plugin_April2017/Decompression_Plugin/EUMETSAT-FCIDECOMP_V1.0.1.tar.gz">ftp://ftp.eumetsat.int/pub/OPS/out/test-data/Test-data-for-External-Users/MTG_FCI_L1c_Compressed-Datasets_and_Decompression-Plugin_April2017/Decompression_Plugin/EUMETSAT-FCIDECOMP_V1.0.1.tar.gz</a></p></li>
+</ul>
+</section>
+<section id="list-of-documents-maintained-by-eumetsat-referring-to-the-fcidecomp-software">
+<span id="fcidecomp-documentation"></span><h2>List of documents maintained by EUMETSAT referring to the FCIDECOMP software<a class="headerlink" href="#list-of-documents-maintained-by-eumetsat-referring-to-the-fcidecomp-software" title="Permalink to this headline">¶</a></h2>
+<p>This is a list of all the documents maintained by EUMETSAT referring to the FCIDECOMP software, to be updated with
+reference to the new FCIDECOMP software:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www-cdn.eumetsat.int/files/2020-07/pdf_mtg_fci_l1_pug.pdf">https://www-cdn.eumetsat.int/files/2020-07/pdf_mtg_fci_l1_pug.pdf</a></p></li>
+<li><p><a class="reference external" href="https://www.eumetsat.int/media/45923">https://www.eumetsat.int/media/45923</a></p></li>
+</ul>
+</section>
 </section>
 
 
@@ -63,20 +121,25 @@
 <li class="toctree-l1"><a class="reference internal" href="document_info.html">Document Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="canonical_repository.html">Creation of canonical repository</a></li>
-<li class="toctree-l1"><a class="reference internal" href="support_and_integration.html">Support and integration with external tools</a></li>
-<li class="toctree-l1"><a class="reference internal" href="packaging_strategy.html">Packaging strategy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a_traceability_matrix.html">Appendix - Traceability matrix</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Appendix - List of users and developers currently using FCIDECOMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="support_to_usage_patterns.html">Support to required usage patterns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packaging_and_deployment.html">Packaging and deployment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a_requirement_trace.html">Appendix - Requirement Trace</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Appendix - List of users and developers currently using FCIDECOMP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-fcidecomp-software-distribution-locations-hosted-by-eumetsat">List of FCIDECOMP software distribution locations hosted by EUMETSAT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-documents-maintained-by-eumetsat-referring-to-the-fcidecomp-software">List of documents maintained by EUMETSAT referring to the FCIDECOMP software</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="a_design_justifications.html">Appendix - Design justifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_preservation_of_dependencies.html">Appendix - Long-term preservation of dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a_integration_with_hdf5plugin.html">Appendix - Integration with <code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="a_further_developments.html">Appendix - Further developments</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="a_traceability_matrix.html" title="previous chapter">Appendix - Traceability matrix</a></li>
+      <li>Previous: <a href="a_requirement_trace.html" title="previous chapter">Appendix - Requirement Trace</a></li>
       <li>Next: <a href="a_design_justifications.html" title="next chapter">Appendix - Design justifications</a></li>
   </ul></li>
 </ul>

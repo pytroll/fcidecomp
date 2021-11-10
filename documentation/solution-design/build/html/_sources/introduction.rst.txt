@@ -50,6 +50,12 @@ Reference Documents
     - Work Package Description
     - EUM/SEP/WPD/21/1244304
 
+  * - [EUMECAST_OS_SPEC]
+
+      .. _[EUMETCAST_OS_SPEC]:
+    - EUMETCast Operating System specifications
+    - `https://eumetsatspace.atlassian.net/wiki/spaces/DSEC/pages/739115041/Operating+System+Specifications <https://eumetsatspace.atlassian.net/wiki/spaces/DSEC/pages/739115041/Operating+System+Specifications>`_
+
   * - [HDF5PLUGIN]
 
       .. _[HDF5PLUGIN]:

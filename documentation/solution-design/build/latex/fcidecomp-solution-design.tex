@@ -130,6 +130,9 @@
 
 \chapter{Document Information}
 \label{\detokenize{document_info:document-information}}\label{\detokenize{document_info::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{{[}NOTA: da dove è preso il valore di |version|?{]}}
+
 
 \begin{savenotes}\sphinxattablestart
 \centering
@@ -340,6 +343,17 @@ EUM/SEP/WPD/21/1244304
 \\
 \hline
 \sphinxAtStartPar
+{[}EUMECAST\_OS\_SPEC{]}
+
+\phantomsection\label{\detokenize{introduction:eumetcast-os-spec}}&
+\sphinxAtStartPar
+EUMETCast Operating System specifications
+&
+\sphinxAtStartPar
+\sphinxurl{https://eumetsatspace.atlassian.net/wiki/spaces/DSEC/pages/739115041/Operating+System+Specifications}
+\\
+\hline
+\sphinxAtStartPar
 {[}HDF5PLUGIN{]}
 
 \phantomsection\label{\detokenize{introduction:hdf5plugin}}&
@@ -420,7 +434,7 @@ Panoply netCDF, HDF and GRIB Data Viewer
 
 
 \chapter{Creation of canonical repository}
-\label{\detokenize{canonical_repository:creation-of-canonical-repository}}\label{\detokenize{canonical_repository::doc}}
+\label{\detokenize{canonical_repository:creation-of-canonical-repository}}\label{\detokenize{canonical_repository:id1}}\label{\detokenize{canonical_repository::doc}}
 
 \section{Introduction}
 \label{\detokenize{canonical_repository:introduction}}
@@ -431,7 +445,7 @@ EUMETSAT Open Source repository at \sphinxstylestrong{XXX {[}NOTE: abbiamo una r
 
 
 \section{Repository initialization}
-\label{\detokenize{canonical_repository:repository-initialization}}\label{\detokenize{canonical_repository:id1}}
+\label{\detokenize{canonical_repository:repository-initialization}}\label{\detokenize{canonical_repository:id2}}
 \sphinxAtStartPar
 {\hyperref[\detokenize{introduction:fcidecomp-latest}]{\sphinxcrossref{\DUrole{std,std-ref}{FCIDECOMP v1.0.2}}}} is taken as blueprint for the development of the solution codebase.
 
@@ -457,6 +471,12 @@ consistent and permanent dataset to execute tests.
 
 \chapter{Support to required usage patterns}
 \label{\detokenize{support_to_usage_patterns:support-to-required-usage-patterns}}\label{\detokenize{support_to_usage_patterns::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{{[}NOTA: da qualche parte (forse qui?) non andrebbe menzionato il fatto che il software supporterà CharLS 1.0, mettendo
+in :ref:\textasciigrave{}further\_developments\textasciigrave{} che si prevede di provare a supportare anche il 2.0? Non dovremmo anche dire COME
+integriamo CharLS 1.0, i.e. src integrato, clone from github (come faccio ora), ecc. Su questo non abbiamo preso una
+decisione.{]}}
+
 
 \section{Introduction}
 \label{\detokenize{support_to_usage_patterns:introduction}}
@@ -469,11 +489,11 @@ patterns.
 
 \sphinxAtStartPar
 As a baseline, the FCIDEOCOMP software supports HDF5 1.10. Strategies to grant support for multiple versions of HDF5
-described in the \sphinxtitleref{Further developments appendix \textless{}further\_developments}.
+described in {\hyperref[\detokenize{a_further_developments:further-developments}]{\sphinxcrossref{\DUrole{std,std-ref}{Appendix \sphinxhyphen{} Further developments}}}}.
 
 
 \section{Integration with tools based on netCDF\sphinxhyphen{}C}
-\label{\detokenize{support_to_usage_patterns:integration-with-tools-based-on-netcdf-c}}
+\label{\detokenize{support_to_usage_patterns:integration-with-tools-based-on-netcdf-c}}\label{\detokenize{support_to_usage_patterns:integration-with-netcdf-c}}
 \sphinxAtStartPar
 \sphinxstylestrong{{[}NOTA: mi sembra che questa parte stia meglio in un ulteriore sottoparagrafo invece che nell’intro,
 ma se non sei d’accordo la sposto su e tolgo questo paragrafo{]}}
@@ -496,7 +516,7 @@ the correct filter id (32018 for FCIDECOMP), if required by the utility, is spec
 
 
 \section{Usage as CLI tool}
-\label{\detokenize{support_to_usage_patterns:usage-as-cli-tool}}
+\label{\detokenize{support_to_usage_patterns:usage-as-cli-tool}}\label{\detokenize{support_to_usage_patterns:id1}}
 \sphinxAtStartPar
 In order to provide a baseline support for CLI usage of the FCIDECOMP software, \sphinxcode{\sphinxupquote{nccopy}} (software utility of the
 \sphinxcode{\sphinxupquote{netcdf\sphinxhyphen{}c}} library) is chosen as reference standard CLI tool. To foster integration with \sphinxcode{\sphinxupquote{nccopy}}, the FCIDECOMP
@@ -522,16 +542,16 @@ FCIDECOMP filter.
 \sphinxAtStartPar
 Integration with Python is provided by a small Python package developed ad hoc, which satisfies the required \sphinxcode{\sphinxupquote{h5py}}
 interface to make the FCIDECOMP filter available for Python applications. Such package, based upon a stripped\sphinxhyphen{}down
-version of the {\hyperref[\detokenize{introduction:hdf5plugin}]{\sphinxcrossref{\DUrole{std,std-ref}{hdf5plugin}}}} package, is essentially composed of an \sphinxcode{\sphinxupquote{\_\_init\_\_.py}} defining the
+version of the {\hyperref[\detokenize{introduction:hdf5plugin}]{\sphinxcrossref{\DUrole{std,std-ref}{hdf5plugin package}}}}, is essentially composed of an \sphinxcode{\sphinxupquote{\_\_init\_\_.py}} defining the
 filter interface to \sphinxcode{\sphinxupquote{h5py}}.
 
 \sphinxAtStartPar
-See the {\hyperref[\detokenize{a_integration_with_hdf5plugin:integration-with-hdf5plugin}]{\sphinxcrossref{\DUrole{std,std-ref}{Integration with hdf5plugin appendix}}}} for details on the integration with the widely used {\hyperref[\detokenize{introduction:hdf5plugin}]{\sphinxcrossref{\DUrole{std,std-ref}{hdf5plugin}}}} package and interation
-with its maintainers’ community.
+See {\hyperref[\detokenize{a_integration_with_hdf5plugin:integration-with-hdf5plugin}]{\sphinxcrossref{\DUrole{std,std-ref}{Appendix \sphinxhyphen{} Integration with hdf5plugin}}}} for details on the integration with the widely used \sphinxcode{\sphinxupquote{hdf5plugin}} package and
+interaction with its maintainers’ community.
 
 
 \section{Integration with EUMETSAT Data Tailor}
-\label{\detokenize{support_to_usage_patterns:integration-with-eumetsat-data-tailor}}
+\label{\detokenize{support_to_usage_patterns:integration-with-eumetsat-data-tailor}}\label{\detokenize{support_to_usage_patterns:integration-with-data-tailor}}
 \sphinxAtStartPar
 At the moment, the Data Tailor supports reading compressed FCI L1C products through the optional
 \sphinxcode{\sphinxupquote{epct\_plugin\_mtg4africa}} {\hyperref[\detokenize{introduction:mtg4africa}]{\sphinxcrossref{\DUrole{std,std-ref}{customisation plugin}}}}, which in turns install FCIDECOMP by installing
@@ -544,7 +564,7 @@ installs the FCIDECOMP support through the Python package described above and it
 
 
 \section{Integration with tools based on netCDF\sphinxhyphen{}Java}
-\label{\detokenize{support_to_usage_patterns:integration-with-tools-based-on-netcdf-java}}
+\label{\detokenize{support_to_usage_patterns:integration-with-tools-based-on-netcdf-java}}\label{\detokenize{support_to_usage_patterns:integration-with-netcdf-java}}
 \sphinxAtStartPar
 {\hyperref[\detokenize{introduction:panoply}]{\sphinxcrossref{\DUrole{std,std-ref}{Panoply}}}} and {\hyperref[\detokenize{introduction:hdfview}]{\sphinxcrossref{\DUrole{std,std-ref}{HDFView}}}} have been identified as the key software based on netCDF\sphinxhyphen{}Java
 to support. The integration of the FCIDECOMP software in these applications can be achieved by instructing them
@@ -553,8 +573,8 @@ to use the netCDF\sphinxhyphen{}C library (instead of netCDF\sphinxhyphen{}Java)
 procedure in the FCIDECOMP software documentation.
 
 \sphinxAtStartPar
-The issue of a generic integration with {\hyperref[\detokenize{introduction:netcdf-java}]{\sphinxcrossref{\DUrole{std,std-ref}{Unidata Netcdf\sphinxhyphen{}Java}}}} is discussed in the
-{\hyperref[\detokenize{a_design_justifications:design-justifications}]{\sphinxcrossref{\DUrole{std,std-ref}{Design justification appendix}}}}.
+The issue of a generic integration with {\hyperref[\detokenize{introduction:netcdf-java}]{\sphinxcrossref{\DUrole{std,std-ref}{Unidata Netcdf\sphinxhyphen{}Java}}}} is discussed in
+{\hyperref[\detokenize{a_design_justifications:design-justifications}]{\sphinxcrossref{\DUrole{std,std-ref}{Appendix \sphinxhyphen{} Design justifications}}}}.
 
 
 \chapter{Packaging and deployment}
@@ -587,8 +607,8 @@ CentOS 7 64 bit
 \end{itemize}
 
 \sphinxAtStartPar
-Details on the selection process leading to the list presented above are provided in the
-{\hyperref[\detokenize{a_design_justifications:design-justifications}]{\sphinxcrossref{\DUrole{std,std-ref}{Design justification appendix}}}}.
+Details on the selection process leading to the list presented above are provided in
+{\hyperref[\detokenize{a_design_justifications:design-justifications}]{\sphinxcrossref{\DUrole{std,std-ref}{Appendix \sphinxhyphen{} Design justifications}}}}.
 
 
 \section{Building the binaries}
@@ -603,10 +623,10 @@ required systems.
 \label{\detokenize{packaging_and_deployment:packaging-as-a-conda-package}}
 \sphinxAtStartPar
 Packages are built using Conda, as it provides standardised environments with a large set of pre\sphinxhyphen{}compiled packages.
-From the point of view of Conda, the operating systems listed in the {\hyperref[\detokenize{packaging_and_deployment:supported-platforms}]{\sphinxcrossref{\DUrole{std,std-ref}{Supported platforms}}}}
-paragraph can be considered as two groups of OS: in Conda standardised environment it is enough to build the package for
-one Linux distribution in order to make it compatible with other Linux distributions. So two conda packages are
-released: one for Linux distributions, and one for Windows 10.
+From the point of view of Conda, the operating systems listed in the {\hyperref[\detokenize{packaging_and_deployment:supported-platforms}]{\sphinxcrossref{\DUrole{std,std-ref}{Supported platforms}}}} paragraph can be
+considered as two groups of OS: in Conda standardised environment it is enough to build the package for one Linux
+distribution in order to make it compatible with other Linux distributions. So two conda packages are released: one for
+Linux distributions, and one for Windows 10.
 
 \sphinxAtStartPar
 These conda packages install both the FCIDECOMP libraries and its Python bindings. As a blueprint for the
@@ -625,26 +645,302 @@ implemented.
 
 \sphinxAtStartPar
 Two GitLab runners are implemented, one with a Docker executor on Linux and the other with a Shell executor on Windows.
+
+\sphinxAtStartPar
 \sphinxstylestrong{{[}NOTA: se va presentata come una cosa già fatta, come inserire che non siamo sicure se serva un altro runner per Windows 32\sphinxhyphen{}bit?{]}}
 
 
-\chapter{Appendix \sphinxhyphen{} Traceability matrix}
-\label{\detokenize{a_traceability_matrix:appendix-traceability-matrix}}\label{\detokenize{a_traceability_matrix::doc}}
+\chapter{Appendix \sphinxhyphen{} Requirement Trace}
+\label{\detokenize{a_requirement_trace:appendix-requirement-trace}}\label{\detokenize{a_requirement_trace:requirement-trace}}\label{\detokenize{a_requirement_trace::doc}}
+\sphinxAtStartPar
+The following table provides the traceability between the system requirements defined in the
+{\hyperref[\detokenize{introduction:fcidecomp-wpd}]{\sphinxcrossref{\DUrole{std,std-ref}{FCIDECOMP WP description}}}} and the design.
+
+\sphinxAtStartPar
+\sphinxstylestrong{{[}NOTE: Manca riferimento esplicito a free and open software{]}}
+
+\sphinxAtStartPar
+\sphinxstylestrong{{[}NOTE: Manca riferimento esplicito maintenance da parte di B\sphinxhyphen{}Open{]}}
+
+\sphinxAtStartPar
+\sphinxstylestrong{{[}NOTE: Va bene tenere tutta la Description o bisogna inventare dei Titles?{]}}
+
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\sphinxcapstartof{table}
+\sphinxthecaptionisattop
+\sphinxcaption{Requirement traceability matrix, mapping system requirements to the design.}\label{\detokenize{a_requirement_trace:id1}}
+\sphinxaftertopcaption
+\begin{tabular}[t]{|\X{25}{100}|\X{35}{100}|\X{10}{100}|\X{30}{100}|}
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Requirement ID
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Requirement Description
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Applicable
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Identified Section in design
+\\
+\hline
+\sphinxAtStartPar
+{[}DTWS\sphinxhyphen{}FCI\sphinxhyphen{}010{]}
+&
+\sphinxAtStartPar
+The solution shall be compatible with all MTG user stations that match the approved baseline.
+&
+\sphinxAtStartPar
+Y
+&
+\sphinxAtStartPar
+{\hyperref[\detokenize{packaging_and_deployment:supported-platforms}]{\sphinxcrossref{\DUrole{std,std-ref}{Supported platforms}}}}
+\\
+\hline
+\sphinxAtStartPar
+{[}DTWS\sphinxhyphen{}FCI\sphinxhyphen{}020{]}
+&
+\sphinxAtStartPar
+The solution shall be included in standard installations of the Data Tailor software.
+&
+\sphinxAtStartPar
+Y
+&
+\sphinxAtStartPar
+{\hyperref[\detokenize{support_to_usage_patterns:integration-with-data-tailor}]{\sphinxcrossref{\DUrole{std,std-ref}{Integration with EUMETSAT Data Tailor}}}}
+\\
+\hline
+\sphinxAtStartPar
+{[}DTWS\sphinxhyphen{}FCI\sphinxhyphen{}030{]}
+&
+\sphinxAtStartPar
+The solution shall allow users to read FCI L1c data compressed using CharLS directly, i.e. without requiring the use of the Data Tailor. The solution shall be compatible both with netCDF\sphinxhyphen{}C and netCDF\sphinxhyphen{}Java.
+&
+\sphinxAtStartPar
+Y
+&
+\sphinxAtStartPar
+{\hyperref[\detokenize{support_to_usage_patterns:integration-with-netcdf-c}]{\sphinxcrossref{\DUrole{std,std-ref}{Integration with tools based on netCDF\sphinxhyphen{}C}}}} {\hyperref[\detokenize{support_to_usage_patterns:usage-as-cli-tool}]{\sphinxcrossref{\DUrole{std,std-ref}{Usage as CLI tool}}}} {\hyperref[\detokenize{support_to_usage_patterns:integration-with-netcdf-java}]{\sphinxcrossref{\DUrole{std,std-ref}{Integration with tools based on netCDF\sphinxhyphen{}Java}}}}
+\\
+\hline
+\sphinxAtStartPar
+{[}DTWS\sphinxhyphen{}FCI\sphinxhyphen{}040{]}
+&
+\sphinxAtStartPar
+The solution shall utilise only software that is licensed in a way that is compatible with any use, i.e. free and open source software. Any dependencies shall be archived at EUMETSAT to ensure that they remain available even if their repositories in the Internet should become unavailable.
+&
+\sphinxAtStartPar
+Y
+&
+\sphinxAtStartPar
+{\hyperref[\detokenize{canonical_repository:creation-of-canonical-repository}]{\sphinxcrossref{\DUrole{std,std-ref}{Creation of canonical repository}}}}
+\\
+\hline
+\sphinxAtStartPar
+{[}DTWS\sphinxhyphen{}FCI\sphinxhyphen{}050{]}
+&
+\sphinxAtStartPar
+The solution shall be maintained by the Contractor for the remaining duration of the Contract.
+&
+\sphinxAtStartPar
+Y
+&\\
+\hline
+\end{tabular}
+\par
+\sphinxattableend\end{savenotes}
+
 
 \chapter{Appendix \sphinxhyphen{} List of users and developers currently using FCIDECOMP}
-\label{\detokenize{a_users_using_fcidecomp:appendix-list-of-users-and-developers-currently-using-fcidecomp}}\label{\detokenize{a_users_using_fcidecomp::doc}}
+\label{\detokenize{a_users_using_fcidecomp:appendix-list-of-users-and-developers-currently-using-fcidecomp}}\label{\detokenize{a_users_using_fcidecomp:a-users-using-fcidecomp}}\label{\detokenize{a_users_using_fcidecomp::doc}}
+\sphinxAtStartPar
+In the following table, a list of all users and developers involved in the maintenance of software or documentation
+referring to the FCIDECOMP decompression software is reported, along with their contact and actions to be carried out
+to foster integration of the new FCIDECOMP software.
+
+
+\begin{savenotes}\sphinxatlongtablestart\begin{longtable}[c]{|\X{20}{100}|\X{30}{100}|\X{50}{100}|}
+\sphinxthelongtablecaptionisattop
+\caption{Users involved in the maintenance of software or documentation referring to the FCIDECOMP software\strut}\label{\detokenize{a_users_using_fcidecomp:id1}}\\*[\sphinxlongtablecapskipadjust]
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+User
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Contact
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Action
+\\
+\hline
+\endfirsthead
+
+\multicolumn{3}{c}%
+{\makebox[0pt]{\sphinxtablecontinued{\tablename\ \thetable{} \textendash{} continued from previous page}}}\\
+\hline
+\sphinxstyletheadfamily 
+\sphinxAtStartPar
+User
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Contact
+&\sphinxstyletheadfamily 
+\sphinxAtStartPar
+Action
+\\
+\hline
+\endhead
+
+\hline
+\multicolumn{3}{r}{\makebox[0pt][r]{\sphinxtablecontinued{continues on next page}}}\\
+\endfoot
+
+\endlastfoot
+
+\sphinxAtStartPar
+\sphinxcode{\sphinxupquote{hdf5plugin}} maintainers
+&
+\sphinxAtStartPar
+\sphinxhref{mailto:silx@esrf.fr}{silx@esrf.fr}
+&
+\sphinxAtStartPar
+Arrange forking and maintenance of the dedicate FCIDECOMP plugin
+\\
+\hline
+\sphinxAtStartPar
+Daniel Lee (EUMETSAT)
+&
+\sphinxAtStartPar
+\sphinxhref{mailto:daniel.lee@eumetsat.int}{daniel.lee@eumetsat.int}
+&
+\sphinxAtStartPar
+Aggregate all FCIDECOMP software distribution locations to the canonical repository (see {\hyperref[\detokenize{a_users_using_fcidecomp:fcidecomp-distribution-locations}]{\sphinxcrossref{\DUrole{std,std-ref}{List of FCIDECOMP software distribution locations hosted by EUMETSAT}}}})
+\\
+\hline
+\sphinxAtStartPar
+Daniel Lee (EUMETSAT)
+&
+\sphinxAtStartPar
+\sphinxhref{mailto:daniel.lee@eumetsat.int}{daniel.lee@eumetsat.int}
+&
+\sphinxAtStartPar
+Update all documentation referring to the FCIDECOMP software (see {\hyperref[\detokenize{a_users_using_fcidecomp:fcidecomp-documentation}]{\sphinxcrossref{\DUrole{std,std-ref}{List of documents maintained by EUMETSAT referring to the FCIDECOMP software}}}})
+\\
+\hline
+\sphinxAtStartPar
+Martin Raspaud
+&
+\sphinxAtStartPar
+\sphinxhref{mailto:martin.raspaud@smhi.se}{martin.raspaud@smhi.se}
+&
+\sphinxAtStartPar
+Arrange acknowledgment of his work as developer of the {\hyperref[\detokenize{introduction:fcidecomp-conda}]{\sphinxcrossref{\DUrole{std,std-ref}{fcidecomp\sphinxhyphen{}conda\sphinxhyphen{}recipe}}}} package
+\\
+\hline
+\sphinxAtStartPar
+HDF Group
+&
+\sphinxAtStartPar
+\sphinxhref{mailto:help@hdfgroup.org}{help@hdfgroup.org}
+&
+\sphinxAtStartPar
+Update information regarding the FCIDECOMP filter exposed at \sphinxurl{https://portal.hdfgroup.org/display/support/Filters}
+\\
+\hline
+\end{longtable}\sphinxatlongtableend\end{savenotes}
+
+
+\section{List of FCIDECOMP software distribution locations hosted by EUMETSAT}
+\label{\detokenize{a_users_using_fcidecomp:list-of-fcidecomp-software-distribution-locations-hosted-by-eumetsat}}\label{\detokenize{a_users_using_fcidecomp:fcidecomp-distribution-locations}}
+\sphinxAtStartPar
+This is a list of all the identified FCIDECOMP software distribution locations currently active, to be aggregated in the
+new canonical repository:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxurl{https://sftp.eumetsat.int/public/folder/UsCVknVOOkSyCdgpMimJNQ/User-Materials/Test-Data/MTG/MTG\_FCI\_L1C\_Enhanced-NonN\_TD-272\_May2020/FCI\_Decompression\_Software\_V1.0.2/EUMETSAT-FCIDECOMP\_V1.0.2.tar.gz}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxurl{ftp://ftp.eumetsat.int/pub/OPS/out/test-data/Test-data-for-External-Users/MTG\_FCI\_Test-Data/FCI\_Decompression\_Software\_V1.0.2/EUMETSAT-FCIDECOMP\_V1.0.2.tar.gz}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxurl{ftp://ftp.eumetsat.int/pub/OPS/out/test-data/Test-data-for-External-Users/MTG\_FCI\_L1c\_Compressed-Datasets\_and\_Decompression-Plugin\_April2017/Decompression\_Plugin/EUMETSAT-FCIDECOMP\_V1.0.1.tar.gz}
+
+\end{itemize}
+
+
+\section{List of documents maintained by EUMETSAT referring to the FCIDECOMP software}
+\label{\detokenize{a_users_using_fcidecomp:list-of-documents-maintained-by-eumetsat-referring-to-the-fcidecomp-software}}\label{\detokenize{a_users_using_fcidecomp:fcidecomp-documentation}}
+\sphinxAtStartPar
+This is a list of all the documents maintained by EUMETSAT referring to the FCIDECOMP software, to be updated with
+reference to the new FCIDECOMP software:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxurl{https://www-cdn.eumetsat.int/files/2020-07/pdf\_mtg\_fci\_l1\_pug.pdf}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxurl{https://www.eumetsat.int/media/45923}
+
+\end{itemize}
+
 
 \chapter{Appendix \sphinxhyphen{} Design justifications}
 \label{\detokenize{a_design_justifications:appendix-design-justifications}}\label{\detokenize{a_design_justifications:design-justifications}}\label{\detokenize{a_design_justifications::doc}}
 
+\section{Choice of supported OS}
+\label{\detokenize{a_design_justifications:choice-of-supported-os}}
+\sphinxAtStartPar
+The list of supported OS reported in the {\hyperref[\detokenize{packaging_and_deployment:supported-platforms}]{\sphinxcrossref{\DUrole{std,std-ref}{Supported platforms}}}} paragraph is based upon the list reported
+in the {\hyperref[\detokenize{introduction:eumetcast-os-spec}]{\sphinxcrossref{\DUrole{std,std-ref}{EUMETCast Operating System Specification page}}}}, where only OS which have not yet
+reached their EOL (and which are neither approaching it) have been retained.
+
+
+\section{Generic integration with Unidata netCDF\sphinxhyphen{}JAVA}
+\label{\detokenize{a_design_justifications:generic-integration-with-unidata-netcdf-java}}
+\sphinxAtStartPar
+\sphinxstylestrong{{[}NOTE: non definitivo, need feedback{]}}
+
+\sphinxAtStartPar
+Generic integration with {\hyperref[\detokenize{introduction:netcdf-java}]{\sphinxcrossref{\DUrole{std,std-ref}{Unidata netCDF\sphinxhyphen{}JAVA based tools}}}}, given their scarce usage, is not
+considered a priority. Nonetheless, communication with Unidata developers is envisioned to know of any development
+regarding the possibility to use external decompression filters such as the FCIDECOMP software.
+
+
 \chapter{Appendix \sphinxhyphen{} Long\sphinxhyphen{}term preservation of dependencies}
 \label{\detokenize{a_preservation_of_dependencies:appendix-long-term-preservation-of-dependencies}}\label{\detokenize{a_preservation_of_dependencies::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{{[}NOTA: qui mi serve una traccia{]}}
+
 
 \chapter{Appendix \sphinxhyphen{} Integration with \sphinxstyleliteralintitle{\sphinxupquote{hdf5plugin}}}
 \label{\detokenize{a_integration_with_hdf5plugin:appendix-integration-with-hdf5plugin}}\label{\detokenize{a_integration_with_hdf5plugin:integration-with-hdf5plugin}}\label{\detokenize{a_integration_with_hdf5plugin::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{{[}NOTA: parlando di un plan, in che tempo va espresso? futuro? o sempre come un cosa che è già stata fatta?{]}}
+
+\sphinxAtStartPar
+Integration with the \sphinxcode{\sphinxupquote{hdf5plugin}} Python package ({\hyperref[\detokenize{introduction:hdf5plugin}]{\sphinxcrossref{\DUrole{std,std-ref}{{[}HDF5PLUGIN{]}}}}}) requires communication with the
+package maintainers (see {\hyperref[\detokenize{a_users_using_fcidecomp:a-users-using-fcidecomp}]{\sphinxcrossref{\DUrole{std,std-ref}{Appendix \sphinxhyphen{} List of users and developers currently using FCIDECOMP}}}}).
+
+\sphinxAtStartPar
+Such interaction is initiated in the early stage of the solution development process. The proposed solution is to have
+a small package including only the FCIDECOMP plugin support (developed and maintained by B\sphinxhyphen{}Open) separated from the main
+\sphinxcode{\sphinxupquote{hdf5plugin}} package, and to have \sphinxcode{\sphinxupquote{hdf5plugin}} use it as a sub\sphinxhyphen{}module dependency.
+
 
 \chapter{Appendix \sphinxhyphen{} Further developments}
 \label{\detokenize{a_further_developments:appendix-further-developments}}\label{\detokenize{a_further_developments:further-developments}}\label{\detokenize{a_further_developments::doc}}
+
+\section{Integration of CharLS 2.0.1}
+\label{\detokenize{a_further_developments:integration-of-charls-2-0-1}}
 
 
 \renewcommand{\indexname}{Index}

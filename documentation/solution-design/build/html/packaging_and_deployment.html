@@ -16,7 +16,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Appendix - Traceability matrix" href="a_traceability_matrix.html" />
+    <link rel="next" title="Appendix - Requirement Trace" href="a_requirement_trace.html" />
     <link rel="prev" title="Support to required usage patterns" href="support_to_usage_patterns.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -49,8 +49,8 @@ support for all the required systems is reported.</p>
 <li><p>Ubuntu 18.04, Ubuntu 20.04 64 bit</p></li>
 <li><p>CentOS 7 64 bit</p></li>
 </ul>
-<p>Details on the selection process leading to the list presented above are provided in the
-<a class="reference internal" href="a_design_justifications.html#design-justifications"><span class="std std-ref">Design justification appendix</span></a>.</p>
+<p>Details on the selection process leading to the list presented above are provided in
+<a class="reference internal" href="a_design_justifications.html#design-justifications"><span class="std std-ref">Appendix - Design justifications</span></a>.</p>
 </section>
 <section id="building-the-binaries">
 <h2>Building the binaries<a class="headerlink" href="#building-the-binaries" title="Permalink to this headline">¶</a></h2>
@@ -61,10 +61,10 @@ required systems.</p>
 <section id="packaging-as-a-conda-package">
 <h2>Packaging as a Conda package<a class="headerlink" href="#packaging-as-a-conda-package" title="Permalink to this headline">¶</a></h2>
 <p>Packages are built using Conda, as it provides standardised environments with a large set of pre-compiled packages.
-From the point of view of Conda, the operating systems listed in the <a class="reference internal" href="#supported-platforms"><span class="std std-ref">Supported platforms</span></a>
-paragraph can be considered as two groups of OS: in Conda standardised environment it is enough to build the package for
-one Linux distribution in order to make it compatible with other Linux distributions. So two conda packages are
-released: one for Linux distributions, and one for Windows 10.</p>
+From the point of view of Conda, the operating systems listed in the <a class="reference internal" href="#supported-platforms"><span class="std std-ref">Supported platforms</span></a> paragraph can be
+considered as two groups of OS: in Conda standardised environment it is enough to build the package for one Linux
+distribution in order to make it compatible with other Linux distributions. So two conda packages are released: one for
+Linux distributions, and one for Windows 10.</p>
 <p>These conda packages install both the FCIDECOMP libraries and its Python bindings. As a blueprint for the
 conda recipes, the <a class="reference internal" href="introduction.html#fcidecomp-conda"><span class="std std-ref">Conda recipe</span></a> for the packaging of FCIDECOMP mantained by Martin Raspaud
 from the Swedish Meteorological and Hydrological Institute has been used.</p>
@@ -74,8 +74,8 @@ from the Swedish Meteorological and Hydrological Institute has been used.</p>
 <h2>Packaging process<a class="headerlink" href="#packaging-process" title="Permalink to this headline">¶</a></h2>
 <p>GitLab CI/CD pipelines to compile, build, test and upload the conda packages to EUMETSAT Anaconda repository are
 implemented.</p>
-<p>Two GitLab runners are implemented, one with a Docker executor on Linux and the other with a Shell executor on Windows.
-<strong>[NOTA: se va presentata come una cosa già fatta, come inserire che non siamo sicure se serva un altro runner per Windows 32-bit?]</strong></p>
+<p>Two GitLab runners are implemented, one with a Docker executor on Linux and the other with a Shell executor on Windows.</p>
+<p><strong>[NOTA: se va presentata come una cosa già fatta, come inserire che non siamo sicure se serva un altro runner per Windows 32-bit?]</strong></p>
 </section>
 </section>
 
@@ -113,7 +113,7 @@ implemented.</p>
 <li class="toctree-l2"><a class="reference internal" href="#packaging-process">Packaging process</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="a_traceability_matrix.html">Appendix - Traceability matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a_requirement_trace.html">Appendix - Requirement Trace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_users_using_fcidecomp.html">Appendix - List of users and developers currently using FCIDECOMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_design_justifications.html">Appendix - Design justifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_preservation_of_dependencies.html">Appendix - Long-term preservation of dependencies</a></li>
@@ -126,7 +126,7 @@ implemented.</p>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="support_to_usage_patterns.html" title="previous chapter">Support to required usage patterns</a></li>
-      <li>Next: <a href="a_traceability_matrix.html" title="next chapter">Appendix - Traceability matrix</a></li>
+      <li>Next: <a href="a_requirement_trace.html" title="next chapter">Appendix - Requirement Trace</a></li>
   </ul></li>
 </ul>
 </div>

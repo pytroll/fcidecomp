@@ -36,16 +36,20 @@
             
   <section id="support-to-required-usage-patterns">
 <h1>Support to required usage patterns<a class="headerlink" href="#support-to-required-usage-patterns" title="Permalink to this headline">¶</a></h1>
+<p><strong>[NOTA: da qualche parte (forse qui?) non andrebbe menzionato il fatto che il software supporterà CharLS 1.0, mettendo
+in :ref:`further_developments` che si prevede di provare a supportare anche il 2.0? Non dovremmo anche dire COME
+integriamo CharLS 1.0, i.e. src integrato, clone from github (come faccio ora), ecc. Su questo non abbiamo preso una
+decisione.]</strong></p>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>This section describes the strategies adopted to ensure that the FCIDECOMP software supports the required usage
 patterns.</p>
 <p><strong>[NOTA: questo l’ho spostato qui da Packaging and deployment]</strong></p>
 <p>As a baseline, the FCIDEOCOMP software supports HDF5 1.10. Strategies to grant support for multiple versions of HDF5
-described in the <cite>Further developments appendix &lt;further_developments</cite>.</p>
+described in <a class="reference internal" href="a_further_developments.html#further-developments"><span class="std std-ref">Appendix - Further developments</span></a>.</p>
 </section>
 <section id="integration-with-tools-based-on-netcdf-c">
-<h2>Integration with tools based on netCDF-C<a class="headerlink" href="#integration-with-tools-based-on-netcdf-c" title="Permalink to this headline">¶</a></h2>
+<span id="integration-with-netcdf-c"></span><h2>Integration with tools based on netCDF-C<a class="headerlink" href="#integration-with-tools-based-on-netcdf-c" title="Permalink to this headline">¶</a></h2>
 <p><strong>[NOTA: mi sembra che questa parte stia meglio in un ulteriore sottoparagrafo invece che nell’intro,
 ma se non sei d’accordo la sposto su e tolgo questo paragrafo]</strong></p>
 <p>The current implementation of the FCIDECOMP software (<a class="reference internal" href="introduction.html#fcidecomp-latest"><span class="std std-ref">v1.0.2</span></a>) which, as mentioned in the
@@ -58,7 +62,7 @@ library (<a class="reference internal" href="introduction.html#netcdf-c"><span c
 </ul>
 </section>
 <section id="usage-as-cli-tool">
-<h2>Usage as CLI tool<a class="headerlink" href="#usage-as-cli-tool" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>Usage as CLI tool<a class="headerlink" href="#usage-as-cli-tool" title="Permalink to this headline">¶</a></h2>
 <p>In order to provide a baseline support for CLI usage of the FCIDECOMP software, <code class="docutils literal notranslate"><span class="pre">nccopy</span></code> (software utility of the
 <code class="docutils literal notranslate"><span class="pre">netcdf-c</span></code> library) is chosen as reference standard CLI tool. To foster integration with <code class="docutils literal notranslate"><span class="pre">nccopy</span></code>, the FCIDECOMP
 software provides to:</p>
@@ -73,13 +77,13 @@ FCIDECOMP filter.</p>
 <h2>Integration with Python<a class="headerlink" href="#integration-with-python" title="Permalink to this headline">¶</a></h2>
 <p>Integration with Python is provided by a small Python package developed ad hoc, which satisfies the required <code class="docutils literal notranslate"><span class="pre">h5py</span></code>
 interface to make the FCIDECOMP filter available for Python applications. Such package, based upon a stripped-down
-version of the <a class="reference internal" href="introduction.html#hdf5plugin"><span class="std std-ref">hdf5plugin</span></a> package, is essentially composed of an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> defining the
+version of the <a class="reference internal" href="introduction.html#hdf5plugin"><span class="std std-ref">hdf5plugin package</span></a>, is essentially composed of an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> defining the
 filter interface to <code class="docutils literal notranslate"><span class="pre">h5py</span></code>.</p>
-<p>See the <a class="reference internal" href="a_integration_with_hdf5plugin.html#integration-with-hdf5plugin"><span class="std std-ref">Integration with hdf5plugin appendix</span></a> for details on the integration with the widely used <a class="reference internal" href="introduction.html#hdf5plugin"><span class="std std-ref">hdf5plugin</span></a> package and interation
-with its maintainers’ community.</p>
+<p>See <a class="reference internal" href="a_integration_with_hdf5plugin.html#integration-with-hdf5plugin"><span class="std std-ref">Appendix - Integration with hdf5plugin</span></a> for details on the integration with the widely used <code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code> package and
+interaction with its maintainers’ community.</p>
 </section>
 <section id="integration-with-eumetsat-data-tailor">
-<h2>Integration with EUMETSAT Data Tailor<a class="headerlink" href="#integration-with-eumetsat-data-tailor" title="Permalink to this headline">¶</a></h2>
+<span id="integration-with-data-tailor"></span><h2>Integration with EUMETSAT Data Tailor<a class="headerlink" href="#integration-with-eumetsat-data-tailor" title="Permalink to this headline">¶</a></h2>
 <p>At the moment, the Data Tailor supports reading compressed FCI L1C products through the optional
 <code class="docutils literal notranslate"><span class="pre">epct_plugin_mtg4africa</span></code> <a class="reference internal" href="introduction.html#mtg4africa"><span class="std std-ref">customisation plugin</span></a>, which in turns install FCIDECOMP by installing
 with <code class="docutils literal notranslate"><span class="pre">pip</span></code> the <code class="docutils literal notranslate"><span class="pre">hdf5plugin</span></code> package.</p>
@@ -88,14 +92,14 @@ build and installation approach for the <code class="docutils literal notranslat
 installs the FCIDECOMP support through the Python package described above and its dependencies.</p>
 </section>
 <section id="integration-with-tools-based-on-netcdf-java">
-<h2>Integration with tools based on netCDF-Java<a class="headerlink" href="#integration-with-tools-based-on-netcdf-java" title="Permalink to this headline">¶</a></h2>
+<span id="integration-with-netcdf-java"></span><h2>Integration with tools based on netCDF-Java<a class="headerlink" href="#integration-with-tools-based-on-netcdf-java" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="introduction.html#panoply"><span class="std std-ref">Panoply</span></a> and <a class="reference internal" href="introduction.html#hdfview"><span class="std std-ref">HDFView</span></a> have been identified as the key software based on netCDF-Java
 to support. The integration of the FCIDECOMP software in these applications can be achieved by instructing them
 to use the netCDF-C library (instead of netCDF-Java) to read netCDF files
 (see related <a class="reference internal" href="introduction.html#netcdf-java-github"><span class="std std-ref">github issue</span></a>). Support is then granted by describing the aforementioned
 procedure in the FCIDECOMP software documentation.</p>
-<p>The issue of a generic integration with <a class="reference internal" href="introduction.html#netcdf-java"><span class="std std-ref">Unidata Netcdf-Java</span></a> is discussed in the
-<a class="reference internal" href="a_design_justifications.html#design-justifications"><span class="std std-ref">Design justification appendix</span></a>.</p>
+<p>The issue of a generic integration with <a class="reference internal" href="introduction.html#netcdf-java"><span class="std std-ref">Unidata Netcdf-Java</span></a> is discussed in
+<a class="reference internal" href="a_design_justifications.html#design-justifications"><span class="std std-ref">Appendix - Design justifications</span></a>.</p>
 </section>
 </section>
 
@@ -134,7 +138,7 @@ procedure in the FCIDECOMP software documentation.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="packaging_and_deployment.html">Packaging and deployment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a_traceability_matrix.html">Appendix - Traceability matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a_requirement_trace.html">Appendix - Requirement Trace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_users_using_fcidecomp.html">Appendix - List of users and developers currently using FCIDECOMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_design_justifications.html">Appendix - Design justifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_preservation_of_dependencies.html">Appendix - Long-term preservation of dependencies</a></li>

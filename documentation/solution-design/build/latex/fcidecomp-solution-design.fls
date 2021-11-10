@@ -422,6 +422,7 @@ INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
 INPUT /usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
 INPUT /usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
+INPUT /usr/share/texmf/fonts/tfm/public/tex-gyre/ts1-qtmb.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
 INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png

@@ -15,7 +15,7 @@ EUMETSAT WP FCIDECOMP - Solution design
    canonical_repository
    support_to_usage_patterns
    packaging_and_deployment
-   a_traceability_matrix
+   a_requirement_trace
    a_users_using_fcidecomp
    a_design_justifications
    a_preservation_of_dependencies
