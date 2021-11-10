@@ -11,8 +11,7 @@ EUMETSAT Open Source repository at XXX [TODO: add reference].
 Repository initialization
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FCIDECOMP v1.0.2 (taken from :ref:`EUMETSAT sFTP repository <[FCIDECOMP_LATEST]>`) is taken as blueprint for the
-development of the solution codebase.
+:ref:`FCIDECOMP v1.0.2 <[FCIDECOMP_LATEST]>` is taken as blueprint for the development of the solution codebase.
 
 The repository is put under configuration control. A new minor release adding README, BUILD, INSTALL, and LICENCE
 files, starting the Changelog, codifying the use of semantic versioning for future versions and adding a standardised
