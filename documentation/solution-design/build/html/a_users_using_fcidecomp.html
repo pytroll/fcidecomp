@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Creation of canonical repository &#8212; EUMETSAT FCIDECOMP - Solution design  documentation</title>
+    <title>Appendix 2 - List of users and developers currently using FCIDECOMP &#8212; EUMETSAT FCIDECOMP - Solution design  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
@@ -16,8 +16,8 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Support and integration with external tools" href="support_and_integration.html" />
-    <link rel="prev" title="Introduction" href="introduction.html" />
+    <link rel="next" title="Appendix 3 - Design justifications" href="a_design_justifications.html" />
+    <link rel="prev" title="Appendix 1 - Traceability matrix" href="a_traceability_matrix.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -34,30 +34,8 @@
 
           <div class="body" role="main">
             
-  <section id="creation-of-canonical-repository">
-<h1>Creation of canonical repository<a class="headerlink" href="#creation-of-canonical-repository" title="Permalink to this headline">¶</a></h1>
-<p>The first step of the solution design consists in the creation of a single canonical repository, at EUMETSAT GitLab,
-hosting the official version of the FCIDECOMP software. This repository will contain all the code necessary to build the
-software and make it available as a HDF dynamically loaded filter.</p>
-<section id="repository-initialization">
-<h2>Repository initialization<a class="headerlink" href="#repository-initialization" title="Permalink to this headline">¶</a></h2>
-<p>Initially, FCIDECOMP v1.0.2 (taken from <a class="reference internal" href="introduction.html#fcidecomp-latest"><span class="std std-ref">EUMETSAT sFTP repository</span></a>) will be taken as blueprint
-for the development of the solution codebase.</p>
-<p>The repository will be put under configuration control. A new minor release adding README, BUILD, INSTALL, and LICENCE
-files, starting the Changelog, codifying the use of semantic versioning for future versions and adding a standardised
-build system will then be published.</p>
-</section>
-<section id="test-suite">
-<h2>Test suite<a class="headerlink" href="#test-suite" title="Permalink to this headline">¶</a></h2>
-<p>An initial test suite (at least against nominal conditions) will be implemented following the V&amp;V strategy defined in
-[add reference]. As an initial proposal, we would implement most or all the tests as automated tests against the Python
-interface.</p>
-</section>
-<section id="test-data">
-<h2>Test data<a class="headerlink" href="#test-data" title="Permalink to this headline">¶</a></h2>
-<p>A preliminary set of test data taken from the MTG FCI L1C test data will be added to ensure a consistent and permanent
-dataset to execute tests.</p>
-</section>
+  <section id="appendix-2-list-of-users-and-developers-currently-using-fcidecomp">
+<h1>Appendix 2 - List of users and developers currently using FCIDECOMP<a class="headerlink" href="#appendix-2-list-of-users-and-developers-currently-using-fcidecomp" title="Permalink to this headline">¶</a></h1>
 </section>
 
 
@@ -84,17 +62,12 @@ dataset to execute tests.</p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="document_info.html">Document Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Creation of canonical repository</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#repository-initialization">Repository initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-suite">Test suite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-data">Test data</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="canonical_repository.html">Creation of canonical repository</a></li>
 <li class="toctree-l1"><a class="reference internal" href="support_and_integration.html">Support and integration with external tools</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packaging_strategy.html">Packaging strategy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="deployment.html">Deployment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_traceability_matrix.html">Appendix 1 - Traceability matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="a_users_using_fcidecomp.html">Appendix 2 - List of users and developers currently using FCIDECOMP</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Appendix 2 - List of users and developers currently using FCIDECOMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a_design_justifications.html">Appendix 3 - Design justifications</a></li>
 </ul>
 
@@ -102,8 +75,8 @@ dataset to execute tests.</p>
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="introduction.html" title="previous chapter">Introduction</a></li>
-      <li>Next: <a href="support_and_integration.html" title="next chapter">Support and integration with external tools</a></li>
+      <li>Previous: <a href="a_traceability_matrix.html" title="previous chapter">Appendix 1 - Traceability matrix</a></li>
+      <li>Next: <a href="a_design_justifications.html" title="next chapter">Appendix 3 - Design justifications</a></li>
   </ul></li>
 </ul>
 </div>
@@ -137,7 +110,7 @@ dataset to execute tests.</p>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/canonical_repository.rst.txt"
+      <a href="_sources/a_users_using_fcidecomp.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
