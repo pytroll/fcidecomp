@@ -1,7 +1,7 @@
 Support and integration with external tools
 -------------------------------------------
 
-In the following paragraphs outlines of the strategy to ensure that the FCIDECOMP software support all the required
+This section describes the strategy to ensure that the FCIDECOMP software supports the required
 systems and usage patterns are reported.
 
 Integration with HDF tools based on netCDF-C
@@ -44,7 +44,7 @@ At the moment, the Data Tailor supports reading compressed FCI L1C products thro
 ``epct_plugin_mtg4africa`` customisation plugin, which in turns install FCIDECOMP by installing with ``pip`` the
 ``hdf5plugin`` package. Note that the same Data Tailor plugin also uses the FCICOMP software to compress output data,
 and that such compressor is built when building the Data Tailor plugin package. This has potential fo dependency
-conflicts, as the compressor and te decompressor rely in part on the same dependencies.
+conflicts, as the compressor and the decompressor rely in part on the same dependencies.
 
 The approach to integrate the described solution with the Data Tailor will therefore include a revision of the current
 build and installation approach for the ``epct_plugin_mtg4africa`` customisation plugin. The most promising
