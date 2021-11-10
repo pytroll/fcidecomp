@@ -1,29 +1,31 @@
 Creation of canonical repository
 --------------------------------
 
-The first step of the solution design consists in the creation of a single canonical repository, at EUMETSAT GitLab,
-hosting the official version of the FCIDECOMP software. This repository will contain all the code necessary to build the
-software and make it available as a HDF dynamically loaded filter.
+Introduction
+~~~~~~~~~~~~
+
+A canonical repository is established on the EUMETSAT GitLab service at https://gitlab.eumetsat.int/sepdssme/fcidecomp
+for development purposes. Each time a new release is produced, the corresponding code is synchronized to the public
+EUMETSAT Open Source repository at XXX [TODO: add reference].
 
 Repository initialization
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Initially, FCIDECOMP v1.0.2 (taken from :ref:`EUMETSAT sFTP repository <[FCIDECOMP_LATEST]>`) will be taken as blueprint
-for the development of the solution codebase.
+FCIDECOMP v1.0.2 (taken from :ref:`EUMETSAT sFTP repository <[FCIDECOMP_LATEST]>`) is taken as blueprint for the
+development of the solution codebase.
 
-The repository will be put under configuration control. A new minor release adding README, BUILD, INSTALL, and LICENCE
+The repository is put under configuration control. A new minor release adding README, BUILD, INSTALL, and LICENCE
 files, starting the Changelog, codifying the use of semantic versioning for future versions and adding a standardised
-build system will then be published.
+build system is published.
 
 Test suite
 ~~~~~~~~~~
 
-An initial test suite (at least against nominal conditions) will be implemented following the V&V strategy defined in
-[add reference]. As an initial proposal, we would implement most or all the tests as automated tests against the Python
-interface.
+An initial test suite (at least against nominal conditions) is implemented following the V&V strategy defined in
+[TODO: add reference]. Most tests are implemented as automated tests against the Python interface.
 
 Test data
 ~~~~~~~~~
 
-A preliminary set of test data taken from the MTG FCI L1C test data will be added to ensure a consistent and permanent
-dataset to execute tests.
+A preliminary set of test data taken from the :ref:`MTG FCI L1C test data <[FCIDECOMP_TEST_DATA]>` is added to ensure a
+consistent and permanent dataset to execute tests.
