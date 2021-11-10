@@ -398,6 +398,9 @@ INPUT ../../images/eumetsat.png
 INPUT /usr/share/texmf/fonts/tfm/public/tex-gyre/ec-qtmb.tfm
 INPUT fcidecomp-solution-design.toc
 INPUT fcidecomp-solution-design.toc
+INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xbtt.tfm
 OUTPUT fcidecomp-solution-design.toc
 INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
@@ -407,8 +410,6 @@ INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
-INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xtt.tfm
 INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
@@ -442,6 +443,15 @@ INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
 INPUT ../../images/eumetsat.png
+INPUT ../../images/eumetsat.png
+INPUT ../../images/eumetsat.png
+INPUT ../../images/eumetsat.png
+INPUT ../../images/eumetsat.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/txfonts/t1xbtt.tfm
+INPUT ../../images/eumetsat.png
+INPUT ../../images/eumetsat.png
+INPUT ../../images/eumetsat.png
+INPUT ../../images/eumetsat.png
 INPUT fcidecomp-solution-design.ind
 INPUT fcidecomp-solution-design.ind
 INPUT ../../images/eumetsat.png
@@ -456,4 +466,5 @@ INPUT /usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb
 INPUT /usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb
 INPUT /usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb
 INPUT /usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb

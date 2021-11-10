@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.11)  10 NOV 2021 11:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.11)  10 NOV 2021 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1061,7 +1061,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 115
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<../../images/eumetsat.png, id=104, 149.05687pt x 48.18pt>
+<../../images/eumetsat.png, id=128, 149.05687pt x 48.18pt>
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
 Package pdftex.def Info: ../../images/eumetsat.png  used on input line 115.
@@ -1109,7 +1109,16 @@ This may cause the page layout to be inconsistent, however.
 [1
 
 
-] (./fcidecomp-solution-design.toc)
+] (./fcidecomp-solution-design.toc
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 2
+9.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 29.
+)
 \tf@toc=\write8
 \openout8 = `fcidecomp-solution-design.toc'.
 
@@ -1144,9 +1153,24 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ]
 Chapter 1.
+
+Overfull \hbox (4.31403pt too wide) in paragraph at lines 145--148
+[]|\T1/qtm/m/n/10 fcidecomp/documentation/solution-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+[]\T1/qtm/m/n/10 Bot-tac-cio (B-Open So-lu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--217
+[]|\T1/qtm/m/n/10 DCN.
+ []
+
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 160.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 235.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1158,7 +1182,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 160.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 235.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1170,93 +1194,124 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 Chapter 2.
 
-Overfull \hbox (17.64641pt too wide) in paragraph at lines 212--214
+Overfull \hbox (17.64641pt too wide) in paragraph at lines 287--289
 []|\T1/qtm/m/n/10 [CONDA_VARIANTS] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--222
+Underfull \hbox (badness 10000) in paragraph at lines 294--297
 []|[][]$\T1/qtm/m/n/10 https : / / docs . conda . io / projects / conda-[]build
  / en / latest /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 298--300
 []|\T1/qtm/m/n/10 [FCIDE-
  []
 
 
-Underfull \hbox (badness 7832) in paragraph at lines 227--229
+Underfull \hbox (badness 7832) in paragraph at lines 302--304
 []|\T1/qtm/m/n/10 FCIDE-COMP Conda recipe
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--233
+Underfull \hbox (badness 10000) in paragraph at lines 305--308
 []|[][]$\T1/qtm/m/n/10 https : / / github . com / mraspaud /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
+Underfull \hbox (badness 10000) in paragraph at lines 309--311
 []|\T1/qtm/m/n/10 [FCIDE-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--244
+Underfull \hbox (badness 10000) in paragraph at lines 316--319
 []|[][]$\T1/qtm/m/n/10 https : / / sftp . eumetsat . int / public / folder /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--244
+Underfull \hbox (badness 10000) in paragraph at lines 316--319
 \T1/qtm/m/n/10 UsCVknVOOkSyCdgpMimJNQ / User-[]Materials /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--244
+Underfull \hbox (badness 10000) in paragraph at lines 316--319
 \T1/qtm/m/n/10 Test-[]Data / MTG / MTG _ FCI _ L1C _ Enhanced-[]NonN _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--244
+Underfull \hbox (badness 10000) in paragraph at lines 316--319
 \T1/qtm/m/n/10 TD-[]272 _ May2020 / FCI _ Decompression _ Software _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--247
+Underfull \hbox (badness 10000) in paragraph at lines 320--322
 []|\T1/qtm/m/n/10 [FCIDE-
  []
 
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 2
-61.
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
-)
-Overfull \hbox (37.65642pt too wide) in paragraph at lines 289--291
+
+Overfull \hbox (13.1664pt too wide) in paragraph at lines 320--322
+\T1/qtm/m/n/10 COMP_TEST_DATA] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--330
+[]|[][]$\T1/qtm/m/n/10 https : / / sftp . eumetsat . int / public / folder /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--330
+\T1/qtm/m/n/10 UsCVknVOOkSyCdgpMimJNQ / User-[]Materials /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--330
+\T1/qtm/m/n/10 Test-[]Data / MTG / MTG _ FCI _ L1C _ Enhanced-[]NonN _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--333
+[]|\T1/qtm/m/n/10 [FCIDE-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 368--370
+[]|\T1/qtm/m/n/10 EU-MET-SAT Data Tai-lor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--374
+[]|[][]$\T1/qtm/m/n/10 https : / / gitlab . eumetsat . int / data-[]tailor /
+ []
+
+
+Overfull \hbox (37.65642pt too wide) in paragraph at lines 397--399
 []|\T1/qtm/m/n/10 [NETCDF_JAVA_GITHUB] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--295
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
 []|\T1/qtm/m/n/10 NetCDF-C for read-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--295
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
 \T1/qtm/m/n/10 (nj22Config.xml) in non-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--295
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
 \T1/qtm/m/n/10 Unidata netCDF-Java based
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 304--306
+Underfull \hbox (badness 6961) in paragraph at lines 412--414
 []|\T1/qtm/m/n/10 Panoply netCDF, HDF and
  []
 
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 314.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 419.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1266,30 +1321,30 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [3]
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 314.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 422.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 
  []
 
-[4
-
-]
+[4]
 Chapter 3.
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 349.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 458.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 
  []
 
-[5]
+[5
+
+]
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 349.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 458.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1300,14 +1355,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ]
 Chapter 4.
-LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 3
-63.
+LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 4
+87.
 (/usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
 )
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 413.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 520.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1317,7 +1372,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [7]
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 451.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 560.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1328,7 +1383,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Chapter 5.
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 509.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 620.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1340,7 +1395,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 519.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 631.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1351,7 +1406,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Chapter 6.
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 536.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 634.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1363,7 +1418,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 536.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 634.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1376,7 +1431,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Chapter 7.
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 539.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 637.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1386,7 +1441,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [13]
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 539.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 637.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1399,7 +1454,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Chapter 8.
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 542.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 640.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1409,7 +1464,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [15]
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 542.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 640.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1420,10 +1475,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ]
 Chapter 9.
-(./fcidecomp-solution-design.ind)
 File: ../../images/eumetsat.png Graphic file (type png)
 <use ../../images/eumetsat.png>
-Package pdftex.def Info: ../../images/eumetsat.png  used on input line 548.
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 643.
 (pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1431,34 +1485,84 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 548.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 548.
+File: ../../images/eumetsat.png Graphic file (type png)
+<use ../../images/eumetsat.png>
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 643.
+(pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+
+ []
+
+[18
+
+]
+Chapter 10.
+LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <14.4> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 643.
+File: ../../images/eumetsat.png Graphic file (type png)
+<use ../../images/eumetsat.png>
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 646.
+(pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+
+ []
+
+[19]
+File: ../../images/eumetsat.png Graphic file (type png)
+<use ../../images/eumetsat.png>
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 646.
+(pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+
+ []
+
+[20
+
+]
+Chapter 11.
+(./fcidecomp-solution-design.ind)
+File: ../../images/eumetsat.png Graphic file (type png)
+<use ../../images/eumetsat.png>
+Package pdftex.def Info: ../../images/eumetsat.png  used on input line 652.
+(pdftex.def)             Requested size: 99.65378pt x 32.2113pt.
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+
+ []
+
+[21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 652.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 652.
  (./fcidecomp-solution-design.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 548.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 548.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 652.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 652.
 Package rerunfilecheck Info: File `fcidecomp-solution-design.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 006AFF75FDCE8345B6F09550DFA5E8E3;4243.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 548.
+(rerunfilecheck)             Checksum: 196747D33FDF28D2E6AB59968FBB7A36;5377.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 652.
  ) 
 Here is how much of TeX's memory you used:
- 24040 strings out of 483183
- 418325 string characters out of 5966292
- 674989 words of memory out of 5000000
- 38388 multiletter control sequences out of 15000+600000
- 585675 words of font info for 74 fonts, out of 8000000 for 9000
+ 24089 strings out of 483183
+ 419554 string characters out of 5966292
+ 682163 words of memory out of 5000000
+ 38418 multiletter control sequences out of 15000+600000
+ 586345 words of font info for 76 fonts, out of 8000000 for 9000
  15 hyphenation exceptions out of 8191
- 68i,11n,64p,489b,914s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,64p,489b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texmf/fonts/
 enc/dvips/tex-gyre/q-ec.enc}</usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.
 pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvr.pfb></usr/share/texmf/fo
 nts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyr
 e/qtmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on fcidecomp-solution-design.pdf (22 pages, 179338 bytes).
+texlive/texmf-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/txfonts/t1xtt.pfb>
+Output written on fcidecomp-solution-design.pdf (26 pages, 191490 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 384 PDF objects out of 1000 (max. 8388607)
+ 338 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 270 words of extra memory for PDF output out of 10000 (max. 10000000)
 
