@@ -16,7 +16,7 @@ EUMETSAT WP FCIDECOMP - Solution design
    support_and_integration
    packaging_strategy
    deployment
-   app_traceability_matrix
-   app_users_using_FCIDECOMP
-   app_design_justifications
+   a_traceability_matrix
+   a_users_using_fcidecomp
+   a_design_justifications
 
