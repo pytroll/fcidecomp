@@ -116,7 +116,16 @@ Reference Documents
       .. _[NETCDF_ISS]:
     - “NetCDF-C for reading (nj22Config.xml) in non-Unidata netCDF-Java based tools #1063“
     - https://github.com/Unidata/thredds/issues/1063
+  * - [NETCDF_ISS]
 
+      .. _[TSSQA]:
+    - “TSS QA Reference Requirements for Software“
+    - EUM/TSS/REQ/18/1016698 V1C
+  * - [DATATAILOR]
+
+      .. _[DATATAILOR]:
+    - “Data Tailor source code“
+    - https://gitlab.eumetsat.int/open-source/data-tailor
 
 List of TBDs
 ^^^^^^^^^^^^

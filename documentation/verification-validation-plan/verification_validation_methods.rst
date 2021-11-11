@@ -88,15 +88,8 @@ As the code is predominantly written in Python, the `pytest` testing framework i
 Such tests are executed in the `test` step of continuous integration pipelines triggered from
 within the project GitLab repository. This ensures testing repeatability.
 
-Automated tests will be executed on a set of test data, one per each type of input products
-(i.e. one per each entry in Table 5.1 in the :ref:`Methods Document <[PSDC_METHODS]>`),
+Automated tests will be executed on a set of test data, one per each type of input products,
 stored in a location reachable from the pipelines.
-
-On each pipeline, the Data Tailor is initially installed, together with its Data Cube plugin.
-The test data is subsequently customized and resulting output analysed.
-
-The procedure also ensures that the plugin code is implicitly validated throughout the process,
-although this is not explicitly stated as a requirement.
 
 The following table lists the test types, their scope and the event which triggers them.
 
@@ -117,7 +110,7 @@ The following table lists the test types, their scope and the event which trigge
         - \-
     *   - Validation tests
         - Tests used for the validation of the Data Cube.
-        - In the root folder of the PSDC source code, in folder :code:`validation-tests`
+        - In the root folder of the FCIDECOMP source code, in folder :code:`validation-tests`
         - At each code revision tag
         - The folder contains one file for each test procedure.
           Files are named :code:`test_<category>_TP_<subgroup>_<progressive_id>`,
@@ -126,7 +119,7 @@ The following table lists the test types, their scope and the event which trigge
           Validation tests need the test data package to be downloaded on the runner machine.
     *   - Validation regression tests
         - Tests used to prevent from future regressions in validation tests.
-        - In the root folder of the PSDC source code, in folder :code:`validation-tests`
+        - In the root folder of the FCIDECOMP source code, in folder :code:`validation-tests`
         - On merge requests.
         - Regression tests are a subset of validation tests; they are marked with the
           :code:`@pytest.mark.regression` decorator inside test files.

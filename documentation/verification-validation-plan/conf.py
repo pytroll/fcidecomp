@@ -198,7 +198,7 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "psdc-verification-validation-plan.tex",
+        "fcidecomp-verification-validation-plan.tex",
         "EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification & Validation Plan",
         "EUMETSAT",
         "manual",
@@ -213,7 +213,7 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "psdc-verification-validation-plan",
+        "fcidecomp-verification-validation-plan",
         "EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification & Validation Plan",
         [author],
         1,
@@ -229,10 +229,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "psdc-verification-validation-plan",
+        "fcidecomp-verification-validation-plan",
         "EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification & Validation Plan",
         author,
-        "psdc-verification-validation-plan",
+        "fcidecomp-verification-validation-plan",
         "One line description of project.",
         "Miscellaneous",
     ),
