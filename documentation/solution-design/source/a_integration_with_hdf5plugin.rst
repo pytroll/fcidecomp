@@ -3,8 +3,6 @@
 Appendix - Integration with ``hdf5plugin``
 ------------------------------------------
 
-**[NOTA: parlando di un plan, in che tempo va espresso? futuro? o sempre come un cosa che è già stata fatta?]**
-
 Integration with the ``hdf5plugin`` Python package (:ref:`[HDF5PLUGIN] <[HDF5PLUGIN]>`) requires communication with the
 package maintainers (see :ref:`a_users_using_fcidecomp`).
 

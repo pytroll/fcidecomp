@@ -13,11 +13,10 @@ reached their EOL (and which are neither approaching it) have been retained.
 Generic integration with Unidata netCDF-JAVA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**[NOTE: non definitivo, need feedback]**
-
-Generic integration with :ref:`Unidata netCDF-JAVA based tools <[NETCDF_JAVA]>`, given their scarce usage, is not
-considered a priority. Nonetheless, communication with Unidata developers is envisioned to know of any development
-regarding the possibility to use external decompression filters such as the FCIDECOMP software.
+Generic integration with :ref:`Unidata netCDF-JAVA based tools <[NETCDF_JAVA]>` is not a straightforward task, and
+at the moment it is not considered a priority. Nonetheless, communication with Unidata developers has been initiated
+to know of any development regarding the possibility to use third-party decompression filters such as the FCIDECOMP
+software.
 
 
 
