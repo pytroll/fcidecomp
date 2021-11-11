@@ -6,8 +6,8 @@ Packaging and deployment
 Introduction
 ~~~~~~~~~~~~
 
-In the following paragraphs the strategy to build and package the FCIDECOMP software in order to ensure
-support for all the required systems is reported.
+This section describes the strategy to build and package the FCIDECOMP software in order to ensure
+support for all the required systems.
 
 .. _supported_platforms:
 
@@ -30,6 +30,8 @@ The build system for the software binaries is drawn from the one used in the
 :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>`, and adapted from there to guarantee support for all the
 required systems.
 
+Dependencies are installed.... :TBW:
+
 Packaging as a Conda package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -43,7 +45,9 @@ These conda packages install both the FCIDECOMP libraries and its Python binding
 conda recipes, the :ref:`Conda recipe <[FCIDECOMP_CONDA]>` for the packaging of FCIDECOMP mantained by Martin Raspaud
 from the Swedish Meteorological and Hydrological Institute has been used.
 
-Conda packages are uploaded to EUMETSAT Anaconda repository **[NOTA: abbiamo una reference?]**.
+Conda packages are uploaded to EUMETSAT Anaconda repository https://anaconda.org/Eumetsat/repo.
+
+Not all the dependencies can be installed from conda repositories, in particular.... :TBW:
 
 Packaging process
 ~~~~~~~~~~~~~~~~~
@@ -53,4 +57,3 @@ implemented.
 
 Two GitLab runners are implemented, one with a Docker executor on Linux and the other with a Shell executor on Windows.
 
-**[NOTA: se va presentata come una cosa già fatta, come inserire che non siamo sicure se serva un altro runner per Windows 32-bit?]**
