@@ -12,7 +12,23 @@ described in :ref:`a_further_developments`.
 
 Dependencies
 ~~~~~~~~~~~~
-:TBW: CharLS v.... JPEGLs... (then in packaging we describe how we include them, and in :ref:`a_further_developments` how to improve)
+External dipendencies of the FCIDECOMP software are listed in the following table
+
+.. list-table:: FCIDECOMP software dependencies
+  :header-rows: 1
+  :class: longtable
+  :widths: 20 30 50
+
+  * - Name
+    - Description
+    - Reference
+
+  * - CharLS v1.x
+    - Optimized implementation of the JPEG-LS standard for lossless and near-lossless image compression.
+    - https://github.com/team-charls/charls/tree/1.x-master
+
+
+CharLS v.... JPEGLs... (then in packaging we describe how we include them, and in :ref:`a_further_developments` how to improve)
 
 
 .. _integration_with_netcdf_c:
@@ -36,7 +52,7 @@ Usage as CLI tool
 
 In order to provide a baseline support for CLI usage of the FCIDECOMP software, ``nccopy`` (a software utility included
 in the ``netcdf-c`` library) is chosen as reference standard CLI tool. To streamline the ingration with ``nccopy``, 
-the FCIDECOMP conda package (:ref:`packaging_and_deployment`_) provides to:
+the FCIDECOMP conda package (:ref:`packaging_and_deployment`) provides to:
 
 - put the filter's library to a specific path at installation
 - set the ``HDF5_PLUGIN_PATH`` environment variable automatically.
@@ -52,7 +68,7 @@ interface to make the FCIDECOMP filter available for Python applications. Such p
 version of the :ref:`hdf5plugin package <[HDF5PLUGIN]>`, is essentially composed of an ``__init__.py`` defining the
 filter interface to ``h5py``.
 
-See :ref:`_a_integration_with_hdf5plugin` for details on the proposed integration with the widely used ``hdf5plugin`` package and
+See :ref:`a_integration_with_hdf5plugin` for details on the proposed integration with the widely used ``hdf5plugin`` package and
 interaction with its maintainers.
 
 .. _integration_with_data_tailor:
@@ -66,7 +82,7 @@ with ``pip`` the ``hdf5plugin`` package.
 
 The approach to integrate the described solution with the Data Tailor includes a revision of the current
 build and installation approach for the ``epct_plugin_mtg4africa`` customisation plugin, so that it
-installs the FCIDECOMP support and its dependencies from the new conda package (see :ref:`packaging_and_deployment`_).
+installs the FCIDECOMP support and its dependencies from the new conda package (see :ref:`packaging_and_deployment`).
 
 .. _integration_with_netcdf_java:
 
@@ -82,4 +98,4 @@ to use the netCDF-C library (instead of netCDF-Java) to read netCDF files
 procedure in the FCIDECOMP software documentation.
 
 The issue of a generic integration with :ref:`Unidata Netcdf-Java <[NETCDF_JAVA]>` is discussed in
-:ref:`_a_design_justifications`.
+:ref:`a_design_justification`.
