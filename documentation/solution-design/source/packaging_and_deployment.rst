@@ -60,8 +60,10 @@ Conda packages are uploaded to EUMETSAT Anaconda repository https://anaconda.org
 Packaging process
 ~~~~~~~~~~~~~~~~~
 
-GitLab CI/CD pipelines to compile, build, test and upload the conda packages to EUMETSAT Anaconda repository are
-implemented.
+Three conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
 
-Two GitLab runners are implemented, one with a Docker executor on Linux and the other with a Shell executor on Windows.
+GitLab CI/CD pipelines to compile, build, test and upload the conda packages to EUMETSAT Anaconda repository are
+implemented. Three GitLab runners are implemented to run the pipelines: one with a Docker executor on Linux and the
+other two with Shell executors on Windows 64-bit, where one of these two is configured to compile the package at
+32-bit (**:TBC:**).
 
