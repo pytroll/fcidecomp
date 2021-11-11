@@ -30,7 +30,17 @@ The build system for the software binaries is drawn from the one used in the
 :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>`, and adapted from there to guarantee support for all the
 required systems.
 
-Dependencies are installed.... :TBW:
+.. _installing_dependencies:
+
+Installing dependencies
+^^^^^^^^^^^^^^^^^^^^^^^
+
+All :ref:`dependencies <dependencies>` are installed through Conda (see :ref:`conda_package`), except for ``CharLS 1.x``.
+The required ``CharLS`` version, on which the :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>` is built upon,
+is no more present on any public Conda distribution channel. It is thus compiled and installed, together with the
+FCIDECOMP software binaries, starting from the source code available at its :ref:`GitHub repository <charls_v1>`.
+
+.. _conda_package:
 
 Packaging as a Conda package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,8 +56,6 @@ conda recipes, the :ref:`Conda recipe <[FCIDECOMP_CONDA]>` for the packaging of 
 from the Swedish Meteorological and Hydrological Institute has been used.
 
 Conda packages are uploaded to EUMETSAT Anaconda repository https://anaconda.org/Eumetsat/repo.
-
-Not all the dependencies can be installed from conda repositories, in particular.... :TBW:
 
 Packaging process
 ~~~~~~~~~~~~~~~~~

@@ -7,8 +7,7 @@ Introduction
 This section describes the strategies adopted to ensure that the FCIDECOMP software supports the required usage
 patterns.
 
-Version 1.0.2 of the FCIDEOCOMP software only supports HDF5 1.10. Strategies to grant support for multiple versions of HDF5
-described in :ref:`a_further_developments`.
+.. _dependencies:
 
 Dependencies
 ~~~~~~~~~~~~
@@ -17,18 +16,32 @@ External dipendencies of the FCIDECOMP software are listed in the following tabl
 .. list-table:: FCIDECOMP software dependencies
   :header-rows: 1
   :class: longtable
-  :widths: 20 30 50
+  :widths: 30 70
 
   * - Name
-    - Description
     - Reference
 
+      .. _charls_v1:
   * - CharLS v1.x
-    - Optimized implementation of the JPEG-LS standard for lossless and near-lossless image compression.
     - https://github.com/team-charls/charls/tree/1.x-master
 
+  * - zlib
+    - http://zlib.net/
 
-CharLS v.... JPEGLs... (then in packaging we describe how we include them, and in :ref:`a_further_developments` how to improve)
+  * - netcdf-c
+    - http://www.unidata.ucar.edu/software/netcdf/
+
+  * - hdf5 1.10.x
+    - http://www.hdfgroup.org/HDF5/
+
+  * - h5py
+    - http://www.h5py.org/
+
+
+The procedure used to include the listed package in the FCIDECOMP software is described in :ref:`conda_package`.
+
+Envisioned strategies to support higher version of the listed dependencies, in particular with respect to the ``CharLS``
+and ``hdf5`` libraries, are described in ``a_further_developments``.
 
 
 .. _integration_with_netcdf_c:
