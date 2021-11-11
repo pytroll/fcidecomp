@@ -81,7 +81,7 @@ Automated Tests
 """""""""""""""
 
 Automated tests provide a repeatable and fast verification tool
-to verify compliance of the Data Cube against the requirements.
+to verify compliance of the FCIDECOMP software against the requirements.
 
 As the code is predominantly written in Python, the `pytest` testing framework is used.
 
@@ -109,7 +109,7 @@ The following table lists the test types, their scope and the event which trigge
         - At each commit into the repository
         - \-
     *   - Validation tests
-        - Tests used for the validation of the Data Cube.
+        - Tests used for the validation of the FCIDECOMP software.
         - In the root folder of the FCIDECOMP source code, in folder :code:`validation-tests`
         - At each code revision tag
         - The folder contains one file for each test procedure.

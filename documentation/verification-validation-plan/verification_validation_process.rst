@@ -161,7 +161,7 @@ setup in advance.
 
 
 .. note:: On-site acceptance tests can be executed on the same machine as in the FAT, under the assumption
-    that the Data Cube is made available as read-only and the publishing server can be deployed as a Docker
+    that the FCIDECOMP software is made available as read-only and the publishing server can be deployed as a Docker
     container.
 
 
