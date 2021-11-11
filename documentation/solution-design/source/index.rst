@@ -17,7 +17,7 @@ EUMETSAT WP FCIDECOMP - Solution design
    packaging_and_deployment
    a_requirement_trace
    a_users_using_fcidecomp
-   a_design_justifications
+   a_design_justification
    a_preservation_of_dependencies
    a_integration_with_hdf5plugin
    a_further_developments
