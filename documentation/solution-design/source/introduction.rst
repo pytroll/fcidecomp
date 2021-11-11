@@ -56,6 +56,12 @@ Reference Documents
     - EUMETCast Operating System specifications
     - `https://eumetsatspace.atlassian.net/wiki/spaces/DSEC/pages/739115041/Operating+System+Specifications <https://eumetsatspace.atlassian.net/wiki/spaces/DSEC/pages/739115041/Operating+System+Specifications>`_
 
+  * - [HDF5FILTERS]
+
+      .. _[HDF5FILTERS]:
+    - HDFGroup``filters``
+    - `https://support.hdfgroup.org/services/filters.html <https://support.hdfgroup.org/services/filters.html>`_
+
   * - [HDF5PLUGIN]
 
       .. _[HDF5PLUGIN]:

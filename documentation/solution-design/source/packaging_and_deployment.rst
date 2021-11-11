@@ -1,3 +1,5 @@
+.. _packaging_and_deployment:
+
 Packaging and deployment
 ------------------------
 
@@ -19,7 +21,7 @@ The FCIDECOMP software supports the following platforms:
 - CentOS 7 64 bit
 
 Details on the selection process leading to the list presented above are provided in
-:ref:`design_justifications`.
+:ref:`a_design_justification`.
 
 Building the binaries
 ~~~~~~~~~~~~~~~~~~~~~

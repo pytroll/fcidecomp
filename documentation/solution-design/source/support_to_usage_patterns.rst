@@ -2,7 +2,7 @@ Support to required usage patterns
 -----------------------------------
 
 **[NOTA: da qualche parte (forse qui?) non andrebbe menzionato il fatto che il software supporterà CharLS 1.0, mettendo
-in :ref:`further_developments` che si prevede di provare a supportare anche il 2.0? Non dovremmo anche dire COME
+in :ref:`a_further_developments` che si prevede di provare a supportare anche il 2.0? Non dovremmo anche dire COME
 integriamo CharLS 1.0, i.e. src integrato, clone from github (come faccio ora), ecc. Su questo non abbiamo preso una
 decisione.]**
 
@@ -12,38 +12,39 @@ Introduction
 This section describes the strategies adopted to ensure that the FCIDECOMP software supports the required usage
 patterns.
 
-**[NOTA: questo l'ho spostato qui da Packaging and deployment]**
+Version 1.0.2 of the FCIDEOCOMP software only supports HDF5 1.10. Strategies to grant support for multiple versions of HDF5
+described in :ref:`a_further_developments`.
 
-As a baseline, the FCIDEOCOMP software supports HDF5 1.10. Strategies to grant support for multiple versions of HDF5
-described in :ref:`further_developments`.
+Dependencies
+~~~~~~~~~~~~
+:TBW: CharLS v.... JPEGLs... (then in packaging we describe how we include them, and in :ref:`a_further_developments` how to improve)
+
 
 .. _integration_with_netcdf_c:
 
-Integration with tools based on netCDF-C
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Integration with generic tools based on netCDF-C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**[NOTA: mi sembra che questa parte stia meglio in un ulteriore sottoparagrafo invece che nell'intro,
-ma se non sei d'accordo la sposto su e tolgo questo paragrafo]**
-
-The current implementation of the FCIDECOMP software (:ref:`v1.0.2 <[FCIDECOMP_LATEST]>`) which, as mentioned in the
-:ref:`repository_initialization` paragraph serves as blueprint for the software codebase,
-already satisfies the HDF5 filters interface. Given this, integration with utilities relying on the ``netcdf-c``
-library (:ref:`[NETCDF-C] <[NETCDF_C]>`) is ensured, provided that:
+Version :ref:`v1.0.2 <[FCIDECOMP_LATEST]>` of the FCIDECOMP software,
+already satisfies the HDF5 filters interface; FCIDECOMP is a registered with filter id 
+32018 (:ref:`[HDF5FILTERS] <[HDF5FILTERS]>`). 
+Integration with utilities relying on the ``netcdf-c``
+library (:ref:`[NETCDF-C] <[NETCDF_C]>`) is therefore ensured, provided that:
 
 - the location of the FCIDECOMP filter library is specified in a specific environment variable, ``HDF5_PLUGIN_PATH``;
-- the correct filter id (32018 for FCIDECOMP), if required by the utility, is specified;
+- the filter id (32018 for FCIDECOMP), if required by the utility, is specified.
 
 .. _usage_as_cli_tool:
 
 Usage as CLI tool
 ~~~~~~~~~~~~~~~~~
 
-In order to provide a baseline support for CLI usage of the FCIDECOMP software, ``nccopy`` (software utility of the
-``netcdf-c`` library) is chosen as reference standard CLI tool. To foster integration with ``nccopy``, the FCIDECOMP
-software provides to:
+In order to provide a baseline support for CLI usage of the FCIDECOMP software, ``nccopy`` (a software utility included
+in the ``netcdf-c`` library) is chosen as reference standard CLI tool. To streamline the ingration with ``nccopy``, 
+the FCIDECOMP conda package (:ref:`packaging_and_deployment`_) provides to:
 
 - put the filter's library to a specific path at installation
-- have the ``HDF5_PLUGIN_PATH`` environment variable automatically set each time a conda environment where FCIDECOMP is installed get activated
+- set the ``HDF5_PLUGIN_PATH`` environment variable automatically.
 
 The FCIDECOMP software documentation also provides instructions on how to call ``nccopy`` to decompress files using the
 FCIDECOMP filter.
@@ -56,8 +57,8 @@ interface to make the FCIDECOMP filter available for Python applications. Such p
 version of the :ref:`hdf5plugin package <[HDF5PLUGIN]>`, is essentially composed of an ``__init__.py`` defining the
 filter interface to ``h5py``.
 
-See :ref:`integration_with_hdf5plugin` for details on the integration with the widely used ``hdf5plugin`` package and
-interaction with its maintainers' community.
+See :ref:`_a_integration_with_hdf5plugin` for details on the proposed integration with the widely used ``hdf5plugin`` package and
+interaction with its maintainers.
 
 .. _integration_with_data_tailor:
 
@@ -70,7 +71,7 @@ with ``pip`` the ``hdf5plugin`` package.
 
 The approach to integrate the described solution with the Data Tailor includes a revision of the current
 build and installation approach for the ``epct_plugin_mtg4africa`` customisation plugin, so that it
-installs the FCIDECOMP support through the Python package described above and its dependencies.
+installs the FCIDECOMP support and its dependencies from the new conda package (see :ref:`packaging_and_deployment`_).
 
 .. _integration_with_netcdf_java:
 
@@ -78,10 +79,12 @@ Integration with tools based on netCDF-Java
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :ref:`Panoply <[PANOPLY]>` and :ref:`HDFView <[HDFVIEW]>` have been identified as the key software based on netCDF-Java
-to support. The integration of the FCIDECOMP software in these applications can be achieved by instructing them
+to support. 
+
+The integration of the FCIDECOMP software in these applications is achieved by instructing them
 to use the netCDF-C library (instead of netCDF-Java) to read netCDF files
 (see related :ref:`github issue <[NETCDF_JAVA_GITHUB]>`). Support is then granted by describing the aforementioned
 procedure in the FCIDECOMP software documentation.
 
 The issue of a generic integration with :ref:`Unidata Netcdf-Java <[NETCDF_JAVA]>` is discussed in
-:ref:`design_justifications`.
+:ref:`_a_design_justifications`.

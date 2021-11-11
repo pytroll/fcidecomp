@@ -1,4 +1,4 @@
-.. _design_justifications:
+.. _design_justification:
 
 Appendix - Design justifications
 --------------------------------
