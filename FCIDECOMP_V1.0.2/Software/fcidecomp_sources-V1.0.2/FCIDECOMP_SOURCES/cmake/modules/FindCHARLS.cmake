@@ -29,12 +29,24 @@
 # CHARLS_INCLUDE_DIR - Path to the header files to include
 #
 
+if(DEFINED ENV{CHARLS_ROOT})
+  message(STATUS "CHARLS_ROOT defined: $ENV{CHARLS_ROOT}")
+else()
+  message(STATUS "CHARLS_ROOT not defined")
+endif()
+
 find_path(CHARLS_INCLUDE_DIR
   NAMES interface.h publictypes.h config.h
   HINTS CHARLS_ROOT ENV CHARLS_ROOT
   PATH_SUFFIXES src
   DOC "CharLS include directory."
 )
+
+if (CHARLS_INCLUDE_DIR)
+  message(STATUS "CharLS include dir found: ${CHARLS_INCLUDE_DIR}")
+else ()
+  message(FATAL_ERROR "Couldn't find CharLS include dir!")
+endif ()
 
 find_library(CHARLS_LIBRARY
   NAMES CharLS charls
