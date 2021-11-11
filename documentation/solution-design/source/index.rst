@@ -22,5 +22,4 @@ EUMETSAT WP FCIDECOMP - Solution design
    a_integration_with_hdf5plugin
    a_further_developments
    a_glossary
-   a_tbds
 

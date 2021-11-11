@@ -18,7 +18,7 @@ Acronyms
 .. _tbcs:
 
 List of TBCs
-------------
+~~~~~~~~~~~~
 
 The following table lists where information TBC is found in the document, with the actions required to close
 them and the target dates or events for closing them.
@@ -39,7 +39,7 @@ them and the target dates or events for closing them.
 .. _tbds:
 
 List of TBDs
-------------
+~~~~~~~~~~~~
 
 The following table lists where information TBD is found in the document, with the actions required to close
 them and the target dates or events for closing them.
