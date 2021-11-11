@@ -63,6 +63,8 @@ from the Swedish Meteorological and Hydrological Institute has been used.
 
 Conda packages are uploaded to EUMETSAT Anaconda repository https://anaconda.org/Eumetsat/repo.
 
+.. _packaging_process:
+
 Packaging process
 ~~~~~~~~~~~~~~~~~
 
