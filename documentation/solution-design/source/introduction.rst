@@ -105,3 +105,9 @@ Reference Documents
       .. _[PANOPLY]:
     - Panoply netCDF, HDF and GRIB Data Viewer
     - `https://www.giss.nasa.gov/tools/panoply/ <https://www.giss.nasa.gov/tools/panoply/>`_
+
+  * - [VV_PLAN]
+
+      .. _[VV_PLAN]:
+    - FCIDECOMP WP Verification and validation plan
+    - documentation/verification-validation-plan
