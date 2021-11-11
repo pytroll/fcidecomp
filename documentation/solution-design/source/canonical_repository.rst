@@ -8,7 +8,7 @@ Introduction
 
 A canonical repository is established on the EUMETSAT GitLab service at https://gitlab.eumetsat.int/sepdssme/fcidecomp
 for development purposes. Each time a new release is produced, the corresponding code is synchronized to the public
-EUMETSAT Open Source repository at **:TBD:**.
+EUMETSAT Open Source repository at TBD.
 
 .. _repository_initialization:
 
