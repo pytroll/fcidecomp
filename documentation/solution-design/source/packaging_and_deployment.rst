@@ -40,6 +40,12 @@ The required ``CharLS`` version, on which the :ref:`FCIDECOMP v1.0.2 source code
 is no more present on any public Conda distribution channel. It is thus compiled and installed, together with the
 FCIDECOMP software binaries, starting from the source code available at its :ref:`GitHub repository <charls_v1>`.
 
+In order to grant the ability to install the software even in case the remote repositories hosting its dependencies
+should become unreachable, a sub-optimal solution is to have a separate assets repository hosted on EUMETSAT
+infrastructure. This assets repository hosts ``.tar.gz`` archives and conda packages of all the dependencies needed
+for each release tag of the FCIDECOMP software. For a long-term solution to this issue,
+see :ref:`a_further_developments`.
+
 .. _conda_package:
 
 Packaging as a Conda package

@@ -111,4 +111,4 @@ to use the netCDF-C library (instead of netCDF-Java) to read netCDF files
 procedure in the FCIDECOMP software documentation.
 
 The issue of a generic integration with :ref:`Unidata Netcdf-Java <[NETCDF_JAVA]>` is discussed in
-:ref:`a_design_justification`.
+:ref:`a_further_developments`.

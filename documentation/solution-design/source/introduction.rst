@@ -100,6 +100,12 @@ Reference Documents
     - NetCDF-C for reading (nj22Config.xml) in non-Unidata netCDF-Java based tools
     - `https://github.com/Unidata/thredds/issues/1063 <https://github.com/Unidata/thredds/issues/1063>`_
 
+  * - [NETCDF_JAVA_TPF]
+
+      .. _[NETCDF_JAVA_TPF]:
+    - Discussion on the status of support for third-part HDF filters in netCDF-java
+    - `https://github.com/Unidata/netcdf-java/discussions/922 <https://github.com/Unidata/netcdf-java/discussions/922>`_
+
   * - [PANOPLY]
 
       .. _[PANOPLY]:
