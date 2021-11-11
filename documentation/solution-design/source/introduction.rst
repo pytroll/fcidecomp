@@ -59,7 +59,7 @@ Reference Documents
   * - [HDF5FILTERS]
 
       .. _[HDF5FILTERS]:
-    - HDFGroup``filters``
+    - HDFGroup ``filters``
     - `https://support.hdfgroup.org/services/filters.html <https://support.hdfgroup.org/services/filters.html>`_
 
   * - [HDF5PLUGIN]
