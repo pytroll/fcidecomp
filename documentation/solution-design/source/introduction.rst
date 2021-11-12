@@ -7,6 +7,24 @@ Purpose
 The document describes a design proposal for a maintainable solution allowing users to reliably decode FCI L1c products
 compressed with CharLS.
 
+Applicable Documents
+~~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: Applicable documents
+  :header-rows: 1
+  :class: longtable
+  :widths: 30 30 40
+
+  * - #
+    - Title
+    - Reference
+
+  * - [FCIDECOMP_WPD]
+
+      .. _[FCIDECOMP_WPD]:
+    - Work Package Description
+    - EUM/SEP/WPD/21/1244304
+
 Reference Documents
 ~~~~~~~~~~~~~~~~~~~
 
@@ -42,13 +60,6 @@ Reference Documents
       .. _[FCIDECOMP_TEST_DATA]:
     - FCIDECOMP v1.0.2 test data
     - `https://sftp.eumetsat.int/public/folder/UsCVknVOOkSyCdgpMimJNQ/User-Materials/Test-Data/MTG/MTG_FCI_L1C_Enhanced-NonN_TD-272_May2020/ <https://sftp.eumetsat.int/public/folder/UsCVknVOOkSyCdgpMimJNQ/User-Materials/Test-Data/MTG/MTG_FCI_L1C_Enhanced-NonN_TD-272_May2020/>`_
-
-
-  * - [FCIDECOMP_WPD]
-
-      .. _[FCIDECOMP_WPD]:
-    - Work Package Description
-    - EUM/SEP/WPD/21/1244304
 
   * - [EUMECAST_OS_SPEC]
 
