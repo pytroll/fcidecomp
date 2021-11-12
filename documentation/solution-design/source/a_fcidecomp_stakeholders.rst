@@ -1,7 +1,7 @@
-.. _a_users_using_fcidecomp:
+.. _fcidecomp_stakeholders:
 
-Appendix - List of users and developers currently using FCIDECOMP
------------------------------------------------------------------
+Appendix - FCIDECOMP software stakeholders
+------------------------------------------
 
 In the following table, a list of all users and developers involved in the maintenance of software or documentation
 referring to the FCIDECOMP decompression software is reported, along with their contact and actions to be carried out
@@ -20,6 +20,7 @@ to foster integration of the new FCIDECOMP software.
     - silx@esrf.fr
     - Arrange forking and maintenance of the dedicate FCIDECOMP plugin
 
+      .. _sh_eumetsat:
   * - Daniel Lee (EUMETSAT)
     - daniel.lee@eumetsat.int
     - Aggregate all FCIDECOMP software distribution locations to the canonical repository (see :ref:`fcidecomp_distribution_locations`)
@@ -32,6 +33,7 @@ to foster integration of the new FCIDECOMP software.
     - martin.raspaud@smhi.se
     - Arrange acknowledgment of his work as developer of the :ref:`fcidecomp-conda-recipe <[FCIDECOMP_CONDA]>` package
 
+      .. _sh_hdfgroup:
   * - HDF Group
     - help@hdfgroup.org
     - Update information regarding the FCIDECOMP filter exposed at https://portal.hdfgroup.org/display/support/Filters

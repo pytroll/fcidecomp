@@ -4,7 +4,7 @@ Appendix - Integration with ``hdf5plugin``
 ------------------------------------------
 
 Integration with the ``hdf5plugin`` Python package (:ref:`[HDF5PLUGIN] <[HDF5PLUGIN]>`) requires communication with the
-package maintainers (see :ref:`a_users_using_fcidecomp`).
+package maintainers (see :ref:`fcidecomp_stakeholders`).
 
 Such interaction is initiated in the early stage of the solution development process. The proposed solution is to have
 a small package including only the FCIDECOMP plugin support (developed and maintained by B-Open) separated from the main
