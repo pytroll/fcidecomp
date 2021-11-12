@@ -71,7 +71,7 @@ Packaging process
 Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
 
 GitLab CI/CD pipelines to compile, build, test and upload the Conda packages to EUMETSAT Anaconda repository are
-implemented. Three GitLab runners are implemented to run the pipelines: one with a Docker executor on Linux and the
+implemented. Three GitLab runners are deployed to run the pipelines: one with a Docker executor on Linux and the
 other two with Shell executors on Windows 64-bit, where one of these two is configured to compile the package at
 32-bit (**:TBC:**).
 
