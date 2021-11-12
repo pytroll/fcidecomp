@@ -44,11 +44,11 @@ them and the target dates or events for closing them.
     *   - :ref:`packaging_process`
         - Possibility to compile at 32-bit in Windows 64-bit
         - Set up a Windows 64-bit runner configured in the proper way and run the pipelines
-        - Early stage of development phase
+        - End of Development milestone
     *   - :ref:`a_communication_plan`
         - Communication channels to be used in case of new FCIDECOMP releases
         - Interact with EUMETSAT to know if they have a dedicated communication channel with MTG users
-        - Development phase
+        - End of Development milestone
 
 
 .. _tbds:
@@ -68,5 +68,5 @@ them and the target dates or events for closing them.
         - Target date/event
     *   - :ref:`creation_of_canonical_repository`
         - FCIDECOMP EUMETSAT Open Source repository URL
-        - Interact with EUMETSAT to obtain a dedicated FCIDECOMP Open Source repository
-        - Early stage of development phase
+        - Ask EUMETSAT the location of the FCIDECOMP Open Source repository
+        - End of Development milestone
