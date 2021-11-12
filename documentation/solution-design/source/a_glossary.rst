@@ -8,6 +8,12 @@ This section contains the main definitions and acronyms used throughout the docu
 Acronyms
 ~~~~~~~~
 
+:CI:
+    Continuous Integration
+
+:CD:
+    Continuous Deployment
+
 :OS:
     Operating System
 
@@ -17,6 +23,8 @@ Acronyms
 :TBD:
     To Be Decided
 
+:URL:
+    Uniform Resource Locator
 
 .. _tbcs:
 
@@ -60,5 +68,5 @@ them and the target dates or events for closing them.
         - Target date/event
     *   - :ref:`creation_of_canonical_repository`
         - FCIDECOMP EUMETSAT Open Source repository URL
-        - Interact with EUMETSAT to obtain a dedicated FCIDECOMP open source repository
+        - Interact with EUMETSAT to obtain a dedicated FCIDECOMP Open Source repository
         - Early stage of development phase

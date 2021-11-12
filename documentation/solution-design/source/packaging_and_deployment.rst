@@ -42,7 +42,7 @@ FCIDECOMP software binaries, starting from the source code available at its :ref
 
 In order to grant the ability to install the software even in case the remote repositories hosting its dependencies
 should become unreachable, a sub-optimal solution is to have a separate assets repository hosted on EUMETSAT
-infrastructure. This assets repository hosts ``.tar.gz`` archives and conda packages of all the dependencies needed
+infrastructure. This assets repository hosts ``.tar.gz`` archives and Conda packages of all the dependencies needed
 for each release tag of the FCIDECOMP software. For a long-term solution to this issue,
 see :ref:`a_further_developments`.
 
@@ -54,11 +54,11 @@ Packaging as a Conda package
 Packages are built using Conda, as it provides standardised environments with a large set of pre-compiled packages.
 From the point of view of Conda, the operating systems listed in the :ref:`supported_platforms` paragraph can be
 considered as two groups of OS: in Conda standardised environment it is enough to build the package for one Linux
-distribution in order to make it compatible with other Linux distributions. So two conda packages are released: one for
+distribution in order to make it compatible with other Linux distributions. So two Conda packages are released: one for
 Linux distributions, and one for Windows 10.
 
-These conda packages install both the FCIDECOMP libraries and its Python bindings. As a blueprint for the
-conda recipes, the :ref:`Conda recipe <[FCIDECOMP_CONDA]>` for the packaging of FCIDECOMP mantained by Martin Raspaud
+These Conda packages install both the FCIDECOMP libraries and its Python bindings. As a blueprint for the
+Conda recipe, the :ref:`Conda recipe <[FCIDECOMP_CONDA]>` for the packaging of FCIDECOMP mantained by Martin Raspaud
 from the Swedish Meteorological and Hydrological Institute has been used.
 
 Conda packages are uploaded to EUMETSAT Anaconda repository https://anaconda.org/Eumetsat/repo.
@@ -68,9 +68,9 @@ Conda packages are uploaded to EUMETSAT Anaconda repository https://anaconda.org
 Packaging process
 ~~~~~~~~~~~~~~~~~
 
-Three conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
+Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
 
-GitLab CI/CD pipelines to compile, build, test and upload the conda packages to EUMETSAT Anaconda repository are
+GitLab CI/CD pipelines to compile, build, test and upload the Conda packages to EUMETSAT Anaconda repository are
 implemented. Three GitLab runners are implemented to run the pipelines: one with a Docker executor on Linux and the
 other two with Shell executors on Windows 64-bit, where one of these two is configured to compile the package at
 32-bit (**:TBC:**).

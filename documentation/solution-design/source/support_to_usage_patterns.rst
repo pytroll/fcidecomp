@@ -65,8 +65,7 @@ Usage as CLI tool
 
 In order to provide a baseline support for CLI usage of the FCIDECOMP software, ``nccopy`` (a software utility included
 in the ``netcdf-c`` library) is chosen as reference standard CLI tool. To streamline the ingration with ``nccopy``, 
-the FCIDECOMP conda package (:ref:`packaging_and_deployment`) provides to:
-
+the FCIDECOMP Conda package (:ref:`packaging_and_deployment`) provides to:
 - put the filter's library to a specific path at installation
 - set the ``HDF5_PLUGIN_PATH`` environment variable automatically.
 
@@ -95,7 +94,7 @@ with ``pip`` the ``hdf5plugin`` package.
 
 The approach to integrate the described solution with the Data Tailor includes a revision of the current
 build and installation approach for the ``epct_plugin_mtg4africa`` customisation plugin, so that it
-installs the FCIDECOMP support and its dependencies from the new conda package (see :ref:`packaging_and_deployment`).
+installs the FCIDECOMP support and its dependencies from the new Conda package (see :ref:`packaging_and_deployment`).
 
 .. _integration_with_netcdf_java:
 
