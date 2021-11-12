@@ -8,6 +8,9 @@ This section contains the main definitions and acronyms used throughout the docu
 Acronyms
 ~~~~~~~~
 
+:OS:
+    Operating System
+
 :TBC:
     To Be Confirmed
 
