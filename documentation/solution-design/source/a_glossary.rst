@@ -31,9 +31,13 @@ them and the target dates or events for closing them.
         - Action
         - Target date/event
     *   - :ref:`packaging_process`
-        - Confirm the possibility to compile at 32-bit in Windows 64-bit
-        - Set up the Windows 64-bit runner configured in the proper way and run the pipelines
+        - Possibility to compile at 32-bit in Windows 64-bit
+        - Set up a Windows 64-bit runner configured in the proper way and run the pipelines
         - Early stage of development phase
+    *   - :ref:`a_communication_plan`
+        - Communication channels to be used in case of new FCIDECOMP releases
+        - Interact with EUMETSAT to know if they have a dedicated communication channel with MTG users
+        - Development phase
 
 
 .. _tbds:

@@ -1,4 +1,4 @@
-.. _communication_plan:
+.. _a_communication_plan:
 
 Appendix - Communication plan
 -----------------------------
@@ -12,4 +12,4 @@ package maintainers is also important and, as described in :ref:`a_integration_w
 early stage of the solution development process.
 
 Finally, for each new release on the open source FCIDECOMP repository emails are sent to the HDF Group and to
-EUMETSAT user support service, which in turns uses its communication channels to directly update MTG users.
+EUMETSAT user support service, which in turns uses its communication channels to directly update MTG users (:TBC:).
