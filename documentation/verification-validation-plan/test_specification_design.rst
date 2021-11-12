@@ -64,8 +64,11 @@ pre-requisites, and to improve clarity and maintenance of the V&V plan.
 
 The following categories are defined:
 
-:AUTOMATIC:
-    Automatic tests
+:CLI:
+    Tests dealing with decompressing of FC1 L1c NRT data via a command line interface (VG1)
 
-:MANUAL:
-    Manual tests
+:PYTHON:
+    Tests dealing with decompressing of FC1 L1c NRT data via python (VG2)
+
+:JAVA:
+    Tests dealing with decompressing of FC1 L1c NRT data via java (VG3)

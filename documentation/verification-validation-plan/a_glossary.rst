@@ -20,21 +20,6 @@ Definitions
 Acronyms
 ~~~~~~~~
 
-:C3S:
-   Copernicus Climate Change Service
-
-:CDS:
-   Climate Data Store
-
-:FAT:
-   Factory Acceptance Tests
-
-:HDF:
-    Hierarchical Data Format
-
-:MET:
-    METeosat
-
 :NetCDF:
     Network Common Data Form
 
@@ -50,14 +35,8 @@ Acronyms
 :TRR:
     Test Readiness Review
 
-:USC:
-    User Support and Climate Services Division of EUMETSAT
-
 :VCD:
     Verification Control Document
 
 :VG:
     Validation Goal
-
-:WMS:
-    Web Map Services and Visualization Systems

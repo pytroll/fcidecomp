@@ -1,4 +1,4 @@
-# Copyright 2017-2019, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)
+# Copyright 2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import re
 
 project = "EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification & Validation Plan"
 copyright = (
-    "2020-2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
+    "2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
 )
 author = "B-Open Solutions srl"
 

@@ -31,31 +31,6 @@ The successful closure of all the RIDs corresponds to the success of the verific
 activity, which is then recorded in a minute of meeting.
 
 
-Analysis Execution and Reporting
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Analysis is used to measure the compliance with :ref:`quality metrics <[TSSQA]>`.
-
-For the following metrics:
-
-- Minimum comment density
-- Maximum level of nested blocks
-- Maximum file code length
-- Maximum function code length
-- Maximum parameter number
-- Maximum number of return statements
-- Maximum boolean expression complexity
-- Maximum cyclomatic complexity
-- Maximum number of methods per class
-
-the measurement is performed as a step in the automated GitLab CI pipelines using standard industry tools,
-in a similar fashion as for the assessment of quality for the :ref:`Data Tailor <[DATATAILOR]>`.
-The associated report is directly viewable in GitLab and can be downloaded as a JSON file for the records.
-
-As the Data Tailor plugin will be developed using a functional programming paradigm, the maximum depth
-of the inheritance tree does not need to be measured.
-
-
 Inspection and Test Execution and Reporting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -66,13 +41,8 @@ Requirements in :ref:`[FCIDECOMP_WP] <[FCIDECOMP_WP]>` which are verified by tes
 are addressed during a dedicated test campaign
 which typically follows the TRR/TRB process described in :ref:`[OPSTRR] <[OPSTRR]>`.
 
-A Test Plan (:ref:`[FCIDECOMP_VP] <[FCIDECOMP_VP]>`) will be devised to identify which tests
-will be executed in various stages of validation. Test sessions will be
-executed at the foreseen check-points detailed in section `Strategy` of the
-:ref:`Execution Plan <[FCIDECOMP_EXECPLAN]>`.
-
 The full set of tests to meet the goals in section :ref:`v&v_goals` will be
-delivered with the final project milestone.
+delivered with the source code and documentation delivery project milestone.
 
 Two execution approaches are envisioned: automatic and manual.
 
@@ -117,16 +87,8 @@ The following table lists the test types, their scope and the event which trigge
           to allow the traceability to the corresponding test case (see
           :ref:`test_specification_design` for test case identification).
           Validation tests need the test data package to be downloaded on the runner machine.
-    *   - Validation regression tests
-        - Tests used to prevent from future regressions in validation tests.
-        - In the root folder of the FCIDECOMP source code, in folder :code:`validation-tests`
-        - On merge requests.
-        - Regression tests are a subset of validation tests; they are marked with the
-          :code:`@pytest.mark.regression` decorator inside test files.
-          Regression tests need the test data package to be downloaded on the runner machine.
 
-
-The reports for automated tests are accessed directly in GitLab, in the section "CI/CI->Pipelines",
+The reports for Validation tests are accessed directly in GitLab, in the section "CI/CI->Pipelines",
 clicking on the pipeline identifier, then on the "Tests" section.
 
 They can be downloaded as Junit XML files as
@@ -135,10 +97,8 @@ clicking on the pipeline identifier, then on "Jobs"), to be attached to test rep
 
 Automated tests are used for the V&V of:
 
-- TBD
-
-.. note:: Performance is not measured in specific tests; rather, the execution time
-  of tests is recorded at each test session in the test reports.
+- the FCIDECOMP software to decompress FC1 L1c NRT data via command line (VG1)
+- the FCIDECOMP software to decompress FC1 L1c NRT data via python (VG2)
 
 Individual automated tests can also be launched manually from the command line.
 This allows in particular to access the
@@ -160,9 +120,6 @@ Manual validation tests need the validation test data package.
 We expect to use manual tests for the validation of:
 
 - TBD
-
-.. note:: Performance is not measured in specific tests; rather, the execution time
-  of tests is recorded at each test session in the test reports.
 
 
 Test Outcomes

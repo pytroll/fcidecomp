@@ -52,6 +52,11 @@ V&V activities for the FCIDECOMP software are organized in the following phases:
    test report. This phase includes one or more on-factory (dry-run)
    test sessions, and is used for the official validation.
 
+Test Plan
+~~~~~~~~~
+
+All the test procedures are performed upon completion of the source code and documentation
+delivery milestone.
 
 Schedule of the Verification and Validation Activities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -72,20 +77,16 @@ detailed in the following table.
       - Allocated
     * - Factory acceptance tests
       - 3 days before TRR
-      - 1 day
-    * - Deployment of service and of generated data on dedicated machines
-        at EUMETSAT
-      - 1 day before TRR
-      - One day
+      - 2 hours
     * - Test readiness review
       - TRR
-      - Half a day
+      - 1 hour
     * - On-site acceptance tests
       - OSAT
-      - One day
-    * - Test review board.
+      - 2 hours
+    * - Test review board
       - TRB
-      - 2 hours.
+      - 1 hour
 
 Anomaly reports mechanism
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,16 +119,6 @@ from which organisations fulfil these roles.
     | Documentation review      | EUMETSAT Review Board |   EUMETSAT          | Documentation review,                |
     |                           |                       |                     | raising of RIDs                      |
     +---------------------------+-----------------------+---------------------+--------------------------------------+
-    | Deployment on             |  WP Leader            |   B-Open            | Deployment                           |
-    | EUMETSAT’s machine        |  (M. Bottaccio) or    |                     |                                      |
-    |                           |  delegate             |                     |                                      |
-    |                           +-----------------------+---------------------+--------------------------------------+
-    |                           |  EUMETSAT technical   |   EUMETSAT          | Provision of the necessary           |
-    |                           |  representative       |                     | infrastructure and personnel         |
-    |                           |                       |                     | Support to address technical         |
-    |                           |                       |                     | issues that may be due               |
-    |                           |                       |                     | to EUMETSAT infrastructure           |
-    +---------------------------+-----------------------+---------------------+--------------------------------------+
     | On-site acceptance        |  WP Leader            |   B-Open            | Responsible for B-Open               |
     | tests                     |  (M. Bottaccio) or    |                     | validation activities                |
     |                           |  delegate             |                     |                                      |
@@ -135,10 +126,6 @@ from which organisations fulfil these roles.
     |                           |  EUMETSAT Project     |   EUMETSAT          | Coordination of validation           |
     |                           |  Manager              |                     | activities.                          |
     +---------------------------+-----------------------+---------------------+--------------------------------------+
-
-
-.. note:: The support of product experts to further verify the correctness of all regridded data would be desirable.
-          However, this verification was considered out of scope.
 
 
 Other Resources

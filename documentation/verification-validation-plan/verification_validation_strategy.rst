@@ -13,21 +13,25 @@ As a general rule, for both validation and verification, tests are the method of
 and automated tests are preferred to manual tests.
 
 
-Decompression of FC1 L1c NRT data (VG1)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TBD:
+Decompression of FC1 L1c NRT data via command line (VG1)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Decompression of FC1 L1c NRT data via command line is automatically tested.
+
+Decompression of FC1 L1c NRT data via python (VG2)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Decompression of FC1 L1c NRT data via python is automatically tested on all the applicable platforms
+(MTG user stations that match the approved baseline).
+
+Decompression of FC1 L1c NRT data via java (VG3)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Decompression of FC1 L1c NRT data via java is tested manually.
 
 
-Compliance with MTG user stations (VG2)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TBD:
+Decompression of FC1 L1c NRT data via the Data Tailor software (VG4)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Decompression of FC1 L1c NRT data via the Data Tailor software is tested manually.
 
 
-Inclusion in standard installations of the Data Tailor software (VG3)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TBD:
-
-
-Package licensed as free and open source software (VG4)
+Package licensed as free and open source software (VG5)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TBD:
+The FCIDECOMP software licensed as free and open source software is tested by code inspection.

@@ -17,10 +17,9 @@ FC1 L1c NRT data, verifying its compatibility with MTG user stations.
 
 It is addressed at:
 
--  Data Tailor developers/quality manager, to support them in the internal V&V
-   process,
+-  developers/quality manager, to support them in the internal V&V process,
 
--  EUMETSAT officers in charge of the validation of the prototype.
+-  EUMETSAT officers in charge of the validation of the software.
 
 
 Applicable Documents
@@ -37,17 +36,12 @@ Applicable Documents
 
       .. _[FCIDECOMP_TP]:
     - Support to CharLS decompression for MTG users - Test Cases and Test Procedures
-    - :TBD:
+    - `fcidecomp/documentation/verification-validation-test-cases-test-procedures <../../../verification-validation-test-cases-test-procedures/_build/html/index.html>`_
   * - [FCIDECOMP_VCD]
 
       .. _[FCIDECOMP_VCD]:
     - Support to CharLS decompression for MTG users - Verification Control Document
-    - :TBD:
-  * - [FCIDECOMP_VP]
-
-      .. _[FCIDECOMP_VP]:
-    - Support to CharLS decompression for MTG users - Test Plan
-    - :TBD:
+    - `fcidecomp/documentation/verification_control_document <../../../verification_control_document/_build/html/index.html>`_
   * - [FCIDECOMP_WP]
 
       .. _[FCIDECOMP_WP]:
@@ -66,69 +60,15 @@ Reference Documents
   * - #
     - Title
     - Reference
-  * - [FCIDECOMP_EXECPLAN]
-
-      .. _[FCIDECOMP_EXECPLAN]:
-    - FCIDECOMP software - Execution Plan
-    - `fcidecomp/documentation/execution-plan <../../../execution-plan/_build/html/index.html>`_
   * - [OPSTRR]
 
       .. _[OPSTRR]:
     - OPS/TSS Working Practice on TRR_TRB
     - EUM/TSS/DOC/13/688793
-  * - [FCIDECOMP_SRC]
 
-      .. _[FCIDECOMP_SRC]:
-    - FCIDECOMP source code
-    - https://sftp.eumetsat.int/public/folder/UsCVknVOOkSyCdgpMimJNQ/User-Materials/Test-Data/MTG/MTG_FCI_L1C_Enhanced-NonN_TD-272_May2020/FCI_Decompression_Software_V1.0.2/EUMETSAT-FCIDECOMP_V1.0.2.tar.gz
-  * - [HDF5PLUGIN]
-
-      .. _[HDF5PLUGIN]:
-    - “Hdf5plugin - HDF5 Plugins for Windows, MacOS, and Linux“
-    - https://pypi.org/project/hdf5plugin
-  * - [FCICOMP_DCK]
-
-      .. _[FCICOMP_DCK]:
-    - “Docker container for setting up the environment for compressing charls fci1c files.“
-    - https://gitlab.eumetsat.int/data-tailor/support-to-mtg/mtg-fci1c-fcicomp-docker
-  * - [FCIDECOMP_CND]
-
-      .. _[FCIDECOMP_CND]:
-    - “fcidecomp-conda-recipe“
-    - https://github.com/mraspaud/fcidecomp-conda-recipe/blob/master/meta.yaml
-  * - [HDF]
-
-      .. _[HDF]:
-    - “The HDF Support portal – Filters“
-    - https://support.hdfgroup.org/services/filters.html
-  * - [CONDA_BLD]
-
-      .. _[CONDA_BLD]:
-    - “conda-build – Build variants”
-    - https://docs.conda.io/projects/conda-build/en/latest/resources/variants.html
-  * - [JOA_DCK]
-
-      .. _[JOA_DCK]:
-    - “joaquinrgu/fcidecomp“
-    - https://hub.docker.com/r/joaquinrgu/fcidecomp
-  * - [NETCDF_ISS]
-
-      .. _[NETCDF_ISS]:
-    - “NetCDF-C for reading (nj22Config.xml) in non-Unidata netCDF-Java based tools #1063“
-    - https://github.com/Unidata/thredds/issues/1063
-  * - [NETCDF_ISS]
-
-      .. _[TSSQA]:
-    - “TSS QA Reference Requirements for Software“
-    - EUM/TSS/REQ/18/1016698 V1C
-  * - [DATATAILOR]
-
-      .. _[DATATAILOR]:
-    - “Data Tailor source code“
-    - https://gitlab.eumetsat.int/open-source/data-tailor
 
 List of TBDs
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 .. list-table:: Items yet to be defined.
   :header-rows: 1
@@ -139,7 +79,7 @@ List of TBDs
     - Expected definition time
   * - Test Cases and Test Procedures reference
     - :ref:`introduction`, Applicable Documents
-    - Mid-term review
+    - Source code and documentation delivery milestone
   * - Verification Control Document reference
     - :ref:`introduction`, Applicable Documents
     - As soon as tests are defined and the document populated
