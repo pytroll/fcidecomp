@@ -1,7 +1,7 @@
-.. _a_further_developments:
+.. _a_improvements:
 
-Appendix - Further developments
--------------------------------
+Appendix - Opportunities for improvements
+-----------------------------------------
 
 Integration of CharLS 2.0.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

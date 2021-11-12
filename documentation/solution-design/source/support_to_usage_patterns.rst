@@ -41,7 +41,7 @@ External dipendencies of the FCIDECOMP software are listed in the following tabl
 The procedure used to include the listed package in the FCIDECOMP software is described in :ref:`conda_package`.
 
 Envisioned strategies to support higher version of the listed dependencies, in particular with respect to the ``CharLS``
-and ``hdf5`` libraries, are described in ``a_further_developments``.
+and ``hdf5`` libraries, are described in :ref:`a_improvements`.
 
 
 .. _integration_with_netcdf_c:
@@ -110,4 +110,4 @@ to use the netCDF-C library (instead of netCDF-Java) to read netCDF files
 procedure in the FCIDECOMP software documentation.
 
 The issue of a generic integration with :ref:`Unidata Netcdf-Java <[NETCDF_JAVA]>` is discussed in
-:ref:`a_further_developments`.
+:ref:`a_improvements`.

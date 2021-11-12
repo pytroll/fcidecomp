@@ -44,7 +44,7 @@ In order to grant the ability to install the software even in case the remote re
 should become unreachable, a sub-optimal solution is to have a separate assets repository hosted on EUMETSAT
 infrastructure. This assets repository hosts ``.tar.gz`` archives and Conda packages of all the dependencies needed
 for each release tag of the FCIDECOMP software. For a long-term solution to this issue,
-see :ref:`a_further_developments`.
+see :ref:`a_improvements`.
 
 .. _conda_package:
 
