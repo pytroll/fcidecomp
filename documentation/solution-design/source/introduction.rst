@@ -13,7 +13,7 @@ Reference Documents
 .. list-table:: Reference documents
   :header-rows: 1
   :class: longtable
-  :widths: 20 30 50
+  :widths: 30 30 40
 
   * - #
     - Title
