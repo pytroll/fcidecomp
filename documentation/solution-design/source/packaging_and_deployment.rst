@@ -23,8 +23,8 @@ The FCIDECOMP software supports the following platforms:
 Details on the selection process leading to the list presented above are provided in
 :ref:`a_design_justification`.
 
-Building the binaries
-~~~~~~~~~~~~~~~~~~~~~
+Building the binaries from the source code
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The build system for the software binaries is drawn from the one used in the
 :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>`, and adapted from there to guarantee support for all the
