@@ -3,8 +3,8 @@ Repositories
 
 Here a list of the different repositories containing a version of the FCIDECOMP software is reported.
 
-v1.0.2 (latest)
-~~~~~~~~~~~~~~~
+FCIDECOPM v1.0.2 (latest)
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table:: FCIDECOMP source code repositories - v1.0.2
   :header-rows: 1
