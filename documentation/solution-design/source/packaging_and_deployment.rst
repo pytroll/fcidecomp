@@ -43,7 +43,7 @@ Conda packages are uploaded to EUMETSAT Anaconda repository https://anaconda.org
 .. _building_binaries:
 
 Building the binaries from the source code
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The build system for the software binaries is drawn from the one used in the
 :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>`, and adapted from there to guarantee support for all the
@@ -52,7 +52,7 @@ required systems.
 .. _installing_dependencies:
 
 Installing dependencies
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
 All :ref:`dependencies <dependencies>` are installed through Conda (see :ref:`conda_package`), except for ``CharLS 1.x``.
 The required ``CharLS`` version, on which the :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>` is built upon,
@@ -68,7 +68,7 @@ see :ref:`a_improvements`.
 .. _packaging_process:
 
 Packaging process
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
 
