@@ -19,13 +19,8 @@ Other software
 
   * - FCIDECOMP conda recipe
     - Martin Raspaud (martin.raspaud@smhi.se)
-    - Remove
+    - Interact with maintainers to reduce riks of potential conflicts
     - https://github.com/mraspaud/fcidecomp-conda-recipe
-
-  * - FCIDECOMP docker container
-    - Joaquín Rodríguez-Guerra (EUMETSAT) ?
-    - Use official FCIDECOMP release from canonical repository
-    - https://hub.docker.com/r/joaquinrgu/fcidecomp
 
 Documentation
 ~~~~~~~~~~~~~
@@ -40,7 +35,14 @@ Documentation
     - Proposed action
     - URL
 
+  * - MTG FCI L1 Product User Guide
+    - EUMETSAT
+    - Interact with documentation maintainers to update information related to the FCIDECOMP software
+    - https://www-cdn.eumetsat.int/files/2020-07/pdf_mtg_fci_l1_pug.pdf
+
   * - HDF filters documentation
     - HDF Group
-    - Point to canonical repository
+    - Interact with developers to updated information on the FCIDECOMP software
     - https://support.hdfgroup.org/services/filters.html
+
+

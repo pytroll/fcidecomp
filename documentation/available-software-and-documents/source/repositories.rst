@@ -1,7 +1,8 @@
 Repositories
 ------------
 
-Here a list of the different repositories containing a version of the FCIDECOMP software is reported.
+Here a list of the different repositories containing a version of the FCIDECOMP software is reported. Details on the
+actions taken can be found in :ref:`EUMETSAT WP FCIDECOMP - Solution design <[FCIDECOMP_DESIGN]>`
 
 FCIDECOPM v1.0.2 (latest)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,12 +29,12 @@ FCIDECOPM v1.0.2 (latest)
 
   * - EUMETSAT Data Tailor
     - EUMETSAT
-    - Remove, use conda package to install FCIDECOMP
+    - Use conda package to install FCIDECOMP
     - https://gitlab.eumetsat.int/data-tailor/support-to-mtg/mtg-fci1c-fcicomp-docker/-/blob/master/fcicomp_sources-V1.0.2.tar.gz
 
   * - Embedded in hdf5plugin
     - silx project (silx@esrf.fr)
-    - Contact developers to reduce risk of potential conflicts
+    - Interact with maintainers to reduce risk of potential conflicts
     - https://github.com/silx-kit/hdf5plugin/tree/main/src/fcidecomp/FCIDECOMP_V1.0.2
 
 Older versions
@@ -56,5 +57,5 @@ Older versions
 
   * - EUMETSAT Data Tailor
     - EUMETSAT
-    - Remove, use conda package to install FCIDECOMP
+    - Use conda package to install FCIDECOMP
     - https://gitlab.eumetsat.int/data-tailor/support-to-mtg/FCI_COMPRESSOR/-/tree/develop/FCIDECOMP_SOURCES
