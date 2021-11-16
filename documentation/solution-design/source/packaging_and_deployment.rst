@@ -47,7 +47,7 @@ Building the binaries from the source code
 
 The build system for the software binaries is drawn from the one used in the
 :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>`, and adapted from there to guarantee support for all the
-required systems.
+required systems. It uses ``GCC`` and ``MSVC`` to compile the binaries respectively in Linux and Windows systems.
 
 .. _installing_dependencies:
 
