@@ -97,8 +97,8 @@ clicking on the pipeline identifier, then on "Jobs"), to be attached to test rep
 
 Automated tests are used for the V&V of:
 
-- the FCIDECOMP software to decompress FC1 L1c NRT data via command line (VG1)
-- the FCIDECOMP software to decompress FC1 L1c NRT data via python (VG2)
+- ability to use FCIDECOMP software to decompress FC1 L1c NRT data via command line (VG1)
+- ability to use the FCIDECOMP software to decompress FC1 L1c NRT data via Python (VG2)
 
 Individual automated tests can also be launched manually from the command line.
 This allows in particular to access the
@@ -117,9 +117,10 @@ The outcome of each test is written in the test report.
 
 Manual validation tests need the validation test data package.
 
-We expect to use manual tests for the validation of:
+Manual tests for the validation of:
 
-- TBD
+- ability to use the FCIDECOMP software to decompress FC1 L1c NRT data in Java programs (VG3)
+- ability to use the FCIDECOMP software to decompress FC1 L1c NRT data via the Data Tailor Software (VG4).
 
 
 Test Outcomes

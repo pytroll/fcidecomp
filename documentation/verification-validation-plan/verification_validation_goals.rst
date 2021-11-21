@@ -10,18 +10,18 @@ The goals are listed below; if a goal only refers to verification or validation,
 The strategies adopted to reach such goals are described in the following sections.
 
 VG1.
-    Ensure the FCIDECOMP software to decompress FC1 L1c NRT data via command line.
+    Ensure the FCIDECOMP software can be used to decompress FC1 L1c NRT data via command line tools.
 
 VG2.
-    Ensure the FCIDECOMP software to decompress FC1 L1c NRT data via python.
+    Ensure the FCIDECOMP software can be used to decompress FC1 L1c NRT data via Python.
 
 VG3.
-    Ensure the FCIDECOMP software to decompress FC1 L1c NRT data via java.
+    Ensure the FCIDECOMP software can be used to decompress FC1 L1c NRT data via Java.
 
 VG4.
-    Ensure the FCIDECOMP software to decompress FC1 L1c NRT data via the Data Tailor Software.
+    Ensure the FCIDECOMP software can be used to decompress FC1 L1c NRT data via the Data Tailor Software.
 
 VG5.
-    Ensure the FCIDECOMP software to utilise only software that is licensed in a way that is
+    Ensure the FCIDECOMP software only uses software that is licensed in a way that is
     compatible with any use, i.e. free and open source software, and any dependencies to be archived
     at EUMETSAT.

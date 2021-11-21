@@ -122,7 +122,7 @@ html_static_path = ["_static"]
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
-html_logo = "vvp_images/eumetsat.png"
+html_logo = "images/eumetsat.png"
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
@@ -165,7 +165,7 @@ latex_elements = {
           \begin{minipage}{.22\textwidth}
           \vspace{1.65cm}
           \hspace{-0.175cm}
-          \includegraphics[width=\linewidth,height=70pt,keepaspectratio]{../../vvp_images/eumetsat.png}
+          \includegraphics[width=\linewidth,height=70pt,keepaspectratio]{../../images/eumetsat.png}
           \end{minipage}%
           \begin{minipage}{.8\textwidth}
           \vspace{2cm}

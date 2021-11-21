@@ -77,9 +77,4 @@ List of TBDs
   * - Item
     - Place in text
     - Expected definition time
-  * - Test Cases and Test Procedures reference
-    - :ref:`introduction`, Applicable Documents
-    - Source code and documentation delivery milestone
-  * - Verification Control Document reference
-    - :ref:`introduction`, Applicable Documents
-    - As soon as tests are defined and the document populated
+
