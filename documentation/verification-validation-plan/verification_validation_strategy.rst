@@ -17,15 +17,14 @@ Decompression of FC1 L1c NRT data via command line (VG1)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Decompression of FC1 L1c NRT data via command line is automatically tested.
 
-Decompression of FC1 L1c NRT data via python (VG2)
+Decompression of FC1 L1c NRT data via Python (VG2)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Decompression of FC1 L1c NRT data via python is automatically tested on all the applicable platforms
+Decompression of FC1 L1c NRT data via Python is automatically tested on all the applicable platforms
 (MTG user stations that match the approved baseline).
 
-Decompression of FC1 L1c NRT data via java (VG3)
+Decompression of FC1 L1c NRT data via Java (VG3)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Decompression of FC1 L1c NRT data via java is tested manually.
-
+Decompression of FC1 L1c NRT data via Java is tested manually.
 
 Decompression of FC1 L1c NRT data via the Data Tailor software (VG4)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

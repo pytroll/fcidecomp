@@ -97,7 +97,7 @@ clicking on the pipeline identifier, then on "Jobs"), to be attached to test rep
 
 Automated tests are used for the V&V of:
 
-- ability to use FCIDECOMP software to decompress FC1 L1c NRT data via command line (VG1)
+- ability to use the FCIDECOMP software to decompress FC1 L1c NRT data via command line (VG1)
 - ability to use the FCIDECOMP software to decompress FC1 L1c NRT data via Python (VG2)
 
 Individual automated tests can also be launched manually from the command line.
