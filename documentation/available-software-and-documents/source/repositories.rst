@@ -29,10 +29,10 @@ FCIDECOPM v1.0.2 (latest)
 
   * - EUMETSAT Data Tailor
     - EUMETSAT
-    - Use conda package to install FCIDECOMP
+    - Use Conda package to install FCIDECOMP
     - https://gitlab.eumetsat.int/data-tailor/support-to-mtg/mtg-fci1c-fcicomp-docker/-/blob/master/fcicomp_sources-V1.0.2.tar.gz
 
-  * - Embedded in hdf5plugin
+  * - Embedded in ``hdf5plugin``
     - silx project (silx@esrf.fr)
     - Interact with maintainers to reduce risk of potential conflicts
     - https://github.com/silx-kit/hdf5plugin/tree/main/src/fcidecomp/FCIDECOMP_V1.0.2
@@ -57,5 +57,5 @@ Older versions
 
   * - EUMETSAT Data Tailor
     - EUMETSAT
-    - Use conda package to install FCIDECOMP
+    - Use Conda package to install FCIDECOMP
     - https://gitlab.eumetsat.int/data-tailor/support-to-mtg/FCI_COMPRESSOR/-/tree/develop/FCIDECOMP_SOURCES

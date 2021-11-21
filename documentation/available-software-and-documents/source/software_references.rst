@@ -17,9 +17,9 @@ Other software
     - Proposed action
     - URL
 
-  * - FCIDECOMP conda recipe
+  * - FCIDECOMP Conda recipe
     - Martin Raspaud (martin.raspaud@smhi.se)
-    - Interact with maintainers to reduce riks of potential conflicts
+    - Interact with maintainers to reduce risk of potential conflicts
     - https://github.com/mraspaud/fcidecomp-conda-recipe
 
 Documentation
