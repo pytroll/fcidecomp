@@ -72,3 +72,6 @@ The following categories are defined:
 
 :JAVA:
     Tests dealing with decompressing of FC1 L1c NRT data via java (VG3)
+
+:DT:
+    Tests dealing with decompressing of FC1 L1c NRT data via the Data Tailor (VG4)
