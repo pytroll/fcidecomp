@@ -25,3 +25,6 @@ VG5.
     Ensure the FCIDECOMP software only uses software that is licensed in a way that is
     compatible with any use, i.e. free and open source software, and any dependencies to be archived
     at EUMETSAT.
+
+All the goals are intended to be achieved on all the applicable platforms
+(MTG user stations that match the approved baseline).
