@@ -77,4 +77,6 @@ List of TBDs
   * - Item
     - Place in text
     - Expected definition time
-
+  * - Reference document with confirmed machine specification for factory acceptance tests
+    - :ref:`software_v&v_process_and_planning`, Other Resources section
+    - As soon as tests are defined and the document populated
