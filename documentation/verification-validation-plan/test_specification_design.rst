@@ -47,6 +47,10 @@ Verification Control Document (:ref:`FCIDECOMP_VCD <[FCIDECOMP_VCD]>`).
 Traceability between test cases and test procedures is
 ensured by the naming convention described in the following paragraph.
 
+The automated tests are pytest files with in-code documentation; with this approach,
+the documentation is written in such a way that it describes the test case, and the
+test code is the test procedure. The part of the automated tests in the
+Test Cases and Procedures document will be then automatically generated from the code.
 
 Identification of Test Cases and Test Procedures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
