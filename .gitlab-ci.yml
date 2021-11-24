@@ -29,8 +29,9 @@ build linux:
     - conda install git
     - conda list
     - mkdir -p conda-channel
+    - cd conda
   script:
-    - conda build $BUILD_OPTS fcidecomp-conda-recipe
+    - conda build $BUILD_OPTS .
   artifacts:
     paths:
       - conda-channel
