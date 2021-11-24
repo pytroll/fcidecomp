@@ -1,6 +1,5 @@
 set -ex
 
-FCIDECOMP_VERSION=V1.0.2
 PATH_TO_DELIVERY=$(pwd)
 
 # 2.5.0: build CharLS 1.0 from source
@@ -11,13 +10,10 @@ cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=On ..
 make
 cp ${CHARLS_ROOT}/release/*.so* ${PREFIX}/lib
 
-# 2.5.1 (already included in meta.yaml)
-#sha256sum -c sha256_FCIDECOMP_${FCIDECOMP_VERSION}.txt
-
 # 2.5.2
 FCIDECOMP_EXTRACTION_PATH=${PATH_TO_DELIVERY}/build
 mkdir -p ${FCIDECOMP_EXTRACTION_PATH}
-cp -r ${PATH_TO_DELIVERY}/FCIDECOMP_${FCIDECOMP_VERSION}/Software/fcidecomp_sources-${FCIDECOMP_VERSION}/FCIDECOMP_SOURCES/* ${FCIDECOMP_EXTRACTION_PATH}
+cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_EXTRACTION_PATH}
 
 # 2.5.3
 cd ${FCIDECOMP_EXTRACTION_PATH}
@@ -32,7 +28,6 @@ echo ${CHARLS_INSTALLATION_PATH}
 -DCHARLS_ROOT=${CHARLS_ROOT}
 
 ./gen/build.sh fcicomp-jpegls test
-
 ./gen/install.sh fcicomp-jpegls
 
 # 2.5.3.2
