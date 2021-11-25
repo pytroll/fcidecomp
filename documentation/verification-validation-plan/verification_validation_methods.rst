@@ -53,7 +53,7 @@ Automated Tests
 Automated tests provide a repeatable and fast verification tool
 to verify compliance of the FCIDECOMP software against the requirements.
 
-As the code is predominantly written in C and Python, the `pytest` testing framework is used.
+The `pytest` testing framework is used to write and execute automated tests.
 
 Such tests are executed in the `test` step of continuous integration pipelines triggered from
 within the project GitLab repository. This ensures testing repeatability.
