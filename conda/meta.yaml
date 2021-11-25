@@ -1,24 +1,35 @@
 {% set version = "1.0.2" %}
+{% set charls_version = "1.1.0" %}
 
 package:
   name: fcidecomp
   version: {{ version }}
 
 source:
-  - git_url: https://github.com/team-charls/charls.git
-    git_tag: 1.x-master
-    folder: charls
+  - url: https://github.com/team-charls/charls/archive/{{ charls_version }}.tar.gz
   - path: ../src/
 
 build:
-  number: 5
+  number: 0
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - cmake
+    - make   # [not win]
+    - ninja  # [win]
   host:
     - zlib
     - hdf5>=1.10.5
   run:
     - hdf5>=1.10.5
+
+test:
+  commands:
+    # the following 2 tests have been changed accordingly to what get installed with version 1.1.0
+    - test -f $PREFIX/lib/libCharLS${SHLIB_EXT}     # [unix]
+    - test -f $PREFIX/include/CharLS/header.h       # [unix]
+    - if not exist %LIBRARY_LIB%\\charls-2-x64.lib exit 1       # [win]
+    - if not exist %LIBRARY_BIN%\\charls-2-x64.dll exit 1       # [win]
+    - if not exist %LIBRARY_INC%\\charls\\charls.h exit 1       # [win]

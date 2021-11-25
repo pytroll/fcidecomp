@@ -38,7 +38,7 @@ endif()
 find_path(CHARLS_INCLUDE_DIR
   NAMES interface.h publictypes.h config.h
   HINTS CHARLS_ROOT ENV CHARLS_ROOT
-  PATH_SUFFIXES src
+  PATH_SUFFIXES include/CharLS
   DOC "CharLS include directory."
 )
 
@@ -51,7 +51,7 @@ endif ()
 find_library(CHARLS_LIBRARY
   NAMES CharLS charls
   HINTS CHARLS_ROOT ENV CHARLS_ROOT
-  PATH_SUFFIXES release
+  PATH_SUFFIXES lib
   DOC "CharLS library."
 )
 

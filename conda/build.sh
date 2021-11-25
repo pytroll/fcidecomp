@@ -1,31 +1,37 @@
 set -ex
 
 PATH_TO_DELIVERY=$(pwd)
-
-# 2.5.0: build CharLS 1.0 from source
-CHARLS_ROOT=${PATH_TO_DELIVERY}/charls
-mkdir ${CHARLS_ROOT}/release
-cd ${CHARLS_ROOT}/release
-cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=On ..
-make
-cp ${CHARLS_ROOT}/release/*.so* ${PREFIX}/lib
-
-# 2.5.2
 FCIDECOMP_EXTRACTION_PATH=${PATH_TO_DELIVERY}/build
 mkdir -p ${FCIDECOMP_EXTRACTION_PATH}
+cd ${FCIDECOMP_EXTRACTION_PATH}
+
+# Install CharLS
+cmake ${CMAKE_ARGS} -LAH                                                  \
+    -DCMAKE_BUILD_TYPE="Release"                                          \
+    -DCMAKE_PREFIX_PATH=${PREFIX}                                         \
+    -DCMAKE_INSTALL_PREFIX=${PREFIX}                                      \
+    -DCMAKE_INSTALL_LIBDIR="lib"                                          \
+    -DBUILD_SHARED_LIBS=1                                                 \
+    -DCHARLS_BUILD_TESTS=1                                                \
+    -DCHARLS_BUILD_SAMPLES=0                                              \
+    -DCHARLS_INSTALL=1                                                    \
+    ..
+make -j${CPU_COUNT}
+make install
+
+# 2.5.2
 cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_EXTRACTION_PATH}
 
 # 2.5.3
-cd ${FCIDECOMP_EXTRACTION_PATH}
 
 # 2.5.3.1
 CHARLS_INSTALLATION_PATH=${CONDA_PREFIX}
 FCIDECOMP_INSTALLATION_PATH=${PREFIX}
-echo ${CHARLS_INSTALLATION_PATH}
 ./gen/build.sh fcicomp-jpegls release \
--DCMAKE_PREFIX_PATH=${CHARLS_INSTALLATION_PATH} \
+-DCMAKE_PREFIX_PATH=${CONDA_PREFIX} \
 -DCMAKE_INSTALL_PREFIX=${FCIDECOMP_INSTALLATION_PATH} \
--DCHARLS_ROOT=${CHARLS_ROOT}
+-DCHARLS_ROOT=${CHARLS_INSTALLATION_PATH} \
+-DCMAKE_INCLUDE_PATH=${SRC_DIR}/src
 
 ./gen/build.sh fcicomp-jpegls test
 ./gen/install.sh fcicomp-jpegls
