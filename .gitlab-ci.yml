@@ -34,6 +34,8 @@ build centos_7:
     - cd conda
   script:
     - conda build $BUILD_OPTS .
+    - cp /usr/local/conda-bld/linux-64/fcidecomp* conda-channel
+    - conda build purge
   artifacts:
     paths:
       - conda-channel
