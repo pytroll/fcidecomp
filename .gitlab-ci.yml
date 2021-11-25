@@ -30,15 +30,13 @@ build centos_7:
     - mkdir -p /usr/local/conda-bld
     - conda index /usr/local/conda-bld
     - conda clean --all --yes
-    - mkdir -p conda-channel
     - cd conda
   script:
     - conda build $BUILD_OPTS .
-    - cp /usr/local/conda-bld/linux-64/fcidecomp* ../conda-channel
     - conda build purge
   artifacts:
     paths:
-      - conda-channel
+      - conda/conda-channel
     expire_in: 10 days
 
 build windows:
