@@ -20,7 +20,8 @@ delegating the requirement matching to the cross-platform nature of these progra
 
 Decompression of FC1 L1c NRT data via command line (VG1)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Decompression of FC1 L1c NRT data via command line is automatically tested.
+Decompression of FC1 L1c NRT data via command line is automatically tested using
+the Unidata `nccopy` as the command line utility.
 
 Decompression of FC1 L1c NRT data via Python (VG2)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -28,13 +29,14 @@ Decompression of FC1 L1c NRT data via Python is automatically tested.
 
 Decompression of FC1 L1c NRT data via Java (VG3)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Decompression of FC1 L1c NRT data via Java is tested manually.
+Decompression of FC1 L1c NRT data via Java is tested manually, by demostrating that
+MTG FCI L1C files can be opened with `Panoply <https://www.giss.nasa.gov/tools/panoply/>`_
+and `HDFView <https://earth.esa.int/eogateway/tools/hdfview>`_.
 
 Decompression of FC1 L1c NRT data via the Data Tailor software (VG4)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Decompression of FC1 L1c NRT data via the Data Tailor software is tested manually.
 
-
 Package licensed as free and open source software (VG5)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The FCIDECOMP software licensed as free and open source software is tested by code inspection.
+The license of the FCIDECOMP software is verified by code inspection.

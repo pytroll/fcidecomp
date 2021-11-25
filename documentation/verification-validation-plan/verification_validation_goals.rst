@@ -16,7 +16,8 @@ VG2.
     Ensure the FCIDECOMP software can be used to decompress FC1 L1c NRT data via Python.
 
 VG3.
-    Ensure the FCIDECOMP software can be used to decompress FC1 L1c NRT data via Java.
+    Ensure the FCIDECOMP software can be used to decompress FC1 L1c NRT data via selected 
+    Java software (Panoply, HDFView).
 
 VG4.
     Ensure the FCIDECOMP software can be used to decompress FC1 L1c NRT data via the Data Tailor Software.

@@ -34,15 +34,13 @@ Each test case describes:
 -  the specific test environment.
 
 A **test procedure** contains the sequential list of operations
-(“steps”) and the corresponding expected outputs, required to validate a
+and the corresponding expected outputs, required to validate a
 test case.
 
 Test cases and test procedures are described in the :ref:`Verification & Verification Test Cases and Test Procedures
-document <[FCIDECOMP_TP]>`.
-
-The traceability between the test cases and the requirements which they
-validate (see :ref:`FCIDECOMP_WP <[FCIDECOMP_WP]>`) is described in a
-Verification Control Document (:ref:`FCIDECOMP_VCD <[FCIDECOMP_VCD]>`).
+document <[FCIDECOMP_TP]>`, which also contains the 
+traceability between the test cases and corresponding verification goals
+validate.
 
 Traceability between test cases and test procedures is
 ensured by the naming convention described in the following paragraph.
@@ -69,13 +67,13 @@ pre-requisites, and to improve clarity and maintenance of the V&V plan.
 The following categories are defined:
 
 :CLI:
-    Tests dealing with decompressing of FC1 L1c NRT data via a command line interface (VG1)
+    Tests for the decompression of FC1 L1c NRT data via a command line interface (VG1)
 
-:PYTHON:
-    Tests dealing with decompressing of FC1 L1c NRT data via python (VG2)
+:PY:
+    Tests for the decompression of FC1 L1c NRT data via Python (VG2)
 
 :JAVA:
-    Tests dealing with decompressing of FC1 L1c NRT data via java (VG3)
+    Tests for the decompression of FC1 L1c NRT data via Java (VG3)
 
 :DT:
-    Tests dealing with decompressing of FC1 L1c NRT data via the Data Tailor (VG4)
+    Tests for the decompression of FC1 L1c NRT data via the Data Tailor (VG4)
