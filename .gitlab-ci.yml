@@ -27,6 +27,7 @@ build centos_7:
   before_script:
     - conda update -n base -c defaults conda
     - conda install -y conda-build
+    - conda install -y git
     - conda install -y -c conda-forge gxx
     - mkdir -p /usr/local/conda-bld
     - conda index /usr/local/conda-bld
