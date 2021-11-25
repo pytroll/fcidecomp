@@ -36,7 +36,7 @@ build centos_7:
     - conda build purge
   artifacts:
     paths:
-      - conda/conda-channel
+      - conda-channel
     expire_in: 10 days
 
 build windows:
