@@ -34,10 +34,11 @@ build centos_7:
     - cd conda
   script:
     - conda build $BUILD_OPTS .
+    - cp /usr/local/conda-bld/linux-64/fcidecomp* ../conda-channel
     - conda build purge
   artifacts:
     paths:
-      - conda-channel/linux-64/fcidecomp-1.0.2-h3fd9d12_0.tar.bz2
+      - conda-channel
     expire_in: 10 days
 
 build windows:
