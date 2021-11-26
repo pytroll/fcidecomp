@@ -29,7 +29,7 @@ test:
   requires:
     - netcdf4
   files:
-    - ../test-data/compressed_test.nc
+    - test-data/compressed_test.nc
   commands:
     - test -f $PREFIX/lib/libCharLS${SHLIB_EXT}     # [unix]
     - test -f $PREFIX/include/CharLS/header.h       # [unix]
