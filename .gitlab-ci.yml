@@ -49,6 +49,7 @@ test centos7:
     - linux
   stage: test
   before_script:
+    - conda update -n base -c defaults conda
     - conda install -y netcdf4
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
