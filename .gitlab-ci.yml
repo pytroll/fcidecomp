@@ -19,7 +19,7 @@ variables: &variables
 stages:
   - build
 
-build centos_7:
+build centos7:
   image: conda/miniconda3-centos7:latest
   tags:
     - linux
