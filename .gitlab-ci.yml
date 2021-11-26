@@ -18,6 +18,8 @@ variables: &variables
 
 stages:
   - build
+  - install
+  - test
 
 build centos7:
   image: conda/miniconda3-centos7:latest
@@ -38,6 +40,14 @@ build centos7:
     paths:
       - conda/conda-channel
     expire_in: 10 days
+
+install centos7:
+  image: conda/miniconda3-centos7:latest
+  tags:
+    - linux
+  stage: test
+  script:
+    - conda install conda/conda-channel/fcidecomp*
 
 build windows:
   tags:

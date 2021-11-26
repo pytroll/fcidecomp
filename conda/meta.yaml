@@ -36,4 +36,3 @@ test:
     - if not exist %LIBRARY_LIB%\\charls-2-x64.lib exit 1       # [win]
     - if not exist %LIBRARY_BIN%\\charls-2-x64.dll exit 1       # [win]
     - if not exist %LIBRARY_INC%\\charls\\charls.h exit 1       # [win]
-    - export HDF5_PLUGIN_PATH=${CONDA_PREFIX}/hdf5/lib/plugin/nccopy; nccopy -F none test-data/compressed_test.nc test-data/decompressed.nc
