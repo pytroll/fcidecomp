@@ -53,9 +53,12 @@ test centos7:
     - conda install -y netcdf4
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
-    - find / -name *H5Zjpegls.so*
-    - echo $CONDA_PEFIX
-    - echo $PREFIX
+    - export HDF5_PLUGIN_PATH=/usr/local/hdf5/lib/plugin/
+    - nccopy -F none test-data/compressed_test.nc test-data/decompressed.nc
+  artifacts:
+    paths:
+      - test-data
+    expire_in: 10 days
 
 build windows:
   tags:
