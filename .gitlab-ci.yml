@@ -48,8 +48,11 @@ test centos7:
   tags:
     - linux
   stage: test
+  before_script:
+    - conda install -y netcdf4
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
+    - find / -name *jpegls*
 
 build windows:
   tags:
