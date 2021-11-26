@@ -53,7 +53,9 @@ test centos7:
     - conda install -y netcdf4
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
-    - find / -name *jpegls*
+    - find / -name *H5Zjpegls.so*
+    - echo $CONDA_PEFIX
+    - echo $PREFIX
 
 build windows:
   tags:
