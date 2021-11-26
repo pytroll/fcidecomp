@@ -45,7 +45,7 @@ install centos7:
   image: conda/miniconda3-centos7:latest
   tags:
     - linux
-  stage: test
+  stage: install
   script:
     - conda install conda/conda-channel/fcidecomp*
 
