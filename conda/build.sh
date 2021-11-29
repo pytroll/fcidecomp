@@ -5,6 +5,8 @@ FCIDECOMP_BUILD_PATH=${PATH_TO_DELIVERY}/build
 mkdir -p ${FCIDECOMP_BUILD_PATH}
 cd ${FCIDECOMP_BUILD_PATH}
 
+
+
 # Install CharLS
 cmake ${CMAKE_ARGS} -LAH                                                  \
     -DCMAKE_BUILD_TYPE="Release"                                          \
