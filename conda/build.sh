@@ -25,15 +25,15 @@ cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_EXTRACTION_PATH}
 ## Build fcicomp-jpegls
 ./gen/build.sh fcicomp-jpegls release                                     \
     -DCMAKE_PREFIX_PATH=${CONDA_PREFIX}                                   \
-    -DCMAKE_INSTALL_PREFIX=${PREFIX}                 \
-    -DCHARLS_ROOT=${CONDA_PREFIX}                             \
+    -DCMAKE_INSTALL_PREFIX=${PREFIX}                                      \
+    -DCHARLS_ROOT=${CONDA_PREFIX}                                         \
     -DCMAKE_INCLUDE_PATH=${SRC_DIR}/src
 ./gen/build.sh fcicomp-jpegls test
 ./gen/install.sh fcicomp-jpegls
 
 ## Build fcicomp-H5Zjpegls
-./gen/build.sh fcicomp-H5Zjpegls release \
-    -DCMAKE_PREFIX_PATH="${PREFIX};${CONDA_PREFIX}"   \
+./gen/build.sh fcicomp-H5Zjpegls release                                  \
+    -DCMAKE_PREFIX_PATH="${CONDA_PREFIX}"                       \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}
 # Fails
 # ./gen/build.sh fcicomp-H5Zjpegls test
