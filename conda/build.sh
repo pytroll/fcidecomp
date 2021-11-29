@@ -1,9 +1,9 @@
 set -ex
 
 PATH_TO_DELIVERY=$(pwd)
-FCIDECOMP_EXTRACTION_PATH=${PATH_TO_DELIVERY}/build
-mkdir -p ${FCIDECOMP_EXTRACTION_PATH}
-cd ${FCIDECOMP_EXTRACTION_PATH}
+FCIDECOMP_BUILD_PATH=${PATH_TO_DELIVERY}/build
+mkdir -p ${FCIDECOMP_BUILD_PATH}
+cd ${FCIDECOMP_BUILD_PATH}
 
 # Install CharLS
 cmake ${CMAKE_ARGS} -LAH                                                  \
@@ -20,7 +20,7 @@ make -j${CPU_COUNT}
 make install
 
 # Build FCIDECMP
-cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_EXTRACTION_PATH}
+cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_BUILD_PATH}
 
 ## Build fcicomp-jpegls
 ./gen/build.sh fcicomp-jpegls release                                     \
@@ -33,7 +33,7 @@ cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_EXTRACTION_PATH}
 
 ## Build fcicomp-H5Zjpegls
 ./gen/build.sh fcicomp-H5Zjpegls release                                  \
-    -DCMAKE_PREFIX_PATH="${CONDA_PREFIX}"                       \
+    -DCMAKE_PREFIX_PATH=${CONDA_PREFIX}                                   \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}
 # Fails
 # ./gen/build.sh fcicomp-H5Zjpegls test
