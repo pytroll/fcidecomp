@@ -1,3 +1,7 @@
+# Code inspired by:
+# - https://github.com/conda-forge/charls-feedstock/blob/master/recipe/build.sh
+# - https://github.com/mraspaud/fcidecomp-conda-recipe/blob/master/build.sh
+
 set -ex
 
 PATH_TO_DELIVERY=$(pwd)

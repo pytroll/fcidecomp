@@ -1,2 +1,2 @@
-# fcidecomp-conda-recipe
+# FCIDECOMP Conda recipe
 

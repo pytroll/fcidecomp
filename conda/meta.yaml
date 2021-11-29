@@ -1,3 +1,7 @@
+# Code inspired by:
+# - https://github.com/conda-forge/charls-feedstock/blob/master/recipe/build.sh
+# - https://github.com/mraspaud/fcidecomp-conda-recipe/blob/master/build.sh
+
 {% set version = "1.0.2" %}
 {% set charls_version = "1.1.0" %}
 
@@ -26,10 +30,6 @@ requirements:
     - hdf5>=1.10.5
 
 test:
-  requires:
-    - netcdf4
-  files:
-    - test-data/compressed_test.nc
   commands:
     - test -f $PREFIX/lib/libCharLS${SHLIB_EXT}     # [unix]
     - test -f $PREFIX/include/CharLS/header.h       # [unix]
