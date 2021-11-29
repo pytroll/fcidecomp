@@ -21,6 +21,7 @@ make install
 
 # Build FCIDECMP
 cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_EXTRACTION_PATH}
+
 ## Build fcicomp-jpegls
 CHARLS_INSTALLATION_PATH=${CONDA_PREFIX}
 FCIDECOMP_INSTALLATION_PATH=${PREFIX}
@@ -31,6 +32,7 @@ FCIDECOMP_INSTALLATION_PATH=${PREFIX}
     -DCMAKE_INCLUDE_PATH=${SRC_DIR}/src
 ./gen/build.sh fcicomp-jpegls test
 ./gen/install.sh fcicomp-jpegls
+
 ## Build fcicomp-H5Zjpegls
 ZLIB_INSTALLATION_PATH=${CONDA_PREFIX}
 HDF5_INSTALLATION_PATH=${CONDA_PREFIX}
