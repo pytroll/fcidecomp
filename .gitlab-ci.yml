@@ -21,7 +21,7 @@ stages:
   - build
   - test
 
-build centos7:
+build conda centos7:
   image: conda/miniconda3-centos7:latest
   tags:
     - linux
@@ -41,10 +41,10 @@ build centos7:
       - conda/conda-channel
     expire_in: 10 days
 
-test centos7:
+test conda centos7:
   image: conda/miniconda3-centos7:latest
   dependencies:
-    - build centos7
+    - build conda centos7
   tags:
     - linux
   stage: test
@@ -60,7 +60,7 @@ test centos7:
       - test-data
     expire_in: 10 days
 
-build windows:
+build conda windows:
   tags:
     - windows
   stage: build
