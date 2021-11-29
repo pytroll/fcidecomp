@@ -1,0 +1,84 @@
+# Copyright 2020-2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+variables: &variables
+  BUILD_OPTS: "--output-folder conda-channel"
+  CONDABIN: 'C:\Miniconda3;C:\Miniconda3\Library\mingw-w64\bin;C:\Miniconda3\Library\usr\bin;C:\Miniconda3\Library\bin;C:\Miniconda3\Scripts;C:\Users\Admin\miniconda3\condabin'
+  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda/conda-channel"
+
+stages:
+  - build
+  - test
+
+build conda centos7:
+  image: conda/miniconda3-centos7:latest
+  tags:
+    - linux
+  stage: build
+  before_script:
+    - conda update -n base -c defaults conda
+    - conda install -y conda-build
+    - mkdir -p /usr/local/conda-bld
+    - conda index /usr/local/conda-bld
+    - conda clean --all --yes
+    - cd conda
+  script:
+    - conda build $BUILD_OPTS .
+    - conda build purge
+  artifacts:
+    paths:
+      - conda/conda-channel
+    expire_in: 10 days
+
+test conda centos7:
+  image: conda/miniconda3-centos7:latest
+  dependencies:
+    - build conda centos7
+  tags:
+    - linux
+  stage: test
+  before_script:
+    - conda update -n base -c defaults conda
+    - conda install -y netcdf4
+  script:
+    - conda install -y $CHANNEL_OPTS fcidecomp
+    - export HDF5_PLUGIN_PATH=/usr/local/hdf5/lib/plugin/
+    - nccopy -F none test-data/compressed_test.nc test-data/decompressed.nc
+  artifacts:
+    paths:
+      - test-data
+    expire_in: 10 days
+
+build conda windows:
+  tags:
+    - windows
+  stage: build
+  when: manual
+  before_script:
+    - echo $env:CONDABIN
+    - $env:Path = "$env:CONDABIN;$env:Path"
+    - echo $env:Path
+    - conda install -y conda-build
+    - mkdir -p conda-channel
+    - cd conda
+  script:
+    - conda build $BUILD_OPTS .
+    - cp C:\Users\Admin\miniconda3\conda-bld\win-64\fcidecomp* conda-channel
+    - conda build purge 
+  artifacts:
+    paths:
+      - conda-channel
+    expire_in: 10 days
+
+

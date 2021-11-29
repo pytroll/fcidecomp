@@ -25,7 +25,7 @@ static const char* JPEG_COMPRESS_NOMINAL_TEST 		= "jpeglsCompressNominal";
 static const char* JPEG_COMPRESS_NOISE_TEST 		= "jpeglsCompressNoise";
 static const char* JPEG_DECOMPRESS_NOISE_TEST 		= "jpeglsDecompressNoise";
 static const char* JPEG_DECOMPRESS_NOMINAL_TEST 	= "jpeglsDecompressNominal";
-static const char* JPEG_COMPRESS_ERROR_CASE			= "jpeglsCompressErrorCase";
+// static const char* JPEG_COMPRESS_ERROR_CASE			= "jpeglsCompressErrorCase";
 static const char* JPEG_READ_HEADER_ERROR_CASE		= "jpeglsReadHeaderErrorCase";
 static const char* JPEG_DECOMPRESS_ERROR_CASE		= "jpeglsDecompressErrorCase";
 
@@ -35,7 +35,7 @@ int jpeglsCompressNominal(int argc, char* argv[]);
 // Decompress nominal
 int jpeglsDecompressNominal(int argc, char* argv[]);
 // Compress error case
-int jpeglsCompressErrorCase(int argc, char* argv[]);
+// int jpeglsCompressErrorCase(int argc, char* argv[]);
 // Read header error case
 int jpeglsReadHeaderErrorCase(void);
 // Decompress error case
@@ -68,10 +68,10 @@ int main(int argc, char* argv[])
         // launch the test
 		result = jpeglsDecompressNominal(argc-1, argv+1);
     }
-	if (strcmp(testName, JPEG_COMPRESS_ERROR_CASE) == 0) {
+	// if (strcmp(testName, JPEG_COMPRESS_ERROR_CASE) == 0) {
         // launch the test
-		result = jpeglsCompressErrorCase(argc-1, argv+1);
-    }
+		// result = jpeglsCompressErrorCase(argc-1, argv+1);
+    // }
 	if (strcmp(testName, JPEG_READ_HEADER_ERROR_CASE) == 0) {
         // launch the test
 		result = jpeglsReadHeaderErrorCase();

@@ -238,6 +238,7 @@ INCLUDE (${FCICOMP_RESOURCES_DIR}/packageConfig.cmake)
 #-----------------------------------------------------------------------------
 # Unit tests
 #-----------------------------------------------------------------------------
+
 IF (BUILD_TESTING)
 
     # Define the unit tests directory
@@ -257,7 +258,7 @@ IF (BUILD_TESTING)
         ${TEST_SOURCE_DIR}/jpegls_test.c
         ${TEST_SOURCE_DIR}/jpegls_compress_nominal.c
         ${TEST_SOURCE_DIR}/jpegls_decompress_nominal.c
-        ${TEST_SOURCE_DIR}/jpegls_compress_error_case.c
+        # ${TEST_SOURCE_DIR}/jpegls_compress_error_case.c
         ${TEST_SOURCE_DIR}/jpegls_read_header_error_case.c
         ${TEST_SOURCE_DIR}/jpegls_decompress_error_case.c
 	)
@@ -420,10 +421,10 @@ IF (BUILD_TESTING)
     # Test jpeglsCompressErrorCase
         
     # Define the name of the compressed file at the output of the test
-    SET (TEST_OUTPUT_FILE "${TEST_SAMPLE_IMAGE_NAME}.jls")
+    # SET (TEST_OUTPUT_FILE "${TEST_SAMPLE_IMAGE_NAME}.jls")
     # Add the unit test: run jpegls_test with the jpeglsCompressErrorCase
-    ADD_FCICOMP_JPEGLS_UNIT_TEST (jpeglsCompressErrorCase
-      ${REF_SAMPLE_RAW_FILE} ${TEST_OUTPUT_FILE} ${TEST_SAMPLE_IMAGE_SIZE} ${TEST_SAMPLE_IMAGE_BPP})
+    # ADD_FCICOMP_JPEGLS_UNIT_TEST (jpeglsCompressErrorCase
+    #   ${REF_SAMPLE_RAW_FILE} ${TEST_OUTPUT_FILE} ${TEST_SAMPLE_IMAGE_SIZE} ${TEST_SAMPLE_IMAGE_BPP})
     
     # --------------------------
     # Test jpeglsReadHeaderErrorCase
