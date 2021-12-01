@@ -12,14 +12,11 @@ import h5py as _h5py
 
 _logger = _logging.getLogger(__name__)
 
-# Give access to build-time config
-# from ._config import config
+try:
+    PLUGINS_PATH = os.environ["HDF5_PLUGIN_PATH"]
+except KeyError:
+    print("HDF5_PLUGIN_PATH environment variable is not defined")
 
-# config = _namedtuple('HDF5PluginBuildOptions', tuple(config.keys()))(**config)
-
-PLUGINS_PATH = _os.path.abspath(
-    _os.path.join(_os.path.dirname(__file__), 'plugins'))
-"""Path where HDF5 filter plugins are stored"""
 
 # ID of FCIDECOMP filter
 
@@ -76,10 +73,6 @@ class FciDecomp(_FilterRefClass):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # if not config.cpp11:
-        #     _logger.error(
-        #         "The FciDecomp filter is not available as hdf5plugin was not built with C++11.\n"
-        #         "You may need to reinstall hdf5plugin with a recent version of pip, or rebuild it with a newer compiler.")
 
 
 def _init_filters():
@@ -89,11 +82,6 @@ def _init_filters():
     hdf5_version = _h5py.h5.get_libversion()
 
     for name, filter_id in FILTERS.items():
-        # Skip "optional" filters if not built
-        # if name == 'fcidecomp' and not config.cpp11:
-        #     _logger.info("%s filter not available in this build of hdf5plugin.", name)
-        #     continue
-
         # Check if filter is already loaded (not on buggy HDF5 versions)
         if (1, 8, 20) <= hdf5_version < (1, 10) or hdf5_version >= (1, 10, 2):
             if _h5py.h5z.filter_avail(filter_id):
@@ -101,8 +89,12 @@ def _init_filters():
                 continue
 
         # Load DLL
+        if sys.platform.startswith('win'):
+            filter_file_extension = '.dll'
+        elif sys.platform.startswith('linux'):
+            filter_file_extension = '.so'
         filename = _glob(_os.path.join(
-            PLUGINS_PATH, 'libh5' + name + '*' + config.filter_file_extension))
+            PLUGINS_PATH, 'libH5Zjpegls' + filter_file_extension + '*'))
         if len(filename):
             filename = filename[0]
         else:
