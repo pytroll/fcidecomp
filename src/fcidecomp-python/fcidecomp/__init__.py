@@ -13,7 +13,7 @@ import h5py as _h5py
 _logger = _logging.getLogger(__name__)
 
 try:
-    PLUGINS_PATH = os.environ["HDF5_PLUGIN_PATH"]
+    PLUGINS_PATH = _os.environ["HDF5_PLUGIN_PATH"]
 except KeyError:
     print("HDF5_PLUGIN_PATH environment variable is not defined")
 
@@ -89,9 +89,9 @@ def _init_filters():
                 continue
 
         # Load DLL
-        if sys.platform.startswith('win'):
+        if _sys.platform.startswith('win'):
             filter_file_extension = '.dll'
-        elif sys.platform.startswith('linux'):
+        elif _sys.platform.startswith('linux'):
             filter_file_extension = '.so'
         filename = _glob(_os.path.join(
             PLUGINS_PATH, 'libH5Zjpegls' + filter_file_extension + '*'))
