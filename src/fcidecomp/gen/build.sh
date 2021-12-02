@@ -83,32 +83,32 @@ if [[ "$mode" == "test" ]]; then
     # Build in release mode with tests enable
     cmake $cmake_options -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON ${FCICOMP_ROOT}/${module} \
 	|| { echo "Error configuring ${module}." 1>&2 ; exit 1; }
-    make || { echo "Error building ${module}." 1>&2 ; exit 1; }
+    make VERBOSE=1 || { echo "Error building ${module}." 1>&2 ; exit 1; }
     ctest --output-on-failure || { echo "Error during the test of ${module}." 1>&2 ; exit 1; }
 elif [[ "$mode" == "debug" ]]; then
     # Build in debug mode
     cmake $cmake_options -DCMAKE_BUILD_TYPE=Debug ${FCICOMP_ROOT}/${module} \
 	|| { echo "Error configuring ${module}." 1>&2 ; exit 1; }
-    make || { echo "Error building ${module}." 1>&2 ; exit 1; }
+    make VERBOSE=1 || { echo "Error building ${module}." 1>&2 ; exit 1; }
     ctest --output-on-failure || { echo "Error during the test of ${module}." 1>&2 ; exit 1; }
 elif [[ "$mode" == "memcheck" ]]; then
     # Build in debug mode with test enable and memory check
     cmake $cmake_options -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DMEMORY_CHECK=ON ${FCICOMP_ROOT}/${module} \
 	|| { echo "Error configuring ${module}." 1>&2 ; exit 1; }
-    make || { echo "Error building ${module}." 1>&2 ; exit 1; }
+    make VERBOSE=1 || { echo "Error building ${module}." 1>&2 ; exit 1; }
     ctest --output-on-failure  -T memcheck || { echo "Error during the test of ${module}." 1>&2 ; exit 1; }
 elif [[ "$mode" == "coverage" ]]; then
     # Build in debug mode with test enable and test coverage
     cmake $cmake_options -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DCOVERAGE_TESTING=ON ${FCICOMP_ROOT}/${module} \
 	|| { echo "Error configuring ${module}." 1>&2 ; exit 1; }
-    make || { echo "Error building ${module}." 1>&2 ; exit 1; }
+    make VERBOSE=1 || { echo "Error building ${module}." 1>&2 ; exit 1; }
     ctest --output-on-failure || { echo "Error during the test of ${module}." 1>&2 ; exit 1; }
     ctest -T coverage || { echo "Error during the test of ${module}." 1>&2 ; exit 1; }
 elif [[ "$mode" == "release" ]]; then
     # Build in release mode
     cmake $cmake_options -DCMAKE_BUILD_TYPE=Release ${FCICOMP_ROOT}/${module} \
 	|| { echo "Error configuring ${module}." 1>&2 ; exit 1; }
-    make || { echo "Error building ${module}." 1>&2 ; exit 1; }
+    make VERBOSE=1 || { echo "Error building ${module}." 1>&2 ; exit 1; }
 else
     echo "${BASH_SOURCE[0]}: Unknown building mode: $mode." 2>&1
     rm -rf $BUILD_DIR
