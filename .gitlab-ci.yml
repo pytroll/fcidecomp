@@ -18,14 +18,16 @@ variables: &variables
   CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda/conda-channel"
 
 stages:
-  - build
-  - test
+  - fcidecomp_build
+  - fcidecomp_test
+  - fcidecomp-python_install
+  - fcidecomp-python_test
 
-build conda centos7:
+fcidecomp build conda centos7:
   image: conda/miniconda3-centos7:latest
   tags:
     - linux
-  stage: build
+  stage: fcidecomp_build
   before_script:
     - conda update -n base -c defaults conda
     - conda install -y conda-build
@@ -41,13 +43,13 @@ build conda centos7:
       - conda/conda-channel
     expire_in: 10 days
 
-test conda centos7:
+fcidecomp test conda centos7:
   image: conda/miniconda3-centos7:latest
   dependencies:
-    - build conda centos7
+    - fcidecomp build conda centos7
   tags:
     - linux
-  stage: test
+  stage: fcidecomp_test
   before_script:
     - conda update -n base -c defaults conda
     - conda install -y netcdf4
@@ -60,10 +62,22 @@ test conda centos7:
       - test-data
     expire_in: 10 days
 
-build conda windows:
+fcidecomp-python install conda centos7:
+  image: conda/miniconda3-centos7:latest
+  dependencies:
+    - fcidecomp test conda centos7
+  tags:
+    - linux
+  stage: fcidecomp_test
+  before_script:
+    - cd src/fcidecomp-python
+  script:
+    - pip install .
+
+fcidecomp build conda windows:
   tags:
     - windows
-  stage: build
+  stage: fcidecomp_build
   when: manual
   before_script:
     - echo $env:CONDABIN
