@@ -18,8 +18,32 @@ variables: &variables
   CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda/conda-channel"
 
 stages:
+  - docs
   - build
   - test
+
+pdf docs:
+  image: sphinxdoc/sphinx-latexpdf
+  stage: docs
+  script:
+    - mkdir -p pdf-docs
+    - cd documentation
+    - |
+      for f in */; do cd $f;
+      if [ -f Makefile ]; then
+        make latexpdf LATEXOPTS="-interaction=nonstopmode" && make latexpdf LATEXOPTS="-interaction=nonstopmode" && cp _build/latex/*.pdf ../../pdf-docs/; cd -;
+      else
+        cd -;
+      fi;done
+    - cp system-design-document/_build/latex/*.pdf ../pdf-docs/
+  tags:
+    - linux
+  when: manual
+  artifacts:
+    paths:
+      - pdf-docs
+    expire_in: 7 days
+
 
 build conda centos7:
   image: conda/miniconda3-centos7:latest
