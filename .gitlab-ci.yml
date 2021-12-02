@@ -68,7 +68,7 @@ fcidecomp-python install conda centos7:
     - fcidecomp test conda centos7
   tags:
     - linux
-  stage: fcidecomp_test
+  stage: fcidecomp-python_install
   before_script:
     - cd src/fcidecomp-python
   script:
