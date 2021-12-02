@@ -63,7 +63,7 @@ fcidecomp test conda centos7:
     expire_in: 10 days
 
 fcidecomp-python install conda centos7:
-  image: conda/miniconda3-centos7:latest
+#  image: conda/miniconda3-centos7:latest
   dependencies:
     - fcidecomp test conda centos7
   tags:
