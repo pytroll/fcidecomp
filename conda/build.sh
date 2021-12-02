@@ -44,3 +44,5 @@ cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_BUILD_PATH}
 # Fails (4 out of 7 tests failing)
 # ./gen/build.sh fcicomp-H5Zjpegls test
 ./gen/install.sh fcicomp-H5Zjpegls
+
+pip install --no-deps --ignore-installed -vv ../fcidecomp-python
