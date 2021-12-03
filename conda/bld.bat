@@ -6,6 +6,7 @@ set FCIDECOMP_BUILD_PATH=%PATH_TO_DELIVERY%\build
 if not exist "%FCIDECOMP_BUILD_PATH%" mkdir "%FCIDECOMP_BUILD_PATH%"
 cd %FCIDECOMP_BUILD_PATH%
 
+
 rem Install CharLS
 cmake -LAH -G "Ninja"                                                     ^
     -DCMAKE_BUILD_TYPE="Release"                                          ^
@@ -19,10 +20,12 @@ cmake -LAH -G "Ninja"                                                     ^
     -DCHARLS_INSTALL=1                                                    ^
     ..
 
-if errorlevel 1 exit 1
 
 cmake --build . --target install --config Release
 if errorlevel 1 exit 1
+
+@echo off
+goto :end
 
 rem Build FCIDECMP
 xcopy /E %PATH_TO_DELIVERY%\fcidecomp\* %FCIDECOMP_BUILD_PATH%
@@ -52,3 +55,5 @@ if errorlevel 1 exit 1
 :: ./gen/build.sh fcicomp-H5Zjpegls test
 call gen\install.bat fcicomp-H5Zjpegls
 if errorlevel 1 exit 1
+
+:end
