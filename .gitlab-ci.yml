@@ -53,7 +53,7 @@ test conda centos7:
     - conda install -y netcdf4
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
-    - export HDF5_PLUGIN_PATH=${CONDA_PREFIX}/hdf5/lib/plugin/
+    - export HDF5_PLUGIN_PATH=${PREFIX}/hdf5/lib/plugin/
     - echo ${HDF5_PLUGIN_PATH}
     - nccopy -F none test-data/compressed_test.nc test-data/decompressed.nc
   artifacts:
