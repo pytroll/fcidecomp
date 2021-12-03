@@ -18,16 +18,14 @@ variables: &variables
   CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda/conda-channel"
 
 stages:
-  - fcidecomp_build
-  - fcidecomp_test
-  - fcidecomp-python_install
-  - fcidecomp-python_test
+  - build
+  - test
 
-fcidecomp build conda centos7:
+build conda centos7:
   image: conda/miniconda3-centos7:latest
   tags:
     - linux
-  stage: fcidecomp_build
+  stage: build
   before_script:
     - conda update -n base -c defaults conda
     - conda install -y conda-build
@@ -43,29 +41,29 @@ fcidecomp build conda centos7:
       - conda/conda-channel
     expire_in: 10 days
 
-fcidecomp test conda centos7:
+test conda centos7:
   image: conda/miniconda3-centos7:latest
   dependencies:
-    - fcidecomp build conda centos7
+    - build conda centos7
   tags:
     - linux
-  stage: fcidecomp_test
+  stage: test
   before_script:
     - conda update -n base -c defaults conda
     - conda install -y netcdf4
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
-    - export HDF5_PLUGIN_PATH=/usr/local/hdf5/lib/plugin/
+    - export HDF5_PLUGIN_PATH=$CONDA_PREFIX/hdf5/lib/plugin/
     - nccopy -F none test-data/compressed_test.nc test-data/decompressed.nc
   artifacts:
     paths:
       - test-data
     expire_in: 10 days
 
-fcidecomp build conda windows:
+build conda windows:
   tags:
     - windows
-  stage: fcidecomp_build
+  stage: build
   when: manual
   before_script:
     - echo $env:CONDABIN
