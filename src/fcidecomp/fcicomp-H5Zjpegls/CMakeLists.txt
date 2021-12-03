@@ -94,6 +94,7 @@ INCLUDE_DIRECTORIES (${FCICOMP_JPEGLS_INCLUDE_DIR})
 # Copy the HDF5_ROOT variable retrieved from the cmake command line option 
 #  -DHDF5_ROOT into the ENV{HDF5_ROOT} variable used by the FIND_PACKAGE(HDF5) command.
 IF (HDF5_ROOT)
+  MESSAGE("HDF5_ROOT = ${HDF5_ROOT}")
   SET (ENV{HDF5_ROOT} ${HDF5_ROOT})
 ENDIF (HDF5_ROOT)
 
@@ -102,6 +103,7 @@ FIND_PACKAGE (HDF5 REQUIRED)
 
 # Set the HDF5 include directories if they have been found
 IF (HDF5_INCLUDE_DIRS)
+  MESSAGE("HDF5_INCLUDE_DIRS = ${HDF5_INCLUDE_DIRS}")
   INCLUDE_DIRECTORIES (${HDF5_INCLUDE_DIRS})
 ENDIF (HDF5_INCLUDE_DIRS)
 
@@ -179,6 +181,7 @@ INCLUDE_DIRECTORIES (${H5ZJPEGLS_SOURCE_DIR}/include
 # Create the H5Zjpegls library
 ADD_LIBRARY (${TARGET_LIBRARY_NAME} SHARED ${H5ZJPEGLS_SRCS})
 TARGET_LINK_LIBRARIES (${TARGET_LIBRARY_NAME} PRIVATE ${FCICOMP_JPEGLS_LIBRARIES})
+TARGET_LINK_LIBRARIES (${TARGET_LIBRARY_NAME} PRIVATE libhdf5.so)
 
 # Set the version and soversion of the library
 # this creates the dynamic links

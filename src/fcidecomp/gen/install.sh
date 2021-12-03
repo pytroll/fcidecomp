@@ -144,7 +144,7 @@ function main()
     echo "Installing $MODULE ..."
 
     # Perform the install
-    make install || { echo "Error: cannot install ${MODULE}." 1>&2 ; exit 1; }
+    make install VERBOSE=1 || { echo "Error: cannot install ${MODULE}." 1>&2 ; exit 1; }
 
     # Copy the install_manifest.txt file from the building directory to the install directory
     copy_install_manifest
