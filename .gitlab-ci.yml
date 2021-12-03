@@ -35,7 +35,6 @@ pdf docs:
       else
         cd -;
       fi;done
-    - cp system-design-document/_build/latex/*.pdf ../pdf-docs/
   tags:
     - linux
   when: manual
