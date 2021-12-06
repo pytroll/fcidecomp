@@ -1,14 +1,22 @@
-
+setlocal enabledelayedexpansion
 :: Get the module to build
 set module=%1
 
 :: Get the building mode
 set mode=%2
+shift
+shift
 
 :: Get cmake options
+set cmake_options=
+:next_option
+if "%1"=="" goto end_options
+set cmake_options=%cmake_options% %~1
 shift
-shift
-cmake_options=%*
+goto next_option
+:end_options
+echo %cmake_options%
+
 
 :: If the FCICOMP_ROOT environment variable is not set, set the default
 :: one: the upper directory of this script
