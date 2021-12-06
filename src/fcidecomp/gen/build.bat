@@ -46,10 +46,10 @@ cd %BUILD_DIR%
 :: Message
 echo "Building %module% ..."
 set modevalid=nn
-if (%mode%=="test") (
+if "%mode%"=="test" (
     set modevalid=yy
     :: Build in release mode with tests enable
-    cmake %cmake_options% -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON %FCICOMP_ROOT%\%module%
+    cmake -G "Ninja" %cmake_options% -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
         echo "Error configuring %module%."
         exit 1 
@@ -65,10 +65,10 @@ if (%mode%=="test") (
         exit 1
     )
 )
-if (%mode%=="debug") (
+if "%mode%"=="debug" (
     set modevalid=yy
     :: Build in debug mode
-    cmake %cmake_options% -DCMAKE_BUILD_TYPE=Debug %FCICOMP_ROOT%\%module%
+    cmake -G "Ninja" %cmake_options% -DCMAKE_BUILD_TYPE=Debug %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
         echo "Error configuring %module%."
         exit 1 
@@ -84,10 +84,10 @@ if (%mode%=="debug") (
         exit 1
     )
 )
-if (%mode%=="memcheck") (
+if "%mode%"=="memcheck" (
     set modevalid=yy
     :: Build in debug mode with test enable and memory check
-    cmake %cmake_options% -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DMEMORY_CHECK=ON %FCICOMP_ROOT%\%module%
+    cmake -G "Ninja" %cmake_options% -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DMEMORY_CHECK=ON %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
         echo "Error configuring %module%."
         exit 1 
@@ -103,10 +103,10 @@ if (%mode%=="memcheck") (
         exit 1
     )
 )
-if (%mode%=="coverage") (
+if "%mode%"=="coverage" (
     set modevalid=yy
     :: Build in debug mode with test enable and test coverage
-    cmake %cmake_options% -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DCOVERAGE_TESTING=ON %FCICOMP_ROOT%\%module%
+    cmake -G "Ninja" %cmake_options% -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DCOVERAGE_TESTING=ON %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
         echo "Error configuring %module%."
         exit 1
@@ -127,10 +127,11 @@ if (%mode%=="coverage") (
         exit 1
     )
 )
-if (%mode%=="release") (
+if "%mode%"=="release" (
     set modevalid=yy
     :: Build in release mode
-    cmake %cmake_options% -DCMAKE_BUILD_TYPE=Release %FCICOMP_ROOT%\%module%
+    echo cmake %cmake_options% -DCMAKE_BUILD_TYPE=Release %FCICOMP_ROOT%\%module%
+    cmake -G "Ninja" %cmake_options% -DCMAKE_BUILD_TYPE=Release %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
         echo "Error configuring %module%."
         exit 1
@@ -141,8 +142,8 @@ if (%mode%=="release") (
         exit 1
     )
 )
-if (%modevalid%=="n" (
+if "%modevalid%"=="nn" (
     echo "%BASH_SOURCE%: Unknown building mode: %mode%."
-    rm -rf "%BUILD_DIR%"
+    rmdir /s/q "%BUILD_DIR%"
     exit 1
 )
