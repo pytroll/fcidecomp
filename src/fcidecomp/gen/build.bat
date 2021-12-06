@@ -1,4 +1,3 @@
-setlocal enabledelayedexpansion
 
 :: get module to build, mode and following cmake options
 @echo off
@@ -7,7 +6,6 @@ for /f "tokens=1-2*" %%a in ("%*") do (
     set mode=%%b
     set cmake_options=%%c
 )
-echo %cmake_options%
 @echo on
 
 :: If the FCICOMP_ROOT environment variable is not set, set the default
@@ -39,7 +37,7 @@ if exist %BUILD_DIR% (
 if not exist %BUILD_DIR% (
     mkdir %BUILD_DIR%
     if errorlevel 1 (
-        echo "Error: cannot create the building directory: %BUILD_DIR%." 1>&2
+        echo "Error: cannot create the building directory: %BUILD_DIR%."
         exit 1
     )
 )
@@ -47,9 +45,9 @@ cd %BUILD_DIR%
 
 :: Message
 echo "Building %module% ..."
-set "modevalid=n"
+set modevalid=nn
 if (%mode%=="test") (
-    set "modevalid=y"
+    set modevalid=yy
     :: Build in release mode with tests enable
     cmake %cmake_options% -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=ON %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
@@ -68,7 +66,7 @@ if (%mode%=="test") (
     )
 )
 if (%mode%=="debug") (
-    set "modevalid=y"
+    set modevalid=yy
     :: Build in debug mode
     cmake %cmake_options% -DCMAKE_BUILD_TYPE=Debug %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
@@ -87,7 +85,7 @@ if (%mode%=="debug") (
     )
 )
 if (%mode%=="memcheck") (
-    set "modevalid=y"
+    set modevalid=yy
     :: Build in debug mode with test enable and memory check
     cmake %cmake_options% -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DMEMORY_CHECK=ON %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
@@ -106,7 +104,7 @@ if (%mode%=="memcheck") (
     )
 )
 if (%mode%=="coverage") (
-    set "modevalid=y"
+    set modevalid=yy
     :: Build in debug mode with test enable and test coverage
     cmake %cmake_options% -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DCOVERAGE_TESTING=ON %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
@@ -130,7 +128,7 @@ if (%mode%=="coverage") (
     )
 )
 if (%mode%=="release") (
-    set "modevalid=y"
+    set modevalid=yy
     :: Build in release mode
     cmake %cmake_options% -DCMAKE_BUILD_TYPE=Release %FCICOMP_ROOT%\%module%
 	if errorlevel 1 (
@@ -143,7 +141,7 @@ if (%mode%=="release") (
         exit 1
     )
 )
-if modevalid n (
+if (%modevalid%=="n" (
     echo "%BASH_SOURCE%: Unknown building mode: %mode%."
     rm -rf "%BUILD_DIR%"
     exit 1
