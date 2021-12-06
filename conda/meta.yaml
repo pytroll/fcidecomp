@@ -14,7 +14,7 @@ source:
   - path: ../src/
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:

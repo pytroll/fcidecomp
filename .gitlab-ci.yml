@@ -77,7 +77,7 @@ test conda centos7:
     - conda init bash
     - source ~/.bashrc
     - conda activate
-    - conda install -y netcdf4
+    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
     - export HDF5_PLUGIN_PATH=${CONDA_PREFIX}/hdf5/lib/plugin/
