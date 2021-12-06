@@ -1,22 +1,14 @@
 setlocal enabledelayedexpansion
-:: Get the module to build
-set module=%1 & shift /1
-:: Get the building mode
-set mode=%1 & shift /1
 
+:: get module to build, mode and following cmake options
 @echo off
-set cmake_options=
-:: Get cmake options
-set delim=
-:next_option
-if "%1"=="" goto end_options
-set "cmake_options=%cmake_options%%delim%%1"
-shift /1
-goto next_option
-:end_options
-@echo on
+for /f "tokens=1-2*" %%a in ("%*") do (
+    set module=%%a
+    set mode=%%b
+    set cmake_options=%%c
+)
 echo %cmake_options%
-
+@echo on
 
 :: If the FCICOMP_ROOT environment variable is not set, set the default
 :: one: the upper directory of this script
