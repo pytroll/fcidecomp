@@ -1,20 +1,20 @@
 setlocal enabledelayedexpansion
 :: Get the module to build
-set module=%1
-
+set module=%1 & shift /1
 :: Get the building mode
-set mode=%2
-shift
-shift
+set mode=%1 & shift /1
 
-:: Get cmake options
+@echo off
 set cmake_options=
+:: Get cmake options
+set delim=
 :next_option
 if "%1"=="" goto end_options
-set cmake_options=%cmake_options% %~1
-shift
+set "cmake_options=%cmake_options%%delim%%1"
+shift /1
 goto next_option
 :end_options
+@echo on
 echo %cmake_options%
 
 
