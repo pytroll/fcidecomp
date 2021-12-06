@@ -84,7 +84,7 @@ test conda centos7:
     - pytest
   artifacts:
     paths:
-      - test-data
+      - tests/test-data
     expire_in: 10 days
 
 build conda windows:
