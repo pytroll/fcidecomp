@@ -81,7 +81,7 @@ test conda centos7:
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
     - export HDF5_PLUGIN_PATH=${CONDA_PREFIX}/hdf5/lib/plugin/
-    - nccopy -F none test-data/compressed_test.nc test-data/decompressed.nc
+    - pytest
   artifacts:
     paths:
       - test-data
