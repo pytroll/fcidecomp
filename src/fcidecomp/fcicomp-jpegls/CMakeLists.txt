@@ -82,6 +82,17 @@ SET (CMAKE_MODULE_PATH ${FCICOMP_CMAKE_MODULE_PATH} ${CMAKE_MODULE_PATH})
 # CHARLS Library Settings
 # Users can set the CHARLS_ROOT variable which is copied to ENV{CHARLS_ROOT}
 # ENV{CHARLS_ROOT} is used in by FindCHARLS.cmake at the call of FIND_PACKAGE(CHARLS)
+
+option (BUILD_SHARED_LIBS "Build CharLS with shared libraries." OFF)
+
+if (WIN32)
+   if (BUILD_SHARED_LIBS)
+     add_definitions(-D CHARLS_DLL)
+   else()
+     add_definitions(-D CHARLS_STATIC)
+   endif()
+endif()
+
 #-----------------------------------------------------------------------------
 
 # Copy the CHARLS_ROOT variable retrieved from the cmake command line option 

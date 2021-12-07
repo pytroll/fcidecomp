@@ -20,7 +20,7 @@ IF NOT DEFINED FCICOMP_COTS_ROOT (
 set BUILD_DIR=%FCICOMP_ROOT%\build\%module%
 
 :: Test only
-if ((%mode%=="test") -and (exist %BUILD_DIR% )) (
+if (%mode%=="test") -and (exist %BUILD_DIR% ) (
     :: If the building directory already exists
     :: do not build but run the unit tests
     cd %BUILD_DIR%
@@ -54,7 +54,7 @@ if "%mode%"=="test" (
         echo "Error configuring %module%."
         exit 1 
     )
-    make
+    cmake --build .
 	if errorlevel 1 (
         echo "Error building %module%."
         exit 1 
@@ -73,7 +73,7 @@ if "%mode%"=="debug" (
         echo "Error configuring %module%."
         exit 1 
     )
-    make
+    cmake --build .
 	if errorlevel 1 (
         echo "Error building %module%."
         exit 1 
@@ -92,7 +92,7 @@ if "%mode%"=="memcheck" (
         echo "Error configuring %module%."
         exit 1 
     )
-    make
+    cmake --build .
 	if errorlevel 1 (
         echo "Error building %module%."
         exit 1 
@@ -111,7 +111,7 @@ if "%mode%"=="coverage" (
         echo "Error configuring %module%."
         exit 1
     )
-    make
+    cmake --build .
 	if errorlevel 1 (
         echo "Error building %module%."
         exit 1
@@ -136,7 +136,7 @@ if "%mode%"=="release" (
         echo "Error configuring %module%."
         exit 1
     )
-    make
+    cmake --build .
 	if errorlevel 1 (
         echo "Error building %module%."
         exit 1

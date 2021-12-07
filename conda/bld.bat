@@ -30,6 +30,7 @@ rem Build fcicomp-jpegls
 call gen\build.bat fcicomp-jpegls release                                 ^
     -DCMAKE_PREFIX_PATH=%CONDA_PREFIX%                                    ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%                               ^
+    -DBUILD_SHARED_LIBS=1                                                 ^
     -DCHARLS_ROOT=%CONDA_PREFIX%                                          ^
     -DCMAKE_INCLUDE_PATH=%SRC_DIR%\src
 if errorlevel 1 exit 1
