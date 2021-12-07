@@ -25,7 +25,7 @@ Pre-requisites
 
 Installation requires:
 
-- `conda`, installed as described
+- ``conda``, installed as described
   `here <https://conda.io/projects/conda/en/latest/user-guide/install/index.html>`_
 
 - a connection to internet
@@ -33,7 +33,7 @@ Installation requires:
 Installation
 ~~~~~~~~~~~~~
 
-Start by creating a new `conda` environment. Let's call it `fcidecomp, but
+Start by creating a new ``conda`` environment. Let's call it ``fcidecomp``, but
 any valid name would do (change the following instructions accordingly)::
 
     conda create -n fcidecomp python=3.7
