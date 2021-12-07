@@ -48,3 +48,37 @@ Activate the environment::
 
     conda install -y --override-channels -c anaconda -c conda-forge -c eumetsat fcidecomp
 
+
+Installation from an 'artifacts' file
+--------------------------------------
+
+Pre-requisites
+~~~~~~~~~~~~~~
+
+Installation requires:
+
+- the FCIDECOMP ``conda`` packages, downloaded as a single ``zip`` file from the project CI pipelines
+
+- ``conda``, installed as described
+  `here <https://conda.io/projects/conda/en/latest/user-guide/install/index.html>`_.
+
+Installation
+~~~~~~~~~~~~~
+
+Start by creating a new ``conda`` environment. Let's call it ``fcidecomp``, but
+any valid name would do (change the following instructions accordingly)::
+
+    conda create -n fcidecomp python=3.7
+
+
+Activate the environment::
+
+    conda activate fcidecomp
+
+Unzip the ``conda`` packages. They end up in a directory which ends with ``conda-channel``.
+
+- On Linux, execute (replace $DATATAILOR with the path to the directory, including `conda-channel`::
+
+    conda install -y --override-channels -c anaconda -c conda-forge -c $DATATAILOR fcidecomp
+
+
