@@ -30,11 +30,13 @@ rem Build fcicomp-jpegls
 call gen\build.bat fcicomp-jpegls release                                 ^
     -DCMAKE_PREFIX_PATH=%CONDA_PREFIX%                                    ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%                               ^
-    -DBUILD_SHARED_LIBS=1                                                 ^
     -DCHARLS_ROOT=%CONDA_PREFIX%                                          ^
-    -DCMAKE_INCLUDE_PATH=%SRC_DIR%\src
+    -DCMAKE_INCLUDE_PATH=%SRC_DIR%\src                                    ^
+    -DBUILD_SHARED_LIBS=OFF                                               ^
+    -DCHARLS_BUILT_DLL=1
 if errorlevel 1 exit 1
 
+cd %FCIDECOMP_BUILD_PATH%
 call gen\build.bat fcicomp-jpegls test
 if errorlevel 1 exit 1
 

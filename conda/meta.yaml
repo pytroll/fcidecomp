@@ -11,6 +11,8 @@ package:
 
 source:
   - url: https://github.com/team-charls/charls/archive/{{ charls_version }}.tar.gz
+    patches:
+      - includeinterface.patch  # [win]
   - path: ../src/
 
 build:

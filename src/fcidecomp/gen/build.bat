@@ -20,12 +20,12 @@ IF NOT DEFINED FCICOMP_COTS_ROOT (
 set BUILD_DIR=%FCICOMP_ROOT%\build\%module%
 
 :: Test only
-if (%mode%=="test") -and (exist %BUILD_DIR% ) (
+if "%mode%"=="test" if exist %BUILD_DIR% (
     :: If the building directory already exists
     :: do not build but run the unit tests
     cd %BUILD_DIR%
     ctest --output-on-failure
-    if errorlevel 1 exit 1
+    if errorlevel 1 (exit 1) else (exit 0)
 )
 
 :: Check that the building folder does not already exists
