@@ -82,6 +82,13 @@ Unzip the ``conda`` packages. They end up in a directory which ends with ``conda
     conda install -y --override-channels -c anaconda -c conda-forge -c $FCIDECOMP fcidecomp
 
 
+Installation from the Conda recipe
+----------------------------------
+
+The FCIDECOMP software can be also built and installed using the provided Conda recipe: instructions are detailed in the
+``conda/README.rst`` file.
+
+
 Test and use the FCIDECOMP software
 -----------------------------------
 
