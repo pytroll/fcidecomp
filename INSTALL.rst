@@ -77,9 +77,9 @@ Activate the environment::
 
 Unzip the ``conda`` packages. They end up in a directory which ends with ``conda-channel``.
 
-- On Linux, execute (replace $DATATAILOR with the path to the directory, including `conda-channel`::
+- On Linux, execute (replace $FCIDECOMP with the path to the directory, including `conda-channel`::
 
-    conda install -y --override-channels -c anaconda -c conda-forge -c $DATATAILOR fcidecomp
+    conda install -y --override-channels -c anaconda -c conda-forge -c $FCIDECOMP fcidecomp
 
 
 Test and use the FCIDECOMP software
