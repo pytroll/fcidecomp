@@ -16,14 +16,14 @@ cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_BUILD_PATH}
 ./gen/build.sh fcicomp-jpegls release                                     \
     -DCMAKE_PREFIX_PATH=${CONDA_PREFIX}                                   \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}                                      \
-    -DCHARLS_ROOT=${PREFIX}                                               \
+    -DCHARLS_ROOT=${PREFIX}
 ./gen/build.sh fcicomp-jpegls test
 ./gen/install.sh fcicomp-jpegls
 
 ## Build fcicomp-H5Zjpegls
 ./gen/build.sh fcicomp-H5Zjpegls release                                  \
-    -DCMAKE_PREFIX_PATH="${PREFIX};${CONDA_PREFIX};${CONDA_PREFIX}"       \
-    -DCMAKE_INSTALL_PREFIX=${PREFIX}                                      \
+    -DCMAKE_PREFIX_PATH="${PREFIX};${CONDA_PREFIX}"                       \
+    -DCMAKE_INSTALL_PREFIX=${PREFIX}
 # Fails (4 out of 7 tests failing)
 # ./gen/build.sh fcicomp-H5Zjpegls test
 ./gen/install.sh fcicomp-H5Zjpegls
