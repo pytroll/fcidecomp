@@ -10,6 +10,10 @@ Prerequisites
 
 - ``notebook``, installed in the ``conda`` environment as described `here <https://anaconda.org/anaconda/notebook>`_
 
+- ``netcdf4``, installed in the ``conda`` environment as described `here <https://anaconda.org/anaconda/netcdf4>`_
+
+- ``xarray``, installed in the ``conda`` environment as described `here <https://anaconda.org/anaconda/xarray>`_
+
 Setting up the environment
 --------------------------
 
@@ -25,13 +29,14 @@ Install ``ipykernell``::
     conda install -c anaconda ipykernel
 
 
+
 Enable the ``conda`` environment in Jupyter ``notebook``::
 
     python -m ipykernel install --user --name=fcidecomp
 
 
-Start the notebooks
--------------------
+Run the notebooks
+-----------------
 
 To start Jupyter ``notebook``, run::
 
