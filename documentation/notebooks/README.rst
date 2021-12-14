@@ -33,5 +33,11 @@ Enable the ``conda`` environment in Jupyter ``notebook``::
 Start the notebooks
 -------------------
 
+To start Jupyter ``notebook``, run::
+
+    jupyter notebook
+
+
+After selecting the notebook, select the ``fcidecomp`` environment from the toolbar menu ``Kernel`` > ``Change kernel``.
 
 
