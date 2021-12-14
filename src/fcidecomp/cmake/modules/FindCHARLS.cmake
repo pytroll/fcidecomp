@@ -36,7 +36,7 @@ else()
 endif()
 
 find_path(CHARLS_INCLUDE_DIR
-  NAMES interface.h publictypes.h config.h
+  NAMES version.h public_types.h jpegls_error.h charls_legacy.h charls.h api_abi.h
   HINTS CHARLS_ROOT ENV CHARLS_ROOT
   PATH_SUFFIXES include/CharLS
   DOC "CharLS include directory."
