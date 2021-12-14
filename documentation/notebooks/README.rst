@@ -31,7 +31,6 @@ Install ``ipykernell``::
     conda install -c anaconda ipykernel
 
 
-
 Enable the ``conda`` environment in Jupyter ``notebook``::
 
     python -m ipykernel install --user --name=fcidecomp
