@@ -429,7 +429,7 @@ IF (BUILD_TESTING)
     # --------------------------
     # Test jpeglsReadHeaderErrorCase
     # Add the unit test: run jpegls_test with the jpeglsReadHeaderErrorCase
-    ADD_FCICOMP_JPEGLS_UNIT_TEST (jpeglsReadHeaderErrorCase)
+    # ADD_FCICOMP_JPEGLS_UNIT_TEST (jpeglsReadHeaderErrorCase)
 
     # --------------------------
     # Test jpeglsDecompressErrorCase
