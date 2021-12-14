@@ -16,45 +16,43 @@ set BUILD_DIR=%FCICOMP_ROOT%\build\%MODULE%
 :: Move to the build directory
 cd %BUILD_DIR%
 
-echo
-echo "Installing %MODULE% ..."
+echo Installing %MODULE% ...
 :: Perform the install
-call make install
+cmake install .
 if errorlevel 1 (
     echo "Error: cannot install %MODULE%."
     exit 1
 )
 :: Copy the install_manifest.txt file from the building directory to the install directory
-:: Define the install_manifest.txt file
-set install_manifest_file=%BUILD_DIR%\install_manifest.txt
-if exist "%install_manifest_file%" (
+rem Define the install_manifest.txt file
+echo %BUILD_DIR%
+
+set INSTALL_MANIFEST_FILE=%BUILD_DIR%\install_manifest.txt
+
+if exist "%INSTALL_MANIFEST_FILE%" (
     :: Try to read the install_prefix in the CMakeCache.txt file
-    cmakecache_file=%BUILD_DIR%\CMakeCache.txt
+    set cmakecache_file=%BUILD_DIR%\CMakeCache.txt
     if exist "%cmakecache_file%" (
         :: Locate the CMAKE_INSTALL_PREFIX in the CMakeCache.txt file
         for /f "tokens=2 delims==" %%a in ('find "CMAKE_INSTALL_PREFIX:PATH=" "%cmakecache_file%"') do @set install_prefix=%%a
-    ) else (
-	    echo "Error: Cannot find file: %cmakecache_file%."
-    )
-	if defined install_prefix (
-
+        if defined install_prefix (
 	    :: Define the destination file and directory
 	    set dest_dir=%install_prefix%\share\cmake
 	    set dest=%dest_dir%\%MODULE%_install_manifest.txt
 	    :: Create the destination directory if it does not exist
-	    if not exist %dest_dir% (
+	    if not exist "%dest_dir%" (
 	       echo "Creating directory %dest_dir%"
 	       mkdir %dest_dir%
 	    )
-
 	    :: Append one line in the install_manifest.txt file
-	    echo %dest%>>"%install_manifest_file%"
-
+	    echo %dest%>>"%INSTALL_MANIFEST_FILE%"
 	    :: Copy the install_manifest.txt file
-	    echo "-- Copying: %install_manifest_file% to %dest%"
-	    copy /y %install_manifest_file% %dest%
-	) else (
-	    echo "Warning: Cannot copy the install_manifest.txt file to the install directory: Install directory is not known."
-
+	    echo "-- Copying: %INSTALL_MANIFEST_FILE% to %dest%"
+	    copy /y %INSTALL_MANIFEST_FILE% %dest%
+	)
+    ) else (
+	echo Error: Cannot find file: %cmakecache_file%.
+    )
 ) else (
-	echo "Warning: The file install_manifest.txt has not been found in the building directory %BUILD_DIR%."
+    echo "Warning: The file install_manifest.txt has not been found in the building directory %BUILD_DIR%."
+)

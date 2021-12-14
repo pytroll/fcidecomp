@@ -8,8 +8,7 @@ for /f "tokens=1-2*" %%a in ("%*") do (
 )
 @echo on
 
-:: If the FCICOMP_ROOT environment variable is not set, set the default
-:: one: the upper directory of this script
+:: If the FCICOMP_ROOT environment variable is not set, set the default one: the upper directory of this script
 IF NOT DEFINED FCICOMP_COTS_ROOT (
     pushd %BASH_SOURCE%\..
     set FCICOMP_ROOT=%cd%
@@ -25,7 +24,7 @@ if "%mode%"=="test" if exist %BUILD_DIR% (
     :: do not build but run the unit tests
     cd %BUILD_DIR%
     ctest --output-on-failure
-    if errorlevel 1 (exit 1) else (exit 0)
+    if errorlevel 1 (exit 1) else ( goto :end2 )
 )
 
 :: Check that the building folder does not already exists
@@ -147,3 +146,5 @@ if "%modevalid%"=="nn" (
     rmdir /s/q "%BUILD_DIR%"
     exit 1
 )
+
+:end2
