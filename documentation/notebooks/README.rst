@@ -14,6 +14,8 @@ Prerequisites
 
 - ``xarray``, installed in the ``conda`` environment as described `here <https://anaconda.org/anaconda/xarray>`_
 
+- ``matplotlib``, installed in the ``conda`` environment as described `here <https://anaconda.org/conda-forge/matplotlib>`_
+
 Setting up the environment
 --------------------------
 
