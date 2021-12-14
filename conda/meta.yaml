@@ -3,14 +3,12 @@
 # - https://github.com/mraspaud/fcidecomp-conda-recipe/blob/master/build.sh
 
 {% set version = "1.0.2" %}
-{% set charls_version = "1.1.0" %}
 
 package:
   name: fcidecomp
   version: {{ version }}
 
 source:
-  - url: https://github.com/team-charls/charls/archive/{{ charls_version }}.tar.gz
   - path: ../src/
 
 build:
@@ -26,12 +24,14 @@ requirements:
   host:
     - python  {{ python }}
     - zlib
-    - hdf5==1.10.*
-    - h5py==2.*
+    - charls=2.1.0
+    - hdf5=1.10.*
+    - h5py=2.*
   run:
     - python  {{ python }}
-    - hdf5==1.10.*
-    - h5py==2.*
+    - charls=2.1.0
+    - hdf5=1.10.*
+    - h5py=2.*
 
 test:
   commands:
