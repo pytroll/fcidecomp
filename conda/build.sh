@@ -16,7 +16,7 @@ cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_BUILD_PATH}
 ./gen/build.sh fcicomp-jpegls release                                     \
     -DCMAKE_PREFIX_PATH=${CONDA_PREFIX}                                   \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}                                      \
-    -DCHARLS_ROOT=${CONDA_PREFIX}                                         \
+    -DCHARLS_ROOT=${PREFIX}                                         \
     -DCMAKE_INCLUDE_PATH=${SRC_DIR}/src
 ./gen/build.sh fcicomp-jpegls test
 ./gen/install.sh fcicomp-jpegls
