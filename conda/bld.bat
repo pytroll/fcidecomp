@@ -28,6 +28,7 @@ xcopy /E %PATH_TO_DELIVERY%\fcidecomp\* %FCIDECOMP_BUILD_PATH%
 
 rem Build fcicomp-jpegls
 call gen\build.bat fcicomp-jpegls release                                 ^
+    -DCMAKE_BUILD_TYPE="Release"                                          ^
     -DCMAKE_PREFIX_PATH=%CONDA_PREFIX%                                    ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%                               ^
     -DCHARLS_ROOT=%CONDA_PREFIX%                                          ^
@@ -44,17 +45,20 @@ cd %FCIDECOMP_BUILD_PATH%
 call gen\install.bat fcicomp-jpegls
 if errorlevel 1 exit 1
 
+rem Build fcicomp-H5Zjpegls
+cd %FCIDECOMP_BUILD_PATH%
+call gen\build.bat fcicomp-H5Zjpegls release                              ^
+    -DCMAKE_PREFIX_PATH="%CONDA_PREFIX%;%LIBRARY_PREFIX%"                 ^
+    -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%                               ^
+    -DHDF5_USE_STATIC_LIBRARIES=1
+if errorlevel 1 exit 1
+
 @echo off
 goto :end
 
-rem Build fcicomp-H5Zjpegls
-call gen\build.bat fcicomp-H5Zjpegls release                              ^
-    -DCMAKE_PREFIX_PATH=${CONDA_PREFIX}                                   ^
-    -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%
-if errorlevel 1 exit 1
-
+cd %FCIDECOMP_BUILD_PATH%
 :: Fails
-:: ./gen/build.sh fcicomp-H5Zjpegls test
+call gen\build.bat fcicomp-H5Zjpegls test
 call gen\install.bat fcicomp-H5Zjpegls
 if errorlevel 1 exit 1
 

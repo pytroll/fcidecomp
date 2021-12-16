@@ -28,9 +28,9 @@ requirements:
     - m2-patch  # [win]
   host:
     - zlib
-    - hdf5>=1.10.5
+    - hdf5==1.10.*
   run:
-    - hdf5>=1.10.5
+    - hdf5==1.10.*
 
 test:
   commands:

@@ -179,6 +179,12 @@ INCLUDE_DIRECTORIES (${H5ZJPEGLS_SOURCE_DIR}/include
 # Create the H5Zjpegls library
 ADD_LIBRARY (${TARGET_LIBRARY_NAME} SHARED ${H5ZJPEGLS_SRCS})
 TARGET_LINK_LIBRARIES (${TARGET_LIBRARY_NAME} PRIVATE ${FCICOMP_JPEGLS_LIBRARIES})
+TARGET_LINK_LIBRARIES (${TARGET_LIBRARY_NAME} PRIVATE ${HDF5_LIBRARIES})
+IF (WIN32)
+    # Find ZLIB, this set ZLIB_LIBRARIES
+    FIND_PACKAGE (ZLIB REQUIRED)
+    TARGET_LINK_LIBRARIES (${TARGET_LIBRARY_NAME} PRIVATE ${ZLIB_LIBRARIES})
+ENDIF()
 
 # Set the version and soversion of the library
 # this creates the dynamic links
@@ -289,6 +295,9 @@ IF (BUILD_TESTING)
         ${TEST_SOURCE_DIR}/H5Zjpegls_decode_nominal.c
 	)
     TARGET_LINK_LIBRARIES (H5Zjpegls_test ${HDF5_LIBRARIES})
+    IF (WIN32)
+        TARGET_LINK_LIBRARIES (H5Zjpegls_test ${ZLIB_LIBRARIES})
+    ENDIF()
 
     #-------------------------------------------------------------------------
     # Define the test image
