@@ -40,11 +40,12 @@ cd %FCIDECOMP_BUILD_PATH%
 call gen\build.bat fcicomp-jpegls test
 if errorlevel 1 exit 1
 
-@echo off
-goto :end
-
+cd %FCIDECOMP_BUILD_PATH%
 call gen\install.bat fcicomp-jpegls
 if errorlevel 1 exit 1
+
+@echo off
+goto :end
 
 rem Build fcicomp-H5Zjpegls
 call gen\build.bat fcicomp-H5Zjpegls release                              ^
