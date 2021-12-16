@@ -25,6 +25,7 @@ requirements:
     - cmake
     - make   # [not win]
     - ninja  # [win]
+    - m2-patch  # [win]
   host:
     - zlib
     - hdf5>=1.10.5
