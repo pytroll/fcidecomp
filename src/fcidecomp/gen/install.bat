@@ -20,40 +20,37 @@ echo "Installing %MODULE% ..."
 CALL cmake --install . || goto :error
 
 :: Copy the install_manifest.txt file from the building directory to the install directory
-echo "Define the install_manifest.txt file..."
 SET "INSTALL_MANIFEST=%BUILD_DIR%\install_manifest.txt"
+SET "CMAKECACHE_FILE=%BUILD_DIR%\CMakeCache.txt"
+echo manifest: "%INSTALL_MANIFEST%" , cmakecache: "%CMAKECACHE_FILE%"
 
-IF EXIST "%INSTALL_MANIFEST%" (
-    REM Try to read the install_prefix in the CMakeCache.txt file
-    SET "CMAKECACHE_FILE=%BUILD_DIR%\CMakeCache.txt"
-    IF EXIST "%CMAKECACHE_FILE%" (
-        REM Locate the CMAKE_INSTALL_PREFIX in the CMakeCache.txt file
-        FOR /f "tokens=2 delims==" %%a IN ('find "CMAKE_INSTALL_PREFIX:PATH=" "%CMAKECACHE_FILE%"') DO
-            @set INSTALL_PREFIX=%%a
-    ) ELSE (
-	    echo Error: Cannot find file: %CMAKECACHE_FILE%.
-	    goto :error
-    )
-	IF DEFINED INSTALL_PREFIX (
-	    REM Define the destination file and directory
-	    SET "DESTDIR=%INSTALL_PREFIX%\share\cmake"
-	    set "DEST=%DESTDIR%\%MODULE%_install_manifest.txt"
-	    REM Create the destination directory if it does not exist
-	    IF NOT EXIST %DESTDIR% (
-	       echo Creating directory %DESTDIR%
-	       mkdir %DESTDIR%
-	    )
-	    REM Append one line in the install_manifest.txt file
-	    echo %DEST%>>"%INSTALL_MANIFEST%"
-	    REM Copy the install_manifest.txt file
-	    echo -- Copying: %INSTALL_MANIFEST% to %DEST%
-	    copy /y %INSTALL_MANIFEST% %DEST%
-	) ELSE (
-	    echo Warning: Cannot copy the install_manifest.txt file to the install directory: Install directory is not known.
-    )
-) ELSE (
-	echo Warning: The file install_manifest.txt has not been found in the building directory %BUILD_DIR%.
+IF NOT EXIST "%INSTALL_MANIFEST%" (
+    echo Warning: The file install_manifest.txt has not been found in the building directory %BUILD_DIR%.
+    goto :EOF
 )
+:: here exists the install manifest
+IF NOT EXIST "%CMAKECACHE_FILE%" (
+    echo Error: Cannot find file: %CMAKECACHE_FILE%.
+	goto :error
+)
+:: here exists the cmake cache file
+FOR /f "tokens=2 delims==" %%a IN ('find "CMAKE_INSTALL_PREFIX:PATH=" "%CMAKECACHE_FILE%"') DO @set cmakeinstallprefix=%%a
+
+IF NOT DEFINED cmakeinstallprefix (
+    echo Warning: Cannot copy the install_manifest.txt file to the install directory: Install directory is not known.
+    goto :EOF
+)
+:: here cmakeinstallprefix is defined
+SET "DESTDIR=%cmakeinstallprefix%\share\cmake"
+set "DEST=%DESTDIR%\%MODULE%_install_manifest.txt"
+echo destdir: "%DESTDIR%", dest: "%DEST%"
+IF NOT EXIST %DESTDIR% (
+   echo Creating directory %DESTDIR%
+   mkdir %DESTDIR%
+)
+echo %DEST%>>"%INSTALL_MANIFEST%"
+echo -- Copying: %INSTALL_MANIFEST% to %DEST%
+copy /y %INSTALL_MANIFEST% %DEST%
 
 goto :EOF
 
