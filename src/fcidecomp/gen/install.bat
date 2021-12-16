@@ -42,7 +42,7 @@ IF NOT DEFINED cmakeinstallprefix (
 )
 :: here cmakeinstallprefix is defined
 SET "DESTDIR=%cmakeinstallprefix%\share\cmake"
-set "DEST=%DESTDIR%\%MODULE%_install_manifest.txt"
+SET "DEST=%DESTDIR%\%MODULE%_install_manifest.txt"
 echo destdir: "%DESTDIR%", dest: "%DEST%"
 IF NOT EXIST %DESTDIR% (
    echo Creating directory %DESTDIR%
@@ -50,7 +50,9 @@ IF NOT EXIST %DESTDIR% (
 )
 echo %DEST%>>"%INSTALL_MANIFEST%"
 echo -- Copying: %INSTALL_MANIFEST% to %DEST%
-copy /y %INSTALL_MANIFEST% %DEST%
+:: problems with '/' in the path taken from cmakecache file!
+SET "DEST2=%DEST:/=\%"
+copy /y %INSTALL_MANIFEST% %DEST2%
 
 goto :EOF
 
