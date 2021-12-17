@@ -75,7 +75,8 @@ build conda windows:
     - mkdir -p conda-channel
     - cd conda
     - dir "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\"
-    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build $BUILD_OPTS . "&" cp C:\Users\Admin\miniconda3\conda-bld\win-64\fcidecomp* conda-channel "&" conda build purge' 
+    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"'
+    - 'cmd.exe /k "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build --output-folder conda-channel . "&" cp C:\Users\Admin\miniconda3\conda-bld\win-64\fcidecomp* conda-channel "&" conda build purge' 
   artifacts:
     paths:
       - conda-channel
