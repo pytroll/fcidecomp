@@ -67,14 +67,13 @@ build conda windows:
     - windows
   stage: build
   when: manual
-  before_script:
+  script:
     - echo $env:CONDABIN
     - $env:Path = "$env:CONDABIN;$env:Path"
     - echo $env:Path
     - conda install -y conda-build
     - mkdir -p conda-channel
     - cd conda
-  script:
     - dir "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\"
     - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build $BUILD_OPTS . "&" cp C:\Users\Admin\miniconda3\conda-bld\win-64\fcidecomp* conda-channel "&" conda build purge' 
   artifacts:
