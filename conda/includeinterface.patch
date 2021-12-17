@@ -1,7 +1,7 @@
 --- ../src/charls/CMakeLists.txt	2021-11-23 11:48:41.426854732 +0100
 +++ ../src/charls/CMakeLists.txt	2021-12-10 13:00:51.170445616 +0100
 @@ -40,7 +40,7 @@
- 
+  
  set (charls_HEADERS
  src/context.h         src/defaulttraits.h    src/jpegimagedatasegment.h  src/jpegsegment.h           src/lookuptable.h       src/publictypes.h
 -src/colortransform.h  src/contextrunmode.h   src/encoderstrategy.h       src/jpegmarker.h            src/losslesstraits.h    src/scan.h
