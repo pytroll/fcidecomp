@@ -19,7 +19,6 @@ echo "Installing %MODULE% ..."
 :: Perform the install
 CALL cmake --install . || goto :error
 
-:: Copy the install_manifest.txt file from the building directory to the install directory
 SET "INSTALL_MANIFEST=%BUILD_DIR%\install_manifest.txt"
 SET "CMAKECACHE_FILE=%BUILD_DIR%\CMakeCache.txt"
 echo manifest: "%INSTALL_MANIFEST%" , cmakecache: "%CMAKECACHE_FILE%"
@@ -40,18 +39,20 @@ IF NOT DEFINED cmakeinstallprefixraw (
     echo Warning: Cannot copy the install_manifest.txt file to the install directory: Install directory is not known.
     goto :EOF
 )
-:: here cmakeinstallprefixraw is defined
+:: here cmakeinstallprefixraw is defined; it is a unix-style path
 SET "cmakeinstallprefix=%cmakeinstallprefixraw:/=\%"
-SET "DESTDIR=%cmakeinstallprefix%\share\cmake"
-SET "DEST=%DESTDIR%\%MODULE%_install_manifest.txt"
-echo destdir: "%DESTDIR%", dest: "%DEST%"
-IF NOT EXIST %DESTDIR% (
-   echo Creating directory %DESTDIR%
-   mkdir %DESTDIR%
+SET "DEST_DIR=%cmakeinstallprefix%\share\cmake"
+SET "DEST_DIRraw=%cmakeinstallprefixraw%/share/cmake"
+SET "DEST=%DEST_DIR%\%MODULE%_install_manifest.txt"
+SET "DESTraw=%DEST_DIRraw%/%MODULE%_install_manifest.txt"
+echo destdir: "%DEST_DIR%", dest: "%DEST%"
+IF NOT EXIST %DEST_DIR% (
+   echo Creating directory %DEST_DIR%
+   mkdir %DEST_DIR%
 )
-echo %DEST%>>"%INSTALL_MANIFEST%"
+echo.>>"%INSTALL_MANIFEST%"
+echo %DESTraw%>>"%INSTALL_MANIFEST%"
 echo -- Copying: %INSTALL_MANIFEST% to %DEST%
-:: problems with '/' in the path taken from cmakecache file!
 copy /y %INSTALL_MANIFEST% %DEST%
 
 goto :EOF

@@ -48,18 +48,16 @@ if errorlevel 1 exit 1
 rem Build fcicomp-H5Zjpegls
 cd %FCIDECOMP_BUILD_PATH%
 call gen\build.bat fcicomp-H5Zjpegls release                              ^
-    -DCMAKE_PREFIX_PATH="%CONDA_PREFIX%;%LIBRARY_PREFIX%"                 ^
+    -DCMAKE_PREFIX_PATH=%CONDA_PREFIX%;%LIBRARY_PREFIX%                   ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX%                               ^
     -DHDF5_USE_STATIC_LIBRARIES=1
 if errorlevel 1 exit 1
 
-@echo off
-goto :end
+:: Fails
+:: cd %FCIDECOMP_BUILD_PATH%
+:: call gen\build.bat fcicomp-H5Zjpegls test
+::if errorlevel 1 exit 1
 
 cd %FCIDECOMP_BUILD_PATH%
-:: Fails
-call gen\build.bat fcicomp-H5Zjpegls test
 call gen\install.bat fcicomp-H5Zjpegls
 if errorlevel 1 exit 1
-
-:end
