@@ -16,6 +16,8 @@ variables: &variables
   BUILD_OPTS: "--output-folder conda-channel"
   CONDABIN: 'C:\Miniconda3;C:\Miniconda3\Library\mingw-w64\bin;C:\Miniconda3\Library\usr\bin;C:\Miniconda3\Library\bin;C:\Miniconda3\Scripts;C:\Users\Admin\miniconda3\condabin'
   CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda/conda-channel"
+  GIT_STRATEGY: "fetch"
+  GIT_FETCH_EXTRA_FLAGS: --prune --refmap=
 
 stages:
   - build
@@ -73,9 +75,8 @@ build conda windows:
     - mkdir -p conda-channel
     - cd conda
   script:
-    - conda build $BUILD_OPTS .
-    - cp C:\Users\Admin\miniconda3\conda-bld\win-64\fcidecomp* conda-channel
-    - conda build purge 
+    - dir "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\"
+    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build $BUILD_OPTS . "&" cp C:\Users\Admin\miniconda3\conda-bld\win-64\fcidecomp* conda-channel "&" conda build purge' 
   artifacts:
     paths:
       - conda-channel
