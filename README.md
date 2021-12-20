@@ -1,3 +1,0 @@
-# Fcidecomp
-
-Main source repository

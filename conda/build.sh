@@ -39,8 +39,10 @@ cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_BUILD_PATH}
 
 ## Build fcicomp-H5Zjpegls
 ./gen/build.sh fcicomp-H5Zjpegls release                                  \
-    -DCMAKE_PREFIX_PATH=${CONDA_PREFIX}                                   \
-    -DCMAKE_INSTALL_PREFIX=${PREFIX}
-# Fails
+    -DCMAKE_PREFIX_PATH="${PREFIX};${CONDA_PREFIX};${CONDA_PREFIX}"       \
+    -DCMAKE_INSTALL_PREFIX=${PREFIX}                                      \
+# Fails (4 out of 7 tests failing)
 # ./gen/build.sh fcicomp-H5Zjpegls test
 ./gen/install.sh fcicomp-H5Zjpegls
+
+pip install --no-deps --ignore-installed -vv ../fcidecomp-python

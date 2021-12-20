@@ -14,7 +14,7 @@ source:
   - path: ../src/
 
 build:
-  number: 0
+  number: 6
 
 requirements:
   build:
@@ -25,10 +25,14 @@ requirements:
     - ninja  # [win]
     - m2-patch  # [win]
   host:
+    - python  {{ python }}
     - zlib
     - hdf5==1.10.*
+    - h5py==2.*
   run:
+    - python  {{ python }}
     - hdf5==1.10.*
+    - h5py==2.*
 
 test:
   commands:

@@ -1,2 +1,0 @@
-# FCIDECOMP Conda recipe
-
