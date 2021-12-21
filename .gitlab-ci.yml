@@ -92,6 +92,7 @@ build conda windows:
   tags:
     - windows
   stage: build
+  when: manual
   script:
     - echo $env:CONDABIN
     - $env:Path = "$env:CONDABIN;$env:Path"
