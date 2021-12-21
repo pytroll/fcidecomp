@@ -101,7 +101,7 @@ build conda windows:
     - mkdir $env:CI_PROJECT_DIR\conda-channel
     - cd conda
     - dir "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\"
-    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsx86_amd64.bat" "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge' 
+    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsamd64_x86.bat" "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge' 
   artifacts:
     paths:
       - $env:CI_PROJECT_DIR\conda-channel
