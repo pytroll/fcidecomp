@@ -107,4 +107,22 @@ build conda windows:
       - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
-
+build conda windows 32bit:
+  tags:
+    - windows
+  stage: build
+  when: manual
+  script:
+    - echo $env:CONDABIN
+    - $env:Path = "$env:CONDABIN;$env:Path"
+    - echo $env:Path
+    - conda install -y conda-build
+    - set CONDA_FORCE_32BIT=1
+    - mkdir $env:CI_PROJECT_DIR\conda-channel
+    - cd conda
+    - dir "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\"
+    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars32.bat" "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge' 
+  artifacts:
+    paths:
+      - $env:CI_PROJECT_DIR\conda-channel
+    expire_in: 10 days
