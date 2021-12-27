@@ -29,8 +29,8 @@ Build on platform Windows require also:
   - Desktop development with C++ (with optional package "C++ CMake tools for Windows")
   - Universal Windows Platform development
 
-Conda package build on Linux
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Conda package build and install on Linux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To build the ``conda`` package, run the following command from within the ``conda`` directory (replace $BUILD_DIRECTORY
 with the path to the directory where ``conda`` packages will be dumped)::
@@ -50,8 +50,8 @@ Execute::
 
     conda install -y --override-channels -c anaconda -c conda-forge -c $BUILD_DIRECTORY fcidecomp
 
-Conda package build on Windows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Conda package build and install on Windows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 From the Windows menu `Start`, select the Visual 2022 folder, then open the
 proper command prompt:
@@ -79,5 +79,5 @@ Activate the environment::
 
 Execute::
 
-    conda install -y --override-channels -c anaconda -c conda-forge -c $BUILD_DIRECTORY fcidecomp
+    conda install -y --override-channels -c anaconda -c conda-forge -c %BUILD_DIRECTORY% fcidecomp
 
