@@ -34,6 +34,9 @@ considered as two groups of OS: in Conda standardised environment it is enough t
 distribution in order to make it compatible with other Linux distributions. So two Conda packages are released: one for
 Linux distributions, and one for Windows 10.
 
+What stated above also ensures long-term maintainability of the chosen solution, even in the case any OS listed in
+:ref:`supported_platforms` should reach its EOL before the end of the period covered by MTG operations.
+
 These Conda packages install both the FCIDECOMP libraries and its Python bindings. As a blueprint for the
 Conda recipe, the :ref:`Conda recipe <[FCIDECOMP_CONDA]>` for the packaging of FCIDECOMP mantained by Martin Raspaud
 from the Swedish Meteorological and Hydrological Institute has been used.
