@@ -32,6 +32,9 @@ Decompression of FC1 L1c NRT data via the Data Tailor software (VG4)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Decompression of FC1 L1c NRT data via the Data Tailor software is tested manually.
 
+Since the Data Tailor supports MTG through plugins, decompression of FC1 L1c NRT data via the Data Tailor can be
+ensured by ensuring the plugin can be installed and work for each Data Tailor release.
+
 Package licensed as free and open source software (VG5)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The license of the FCIDECOMP software is verified by code inspection.
