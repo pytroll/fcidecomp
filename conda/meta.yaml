@@ -41,3 +41,12 @@ test:
     - if not exist %LIBRARY_LIB%\charLS.lib exit 1       # [win]
     - if not exist %LIBRARY_BIN%\CharLS.dll exit 1       # [win]
     - if not exist %LIBRARY_INC%\CharLS\util.h exit 1       # [win]
+
+about:
+    home: https://www.eumetsat.int/
+    license: Apache License 2.0
+    license_family: APACHE
+    license_file: {{ SRC_DIR }}/LICENSE.txt
+    summary: EUMETSAT FCIDECOMP software, core package
+    description:
+
