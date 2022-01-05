@@ -48,8 +48,8 @@ Documentation
     - https://support.hdfgroup.org/services/filters.html
 
   * - EUMETSAT Data Tailor documentation
-    - Ben Loveday (EUMETSAT,
+    - Ben Loveday (EUMETSAT)
     - Interact with documentation maintainers to add information and instructions on FCIDECOMP plugin installation and usage
-    -
+    - https://eumetsatspace.atlassian.net/wiki/spaces/DSDT/overview
 
 
