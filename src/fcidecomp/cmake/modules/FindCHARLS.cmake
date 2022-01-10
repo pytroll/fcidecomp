@@ -3,9 +3,11 @@
 # 
 # PROJECT  : FCI_COMPRESSION 
 # 
-# AUTHOR   : THALES Services
+# AUTHORS   : THALES Services, B-Open Solutions srl
 # 
-# Copyright 2015 EUMETSAT
+# Copyright 2015-2022 EUMETSAT
+#
+# Licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
 # 
 # =============================================================
 # HISTORY :
