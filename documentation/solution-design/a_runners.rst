@@ -25,7 +25,7 @@ The runner for Windows is registered following instructions reported
 
 - Intel(R) Xeon(R) Gold 6132 CPU @ 2.60 GHz, 4 Cores
 - 32 GB RAM
-- 149 space on disk
+- 149 GB space on disk
 
 While registering the runner, ``shell`` is chosen as executor. The ``shell`` of choice is ``powershell``.
 
@@ -38,8 +38,8 @@ additional ``Visual Studio`` workloads are also required:
 
 The standard ``shell`` environment is set using the script ``vcvars64.bat`` for compiling the package at 64-bit, or the
 script ``vcvars32.bat`` for compiling the package at 32-bit. Both the scripts are provided by
-``Visual Studio Community 2022``. To compile the package at 32-bit, the ``shell`` environment variable
-``CONDA_FORCE_32BIT=1`` is set.
+``Visual Studio Community 2022``. Also, to compile the package at 32-bit the ``shell`` environment variable
+``CONDA_FORCE_32BIT`` must be set to 1.
 
 
 
