@@ -63,14 +63,13 @@ is no more present on any public Conda distribution channel. It is thus compiled
 FCIDECOMP software binaries, starting from the source code available at its :ref:`GitHub repository <charls_v1>`.
 
 In order to grant the ability to install the software even in case the remote repositories hosting its dependencies
-should become unreachable, a have a separate assets repository is hosted on EUMETSAT infrastructure (**:TBC:**).
+should become unreachable, a have a separate assets repository is hosted on EUMETSAT infrastructure.
 This assets repository hosts ``.tar.gz`` archives and Conda packages of all the dependencies needed for each release tag
 of the FCIDECOMP software. For a possible more general solution, which is out of the scope of this project, see
 :ref:`a_improvements`.
 
 .. _packaging_process:
 
-Packaging process
 ~~~~~~~~~~~~~~~~~
 
 Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
