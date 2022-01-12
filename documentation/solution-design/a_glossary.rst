@@ -14,6 +14,9 @@ Acronyms
 :CD:
     Continuous Deployment
 
+:MTG:
+    Meteosat Third Generation
+
 :OS:
     Operating System
 
