@@ -70,7 +70,6 @@ build conda windows 32bit:
   tags:
     - windows
   stage: build
-  when: manual
   script:
     - $env:Path = "$env:CONDABIN;$env:Path"
     - conda install -y conda-build
@@ -86,7 +85,6 @@ build conda windows 64bit:
   tags:
     - windows
   stage: build
-  when: manual
   script:
     - $env:Path = "$env:CONDABIN;$env:Path"
     - conda install -y conda-build
@@ -128,6 +126,7 @@ test conda windows 64bit:
   stage: test
   before_script:
     - conda activate fcidecomp
+    - conda update -n base -c defaults conda
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y $env:CHANNEL_OPTS_WIN fcidecomp
