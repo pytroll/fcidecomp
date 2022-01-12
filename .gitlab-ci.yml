@@ -46,7 +46,6 @@ pdf docs:
       - pdf-docs
     expire_in: 7 days
 
-
 build conda centos7:
   image: conda/miniconda3-centos7:latest
   tags:
@@ -65,6 +64,38 @@ build conda centos7:
   artifacts:
     paths:
       - conda/conda-channel
+    expire_in: 10 days
+
+build conda windows 32bit:
+  tags:
+    - windows
+  stage: build
+  when: manual
+  script:
+    - $env:Path = "$env:CONDABIN;$env:Path"
+    - conda install -y conda-build
+    - mkdir $env:CI_PROJECT_DIR\conda-channel
+    - cd conda
+    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars32.bat" "&" set CONDA_FORCE_32BIT=1 "&" conda create -y --name fcidecomp32 "&" conda activate fcidecomp32 "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge' 
+  artifacts:
+    paths:
+      - $env:CI_PROJECT_DIR\conda-channel
+    expire_in: 10 days
+
+build conda windows 64bit:
+  tags:
+    - windows
+  stage: build
+  when: manual
+  script:
+    - $env:Path = "$env:CONDABIN;$env:Path"
+    - conda install -y conda-build
+    - mkdir $env:CI_PROJECT_DIR\conda-channel
+    - cd conda
+    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat" "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge'
+  artifacts:
+    paths:
+      - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
 test conda centos7:
@@ -89,22 +120,6 @@ test conda centos7:
       - tests/test-data
     expire_in: 10 days
 
-build conda windows 64bit:
-  tags:
-    - windows
-  stage: build
-  when: manual
-  script:
-    - $env:Path = "$env:CONDABIN;$env:Path"
-    - conda install -y conda-build
-    - mkdir $env:CI_PROJECT_DIR\conda-channel
-    - cd conda
-    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat" "&" conda create --name fcidecomp "&" conda activate fcidecomp "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge'
-  artifacts:
-    paths:
-      - $env:CI_PROJECT_DIR\conda-channel
-    expire_in: 10 days
-
 test conda windows 64bit:
   dependencies:
     - build conda windows 64bit
@@ -116,25 +131,9 @@ test conda windows 64bit:
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y $env:CHANNEL_OPTS_WIN fcidecomp
-    - $env:HDF5_PLUGIN_PATH=$env:CONDA_PREFIX\Library\lib
+    - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\lib"
     - pytest -vv
   artifacts:
     paths:
       - tests/test-data
-    expire_in: 10 days
-
-build conda windows 32bit:
-  tags:
-    - windows
-  stage: build
-  when: manual
-  script:
-    - $env:Path = "$env:CONDABIN;$env:Path"
-    - conda install -y conda-build
-    - mkdir $env:CI_PROJECT_DIR\conda-channel
-    - cd conda
-    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars32.bat" "&" set CONDA_FORCE_32BIT=1 "&" conda create -y --name fcidecomp32 "&" conda activate fcidecomp32 "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge' 
-  artifacts:
-    paths:
-      - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
