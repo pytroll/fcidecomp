@@ -43,5 +43,3 @@ script ``vcvars32.bat`` for compiling the package at 32-bit. Both the scripts ar
 
 
 
-
-

@@ -77,16 +77,8 @@ of the FCIDECOMP software. For a possible more general solution, which is out of
 Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
 
 GitLab CI/CD pipelines to compile, build, test and upload the Conda packages to EUMETSAT Anaconda repository are
-implemented. Three GitLab runners are deployed to run the pipelines: one with a Docker executor on Linux and the
-other two with Shell executors on Windows 64-bit, where one of these two is configured to compile the package at
-32-bit.
-
-For the runners on Windows, the software `Visual Studio 2022` is needed, with some additional notes listed below:
- * the standard shell environment must be set using the script `vcvars64.bat` for compiling
-   the package at 64-bit, or the script `vcvars32.bat` for compiling the package at 32-bit. Both the
-   scripts are provided by `Visual Studio 2022`
- * in case of compiling the package at 32-bit, the Shell environment must include also the set
-   of the variable CONDA_FORCE_32BIT=1
+implemented. Two GitLab runners are deployed to run the pipelines: one with a Docker executor on Linux and the
+other with a Shell executor on Windows 64-bit, which is used to build both 64- and 32-bit packages
 
 See :ref:`a_runners` for details on the deployed GitLab runners.
 
