@@ -52,4 +52,14 @@ Documentation
     - Interact with documentation maintainers to add information and instructions on FCIDECOMP plugin installation and usage
     - https://eumetsatspace.atlassian.net/wiki/spaces/DSDT/overview
 
+  * - EUMETSAT Data Tailor news feed
+    - EUMETSAT
+    - Interact with news feed maintainers to communicate publication of the new FCIDECOMP software
+    - https://www.eumetsat.int/data-tailor
+
+  * - EUMETSAT Data Tailor open-source repository
+    - B-Open Solutions
+    - Update README
+    - https://gitlab.eumetsat.int/open-source/data-tailor/
+
 
