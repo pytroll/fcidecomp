@@ -142,7 +142,7 @@ setup in advance.
 
     "Execution of automated tests for verification", "GitLab instance with CI/CD active", "EUMETSAT"
     "Execution of automated tests for verification", "Linux machine with Docker_, GitLab Runner_ installed",
-    "Factory acceptance tests (manual)", "Reference machine described in :TBD:
+    "Factory acceptance tests (manual)", "Reference machine described in :ref:`[FCIDECOMP_WP] <[FCIDECOMP_WP]>`
     with Docker, SSH access with Public IP", "EUMETSAT"
     "On-site acceptance tests", "Machines with the same requirements as for the FAT", "EUMETSAT"
 
