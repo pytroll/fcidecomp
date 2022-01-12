@@ -72,6 +72,7 @@ of the FCIDECOMP software. For a possible more general solution, which is out of
 
 .. _packaging_process:
 
+Packaging process
 ~~~~~~~~~~~~~~~~~
 
 Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
