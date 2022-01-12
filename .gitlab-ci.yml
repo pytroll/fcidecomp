@@ -129,7 +129,7 @@ test conda windows 64bit:
     - conda update -n base -c defaults conda
     - conda install -y netcdf4 xarray pytest
   script:
-    - conda install -y --override-channels -c defaults -c conda-forge -c file:\\$env:CI_PROJECT_DIR\conda-channel fcidecomp
+    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\lib"
     - pytest -vv
   artifacts:
