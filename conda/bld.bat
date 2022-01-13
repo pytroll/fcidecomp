@@ -62,4 +62,4 @@ cd %FCIDECOMP_BUILD_PATH%
 call gen\install.bat fcicomp-H5Zjpegls
 if errorlevel 1 exit 1
 
-pip install --no-deps --ignore-installed -vv ..\fcidecomp-python
+py -m pip install --no-deps --ignore-installed -vv ../fcidecomp-python
