@@ -24,7 +24,7 @@ Document Change Record
 
     0.0.1-doc        3 Dec 2021          Initial issue, prepared under contract EUM/SEP/WPD/21/1244304 by B-Open Solutions srl.
 
-    0.1.0-doc        12 Jan 2022         Add EUMETSAT Data-Tailor public documentation to FCIDECOMP software reference to be updated.
+    0.1.0-doc        12 Jan 2022         Add EUMETSAT Data-Tailor public documentation among FCIDECOMP software references to be updated.
 
     |version|                            Current version.
     ================ =========== ======= ===================================================================================================================================
