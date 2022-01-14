@@ -125,13 +125,15 @@ test conda windows 64bit:
     - windows
   stage: test
   before_script:
-    - conda create -y --name fcidecomp64 python=3.9
-    - conda activate fcidecomp64
+    - conda create -y --name $env:CI_JOB_ID python=3.9
+    - conda activate $env:CI_JOB_ID
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
     - pytest -vv
+    - conda deactivate
+    - conda env remove -n $env:CI_JOB_ID
   artifacts:
     paths:
       - tests/test-data
