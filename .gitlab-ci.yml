@@ -90,7 +90,7 @@ build conda windows 64bit:
     - conda install -y conda-build
     - mkdir $env:CI_PROJECT_DIR\conda-channel
     - cd conda
-    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat" "&" conda create -y --name fcidecomp64 python=3.9"&" conda activate fcidecomp64"&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge'
+    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat" "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel .'
   artifacts:
     paths:
       - $env:CI_PROJECT_DIR\conda-channel
@@ -125,8 +125,8 @@ test conda windows 64bit:
     - windows
   stage: test
   before_script:
+    - conda create -y --name fcidecomp64 python=3.9
     - conda activate fcidecomp64
-    - conda update -n base -c defaults conda
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
