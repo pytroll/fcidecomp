@@ -6,7 +6,6 @@ set FCIDECOMP_BUILD_PATH=%PATH_TO_DELIVERY%\build
 if not exist "%FCIDECOMP_BUILD_PATH%" mkdir "%FCIDECOMP_BUILD_PATH%"
 cd %FCIDECOMP_BUILD_PATH%
 
-
 rem Install CharLS
 cmake -LAH -G "Ninja"                                                     ^
     -DCMAKE_BUILD_TYPE="Release"                                          ^
@@ -62,4 +61,5 @@ cd %FCIDECOMP_BUILD_PATH%
 call gen\install.bat fcicomp-H5Zjpegls
 if errorlevel 1 exit 1
 
-pip install --no-deps --ignore-installed -vv ../fcidecomp-python
+cd %FCIDECOMP_BUILD_PATH%
+call %PREFIX%\Scripts\pip install --no-deps --ignore-installed -vv ../fcidecomp-python
