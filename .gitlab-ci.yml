@@ -125,7 +125,7 @@ test conda windows 32bit:
     - windows
   stage: test
   before_script:
-    - CONDA_FORCE_32BIT=1
+    - $env:CONDA_FORCE_32BIT=1
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
