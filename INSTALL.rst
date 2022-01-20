@@ -5,7 +5,11 @@ This document describes how to build and install the EUMETSAT FCIDECOMP software
 provided with an internet connection.
 The following Operating Systems are supported:
 
-- CentOS Linux 7 64bit
+- Linux CentOS 7 64bit
+- Linux Ubuntu 18.04 LTS
+- Linux Ubuntu 20.04 LTS
+- Windows 10 64bit
+- Windows 10 32bit
 
 There are two ways to install the EUMETSAT FCIDECOMP software:
 
@@ -28,7 +32,7 @@ Installation requires:
 - ``conda``, installed as described
   `here <https://conda.io/projects/conda/en/latest/user-guide/install/index.html>`_
 
-- a connection to internet
+- a connection to the internet
 
 Installation
 ~~~~~~~~~~~~~
@@ -76,11 +80,17 @@ Activate the environment::
     conda activate fcidecomp
 
 Unzip the ``conda`` packages. They end up in a directory which ends with ``conda-channel``.
+Execute (replace ``CONDACHANNELPATH`` with the path to the directory, including `conda-channel`)::
 
-- On Linux, execute (replace $FCIDECOMP with the path to the directory, including `conda-channel`::
+    conda install -y --override-channels -c anaconda -c conda-forge -c CONDACHANNELPATH fcidecomp
 
-    conda install -y --override-channels -c anaconda -c conda-forge -c $FCIDECOMP fcidecomp
+For example, on Linux::
 
+    conda install -y --override-channels -c anaconda -c conda-forge -c /home/user1/Desktop/conda/conda-channel fcidecomp
+
+For example, on Windows::
+
+    conda install -y --override-channels -c anaconda -c conda-forge -c C:\Users\user1\Desktop\conda\conda-channel fcidecomp
 
 Installation from the Conda recipe
 ----------------------------------
