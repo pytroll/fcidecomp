@@ -40,7 +40,7 @@ find_path(CHARLS_INCLUDE_DIR
   PATH_SUFFIXES /include/CharLS /include/charls
   DOC "CharLS include directory."
 )
-message(STATUS "--------------ciaociao--------------- $ENV{ARCH} WIN32")
+
 if(WIN32)
    if($ENV{ARCH} EQUAL "64")
       set(charls_lib_name charls-2-x64)
@@ -48,9 +48,9 @@ if(WIN32)
       set(charls_lib_name charls-2-x86)
    endif ()
 else ()
-   set(charls_lib_name "CharLS charls")
+   set(charls_lib_name CharLS charls)
 endif ()
-message(STATUS "--------------ciaociao2--------------- ${charls_lib_name}")
+
 
 find_library(CHARLS_LIBRARY
   NAMES ${charls_lib_name}
