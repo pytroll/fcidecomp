@@ -40,15 +40,20 @@ find_path(CHARLS_INCLUDE_DIR
   PATH_SUFFIXES /include/CharLS /include/charls
   DOC "CharLS include directory."
 )
-
-if (CHARLS_INCLUDE_DIR)
-  message(STATUS "CharLS include dir found: ${CHARLS_INCLUDE_DIR}")
+message(STATUS "--------------ciaociao--------------- $ENV{ARCH} WIN32")
+if(WIN32)
+   if($ENV{ARCH} EQUAL "64")
+      set(charls_lib_name charls-2-x64)
+   else ()
+      set(charls_lib_name charls-2-x86)
+   endif ()
 else ()
-  message(FATAL_ERROR "Couldn't find CharLS include dir!")
+   set(charls_lib_name "CharLS charls")
 endif ()
+message(STATUS "--------------ciaociao2--------------- ${charls_lib_name}")
 
 find_library(CHARLS_LIBRARY
-  NAMES CharLS charls
+  NAMES ${charls_lib_name}
   HINTS CHARLS_ROOT ENV CHARLS_ROOT
   PATHS /usr/ /usr/local/
   PATH_SUFFIXES lib Lib
