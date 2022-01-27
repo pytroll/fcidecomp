@@ -111,7 +111,6 @@ test conda centos7:
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
-    - export HDF5_PLUGIN_PATH=${CONDA_PREFIX}/hdf5/lib/plugin/
     - pytest
   artifacts:
     paths:
@@ -133,7 +132,6 @@ test conda windows 32bit:
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
-    - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
@@ -156,7 +154,6 @@ test conda windows 64bit:
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
-    - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
