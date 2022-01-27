@@ -132,6 +132,7 @@ test conda windows 32bit:
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
+    - echo %HDF5_PLUGIN_PATH%
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
@@ -154,6 +155,7 @@ test conda windows 64bit:
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
+    - echo %HDF5_PLUGIN_PATH%
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
