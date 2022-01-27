@@ -127,11 +127,11 @@ test conda windows 32bit:
     - $env:CONDA_FORCE_32BIT=1
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
+  script:
     - conda activate $env:CI_JOB_ID
     - conda env list
     - conda install -y netcdf4 xarray pytest
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
-  script:
     - echo %HDF5_PLUGIN_PATH%
     - pytest -vv
     - conda deactivate
