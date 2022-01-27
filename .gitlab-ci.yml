@@ -130,8 +130,8 @@ test conda windows 32bit:
     - conda activate $env:CI_JOB_ID
     - conda env list
     - conda install -y netcdf4 xarray pytest
-  script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
+  script:
     - echo %HDF5_PLUGIN_PATH%
     - pytest -vv
     - conda deactivate
