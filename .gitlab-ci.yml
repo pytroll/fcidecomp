@@ -60,10 +60,9 @@ build conda centos7:
     - cd conda
   script:
     - conda build $BUILD_OPTS .
-    - conda build purge
   artifacts:
     paths:
-      - conda-channel
+      - $CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
 build conda windows 32bit:
