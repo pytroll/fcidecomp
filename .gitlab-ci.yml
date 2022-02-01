@@ -62,7 +62,7 @@ build conda centos7:
     - conda build $BUILD_OPTS .
   artifacts:
     paths:
-      - $CI_PROJECT_DIR\conda-channel
+      - $CI_PROJECT_DIR/conda-channel
     expire_in: 10 days
 
 build conda windows 32bit:
