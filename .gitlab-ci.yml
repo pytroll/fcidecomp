@@ -15,7 +15,7 @@
 variables: &variables
   BUILD_OPTS: "--output-folder conda-channel"
   CONDABIN: 'C:\ProgramData\Miniconda3\Library\bin;C:\ProgramData\Miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\condabin;C:\Users\datatailor_admin\miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\Library\bin'
-  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda/conda-channel"
+  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
   CHANNEL_OPTS_WIN: "--override-channels -c defaults -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel"
   GIT_STRATEGY: "fetch"
   GIT_FETCH_EXTRA_FLAGS: --prune --refmap=
@@ -63,7 +63,7 @@ build conda centos7:
     - conda build purge
   artifacts:
     paths:
-      - conda/conda-channel
+      - conda-channel
     expire_in: 10 days
 
 build conda windows 32bit:
