@@ -20,10 +20,12 @@ variables: &variables
   GIT_STRATEGY: "fetch"
   GIT_FETCH_EXTRA_FLAGS: --prune --refmap=
 
+
 stages:
   - docs
   - build
   - test
+
 
 pdf docs:
   image: sphinxdoc/sphinx-latexpdf
@@ -46,7 +48,7 @@ pdf docs:
       - pdf-docs
     expire_in: 7 days
 
-build conda centos7:
+build linux:
   image: conda/miniconda3-centos7:latest
   tags:
     - linux
@@ -65,7 +67,7 @@ build conda centos7:
       - $CI_PROJECT_DIR/conda-channel
     expire_in: 10 days
 
-build conda windows 32bit:
+build win32:
   tags:
     - windows
   stage: build
@@ -80,7 +82,7 @@ build conda windows 32bit:
       - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
-build conda windows 64bit:
+build win64:
   tags:
     - windows
   stage: build
@@ -95,10 +97,10 @@ build conda windows 64bit:
       - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
-test conda centos7:
+test linux:
   image: conda/miniconda3-centos7:latest
   dependencies:
-    - build conda centos7
+    - build linux
   tags:
     - linux
   stage: test
@@ -117,9 +119,9 @@ test conda centos7:
       - tests/test-data
     expire_in: 10 days
 
-test conda windows 32bit:
+test win32:
   dependencies:
-    - build conda windows 32bit
+    - build win32
   tags:
     - windows
   stage: test
@@ -141,9 +143,9 @@ test conda windows 32bit:
       - tests/test-data
     expire_in: 10 days
 
-test conda windows 64bit:
+test win64:
   dependencies:
-    - build conda windows 64bit
+    - build win64
   tags:
     - windows
   stage: test
