@@ -13,28 +13,33 @@
 # limitations under the License.
 
 import os
+
 import pytest
-import xarray as xr
+import netCDF4 as nc
+import numpy as np
 
 import fcidecomp
 
-TEST_DATA_DIR = os.path.join(os.path.dirname(__file__), "test-data")
+SAMPLE_DATA = os.path.join(os.path.dirname(__file__), "sample_data")
+BODY_COMPR_FILEPATH = os.path.join(SAMPLE_DATA, "compressed.nc")
+BODY_UNCOMPR_FILEPATH = os.path.join(SAMPLE_DATA, "uncompressed.nc")
+
 BANDS = [
     "ir_105", "ir_123", "ir_133", "ir_38", "ir_87", "ir_97",
     "nir_13", "nir_16", "nir_22",
     "vis_04", "vis_05", "vis_06", "vis_08", "vis_09",
     "wv_63", "wv_73"
 ]
-GROUPS = [f"data/{band}/measured" for band in BANDS]
+
 
 @pytest.mark.skipif(not os.environ["HDF5_PLUGIN_PATH"], reason="requires HDF5_PLUGIN_PATH in env")
-def test_read_compressed_data():
+def test_decompression():
 
-    compr_file = os.path.join(TEST_DATA_DIR, "compressed_test.nc")
-    uncompr_file = os.path.join(TEST_DATA_DIR, "uncompressed_test.nc")
+    ds_test = nc.Dataset(BODY_UNCOMPR_FILEPATH, "r")
+    ds_res = nc.Dataset(BODY_COMPR_FILEPATH, "r")
 
-    for group in GROUPS:
-        ds_res = xr.open_dataset(compr_file, group=group)
-        ds_test = xr.open_dataset(uncompr_file, group=group)
-        assert ds_res.equals(ds_test)
+    for band in BANDS:
+        array_test = ds_test[f"data/{band}/measured/effective_radiance"][:]
+        array_res = ds_res[f"data/{band}/measured/effective_radiance"][:]
+        assert np.ma.allequal(array_test, array_res)
 
