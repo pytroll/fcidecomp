@@ -41,7 +41,10 @@ def test_decompression(tmpdir):
         (uncompr_res_file, 'body_res.txt'),
         (BODY_UNCOMPR_FILEPATH, 'body_test.txt')
     ]:
-        command = f"ncdump -g measured {netcdf_file} > {os.path.join(tmpdir, txt_file)}"
+        if os.sys.platform == "win32":
+            command = f"ncdump -g measured {netcdf_file.replace('\\', '\\\\')} > {os.path.join(tmpdir, txt_file)}"
+        else:
+            command = f"ncdump -g measured {netcdf_file} > {os.path.join(tmpdir, txt_file)}"
         process = subprocess.run(command, shell=True)
 
     assert filecmp.cmp(
