@@ -156,11 +156,11 @@ test conda windows 64bit:
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - conda deactivate
-    - $env:HDF5_PLUGIN_PATH
     - conda activate $env:CI_JOB_ID
     - $env:HDF5_PLUGIN_PATH
     - pytest -vv
     - conda deactivate
+    - $env:HDF5_PLUGIN_PATH
     - conda env remove -n $env:CI_JOB_ID
   artifacts:
     paths:
