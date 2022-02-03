@@ -111,7 +111,10 @@ test conda centos7:
     - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
+    - echo $HDF5_PLUGIN_PATH
     - pytest
+    - conda deactivate
+    - echo $HDF5_PLUGIN_PATH
   artifacts:
     paths:
       - tests/test-data
@@ -150,8 +153,6 @@ test conda windows 64bit:
   before_script:
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
-    - $env:HDF5_PLUGIN_PATH
-    - $env:HDF5_PLUGIN_PATH_EXT
     - conda activate $env:CI_JOB_ID
     - conda install -y netcdf4 xarray pytest
   script:
@@ -159,11 +160,9 @@ test conda windows 64bit:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:HDF5_PLUGIN_PATH
-    - $env:HDF5_PLUGIN_PATH_EXT
     - pytest -vv
     - conda deactivate
     - $env:HDF5_PLUGIN_PATH
-    - $env:HDF5_PLUGIN_PATH_EXT
     - conda env remove -n $env:CI_JOB_ID
   artifacts:
     paths:
