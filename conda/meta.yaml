@@ -30,9 +30,9 @@ requirements:
     - hdf5==1.10.*
     - h5py==2.*
   run:
-    - netcdf4
+    - netCDF44
     - python  {{ python }}
-    - pytest
+    - pytest-runner
     - hdf5==1.10.*
     - h5py==2.*
 

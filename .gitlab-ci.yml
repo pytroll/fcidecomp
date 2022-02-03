@@ -110,7 +110,6 @@ test linux:
     - source ~/.bashrc
     - conda activate
     - conda update -n base -c defaults conda
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
     - export HDF5_PLUGIN_PATH=${CONDA_PREFIX}/hdf5/lib/plugin/
@@ -131,7 +130,6 @@ test win32:
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
@@ -153,7 +151,6 @@ test win64:
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
