@@ -12,11 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import filecmp
 import os
 import pytest
 import subprocess
-
-import xarray as xr
 
 import fcidecomp
 
@@ -39,7 +38,7 @@ BANDS = [
     "vis_04", "vis_05", "vis_06", "vis_08", "vis_09",
     "wv_63", "wv_73"
 ]
-GROUPS = [f"data/{band}/measured" for band in BANDS]
+
 
 @pytest.mark.skipif(not os.environ["HDF5_PLUGIN_PATH"], reason="requires HDF5_PLUGIN_PATH in env")
 def test_decompression(tmpdir):
@@ -47,10 +46,19 @@ def test_decompression(tmpdir):
     uncompr_res_file = os.path.join(tmpdir, os.path.basename(BODY_UNCOMPR_FILEPATH))
     process = subprocess.run(["nccopy", "-F", "none", BODY_COMPR_FILEPATH, uncompr_res_file])
 
-    for group in GROUPS:
-        ds_res = xr.open_dataset(uncompr_res_file, group=group)
-        ds_test = xr.open_dataset(BODY_UNCOMPR_FILEPATH, group=group)
-        assert ds_res.equals(ds_test)
+    for netcdf_file, txt_file in [
+        (uncompr_res_file, "body_res.txt"),
+        (BODY_UNCOMPR_FILEPATH, "body_test.txt")
+    ]:
+        command = ["ncdump", "-g", "measured", netcdf_file, ">", os.path.join(tmpdir, txt_file)]
+        process = subprocess.run(command)
+
+    assert filecmp.cmp(
+        os.path.join(tmpdir, "body_res.txt"),
+        os.path.join(tmpdir, "body_test.txt"),
+        shallow=False
+    )
+
 
 
 
