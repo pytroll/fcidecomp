@@ -48,7 +48,7 @@ BANDS = [
     os.path.isfile(BODY_COMPR_FILEPATH), reason=f"test file {BODY_COMPR_FILEPATH} not found"
 )
 @pytest.mark.skipif(
-    os.path.isfile(BODY_COMPR_FILEPATH), reason=f"test file {BODY_UNCOMPR_FILEPATH} not found"
+    os.path.isfile(BODY_UNCOMPR_FILEPATH), reason=f"test file {BODY_UNCOMPR_FILEPATH} not found"
 )
 def test_decompression(tmpdir):
 
