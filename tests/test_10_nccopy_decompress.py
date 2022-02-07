@@ -12,10 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import filecmp
 import os
 import pytest
 import subprocess
+
+import xarray as xr
 
 import fcidecomp
 
