@@ -13,17 +13,19 @@
 # limitations under the License.
 
 variables: &variables
-  BUILD_OPTS: "--output-folder conda-channel"
+  BUILD_OPTS: "--output-folder $CI_PROJECT_DIR/conda-channel"
   CONDABIN: 'C:\ProgramData\Miniconda3\Library\bin;C:\ProgramData\Miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\condabin;C:\Users\datatailor_admin\miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\Library\bin'
-  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda/conda-channel"
+  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
   CHANNEL_OPTS_WIN: "--override-channels -c defaults -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel"
   GIT_STRATEGY: "fetch"
   GIT_FETCH_EXTRA_FLAGS: --prune --refmap=
+
 
 stages:
   - docs
   - build
   - test
+
 
 pdf docs:
   image: sphinxdoc/sphinx-latexpdf
@@ -46,7 +48,7 @@ pdf docs:
       - pdf-docs
     expire_in: 7 days
 
-build conda centos7:
+build linux:
   image: conda/miniconda3-centos7:latest
   tags:
     - linux
@@ -60,13 +62,12 @@ build conda centos7:
     - cd conda
   script:
     - conda build $BUILD_OPTS .
-    - conda build purge
   artifacts:
     paths:
-      - conda/conda-channel
+      - $CI_PROJECT_DIR/conda-channel
     expire_in: 10 days
 
-build conda windows 32bit:
+build win32:
   tags:
     - windows
   stage: build
@@ -81,7 +82,7 @@ build conda windows 32bit:
       - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
-build conda windows 64bit:
+build win64:
   tags:
     - windows
   stage: build
@@ -96,10 +97,11 @@ build conda windows 64bit:
       - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
-test conda centos7:
+
+test linux:
   image: conda/miniconda3-centos7:latest
   dependencies:
-    - build conda centos7
+    - build linux
   tags:
     - linux
   stage: test
@@ -108,7 +110,6 @@ test conda centos7:
     - source ~/.bashrc
     - conda activate
     - conda update -n base -c defaults conda
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
     - pytest
@@ -118,9 +119,9 @@ test conda centos7:
       - tests/test-data
     expire_in: 10 days
 
-test conda windows 32bit:
+test win32:
   dependencies:
-    - build conda windows 32bit
+    - build win32
   tags:
     - windows
   stage: test
@@ -129,7 +130,6 @@ test conda windows 32bit:
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - conda deactivate
@@ -142,9 +142,9 @@ test conda windows 32bit:
       - tests/test-data
     expire_in: 10 days
 
-test conda windows 64bit:
+test win64:
   dependencies:
-    - build conda windows 64bit
+    - build win64
   tags:
     - windows
   stage: test
@@ -152,7 +152,6 @@ test conda windows 64bit:
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - conda deactivate

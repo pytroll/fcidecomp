@@ -21,5 +21,14 @@ Document Change Record
     ================ =========== ======= ===================================================================================================================================
     Issue / Revision Date        DCN. No Changed Pages / Paragraphs
 
-    |version|        15 Nov 2021         First version.
+    0.0.1-doc        3 Dec 2021          Initial issue, prepared under contract EUM/SEP/WPD/21/1244304 by B-Open Solutions srl.
+
+    0.1.0-doc        12 Jan 2022         Resolve TBCs.
+
+                                         Complete appendix on GitLab runners.
+
+                                         In "Packaging as a Conda package" section, add details on the role of Conda packaging in the solution long-term maintainabiliy.
+
+    |version|                            Current version
     ================ =========== ======= ===================================================================================================================================
+
