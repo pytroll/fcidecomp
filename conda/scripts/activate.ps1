@@ -1,0 +1,3 @@
+$env:HDF5_PLUGIN_PATH_EXT=$env:HDF5_PLUGIN_PATH
+$env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
+

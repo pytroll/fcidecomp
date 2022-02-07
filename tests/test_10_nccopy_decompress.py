@@ -12,46 +12,47 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import filecmp
 import os
 import pytest
 import subprocess
 
+import xarray as xr
+
 import fcidecomp
 
-SAMPLE_DATA = os.path.join(os.path.dirname(__file__), "sample_data")
-BODY_COMPR_FILEPATH = os.path.join(SAMPLE_DATA, "compressed.nc")
-BODY_UNCOMPR_FILEPATH = os.path.join(SAMPLE_DATA, "uncompressed.nc")
+
+TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", os.path.join("data","data-tailor"))
+INPUT_PATH = os.path.join(TEST_DATA_PATH, "MTG", "MTGFCIL1")
+BODY_COMPR_FILEPATH = os.path.join(
+    INPUT_PATH,
+    "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
+    "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N_JLS_T_0073_0015.nc"
+)
+BODY_UNCOMPR_FILEPATH = os.path.join(
+    INPUT_PATH,
+    "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
+    "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N__T_0073_0015.nc"
+)
 BANDS = [
     "ir_105", "ir_123", "ir_133", "ir_38", "ir_87", "ir_97",
     "nir_13", "nir_16", "nir_22",
     "vis_04", "vis_05", "vis_06", "vis_08", "vis_09",
     "wv_63", "wv_73"
 ]
+GROUPS = [f"data/{band}/measured" for band in BANDS]
 
 @pytest.mark.skipif(not os.environ["HDF5_PLUGIN_PATH"], reason="requires HDF5_PLUGIN_PATH in env")
 def test_decompression(tmpdir):
 
-    uncompr_res_file = os.path.join(tmpdir, "uncompressed.nc")
-    process = subprocess.run(
-        f"nccopy -F none {BODY_COMPR_FILEPATH} {uncompr_res_file}", shell=True
-    )
+    uncompr_res_file = os.path.join(tmpdir, os.path.basename(BODY_UNCOMPR_FILEPATH))
+    process = subprocess.run(["nccopy", "-F", "none", BODY_COMPR_FILEPATH, uncompr_res_file])
 
-    for netcdf_file, txt_file in [
-        (uncompr_res_file, 'body_res.txt'),
-        (BODY_UNCOMPR_FILEPATH, 'body_test.txt')
-    ]:
-        if os.sys.platform == "win32":
-            command = f"ncdump -g measured {netcdf_file.replace('\\', '\\\\')} > {os.path.join(tmpdir, txt_file)}"
-        else:
-            command = f"ncdump -g measured {netcdf_file} > {os.path.join(tmpdir, txt_file)}"
-        process = subprocess.run(command, shell=True)
+    for group in GROUPS:
+        ds_res = xr.open_dataset(uncompr_res_file, group=group)
+        ds_test = xr.open_dataset(BODY_UNCOMPR_FILEPATH, group=group)
+        assert ds_res.equals(ds_test)
 
-    assert filecmp.cmp(
-        os.path.join(tmpdir, 'body_res.txt'),
-        os.path.join(tmpdir, 'body_test.txt'),
-        shallow=False
-    )
+
 
 
 

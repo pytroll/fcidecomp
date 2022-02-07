@@ -17,6 +17,7 @@ variables: &variables
   CONDABIN: 'C:\ProgramData\Miniconda3\Library\bin;C:\ProgramData\Miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\condabin;C:\Users\datatailor_admin\miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\Library\bin'
   CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
   CHANNEL_OPTS_WIN: "--override-channels -c defaults -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel"
+  EPCT_TEST_DATA_DIR: "/data/data-tailor"
   GIT_STRATEGY: "fetch"
   GIT_FETCH_EXTRA_FLAGS: --prune --refmap=
 
@@ -112,8 +113,8 @@ test linux:
     - conda update -n base -c defaults conda
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
-    - export HDF5_PLUGIN_PATH=${CONDA_PREFIX}/hdf5/lib/plugin/
-    - pytest
+    - pytest -vv
+    - conda deactivate
   artifacts:
     paths:
       - tests/test-data
@@ -132,7 +133,9 @@ test win32:
     - conda activate $env:CI_JOB_ID
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
-    - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
@@ -153,7 +156,9 @@ test win64:
     - conda activate $env:CI_JOB_ID
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
-    - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID

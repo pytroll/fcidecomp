@@ -20,10 +20,19 @@ import numpy as np
 
 import fcidecomp
 
-SAMPLE_DATA = os.path.join(os.path.dirname(__file__), "sample_data")
-BODY_COMPR_FILEPATH = os.path.join(SAMPLE_DATA, "compressed.nc")
-BODY_UNCOMPR_FILEPATH = os.path.join(SAMPLE_DATA, "uncompressed.nc")
 
+TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", os.path.join("data","data-tailor"))
+INPUT_PATH = os.path.join(TEST_DATA_PATH, "MTG", "MTGFCIL1")
+BODY_COMPR_FILEPATH = os.path.join(
+    INPUT_PATH,
+    "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
+    "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N_JLS_T_0073_0015.nc"
+)
+BODY_UNCOMPR_FILEPATH = os.path.join(
+    INPUT_PATH,
+    "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
+    "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N__T_0073_0015.nc"
+)
 BANDS = [
     "ir_105", "ir_123", "ir_133", "ir_38", "ir_87", "ir_97",
     "nir_13", "nir_16", "nir_22",
