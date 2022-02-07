@@ -20,18 +20,15 @@ import subprocess
 import fcidecomp
 
 
-TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", "")
+TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", os.path.join("data","data-tailor"))
+INPUT_PATH = os.path.join(TEST_DATA_PATH, "MTG", "MTGFCIL1")
 BODY_COMPR_FILEPATH = os.path.join(
-    TEST_DATA_PATH,
-    "MTG",
-    "MTGFCIL1",
+    INPUT_PATH,
     "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
     "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N_JLS_T_0073_0015.nc"
 )
 BODY_UNCOMPR_FILEPATH = os.path.join(
-    TEST_DATA_PATH,
-    "MTG",
-    "MTGFCIL1",
+    INPUT_PATH,
     "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
     "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N__T_0073_0015.nc"
 )
@@ -44,12 +41,6 @@ BANDS = [
 
 
 @pytest.mark.skipif(not os.environ["HDF5_PLUGIN_PATH"], reason="requires HDF5_PLUGIN_PATH in env")
-@pytest.mark.skipif(
-    os.path.isfile(BODY_COMPR_FILEPATH), reason=f"test file {BODY_COMPR_FILEPATH} not found"
-)
-@pytest.mark.skipif(
-    os.path.isfile(BODY_UNCOMPR_FILEPATH), reason=f"test file {BODY_UNCOMPR_FILEPATH} not found"
-)
 def test_decompression(tmpdir):
 
     uncompr_res_file = os.path.join(tmpdir, os.path.basename(BODY_UNCOMPR_FILEPATH))
