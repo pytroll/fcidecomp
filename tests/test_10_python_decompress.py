@@ -20,6 +20,7 @@ import numpy as np
 
 import fcidecomp
 
+
 TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", "")
 BODY_COMPR_FILEPATH = os.path.join(
     TEST_DATA_PATH,

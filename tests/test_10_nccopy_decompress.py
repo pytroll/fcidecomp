@@ -42,6 +42,7 @@ BANDS = [
     "wv_63", "wv_73"
 ]
 
+
 @pytest.mark.skipif(not os.environ["HDF5_PLUGIN_PATH"], reason="requires HDF5_PLUGIN_PATH in env")
 def test_decompression(tmpdir):
 

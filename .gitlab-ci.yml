@@ -113,7 +113,7 @@ test linux:
     - conda update -n base -c defaults conda
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
-    - pytest
+    - pytest -vv
     - conda deactivate
   artifacts:
     paths:
