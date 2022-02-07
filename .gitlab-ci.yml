@@ -135,7 +135,7 @@ test win32:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - conda deactivate
     - conda activate $env:CI_JOB_ID
-    - $env:EPCT_TEST_DATA_DIR=C:\\BuildTools\test-data
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
@@ -158,7 +158,7 @@ test win64:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
     - conda deactivate
     - conda activate $env:CI_JOB_ID
-    - $env:EPCT_TEST_DATA_DIR=C:\\BuildTools\test-data
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
