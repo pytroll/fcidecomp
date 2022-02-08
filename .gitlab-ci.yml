@@ -24,6 +24,7 @@ stages:
   - docs
   - build
   - test
+  - deploy
 
 
 pdf docs:
@@ -55,9 +56,6 @@ build linux:
   before_script:
     - conda update -n base -c defaults conda
     - conda install -y conda-build
-    - mkdir -p /usr/local/conda-bld
-    - conda index /usr/local/conda-bld
-    - conda clean --all --yes
     - cd conda
   script:
     - conda build $BUILD_OPTS .
@@ -141,10 +139,6 @@ test win32:
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
-  artifacts:
-    paths:
-      - tests/test-data
-    expire_in: 10 days
 
 test win64:
   stage: test
@@ -166,7 +160,22 @@ test win64:
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
-  artifacts:
-    paths:
-      - tests/test-data
-    expire_in: 10 days
+
+
+deploy local:
+  tags:
+    - linux
+  dependencies:
+    - build linux
+    - build win32
+    - build win64
+  needs:
+    - test linux
+    - test win32
+    - test win64
+  before_script:
+  script:
+    - conda env list
+
+
+
