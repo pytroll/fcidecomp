@@ -18,8 +18,6 @@ variables: &variables
   CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
   CHANNEL_OPTS_WIN: "--override-channels -c defaults -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel"
   EPCT_TEST_DATA_DIR: "/data/data-tailor"
-  GIT_STRATEGY: "fetch"
-  GIT_FETCH_EXTRA_FLAGS: --prune --refmap=
 
 
 stages:
