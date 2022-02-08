@@ -3,14 +3,14 @@
 # - https://github.com/mraspaud/fcidecomp-conda-recipe/blob/master/build.sh
 
 {% set version = "1.0.2" %}
-{% set charls_version = "1.1.0" %}
+{% set charls_version = "2.1.0" %}
 
 package:
   name: fcidecomp
   version: {{ version }}
 
 source:
-  - url: https://github.com/team-charls/charls/archive/{{ charls_version }}.tar.gz
+  - url: https://github.com/team-charls/charls/archive/{{ charls_version }}.tar.gz # [win32]
   - path: ../src/
 
 build:
@@ -21,25 +21,21 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - make   # [not win]
-    - ninja  # [win]
-    - m2-patch  # [win]
+    - m2-patch      # [win]
+    - make          # [not win]
+    - ninja         # [win]
   host:
+    - charls=2.1.0  # [not win32]
+    - hdf5=1.10.*
+    - h5py=2.*
     - python  {{ python }}
     - zlib
-    - hdf5==1.10.*
-    - h5py==2.*
   run:
+    - charls=2.1.0  # [not win32]
+    - hdf5=1.10.*
+    - h5py=2.*
     - netCDF4
     - python  {{ python }}
     - pytest-runner
-    - hdf5==1.10.*
-    - h5py==2.*
 
-test:
-  commands:
-    - test -f $PREFIX/lib/libCharLS${SHLIB_EXT}     # [unix]
-    - test -f $PREFIX/include/CharLS/header.h       # [unix]
-    - if not exist %LIBRARY_LIB%\charLS.lib exit 1       # [win]
-    - if not exist %LIBRARY_BIN%\CharLS.dll exit 1       # [win]
-    - if not exist %LIBRARY_INC%\CharLS\util.h exit 1       # [win]
+

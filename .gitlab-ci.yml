@@ -73,7 +73,7 @@ build win32:
     - conda install -y conda-build
     - mkdir $env:CI_PROJECT_DIR\conda-channel
     - cd conda
-    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars32.bat" "&" set CONDA_FORCE_32BIT=1 "&" conda create -y --name fcidecomp32 python=3.9"&" conda activate fcidecomp32 "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel . "&" conda build purge' 
+    - 'cmd.exe /k "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars32.bat" "&" set CONDA_FORCE_32BIT=1 "&" conda build --output-folder $env:CI_PROJECT_DIR\conda-channel .' 
   artifacts:
     paths:
       - $env:CI_PROJECT_DIR\conda-channel
