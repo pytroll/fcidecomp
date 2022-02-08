@@ -162,6 +162,7 @@ deploy local:
   stage: deploy
   tags:
     - linux
+  image: conda/miniconda3-centos7:latest
   dependencies:
     - build linux
     - build win32
