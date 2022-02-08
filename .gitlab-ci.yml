@@ -169,10 +169,6 @@ deploy local:
     - build linux
     - build win32
     - build win64
-  needs:
-    - test linux
-    - test win32
-    - test win64
   before_script:
   script:
     - conda env list
