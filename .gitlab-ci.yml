@@ -168,6 +168,7 @@ deploy local:
     - build win32
     - build win64
   before_script:
+    - conda install -y conda-build
   script:
     - conda index $CI_PROJECT_DIR/conda-channel
   artifacts:
