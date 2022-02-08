@@ -29,8 +29,11 @@ stages:
 
 
 pdf docs:
-  image: sphinxdoc/sphinx-latexpdf
   stage: docs
+  tags:
+    - linux
+  image: sphinxdoc/sphinx-latexpdf
+  when: manual
   script:
     - mkdir -p pdf-docs
     - cd documentation
@@ -41,19 +44,16 @@ pdf docs:
       else
         cd -;
       fi;done
-  tags:
-    - linux
-  when: manual
   artifacts:
     paths:
       - pdf-docs
     expire_in: 7 days
 
 build linux:
-  image: conda/miniconda3-centos7:latest
+  stage: build
   tags:
     - linux
-  stage: build
+  image: conda/miniconda3-centos7:latest
   before_script:
     - conda update -n base -c defaults conda
     - conda install -y conda-build
@@ -69,9 +69,9 @@ build linux:
     expire_in: 10 days
 
 build win32:
+  stage: build
   tags:
     - windows
-  stage: build
   script:
     - $env:Path = "$env:CONDABIN;$env:Path"
     - conda install -y conda-build
@@ -84,9 +84,9 @@ build win32:
     expire_in: 10 days
 
 build win64:
+  stage: build
   tags:
     - windows
-  stage: build
   script:
     - $env:Path = "$env:CONDABIN;$env:Path"
     - conda install -y conda-build
@@ -100,12 +100,14 @@ build win64:
 
 
 test linux:
+  stage: test
+  tags:
+    - linux
   image: conda/miniconda3-centos7:latest
   dependencies:
     - build linux
-  tags:
-    - linux
-  stage: test
+  needs:
+    - build linux
   before_script:
     - conda init bash
     - source ~/.bashrc
@@ -121,11 +123,13 @@ test linux:
     expire_in: 10 days
 
 test win32:
-  dependencies:
-    - build win32
+  stage: test
   tags:
     - windows
-  stage: test
+  dependencies:
+    - build win32
+  needs:
+    - build win32
   before_script:
     - $env:CONDA_FORCE_32BIT=1
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
@@ -145,11 +149,13 @@ test win32:
     expire_in: 10 days
 
 test win64:
-  dependencies:
-    - build win64
+  stage: test
   tags:
     - windows
-  stage: test
+  dependencies:
+    - build win64
+  needs:
+    - build win64
   before_script:
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
