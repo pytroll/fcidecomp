@@ -35,7 +35,6 @@ requirements:
     - pytest-runner
     - hdf5==1.10.*
     - h5py==2.*
-    - xarray
 
 test:
   commands:
