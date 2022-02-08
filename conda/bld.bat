@@ -65,3 +65,12 @@ if errorlevel 1 exit 1
 
 cd %FCIDECOMP_BUILD_PATH%
 call %PREFIX%\Scripts\pip install --no-deps --ignore-installed -vv ../fcidecomp-python
+
+if not exist %PREFIX%\etc\conda\activate.d mkdir %PREFIX%\etc\conda\activate.d
+copy %RECIPE_DIR%\scripts\activate.bat %PREFIX%\etc\conda\activate.d\%PKG_NAME%_activate.bat
+copy %RECIPE_DIR%\scripts\activate.ps1 %PREFIX%\etc\conda\activate.d\%PKG_NAME%_activate.ps1
+copy %RECIPE_DIR%\scripts\activate.sh %PREFIX%\etc\conda\activate.d\%PKG_NAME%_activate.sh
+if not exist %PREFIX%\etc\conda\deactivate.d mkdir %PREFIX%\etc\conda\deactivate.d
+copy %RECIPE_DIR%\scripts\deactivate.bat %PREFIX%\etc\conda\deactivate.d\%PKG_NAME%_deactivate.bat
+copy %RECIPE_DIR%\scripts\deactivate.ps1 %PREFIX%\etc\conda\deactivate.d\%PKG_NAME%_deactivate.ps1
+copy %RECIPE_DIR%\scripts\deactivate.sh %PREFIX%\etc\conda\deactivate.d\%PKG_NAME%_deactivate.sh

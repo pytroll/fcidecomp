@@ -13,21 +13,26 @@
 # limitations under the License.
 
 variables: &variables
-  BUILD_OPTS: "--output-folder conda-channel"
+  BUILD_OPTS: "--output-folder $CI_PROJECT_DIR/conda-channel"
   CONDABIN: 'C:\ProgramData\Miniconda3\Library\bin;C:\ProgramData\Miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\condabin;C:\Users\datatailor_admin\miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\Library\bin'
-  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda/conda-channel"
+  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
   CHANNEL_OPTS_WIN: "--override-channels -c defaults -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel"
-  GIT_STRATEGY: "fetch"
-  GIT_FETCH_EXTRA_FLAGS: --prune --refmap=
+  EPCT_TEST_DATA_DIR: "/data/data-tailor"
+
 
 stages:
   - docs
   - build
   - test
+  - deploy
+
 
 pdf docs:
-  image: sphinxdoc/sphinx-latexpdf
   stage: docs
+  tags:
+    - linux
+  image: sphinxdoc/sphinx-latexpdf
+  when: manual
   script:
     - mkdir -p pdf-docs
     - cd documentation
@@ -38,38 +43,31 @@ pdf docs:
       else
         cd -;
       fi;done
-  tags:
-    - linux
-  when: manual
   artifacts:
     paths:
       - pdf-docs
     expire_in: 7 days
 
-build conda centos7:
-  image: conda/miniconda3-centos7:latest
+build linux:
+  stage: build
   tags:
     - linux
-  stage: build
+  image: conda/miniconda3-centos7:latest
   before_script:
     - conda update -n base -c defaults conda
     - conda install -y conda-build
-    - mkdir -p /usr/local/conda-bld
-    - conda index /usr/local/conda-bld
-    - conda clean --all --yes
     - cd conda
   script:
     - conda build $BUILD_OPTS .
-    - conda build purge
   artifacts:
     paths:
-      - conda/conda-channel
+      - $CI_PROJECT_DIR/conda-channel
     expire_in: 10 days
 
-build conda windows 32bit:
+build win32:
+  stage: build
   tags:
     - windows
-  stage: build
   script:
     - $env:Path = "$env:CONDABIN;$env:Path"
     - conda install -y conda-build
@@ -81,10 +79,10 @@ build conda windows 32bit:
       - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
-build conda windows 64bit:
+build win64:
+  stage: build
   tags:
     - windows
-  stage: build
   script:
     - $env:Path = "$env:CONDABIN;$env:Path"
     - conda install -y conda-build
@@ -96,71 +94,85 @@ build conda windows 64bit:
       - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
 
-test conda centos7:
-  image: conda/miniconda3-centos7:latest
-  dependencies:
-    - build conda centos7
+
+test linux:
+  stage: test
   tags:
     - linux
-  stage: test
+  image: conda/miniconda3-centos7:latest
+  dependencies:
+    - build linux
+  needs:
+    - build linux
   before_script:
     - conda init bash
     - source ~/.bashrc
     - conda activate
     - conda update -n base -c defaults conda
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp
-    - export HDF5_PLUGIN_PATH=${CONDA_PREFIX}/hdf5/lib/plugin/
-    - pytest
-  artifacts:
-    paths:
-      - tests/test-data
-    expire_in: 10 days
+    - pytest -vv
+    - conda deactivate
 
-test conda windows 32bit:
-  dependencies:
-    - build conda windows 32bit
+test win32:
+  stage: test
   tags:
     - windows
-  stage: test
+  dependencies:
+    - build win32
+  needs:
+    - build win32
   before_script:
     - $env:CONDA_FORCE_32BIT=1
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
-    - conda env list
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
-    - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
-  artifacts:
-    paths:
-      - tests/test-data
-    expire_in: 10 days
 
-test conda windows 64bit:
-  dependencies:
-    - build conda windows 64bit
+test win64:
+  stage: test
   tags:
     - windows
-  stage: test
+  dependencies:
+    - build win64
+  needs:
+    - build win64
   before_script:
     - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
-    - conda env list
-    - conda install -y netcdf4 xarray pytest
   script:
     - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp
-    - $env:HDF5_PLUGIN_PATH="$env:CONDA_PREFIX\Library\bin"
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
     - pytest -vv
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
+
+
+deploy local:
+  stage: deploy
+  tags:
+    - linux
+  dependencies:
+    - build linux
+    - build win32
+    - build win64
+  before_script:
+  script:
+    - conda index $env:CI_PROJECT_DIR\conda-channel
   artifacts:
     paths:
-      - tests/test-data
+      - $env:CI_PROJECT_DIR\conda-channel
     expire_in: 10 days
+
+
+
