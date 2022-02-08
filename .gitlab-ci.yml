@@ -169,10 +169,10 @@ deploy local:
     - build win64
   before_script:
   script:
-    - conda index $env:CI_PROJECT_DIR\conda-channel
+    - conda index $CI_PROJECT_DIR/conda-channel
   artifacts:
     paths:
-      - $env:CI_PROJECT_DIR\conda-channel
+      - $CI_PROJECT_DIR/conda-channel
     expire_in: 10 days
 
 
