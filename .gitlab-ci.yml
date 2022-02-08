@@ -113,10 +113,6 @@ test linux:
     - conda install -y $CHANNEL_OPTS fcidecomp
     - pytest -vv
     - conda deactivate
-  artifacts:
-    paths:
-      - tests/test-data
-    expire_in: 10 days
 
 test win32:
   stage: test
@@ -172,7 +168,11 @@ deploy local:
     - build win64
   before_script:
   script:
-    - conda env list
+    - conda index $env:CI_PROJECT_DIR\conda-channel
+  artifacts:
+    paths:
+      - $env:CI_PROJECT_DIR\conda-channel
+    expire_in: 10 days
 
 
 
