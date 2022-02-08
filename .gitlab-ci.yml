@@ -163,6 +163,7 @@ test win64:
 
 
 deploy local:
+  stage: deploy
   tags:
     - linux
   dependencies:
