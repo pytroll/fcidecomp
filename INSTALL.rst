@@ -18,9 +18,6 @@ There are two ways to install the EUMETSAT FCIDECOMP software:
 * from conda packages downloaded as artifacts of CI pipelines on the target machine (mostly for testing purposes),
   as described in `Installation from an 'artifacts' file`_ .
 
-Hardware pre-requisites
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 Installation from the Anaconda repository
 -----------------------------------------
 
@@ -48,7 +45,7 @@ Activate the environment::
     conda activate fcidecomp
 
 
-- On Linux, execute::
+Now execute::
 
     conda install -y --override-channels -c anaconda -c conda-forge -c eumetsat fcidecomp
 
@@ -98,44 +95,6 @@ Installation from the Conda recipe
 The FCIDECOMP software can be also built and installed using the provided ``conda`` recipe: instructions are detailed in the
 ``conda/README.rst`` file.
 
-
-Test and use the FCIDECOMP software
------------------------------------
-
-Activate the environment created in one of the installation methods above, e.g.::
-
-   conda activate fcidecomp
-
-On Linux, it can be activated by default by adding it to `.bashrc`::
-
-   echo conda activate fcidecomp >> $HOME/.bashrc
-
-Once the environment is active, set the environment variable HDF5_PLUGIN_PATH to the path where the FCIDECOMP libraries
-have been installed:
-
-- On Linux, execute::
-
-   export HDF5_PLUGIN_PATH=$CONDA_PREFIX/hdf5/lib/plugin/
-
-
-Use with NetCDF-Java based tools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Panoply
-=======
-
-To be able to open FCICOMP compressed NetCDFs with Panoply, it should be instructed to use the NetCDF-C library (instead
-of NetCDF-Java) for reading purposes. To do so, the file ``~/.unidata/nj22Config.xml`` must contain the following lines::
-
-  <nj22Config>
-    <Netcdf4Clibrary>
-      <libraryPath><PATH_TO_NETCDF_LIB_DIR></libraryPath>
-      <libraryName>netcdf</libraryName>
-      <useForReading>true</useForReading>
-    </Netcdf4Clibrary>
-  </nj22Config>
-
-where ``<PATH_TO_NETCDF_LIB_DIR>`` is the path to the directory containing the ``netcdf4`` library.
 
 
 
