@@ -1,19 +1,9 @@
-Manual Tests: Interface, Guidance and Documentation, Data Cube Handling (ACDC.TC.02)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manual Tests: Decompression via Java Software and via the EUMETSAT Data Tailor Software (FCIDECOMP.TC.02)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this section, users are manually walked through the processes
 of input data retrieval, customisation, and inspection of the generated output data cube,
 via Jupyter notebooks.
-
-In particular, users are initially shown how to interface with the list of input datasets.
-Detailed instructions explain how to input their preferred choice of variables,
-and subsequently generate the data cube using the new Data Tailor plugin `epct_plugin_acdc`.
-
-In-depth examples subsequently demonstrate how to customize the plugin configuration in order to
-subset on a region of interest or filter bands, estimate the output data cube size, and perform
-basic inspection of the thus generated data cube via plots, animations or simply by
-downloading output data.
-
 
 ACDC.TC.02.01: ACDC Data Discovery
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

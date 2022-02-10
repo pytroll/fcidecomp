@@ -48,22 +48,15 @@ following specifications:
     |                         |                                           |                                     |
     |                         |                                           |                                     |
     +=========================+===========================================+=====================================+
-    | ACDC.TC.01.GOME2        | Conda, Data Tailor core package `epct`    | 184                                 |
-    |                         | and `epct_plugin_acdc` plugin installed   |                                     |
-    +-------------------------+                                           +-------------------------------------+
-    | ACDC.TC.01.IASIL3       |                                           | 185                                 |
-    +-------------------------+                                           +-------------------------------------+
-    | ACDC.TC.01.TROPOMI      |                                           | 36                                  |
-    +-------------------------+-------------------------------------------+-------------------------------------+
-    | ACDC.TC.02.*            | Notebook server running and accessible    | 1200                                |
+    | -                       | -                                         | -                                   |
     +-------------------------+-------------------------------------------+-------------------------------------+
 
 
 Requirements and Validation Goals addressed by Test Cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following table maps the requirements detailed in the :ref:`Work package description <[ACDC_WP]>` with the
-validation goals defined in the :ref:`ACDC Verification and Validation Plan <[ACDC_VV]>`
+The following table maps the requirements detailed in the :ref:`Work package description <[FCIDECOMP_WP]>` with the
+validation goals defined in the :ref:`FCIDECOMP Verification and Validation Plan <[FCIDECOMP_VV]>`
 and respective tests to meet these goals defined herein:
 
 .. table:: Requirements and validation goals addressed by the test cases defined in this document.
@@ -71,20 +64,15 @@ and respective tests to meet these goals defined herein:
     +-----------------------------------+-----------------+-------------------------------------------+
     | Requirements                      | Validation Goal | Corresponding Tests (IDs)                 |
     +===================================+=================+===========================================+
-    | REQ 01. All Data Records          | All             | ACDC.TC.01                                |
+    | DTWS-FCI-010                      | -               | -                                         |
     +-----------------------------------+-----------------+-------------------------------------------+
-    | REQ 02. Output Format NetCDF4     | VG2             | ACDC.TC.01                                |
+    | DTWS-FCI-020                      | VG4             | FCIDECOMP.TC.02                           |
     +-----------------------------------+-----------------+-------------------------------------------+
-    | REQ 03. CDM Compliance            | VG3             | ACDC.TC.01                                |
+    | DTWS-FCI-030                      | VG1, VG3        | FCIDECOMP.TC.01, FCIDECOMP.TC.02          |                    |
     +-----------------------------------+-----------------+-------------------------------------------+
-    | REQ 04. CF Compliance             | VG2             | ACDC.TC.01                                |
+    | DTWS-FCI-040                      | -               | -                                         |
     +-----------------------------------+-----------------+-------------------------------------------+
-    | REQ 05. Tools Compatibility       | VG2, VG4        | ACDC.TC.01                                |
+    | DTWS-FCI-050                      | -               | -                                         |
     +-----------------------------------+-----------------+-------------------------------------------+
-    | REQ 06. Regular Lat-Lon           | VG2             | ACDC.TC.01                                |
-    +-----------------------------------+-----------------+-------------------------------------------+
-    | REQ 08. Metadata                  | VG2, VG3        | ACDC.TC.01                                |
-    +-----------------------------------+-----------------+-------------------------------------------+
-    | REQ 09. Jupyter Notebook          | VG4             | ACDC.TC.02                                |
-    +-----------------------------------+-----------------+-------------------------------------------+
+
 

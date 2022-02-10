@@ -42,7 +42,11 @@ Applicable Documents
       .. _[FCIDECOMP_VV]:
     - EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification & Validation Plan
     - `fcidecomp/documentation/verification-validation-plan <../../../verification-validation-plan/_build/html/index.html>`_
+  * - [FCIDECOMP_WP]
 
+      .. _[FCIDECOMP_WP]:
+    - Support to CharLS decompression for MTG users - Work package description
+    - EUM/SEP/WPD/21/1244304
 
 Reference Documents
 ~~~~~~~~~~~~~~~~~~~
