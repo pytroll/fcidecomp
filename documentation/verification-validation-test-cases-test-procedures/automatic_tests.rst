@@ -1,4 +1,4 @@
-Automatic Tests of Decompression via Command Line Tools and via Python (FCIDECOMP.TC.01)
+Automatic Tests: Decompression via Command Line Tools and via Python (FCIDECOMP.TC.01)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section presents the automatic validation tests launched
