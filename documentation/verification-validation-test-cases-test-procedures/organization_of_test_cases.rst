@@ -4,17 +4,14 @@ Organization of Test Cases, Non-regression Tests
 Organization of Test Cases and Order of Execution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Automatic test cases (ACDC.TC.01.*) are grouped in categories
-(GOME2, IASIL3, TROPOMI) which differ by respective input product types.
-Those test cases all require *Docker*
-to be successfully installed on the target test machine.
-They can be executed in isolation and in
-any order, as they are independent of each other.
+Automatic test cases (FCIDECOPM.TC.01.*) test the FCIDECOMP software can be used to
+decompress FC1 L1c NRT data via command line tools and via Python.
+The netCDF4 `nccopy` tool is taken as reference for command line tools,
+and the netCDF4 Python library is taken ar reference for use via Python.
 
-Manual test cases (ACDC.TC.02.*) can equally be executed in
-any order, however they are organized by growing complexity,
-thus it is advisable to execute them following the order given
-in the document.
+Manual test cases (FCIDECOMP.TC.02.*) test the FCIDECOMP software can be used to
+decompress FC1 L1c NRT data via command line tools and
+via selected Java software (Panoply) and via the Data Tailor Software.
 
 Conventions
 ~~~~~~~~~~~
@@ -31,7 +28,7 @@ For validation purposes, the reference platform is CentOS 7.
 
 
 Reference Platform and Execution Time for Test Cases
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As a support to the planning of test sessions, the following table
 summarizes hardware and software pre-requisites and average execution
