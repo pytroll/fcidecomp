@@ -2,11 +2,11 @@ Document Information
 ====================
 
 +---------------------------+----------------------------------------------------------------------------------+
-| Doc. id :                 | epct-plugin-acdc/project-docs/verification-validation-test-cases-test-procedures |
+| Doc. id :                 | fcidecomp/project-docs/verification-validation-test-cases-test-procedures        |
 +---------------------------+----------------------------------------------------------------------------------+
 | External version :        | |version|                                                                        |
 +---------------------------+----------------------------------------------------------------------------------+
-| Author :                  | M. Cucchi, M. Di Bari, G. Le Voci, M. Rossetti (B-Open Solutions)                |
+| Author :                  | M. Bottaccio, M. Cucchi (B-Open Solutions)                                       |
 +---------------------------+----------------------------------------------------------------------------------+
 
 
@@ -20,11 +20,8 @@ Document Change Record
     ============= ================================ ========== =========================================================================================================================================================================================================
     Version       Version Date                     DCR\* No.  Description of Changes
     ============= ================================ ========== =========================================================================================================================================================================================================
-    0.1.0         26-07-2021                                  Initial issue, prepared under contract EUM/CO/17/4600001943/OPN by B-Open Solutions srl.
 
-    0.2.0         02-08-2021                                  Updating manual tests section, VCD and automatic tests durations.
-
-    |version|     03-08-2021                                  Specify requirements addressed by individual subtests where applicable. Document test on download of missing data.
+    |version|     10-02-2022                                  Initial issue, prepared under contract EUM/SEP/WPD/21/1244304 by B-Open Solutions srl.
     ============= ================================ ========== =========================================================================================================================================================================================================
 
 
