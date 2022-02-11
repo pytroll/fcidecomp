@@ -4,14 +4,16 @@ Organization of Test Cases, Non-regression Tests
 Organization of Test Cases and Order of Execution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Automatic test cases (FCIDECOPM.TC.01.*) test the FCIDECOMP software can be used to
+Automatic test cases (FCIDECOMP.\*.TC.01.\*) test the FCIDECOMP software can be used to
 decompress FC1 L1c NRT data via command line tools and via Python.
 The netCDF4 `nccopy` tool is taken as reference for command line tools,
 and the netCDF4 Python library is taken ar reference for use via Python.
 
-Manual test cases (FCIDECOMP.TC.02.*) test the FCIDECOMP software can be used to
+Manual test cases (FCIDECOMP.\*.02.\*) test the FCIDECOMP software can be used to
 decompress FC1 L1c NRT data via command line tools and
 via selected Java software (Panoply) and via the Data Tailor Software.
+
+.. _organization_of_test_cases_conventions:
 
 Conventions
 ~~~~~~~~~~~
@@ -24,7 +26,11 @@ Procedures:
 -  commands executed in a terminal are written with a BASH syntax (e.g.
    newlines).
 
-For validation purposes, the reference platform is CentOS 7.
+For validation purposes, reference platform are:
+
+- Centos 7, Windows 64-bit and Windows 32-bit for FCIDECOMP.\*.TC.01.\*
+
+- **TBD**
 
 
 Reference Platform and Execution Time for Test Cases
@@ -35,11 +41,11 @@ summarizes hardware and software pre-requisites and average execution
 times for each test case category, for the reference platform with the
 following specifications:
 
-- Number of CPU cores: 1
+- Number of CPU cores: -
 
-- RAM: 4 GB
+- RAM: -
 
-- OS: CentOS 7 64 bit
+- OS: -
 
 .. table:: Estimated execution times for test cases under each test sub-category.
 
@@ -48,7 +54,14 @@ following specifications:
     |                         |                                           |                                     |
     |                         |                                           |                                     |
     +=========================+===========================================+=====================================+
-    | -                       | -                                         | -                                   |
+    | FCIDECOMP.CLI.TC.01.01  | `conda` environment with `fcidecomp` and  | -                                   |
+    +-------------------------+ `pytest` installed                        +-------------------------------------+
+    | FCIDECOMP.PY.TC.01.01   |                                           | -                                   |
+    +-------------------------+-------------------------------------------+-------------------------------------+
+    | FCIDECOMP.JAVA.TC.01.01 | -                                         | -                                   |
+    +-------------------------+-------------------------------------------+-------------------------------------+
+    | FCIDECOMP.DT.TC.01.01   | `conda` environment withn `epct` and      | -                                   |
+    |                         | `epct_plugin_mtg` installed               |                                     |
     +-------------------------+-------------------------------------------+-------------------------------------+
 
 

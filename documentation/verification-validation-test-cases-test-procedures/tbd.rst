@@ -11,11 +11,11 @@ them and the target dates or events for closing them.
     :header-rows: 1
 
     *   - Section
+        - TBD
         - Action
         - Target date/event
-        - Resolution
-    *   -
-        -
-        -
-        -
+    *   - :ref:`organization_of_test_cases_conventions`
+        - Define which are the reference platforms for manual validation tests
+        - Explore which are the available platforms which are most suited for the scope of the tests
+        - End of Development milestone
 

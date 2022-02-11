@@ -6,18 +6,18 @@ on a pipeline on EUMETSAT's Gitlab CI/CD,
 on a machines provided by EUMETSAT with CentOS 7, Windows 64-bit and Windows 32-bit,
 with the `fcidecomp` software installed.
 
-FCIDECOMP.TC.01.NCCOPY: Test on decompression via command line tools
+FCIDECOMP.CLI.TC.01.01: Test on decompression via command line tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: test_TC_01_nccopy_decompress
+.. automodule:: test_CLI_TC_01_01
     :members:
     :undoc-members:
     :show-inheritance:
 
-FCIDECOMP.TC.01.PYTHON: Test on decompression via Python
+FCIDECOMP.PY.TC.01.01: Test on decompression via Python
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: test_TC_01_python_decompress
+.. automodule:: test_PY_TC_01_01
     :members:
     :undoc-members:
     :show-inheritance:
