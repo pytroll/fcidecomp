@@ -4,14 +4,17 @@ Organization of Test Cases, Non-regression Tests
 Organization of Test Cases and Order of Execution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Automatic test cases (FCIDECOMP.\*.TC.01.\*) test the FCIDECOMP software can be used to
-decompress FC1 L1c NRT data via command line tools and via Python.
+Automatic test cases (FCIDECOMP.CLI.TC.01.01 and FCIDECOMP.PY.TC.01.01) test
+the FCIDECOMP software can be used to decompress FC1 L1c NRT data
+via command line tools and via Python.
 The netCDF4 `nccopy` tool is taken as reference for command line tools,
-and the netCDF4 Python library is taken ar reference for use via Python.
+and the `netCDF4` Python library is taken as reference for use via Python.
 
-Manual test cases (FCIDECOMP.\*.02.\*) test the FCIDECOMP software can be used to
-decompress FC1 L1c NRT data via command line tools and
-via selected Java software (Panoply) and via the Data Tailor Software.
+Manual test cases test the FCIDECOMP software
+can be used to decompress FC1 L1c NRT data
+via selected Java Software and via the Data Tailor Software (FICDECOMP.JAVA.TC.01.01 and FCIDECOMP.JAVA.TP.01.01),
+and that it can be installed using the offline dependencies repository hosted at **TBD** (FCIDECOMP.OFF.TP.01.01).
+`Panoply` is taken as reference for decompression via Java Software
 
 .. _organization_of_test_cases_conventions:
 
@@ -74,18 +77,18 @@ and respective tests to meet these goals defined herein:
 
 .. table:: Requirements and validation goals addressed by the test cases defined in this document.
 
-    +-----------------------------------+-----------------+-------------------------------------------+
-    | Requirements                      | Validation Goal | Corresponding Tests (IDs)                 |
-    +===================================+=================+===========================================+
-    | DTWS-FCI-010                      | -               | -                                         |
-    +-----------------------------------+-----------------+-------------------------------------------+
-    | DTWS-FCI-020                      | VG4             | FCIDECOMP.TC.02                           |
-    +-----------------------------------+-----------------+-------------------------------------------+
-    | DTWS-FCI-030                      | VG1, VG3        | FCIDECOMP.TC.01, FCIDECOMP.TC.02          |                    |
-    +-----------------------------------+-----------------+-------------------------------------------+
-    | DTWS-FCI-040                      | -               | -                                         |
-    +-----------------------------------+-----------------+-------------------------------------------+
-    | DTWS-FCI-050                      | -               | -                                         |
-    +-----------------------------------+-----------------+-------------------------------------------+
+    +----------------------------+--------------------+------------------------------------------------+
+    | Requirements               | Validation Goal    | Corresponding Tests (IDs)                      |
+    +============================+====================+================================================+
+    | DTWS-FCI-010               | VG1, VG2, VG3, VG4 | All                                            |
+    +----------------------------+--------------------+------------------------------------------------+
+    | DTWS-FCI-020               | VG4                | FCIDECOMP.DT.TC.01.01                          |
+    +----------------------------+--------------------+------------------------------------------------+
+    | DTWS-FCI-030               | VG1, VG3           | FCIDECOMP.CLI.TC.01.01, FCIDECOMP.PY.TC.01.01  |                    |
+    +----------------------------+--------------------+------------------------------------------------+
+    | DTWS-FCI-040               | VG6                | FCIDECOMP.OFF.TC.01.01                         |
+    +----------------------------+--------------------+------------------------------------------------+
+    | DTWS-FCI-050               | -                  | -                                              |
+    +----------------------------+--------------------+------------------------------------------------+
 
 

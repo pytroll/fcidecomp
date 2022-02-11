@@ -1,5 +1,5 @@
-Automatic Tests: Decompression via Command Line Tools and via Python (FCIDECOMP.TC.01)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Automatic Tests: Decompression via Command Line Tools and via Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section presents the automatic validation tests launched
 on a pipeline on EUMETSAT's Gitlab CI/CD,
