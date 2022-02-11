@@ -13,8 +13,8 @@
 # limitations under the License.
 
 """
-This test checks that JPEG-LS compressed files are correctly decompressed when opened using the
-Python library `netCDF4`
+This test checks that JPEG-LS compressed MTG FCI L1C products are correctly decompressed when
+opened using the Python library `netCDF4`
 """
 
 import os

@@ -13,8 +13,8 @@
 # limitations under the License.
 
 """
-This test checks that JPEG-LS compressed files are correctly decompressed using the netCDF4 tool
-`nccopy`
+This test checks that JPEG-LS compressed MTG FCI L1C products are correctly decompressed using the
+netCDF4 tool `nccopy`
 """
 
 import os
