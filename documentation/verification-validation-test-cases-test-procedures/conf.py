@@ -1,4 +1,4 @@
-# Copyright 2017-2019, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)
+# Copyright 2022, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,15 +29,15 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../../validation_tests'))
+sys.path.insert(0, os.path.abspath('../../tests'))
 
 # -- Project information -----------------------------------------------------
 
 import re
 
-project = "EUMETSAT Atmospheric Composition Data Cube - Verification and Validation Test Cases and Test Procedures"
+project = "EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures"
 copyright = (
-    "2020-2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
+    "2022, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
 )
 author = "B-Open Solutions srl"
 
@@ -75,20 +75,12 @@ extensions = [
 ]
 
 ###################################################################
-PLUGIN_ACDC_STR = "../../epct_plugin_acdc"
-ARRANGEMENTS_STR = f"{PLUGIN_ACDC_STR}/resources/arrangements.yaml"
-RESOURCES_COORDS_STR = f"{PLUGIN_ACDC_STR}/resources/Tables/coordinate.json"
-RESOURCES_VARS_STR = f"{PLUGIN_ACDC_STR}/resources/Tables/variable.json"
-
-os.environ['EPCT_PLUGIN_ACDC_VERSION'] = '0.1.0'
-os.environ['ARRANGEMENTS_PATH'] = os.path.abspath(ARRANGEMENTS_STR)
-os.environ['CDM_COORDS_PATH'] = os.path.abspath(RESOURCES_COORDS_STR)
-os.environ['CDM_VARS_PATH'] = os.path.abspath(RESOURCES_VARS_STR)
+os.environ['FCIDECOMP_VERSION'] = '0.1.0'
 
 autodoc_mock_imports = ["cf2cdm",
                         "cfunits",
                         "datetime",
-                        "epct_plugin_acdc",
+                        "fcidecomp",
                         "glob",
                         "logging",
                         "netCDF4",
@@ -223,14 +215,14 @@ latex_elements = {
         \pagestyle{fancy}
         \fancypagestyle{normal}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{project-docs/verification-and-validation-test-cases-test-procedures \\ version, \today \\ EUMETSAT Atmospheric Composition Data Cube - Verification and Validation Test Cases and Test Procedures}}
+        \fancyhead[RE,RO]{\bf{documents/verification-and-validation-test-cases-test-procedures \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures}}
         \renewcommand{\headrulewidth}{0.5pt}
         \fancyfoot{}
         \fancyfoot[C]{\thepage}
         }
         \fancypagestyle{plain}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{project-docs/verification-and-validation-test-cases-test-procedures \\ version, \today \\ EUMETSAT Atmospheric Composition Data Cube - Verification and Validation Test Cases and Test Procedures}}
+        \fancyhead[RE,RO]{\bf{documents/verification-and-validation-test-cases-test-procedures \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures}}
         \fancyfoot[CO,CE]{\thepage}
         }
 
@@ -243,8 +235,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "acdc-verification-and-validation-test-cases-test-procedures.tex",
-        "EUMETSAT Atmospheric Composition Data Cube - Verification and Validation Test Cases and Test Procedures",
+        "fcidecomp-verification-and-validation-test-cases-test-procedures.tex",
+        "EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures",
         "EUMETSAT",
         "manual",
     ),
@@ -257,8 +249,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "acdc-verification-and-validation-test-cases-test-procedures",
-        "EUMETSAT Atmospheric Composition Data Cube - Verification and Validation Test Cases and Test Procedures",
+        "fcidecomp-verification-and-validation-test-cases-test-procedures",
+        "EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures",
         [author],
         1,
     )
@@ -272,10 +264,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "acdc-verification-and-validation-test-cases-test-procedures",
-        "EUMETSAT Atmospheric Composition Data Cube - Verification and Validation Test Cases and Test Procedures",
+        "fcidecomp-verification-and-validation-test-cases-test-procedures",
+        "EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures",
         author,
-        "acdc-verification-and-validation-test-cases-test-procedures",
+        "fcidecomp-verification-and-validation-test-cases-test-procedures",
         "One line description of project.",
         "Miscellaneous",
     ),

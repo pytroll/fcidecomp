@@ -14,7 +14,7 @@ FCIDECOMP.TC.01.NCCOPY: Test on decompression via command line tools
     :undoc-members:
     :show-inheritance:
 
-FCIDECOMP.TC.01.NCCOPY: Test on decompression via Python
+FCIDECOMP.TC.01.PYTHON: Test on decompression via Python
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. automodule:: test_TC_01_python_decompress
