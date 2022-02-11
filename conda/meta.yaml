@@ -36,6 +36,3 @@ requirements:
     - h5py=2.*
     - netCDF4
     - python  {{ python }}
-    - pytest-runner
-
-

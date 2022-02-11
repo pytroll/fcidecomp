@@ -17,6 +17,7 @@ This test checks that JPEG-LS compressed MTG FCI L1C products are correctly deco
 netCDF4 tool `nccopy`
 """
 
+import filecmp
 import os
 import pytest
 import subprocess
