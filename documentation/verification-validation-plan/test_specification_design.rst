@@ -77,3 +77,6 @@ The following categories are defined:
 
 :DT:
     Tests for the decompression of FC1 L1c NRT data via the Data Tailor (VG4)
+
+:OFF:
+    Tests for the installation of the FCIDECOMP Software using the offline dependencies repository hosted at EUMETSAT Gitlab (VG5, VG6)
