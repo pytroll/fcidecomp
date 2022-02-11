@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""
+This test checks that JPEG-LS compressed files are correctly decompressed when opened using the
+Python library `netCDF4`
+"""
+
 import os
 
 import pytest
