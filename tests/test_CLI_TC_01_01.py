@@ -35,7 +35,9 @@ BODY_UNCOMPR_FILEPATH = os.path.join(
 )
 
 
-@pytest.mark.skipif(not os.environ["HDF5_PLUGIN_PATH"], reason="requires HDF5_PLUGIN_PATH in env")
+@pytest.mark.skipif(
+    "HDF5_PLUGIN_PATH" not in os.environ.keys(), reason="requires HDF5_PLUGIN_PATH in env"
+)
 def test_decompression(tmpdir):
 
     uncompr_res_file = os.path.join(tmpdir, os.path.basename(BODY_UNCOMPR_FILEPATH))
@@ -50,6 +52,11 @@ def test_decompression(tmpdir):
         command = f"ncdump -g measured -n decomp {netcdf_file} > {os.path.join(tmpdir, txt_file)}"
         process = subprocess.run(command, shell=True)
 
+    assert filecmp.cmp(
+        os.path.join(tmpdir, 'body_res.txt'),
+        os.path.join(tmpdir, 'body_test.txt'),
+        shallow=False
+    )
 
 
 

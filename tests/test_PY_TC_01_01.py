@@ -41,7 +41,9 @@ BANDS = [
 ]
 
 
-@pytest.mark.skipif(not os.environ["HDF5_PLUGIN_PATH"], reason="requires HDF5_PLUGIN_PATH in env")
+@pytest.mark.skipif(
+    "HDF5_PLUGIN_PATH" not in os.environ.keys(), reason="requires HDF5_PLUGIN_PATH in env"
+)
 def test_decompression():
 
     ds_test = nc.Dataset(BODY_UNCOMPR_FILEPATH, "r")
