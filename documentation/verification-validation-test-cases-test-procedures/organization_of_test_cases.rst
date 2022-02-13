@@ -50,22 +50,33 @@ following specifications:
 
 - OS: -
 
-.. table:: Estimated execution times for test cases under each test sub-category.
+.. list-table:: Estimated execution times for test cases under each test sub-category.
+   :header-rows: 1
+   :widths: 20 40 40
 
-    +-------------------------+-------------------------------------------+-------------------------------------+
-    | Category ID             | Software pre-requisites                   | Average execution time in seconds   |
-    |                         |                                           |                                     |
-    |                         |                                           |                                     |
-    +=========================+===========================================+=====================================+
-    | FCIDECOMP.CLI.TC.01.01  | `conda` environment with `fcidecomp` and  | -                                   |
-    +-------------------------+ `pytest` installed                        +-------------------------------------+
-    | FCIDECOMP.PY.TC.01.01   |                                           | -                                   |
-    +-------------------------+-------------------------------------------+-------------------------------------+
-    | FCIDECOMP.JAVA.TC.01.01 | -                                         | -                                   |
-    +-------------------------+-------------------------------------------+-------------------------------------+
-    | FCIDECOMP.DT.TC.01.01   | `conda` environment withn `epct` and      | -                                   |
-    |                         | `epct_plugin_mtg` installed               |                                     |
-    +-------------------------+-------------------------------------------+-------------------------------------+
+   * - Category ID
+     - Software pre-requisites
+     - Average execution time in seconds
+
+   * - FCIDECOMP.CLI.TC.01.01
+     - `conda` environment with `fcidecomp` and `pytest` installed
+     -
+
+   * - FCIDECOMP.PY.TC.01.01
+     - `conda` environment with `fcidecomp` and `pytest` installed
+     -
+
+   * - FCIDECOMP.JAVA.TC.01.01
+     -
+     -
+
+   * - FCIDECOMP.DT.TC.01.01
+     - `conda` environment with `epct`, `epct_plugin_mtg` and `netCDF4` installed
+     -
+
+   * - FCIDECOMP.OFF.TC.01.01
+     -
+     -
 
 
 Requirements and Validation Goals addressed by Test Cases
@@ -75,20 +86,33 @@ The following table maps the requirements detailed in the :ref:`Work package des
 validation goals defined in the :ref:`FCIDECOMP Verification and Validation Plan <[FCIDECOMP_VV]>`
 and respective tests to meet these goals defined herein:
 
-.. table:: Requirements and validation goals addressed by the test cases defined in this document.
+.. list-table:: Requirements and validation goals addressed by the test cases defined in this document.
+   :header-rows: 1
+   :widths: 10 40 50
 
-    +------------------------+--------------------------+------------------------------------------------+
-    | Requirements           | Validation Goal          | Corresponding Tests (IDs)                      |
-    +========================+==========================+================================================+
-    | DTWS-FCI-010           | VG1, VG2, VG3, VG4       | All                                            |
-    +------------------------+--------------------------+------------------------------------------------+
-    | DTWS-FCI-020           | VG4                      | FCIDECOMP.DT.TC.01.01                          |
-    +------------------------+--------------------------+------------------------------------------------+
-    | DTWS-FCI-030           | VG1, VG3                 | FCIDECOMP.CLI.TC.01.01, FCIDECOMP.PY.TC.01.01  |                    |
-    +------------------------+--------------------------+------------------------------------------------+
-    | DTWS-FCI-040           | VG5, VG6                 | FCIDECOMP.OFF.TC.01.01                         |
-    +------------------------+--------------------------+------------------------------------------------+
-    | DTWS-FCI-050           | Contractual requirement  | No test expected                               |
-    +------------------------+--------------------------+------------------------------------------------+
+   * - Requirement
+     - Validation Goal
+     - Corresponding Tests (IDs)
+
+   * - DTWS-FCI-010
+     - VG1, VG2, VG3, VG4
+     - All
+
+   * - DTWS-FCI-020
+     - VG4
+     - FCIDECOMP.DT.TC.01.01
+
+   * - DTWS-FCI-030
+     - VG1, VG3
+     - FCIDECOMP.CLI.TC.01.01, FCIDECOMP.PY.TC.01.01
+
+   * - DTWS-FCI-040
+     - VG5, VG6
+     - FCIDECOMP.OFF.TC.01.01
+
+   * - DTWS-FCI-050
+     - Contractual requirement
+     - No test expected
+
 
 

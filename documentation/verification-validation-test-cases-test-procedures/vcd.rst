@@ -1,7 +1,7 @@
 Verification Control Document
 ------------------------------
 
-The :ref:`verification and control document <[FCIDECOPM_VCD]>` confirms
+The :ref:`verification and control document <[FCIDECOMP_VCD]>` confirms
 the outcome of automatic and manual tests,
 and therefore the fulfilment of the respective requirements they cover.
 

@@ -38,6 +38,12 @@ Applicable Documents
     - Title
     - Reference
 
+  * - [EPCT_MTG_README]
+
+      .. _[EPCT_MTG_README]:
+    - `epct_plugin_mtg` Gitlab repository README
+    - `https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/README.md <https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/README.md>`_
+
   * - [FCIDECOMP_VCD]
 
       .. _[FCIDECOMP_VCD]:
@@ -56,6 +62,13 @@ Applicable Documents
     - Support to CharLS decompression for MTG users - Work package description
     - EUM/SEP/WPD/21/1244304
 
+  * - [TEST_DATA]
+
+      .. _[TEST_DATA]:
+    - MTG FCI L1C test data
+    - `https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1` <https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1>`_
+
+
 Reference Documents
 ~~~~~~~~~~~~~~~~~~~
 
@@ -67,3 +80,7 @@ Reference Documents
   * - #
     - Title
     - Reference
+
+  * -
+    -
+    -
