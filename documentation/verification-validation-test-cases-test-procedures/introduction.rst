@@ -44,6 +44,19 @@ Applicable Documents
     - `epct_plugin_mtg` Gitlab repository README
     - `https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/README.md <https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/README.md>`_
 
+  * - [FCIDECOMP]
+
+      .. _[FCIDECOMP]:
+    - FCIDECOMP Software repository
+    - `ttps://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development <ttps://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development>`_
+
+
+  * - [FCIDECOMP_DEP_OFF]
+
+      .. _[FCIDECOMP_DEP_OFF]:
+    - FCIDECOMP Softwre offline dependencies repository
+    - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/offline-dependencies/-/tree/development <https://gitlab.eumetsat.int/sepdssme/fcidecomp/offline-dependencies/-/tree/development>`_
+
   * - [FCIDECOMP_VCD]
 
       .. _[FCIDECOMP_VCD]:

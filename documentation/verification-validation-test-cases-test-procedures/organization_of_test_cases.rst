@@ -31,8 +31,7 @@ Procedures:
 
 For validation purposes, reference platform are:
 
-- Centos 7, Windows 64-bit and Windows 32-bit for FCIDECOMP.\*.TC.01.\*
-
+- Centos 7, Windows 64-bit and Windows 32-bit for FCIDECOMP.CLI.TC.01.01 and FCIDECOMP.PY.TC.01.01
 - **TBD**
 
 
@@ -59,23 +58,32 @@ following specifications:
      - Average execution time in seconds
 
    * - FCIDECOMP.CLI.TC.01.01
-     - `conda` environment with `fcidecomp` and `pytest` installed
+     - ``conda`` environment with
+
+       * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
+       * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
      -
 
    * - FCIDECOMP.PY.TC.01.01
-     - `conda` environment with `fcidecomp` and `pytest` installed
+     - ``conda`` environment with
+
+       * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
+       * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
      -
 
    * - FCIDECOMP.JAVA.TC.01.01
-     -
+     - ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
      -
 
    * - FCIDECOMP.DT.TC.01.01
-     - `conda` environment with `epct`, `epct_plugin_mtg` and `netCDF4` installed
+     - ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in `<[EPCT_MTG_README]>`_
      -
 
    * - FCIDECOMP.OFF.TC.01.01
-     -
+     - ``conda`` environment with
+
+       * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
+       * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
      -
 
 

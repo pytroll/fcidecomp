@@ -1,3 +1,5 @@
+.. _automatic_tests:
+
 Automatic Tests: Decompression via Command Line Tools and via Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
