@@ -110,7 +110,7 @@ test linux:
     - conda activate
     - conda update -n base -c defaults conda
   script:
-    - conda install -y $CHANNEL_OPTS fcidecomp pytest
+    - conda install -y $CHANNEL_OPTS fcidecomp netcdf4 pytest
     - pytest -vv
     - conda deactivate
 
@@ -128,7 +128,7 @@ test win32:
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
-    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp pytest
+    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp netcdf4 pytest
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
@@ -149,7 +149,7 @@ test win64:
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
-    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp pytest
+    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp netcdf4 pytest
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
