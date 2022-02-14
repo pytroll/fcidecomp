@@ -29,7 +29,7 @@ BODY_COMPR_FILEPATH = os.path.join(
     "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
     "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N_JLS_T_0073_0015.nc"
 )
-BODY_UNCOMPR_FILEPATH = os.path.join(
+BODY_DECOMPR_FILEPATH = os.path.join(
     INPUT_PATH,
     "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
     "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N__T_0073_0015.nc"
@@ -41,14 +41,19 @@ BODY_UNCOMPR_FILEPATH = os.path.join(
 )
 def test_decompression(tmpdir):
 
-    uncompr_res_file = os.path.join(tmpdir, os.path.basename(BODY_UNCOMPR_FILEPATH))
+    decompr_res_file = os.path.join(tmpdir, os.path.basename(BODY_DECOMPR_FILEPATH))
     process = subprocess.run(
-        f"nccopy -F none {BODY_COMPR_FILEPATH} {uncompr_res_file}", shell=True
+        f"nccopy -F none {BODY_COMPR_FILEPATH} {decompr_res_file}", shell=True
     )
+    decompr_file_size = os.path.getsize(decompr_res_file)
+    compr_file_size = os.path.getsize(BODY_COMPR_FILEPATH)
+
+    assert os.path.isfile(decompr_res_file)
+    assert decompr_file_size > (compr_file_size * 4)
 
     for netcdf_file, txt_file in [
-        (uncompr_res_file, 'body_res.txt'),
-        (BODY_UNCOMPR_FILEPATH, 'body_test.txt')
+        (decompr_res_file, 'body_res.txt'),
+        (BODY_DECOMPR_FILEPATH, 'body_test.txt')
     ]:
         command = f"ncdump -g measured -n decomp {netcdf_file} > {os.path.join(tmpdir, txt_file)}"
         process = subprocess.run(command, shell=True)
