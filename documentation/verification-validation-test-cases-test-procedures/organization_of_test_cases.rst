@@ -35,6 +35,8 @@ For validation purposes, reference platform are:
 - **TBD**
 
 
+.. _reference_platform:
+
 Reference Platform and Execution Time for Test Cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -72,7 +74,8 @@ following specifications:
      -
 
    * - FCIDECOMP.JAVA.TC.01.01
-     - ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
+     - * ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
+       * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      -
 
    * - FCIDECOMP.DT.TC.01.01

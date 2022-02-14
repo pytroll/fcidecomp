@@ -9,6 +9,8 @@ of:
 - Installing the FCIDECOMP Software using the offline dependencies repository hosted at EUMETSAT Gitlab
   (`<[FCIDECOMP_DEP_OFF]>`_)
 
+.. _test_data:
+
 Tests reported in this section use the following test data files, all hosted at `<[TEST_DATA]>`_:
 
 .. list-table:: Test data
@@ -53,11 +55,12 @@ FCIDECOMP.JAVA.TP.01.01: decompression via Java Software
      - Description
      - Expected output
    * - 0.
-     -
-     -
+     - Configure Panoply to use the netCDF4-C library, following instructions reported in the REDAME file at
+       `<FCIDECOMP>`_
+     - Steps reported in the given instructions can be carried out
    * - 1.
-     -
-     -
+     - Open TD.COMP.01 in Panoply and create a plot using the `/data/ir_105/measured/effective_radiance` variable
+     - Plot is generated
 
 
 FCIDECOMP.DT.TC.01.01: decompression via the EUMETSAT Data Tailor Software
