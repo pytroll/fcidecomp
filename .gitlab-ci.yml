@@ -309,6 +309,9 @@ deploy local:
     - build win32
     - build win64
   needs:
+    - build linux
+    - build win32
+    - build win64
     - test linux py39
     - test win64 py39
     - test win32 py39
