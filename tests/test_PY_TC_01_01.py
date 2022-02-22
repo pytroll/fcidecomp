@@ -52,7 +52,7 @@ def test_decompression():
     for (comp_test_file, decomp_test_file) in zip(COMP_FILEPATH, DECOMP_FILEPATH):
 
         ds_test = nc.Dataset(decomp_test_file, "r")
-        ds_res = nc.Dataset(decomp_test_file, "r")
+        ds_res = nc.Dataset(comp_test_file, "r")
 
         for band in BANDS:
             for variable in VARIABLES:
