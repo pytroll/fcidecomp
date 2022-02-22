@@ -69,15 +69,11 @@ Activate the environment:
 Unzip the `conda` packages. They end up in a directory which ends with `conda-channel`.
 Execute (replace `CONDACHANNELPATH` with the path to the directory, including `conda-channel`):
 
-    conda install -y --override-channels -c anaconda -c conda-forge -c CONDACHANNELPATH fcidecomp
+    conda install -y -c anaconda -c conda-forge -c CONDACHANNELPATH fcidecomp
 
 For example, on Linux:
 
     conda install -y -c anaconda -c conda-forge -c /home/user1/Desktop/conda/conda-channel fcidecomp
-
-For example, on Windows::
-
-    conda install -y -c anaconda -c conda-forge -c C:\Users\user1\Desktop\conda\conda-channel fcidecomp
 
 ## Installation from the Conda recipe
 
