@@ -163,9 +163,8 @@ test linux py38:
   stage: test
   tags:
     - linux
-  when:
-    - manual
   image: conda/miniconda3-centos7:latest
+  when: manual
   dependencies:
     - build linux
   needs:
@@ -185,8 +184,7 @@ test win32 py38:
   stage: test
   tags:
     - windows
-  when:
-    - manual
+  when: manual
   dependencies:
     - build win32
   needs:
@@ -209,8 +207,7 @@ test win64 py38:
   stage: test
   tags:
     - windows
-  when:
-    - manual
+  when: manual
   dependencies:
     - build win64
   needs:
@@ -233,9 +230,8 @@ test linux py37:
   stage: test
   tags:
     - linux
-  when:
-    - manual
   image: conda/miniconda3-centos7:latest
+  when: manual
   dependencies:
     - build linux
   needs:
@@ -255,8 +251,7 @@ test win32 py37:
   stage: test
   tags:
     - windows
-  when:
-    - manual
+  when: manual
   dependencies:
     - build win32
   needs:
@@ -279,8 +274,7 @@ test win64 py37:
   stage: test
   tags:
     - windows
-  when:
-    - manual
+  when: manual
   dependencies:
     - build win64
   needs:
