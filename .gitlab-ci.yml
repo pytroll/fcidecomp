@@ -129,7 +129,7 @@ test win32 py39:
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
-    - conda install -y -c anaconda -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
@@ -150,7 +150,7 @@ test win64 py39:
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
-    - conda install -y -c anaconda -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
