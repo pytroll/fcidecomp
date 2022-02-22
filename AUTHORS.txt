@@ -1,0 +1,8 @@
+# Copyright holder
+EUMETSAT
+# Developed by B-Open Solutions srl for EUMETSAT under contract EUM/C0/17/4600001943/0PN
+Maurizio Bottaccio <m.bottaccio@bopen.eu>
+Alessandro Amici <a.amici@bopen.eu>
+Marco Di Bari <m.dibari@bopen.eu>
+Giuseppe Cammarota <g.cammarota@bopen.eu>
+Marco Cucchi <m.cucchi@bopen.eu>
