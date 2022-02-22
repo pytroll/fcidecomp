@@ -104,11 +104,10 @@ def _init_filters():
 
         # Load DLL
         if _sys.platform.startswith('win'):
-            filter_file_extension = '.dll'
+            filter_file_name = 'H5Zjpegls.dll'
         elif _sys.platform.startswith('linux'):
-            filter_file_extension = '.so'
-        filename = _glob(_os.path.join(
-            PLUGINS_PATH, 'libH5Zjpegls' + filter_file_extension + '*'))
+            filter_file_extension = 'libH5Zjpegls.so'
+        filename = _glob(_os.path.join(PLUGINS_PATH, filter_file_name))
         if len(filename):
             filename = filename[0]
         else:

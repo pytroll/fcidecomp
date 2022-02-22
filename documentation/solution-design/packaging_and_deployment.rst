@@ -34,6 +34,11 @@ considered as two groups of OS: in Conda standardised environment it is enough t
 distribution in order to make it compatible with other Linux distributions. So two Conda packages are released: one for
 Linux distributions, and one for Windows 10.
 
+As Conda is both a package manager and an environment manager, it allows to generate the same environment and install
+the packages on different OSes of the same type and architecture (e.g. Linux 64-bit). For this reason its use ensures
+long-term maintainability of the chosen solution, even in the case any OS listed in :ref:`supported_platforms` should
+reach its end-of-life before the end of the period covered by MTG operations.
+
 These Conda packages install both the FCIDECOMP libraries and its Python bindings. As a blueprint for the
 Conda recipe, the :ref:`Conda recipe <[FCIDECOMP_CONDA]>` for the packaging of FCIDECOMP mantained by Martin Raspaud
 from the Swedish Meteorological and Hydrological Institute has been used.
@@ -60,7 +65,7 @@ is no more present on any public Conda distribution channel. It is thus compiled
 FCIDECOMP software binaries, starting from the source code available at its :ref:`GitHub repository <charls_v1>`.
 
 In order to grant the ability to install the software even in case the remote repositories hosting its dependencies
-should become unreachable, a have a separate assets repository is hosted on EUMETSAT infrastructure (**:TBC:**).
+should become unreachable, a separate assets repository is hosted on EUMETSAT infrastructure.
 This assets repository hosts ``.tar.gz`` archives and Conda packages of all the dependencies needed for each release tag
 of the FCIDECOMP software. For a possible more general solution, which is out of the scope of this project, see
 :ref:`a_improvements`.
@@ -73,9 +78,10 @@ Packaging process
 Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
 
 GitLab CI/CD pipelines to compile, build, test and upload the Conda packages to EUMETSAT Anaconda repository are
-implemented. Three GitLab runners are deployed to run the pipelines: one with a Docker executor on Linux and the
-other two with Shell executors on Windows 64-bit, where one of these two is configured to compile the package at
-32-bit (**:TBC:**). See :ref:`a_runners` for details on the deployed GitLab runners.
+implemented. Two GitLab runners are deployed to run the pipelines: one with a Docker executor on Linux and the
+other with a Shell executor on Windows 64-bit, which is used to build both 64- and 32-bit packages
+
+See :ref:`a_runners` for details on the deployed GitLab runners.
 
 
 

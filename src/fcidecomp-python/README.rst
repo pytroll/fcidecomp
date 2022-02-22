@@ -1,2 +1,0 @@
-FCIDECOMP Python plugin
-=======================
