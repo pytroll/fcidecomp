@@ -48,7 +48,7 @@ Activate the environment::
 
 Execute::
 
-    conda install -y --override-channels -c anaconda -c conda-forge -c $BUILD_DIRECTORY fcidecomp
+    conda install -y -c anaconda -c conda-forge -c $BUILD_DIRECTORY fcidecomp
 
 Conda package build and install on Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,5 +79,5 @@ Activate the environment::
 
 Execute::
 
-    conda install -y --override-channels -c anaconda -c conda-forge -c %BUILD_DIRECTORY% fcidecomp
+    conda install -y -c anaconda -c conda-forge -c %BUILD_DIRECTORY% fcidecomp
 
