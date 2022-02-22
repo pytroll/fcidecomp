@@ -15,8 +15,8 @@
 variables: &variables
   BUILD_OPTS: "--output-folder $CI_PROJECT_DIR/conda-channel"
   CONDABIN: 'C:\ProgramData\Miniconda3\Library\bin;C:\ProgramData\Miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\condabin;C:\Users\datatailor_admin\miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\Library\bin'
-  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
-  CHANNEL_OPTS_WIN: "--override-channels -c defaults -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel"
+  CHANNEL_OPTS: "-c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
+  CHANNEL_OPTS_WIN: "-c anaconda -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel"
   EPCT_TEST_DATA_DIR: "/data/data-tailor"
 
 
@@ -128,7 +128,7 @@ test win32:
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
-    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp pytest
+    - conda install -y $CHANNEL_OPTS_WIN fcidecomp pytest
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
@@ -149,7 +149,7 @@ test win64:
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
-    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp pytest
+    - conda install -y $CHANNEL_OPTS_WIN fcidecomp pytest
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
