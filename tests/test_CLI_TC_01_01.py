@@ -56,11 +56,11 @@ def test_decompression(tmpdir):
         process = subprocess.run(
             f"nccopy -F none {comp_test_file} {decomp_res_file}", shell=True
         )
-        decompr_file_size = os.path.getsize(decomp_res_file)
-        compr_file_size = os.path.getsize(comp_test_file)
+        decomp_file_size = os.path.getsize(decomp_res_file)
+        comp_file_size = os.path.getsize(comp_test_file)
 
         assert os.path.isfile(decomp_res_file)
-        assert decompr_file_size > (compr_file_size * 4)
+        assert decomp_file_size > (comp_file_size * 4)
 
         ds_test = nc.Dataset(decomp_test_file, "r")
         ds_res = nc.Dataset(decomp_res_file, "r")
