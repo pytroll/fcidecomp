@@ -7,7 +7,6 @@ import logging as _logging
 import os as _os
 import sys as _sys
 from collections.abc import Mapping as _Mapping
-from collections import namedtuple as _namedtuple
 import h5py as _h5py
 
 _logger = _logging.getLogger(__name__)
@@ -17,21 +16,15 @@ try:
 except KeyError:
     print("HDF5_PLUGIN_PATH environment variable is not defined")
 
-
-# ID of FCIDECOMP filter
-
 FCIDECOMP_ID = 32018
-"""FCIDECOMP filter ID"""
-
 FILTERS = {'fcidecomp': FCIDECOMP_ID}
-"""Mapping of filter name to HDF5 filter ID for available filters"""
 
 try:
     _FilterRefClass = _h5py.filters.FilterRefBase
 except AttributeError:
     class _FilterRefClass(_Mapping):
-        """Base class for referring to an HDF5 and describing its options
-        Your subclass must define filter_id, and may define a filter_options tuple.
+        """
+        Base class for referring to an HDF5 filter and describing its options.
         """
         filter_id = None
         filter_options = ()
@@ -59,15 +52,8 @@ except AttributeError:
 
 
 class FciDecomp(_FilterRefClass):
-    """``h5py.Group.create_dataset``'s compression arguments for using FciDecomp filter.
-    It can be passed as keyword arguments:
-    .. code-block:: python
-        f = h5py.File('test.h5', 'w')
-        f.create_dataset(
-            'fcidecomp',
-            data=numpy.arange(100),
-            **hdf5plugin.FciDecomp())
-        f.close()
+    """`
+    `h5py.Group.create_dataset``'s compression arguments for using FciDecomp filter.
     """
     filter_id = FCIDECOMP_ID
 
@@ -76,7 +62,8 @@ class FciDecomp(_FilterRefClass):
 
 
 def _init_filters():
-    """Initialise and register HDF5 filters with h5py
+    """
+    Initialise and register HDF5 filters with h5py
     Generator of tuples: (filename, library handle)
     """
     hdf5_version = _h5py.h5.get_libversion()
@@ -92,7 +79,7 @@ def _init_filters():
         if _sys.platform.startswith('win'):
             filter_file_name = 'H5Zjpegls.dll'
         elif _sys.platform.startswith('linux'):
-            filter_file_extension = 'libH5Zjpegls.so'
+            filter_file_name = 'libH5Zjpegls.so'
         filename = _glob(_os.path.join(PLUGINS_PATH, filter_file_name))
         if len(filename):
             filename = filename[0]
