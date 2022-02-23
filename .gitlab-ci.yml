@@ -15,8 +15,8 @@
 variables: &variables
   BUILD_OPTS: "--output-folder $CI_PROJECT_DIR/conda-channel"
   CONDABIN: 'C:\ProgramData\Miniconda3\Library\bin;C:\ProgramData\Miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\condabin;C:\Users\datatailor_admin\miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\Library\bin'
-  CHANNEL_OPTS: "--override-channels -c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
-  CHANNEL_OPTS_WIN: "--override-channels -c defaults -c conda-forge -c file://$env:CI_PROJECT_DIR/conda-channel"
+  CHANNEL_OPTS: "-c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
+  CHANNEL_OPTS_WIN: "-c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel"
   EPCT_TEST_DATA_DIR: "/data/data-tailor"
 
 
@@ -95,7 +95,7 @@ build win64:
     expire_in: 10 days
 
 
-test linux:
+test linux py39:
   stage: test
   tags:
     - linux
@@ -107,14 +107,15 @@ test linux:
   before_script:
     - conda init bash
     - source ~/.bashrc
-    - conda activate
+    - conda create -y --name $CI_JOB_ID python=3.9
+    - conda activate $CI_JOB_ID
     - conda update -n base -c defaults conda
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp pytest
     - pytest -vv
     - conda deactivate
 
-test win32:
+test win32 py39:
   stage: test
   tags:
     - windows
@@ -128,7 +129,7 @@ test win32:
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
-    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp pytest
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
@@ -136,7 +137,7 @@ test win32:
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
-test win64:
+test win64 py39:
   stage: test
   tags:
     - windows
@@ -149,7 +150,141 @@ test win64:
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
-    - conda install -y --override-channels -c defaults -c conda-forge -c $env:CI_PROJECT_DIR\conda-channel fcidecomp pytest
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
+    - pytest -vv
+    - conda deactivate
+    - conda env remove -n $env:CI_JOB_ID
+
+
+test linux py38:
+  stage: test
+  tags:
+    - linux
+  image: conda/miniconda3-centos7:latest
+  when: manual
+  dependencies:
+    - build linux
+  needs:
+    - build linux
+  before_script:
+    - conda init bash
+    - source ~/.bashrc
+    - conda create -y --name $CI_JOB_ID python=3.8
+    - conda activate $CI_JOB_ID
+    - conda update -n base -c defaults conda
+  script:
+    - conda install -y $CHANNEL_OPTS fcidecomp pytest
+    - pytest -vv
+    - conda deactivate
+
+test win32 py38:
+  stage: test
+  tags:
+    - windows
+  when: manual
+  dependencies:
+    - build win32
+  needs:
+    - build win32
+  before_script:
+    - $env:CONDA_FORCE_32BIT=1
+    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - conda create -y --name $env:CI_JOB_ID python=3.8
+    - conda activate $env:CI_JOB_ID
+  script:
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
+    - pytest -vv
+    - conda deactivate
+    - conda env remove -n $env:CI_JOB_ID
+
+test win64 py38:
+  stage: test
+  tags:
+    - windows
+  when: manual
+  dependencies:
+    - build win64
+  needs:
+    - build win64
+  before_script:
+    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - conda create -y --name $env:CI_JOB_ID python=3.8
+    - conda activate $env:CI_JOB_ID
+  script:
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
+    - pytest -vv
+    - conda deactivate
+    - conda env remove -n $env:CI_JOB_ID
+
+
+test linux py37:
+  stage: test
+  tags:
+    - linux
+  image: conda/miniconda3-centos7:latest
+  when: manual
+  dependencies:
+    - build linux
+  needs:
+    - build linux
+  before_script:
+    - conda init bash
+    - source ~/.bashrc
+    - conda create -y --name $CI_JOB_ID python=3.7
+    - conda activate $CI_JOB_ID
+    - conda update -n base -c defaults conda
+  script:
+    - conda install -y $CHANNEL_OPTS fcidecomp pytest
+    - pytest -vv
+    - conda deactivate
+
+test win32 py37:
+  stage: test
+  tags:
+    - windows
+  when: manual
+  dependencies:
+    - build win32
+  needs:
+    - build win32
+  before_script:
+    - $env:CONDA_FORCE_32BIT=1
+    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - conda create -y --name $env:CI_JOB_ID python=3.7
+    - conda activate $env:CI_JOB_ID
+  script:
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
+    - pytest -vv
+    - conda deactivate
+    - conda env remove -n $env:CI_JOB_ID
+
+test win64 py37:
+  stage: test
+  tags:
+    - windows
+  when: manual
+  dependencies:
+    - build win64
+  needs:
+    - build win64
+  before_script:
+    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - conda create -y --name $env:CI_JOB_ID python=3.7
+    - conda activate $env:CI_JOB_ID
+  script:
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
@@ -167,6 +302,13 @@ deploy local:
     - build linux
     - build win32
     - build win64
+  needs:
+    - build linux
+    - build win32
+    - build win64
+    - test linux py39
+    - test win64 py39
+    - test win32 py39
   before_script:
     - conda install -y conda-build
   script:

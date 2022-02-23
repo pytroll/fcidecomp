@@ -37,6 +37,7 @@ endif()
 
 find_path(CHARLS_INCLUDE_DIR
   NAMES charls.h
+  HINTS CHARLS_ROOT ENV CHARLS_ROOT
   PATH_SUFFIXES /include/CharLS /include/charls
   DOC "CharLS include directory."
 )

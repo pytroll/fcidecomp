@@ -19,26 +19,36 @@ netCDF4 tool `nccopy`
 
 import filecmp
 import os
-import pytest
 import subprocess
 
 import netCDF4 as nc
+import numpy as np
+import pytest
 
-import fcidecomp
 
-
-TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", os.path.join("data","data-tailor"))
+TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", "")
 INPUT_PATH = os.path.join(TEST_DATA_PATH, "MTG", "MTGFCIL1")
-BODY_COMPR_FILEPATH = os.path.join(
-    INPUT_PATH,
+COMP_FILEPATH = [os.path.join(INPUT_PATH, file_name) for file_name in (
+    "W_XX-EUMETSAT-Darmstadt_IMG+SAT_MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY--"
+    "DIS-NC4E_C_EUMT_20200405000845_GTT_DEV_20200405000330_20200405000345_N_JLS_T_0001_0015.nc",
+    "W_XX-EUMETSAT-Darmstadt_IMG+SAT_MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY--"
+    "DIS-NC4E_C_EUMT_20200406000730_GTT_DEV_20200406000215_20200406000230_N_JLS_T_0001_0010.nc"
+)]
+DECOMP_FILEPATH = [os.path.join(INPUT_PATH, file_name) for file_name in (
     "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
-    "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N_JLS_T_0073_0015.nc"
-)
-BODY_UNCOMPR_FILEPATH = os.path.join(
-    INPUT_PATH,
+    "NC4E_C_EUMT_20200405000845_GTT_DEV_20200405000330_20200405000345_N__T_0001_0015.nc",
     "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
-    "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N__T_0073_0015.nc"
-)
+    "NC4E_C_EUMT_20200406000730_GTT_DEV_20200406000215_20200406000230_N__T_0001_0010.nc"
+)]
+BANDS = [
+    "ir_105", "ir_123", "ir_133", "ir_38", "ir_87", "ir_97",
+    "nir_13", "nir_16", "nir_22",
+    "vis_04", "vis_05", "vis_06", "vis_08", "vis_09",
+    "wv_63", "wv_73"
+]
+VARIABLES = [
+    "effective_radiance", "pixel_quality", "index_map"
+]
 
 
 @pytest.mark.skipif(
@@ -46,23 +56,27 @@ BODY_UNCOMPR_FILEPATH = os.path.join(
 )
 def test_decompression(tmpdir):
 
-    uncompr_res_file = os.path.join(tmpdir, os.path.basename(BODY_UNCOMPR_FILEPATH))
-    process = subprocess.run(
-        f"nccopy -F none {BODY_COMPR_FILEPATH} {uncompr_res_file}", shell=True
-    )
+    for (comp_test_file, decomp_test_file) in zip(COMP_FILEPATH, DECOMP_FILEPATH):
 
-    for netcdf_file, txt_file in [
-        (uncompr_res_file, 'body_res.txt'),
-        (BODY_UNCOMPR_FILEPATH, 'body_test.txt')
-    ]:
-        command = f"ncdump -g measured -n decomp {netcdf_file} > {os.path.join(tmpdir, txt_file)}"
-        process = subprocess.run(command, shell=True)
+        decomp_res_file = os.path.join(tmpdir, os.path.basename(decomp_test_file))
+        process = subprocess.run(
+            f"nccopy -F none {comp_test_file} {decomp_res_file}", shell=True
+        )
+        decomp_file_size = os.path.getsize(decomp_res_file)
+        comp_file_size = os.path.getsize(comp_test_file)
 
-    assert filecmp.cmp(
-        os.path.join(tmpdir, 'body_res.txt'),
-        os.path.join(tmpdir, 'body_test.txt'),
-        shallow=False
-    )
+        assert os.path.isfile(decomp_res_file)
+        assert decomp_file_size > (comp_file_size * 4)
+
+        ds_test = nc.Dataset(decomp_test_file, "r")
+        ds_res = nc.Dataset(decomp_res_file, "r")
+
+        for band in BANDS:
+            for variable in VARIABLES:
+                array_test = ds_test[f"data/{band}/measured/{variable}"][:]
+                array_res = ds_res[f"data/{band}/measured/{variable}"][:]
+                assert np.ma.allequal(array_test, array_res)
+
 
 
 

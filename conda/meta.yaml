@@ -34,5 +34,6 @@ requirements:
     - charls=2.1.0  # [not win32]
     - hdf5=1.10.*
     - h5py=2.*
+    - libssh2       # [win]
     - netcdf4
     - python  {{ python }}

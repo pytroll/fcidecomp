@@ -19,30 +19,33 @@ opened using the Python library `netCDF4`
 
 import os
 
-import pytest
 import netCDF4 as nc
 import numpy as np
+import pytest
 
-import fcidecomp
 
-
-TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", os.path.join("data","data-tailor"))
+TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", "")
 INPUT_PATH = os.path.join(TEST_DATA_PATH, "MTG", "MTGFCIL1")
-BODY_COMPR_FILEPATH = os.path.join(
-    INPUT_PATH,
+COMP_FILEPATH = [os.path.join(INPUT_PATH, file_name) for file_name in (
+    "W_XX-EUMETSAT-Darmstadt_IMG+SAT_MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY--"
+    "DIS-NC4E_C_EUMT_20200405000845_GTT_DEV_20200405000330_20200405000345_N_JLS_T_0001_0015.nc",
+    "W_XX-EUMETSAT-Darmstadt_IMG+SAT_MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY--"
+    "DIS-NC4E_C_EUMT_20200406000730_GTT_DEV_20200406000215_20200406000230_N_JLS_T_0001_0010.nc"
+)]
+DECOMP_FILEPATH = [os.path.join(INPUT_PATH, file_name) for file_name in (
     "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
-    "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N_JLS_T_0073_0015.nc"
-)
-BODY_UNCOMPR_FILEPATH = os.path.join(
-    INPUT_PATH,
+    "NC4E_C_EUMT_20200405000845_GTT_DEV_20200405000330_20200405000345_N__T_0001_0015.nc",
     "W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---"
-    "NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N__T_0073_0015.nc"
-)
+    "NC4E_C_EUMT_20200406000730_GTT_DEV_20200406000215_20200406000230_N__T_0001_0010.nc"
+)]
 BANDS = [
     "ir_105", "ir_123", "ir_133", "ir_38", "ir_87", "ir_97",
     "nir_13", "nir_16", "nir_22",
     "vis_04", "vis_05", "vis_06", "vis_08", "vis_09",
     "wv_63", "wv_73"
+]
+VARIABLES = [
+    "effective_radiance", "pixel_quality", "index_map"
 ]
 
 
@@ -51,11 +54,14 @@ BANDS = [
 )
 def test_decompression():
 
-    ds_test = nc.Dataset(BODY_UNCOMPR_FILEPATH, "r")
-    ds_res = nc.Dataset(BODY_COMPR_FILEPATH, "r")
+    for (comp_test_file, decomp_test_file) in zip(COMP_FILEPATH, DECOMP_FILEPATH):
 
-    for band in BANDS:
-        array_test = ds_test[f"data/{band}/measured/effective_radiance"][:]
-        array_res = ds_res[f"data/{band}/measured/effective_radiance"][:]
-        assert np.ma.allequal(array_test, array_res)
+        ds_test = nc.Dataset(decomp_test_file, "r")
+        ds_res = nc.Dataset(comp_test_file, "r")
+
+        for band in BANDS:
+            for variable in VARIABLES:
+                array_test = ds_test[f"data/{band}/measured/{variable}"][:]
+                array_res = ds_res[f"data/{band}/measured/{variable}"][:]
+                assert np.ma.allequal(array_test, array_res)
 
