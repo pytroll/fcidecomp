@@ -18,6 +18,8 @@ import netCDF4 as nc
 import numpy as np
 import pytest
 
+import fcidecomp
+
 
 TEST_DATA_PATH = os.environ.get("EPCT_TEST_DATA_DIR", "")
 INPUT_PATH = os.path.join(TEST_DATA_PATH, "MTG", "MTGFCIL1")
