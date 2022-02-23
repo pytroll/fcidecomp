@@ -28,7 +28,7 @@ cp -r ${PATH_TO_DELIVERY}/fcidecomp/* ${FCIDECOMP_BUILD_PATH}
 # ./gen/build.sh fcicomp-H5Zjpegls test
 ./gen/install.sh fcicomp-H5Zjpegls
 
-pip install --no-deps --ignore-installed -vv ../fcidecomp-python
+# pip install --no-deps --ignore-installed -vv ../fcidecomp-python
 
 mkdir -p "${PREFIX}/etc/conda/activate.d"
 cp "${RECIPE_DIR}/scripts/activate.sh" "${PREFIX}/etc/conda/activate.d/${PKG_NAME}_activate.sh"
