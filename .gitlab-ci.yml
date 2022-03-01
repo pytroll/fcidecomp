@@ -245,7 +245,7 @@ test linux py37:
     - conda update -n base -c defaults conda
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp pytest
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
 
 test win32 py37:
@@ -267,7 +267,7 @@ test win32 py37:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
@@ -289,7 +289,7 @@ test win64 py37:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
