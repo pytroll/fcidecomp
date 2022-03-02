@@ -24,6 +24,7 @@ stages:
   - docs
   - build
   - test
+  - performance
   - deploy
 
 
@@ -112,7 +113,7 @@ test linux py39:
     - conda update -n base -c defaults conda
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp pytest
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
 
 test win32 py39:
@@ -133,7 +134,7 @@ test win32 py39:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
@@ -154,7 +155,7 @@ test win64 py39:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
@@ -177,7 +178,7 @@ test linux py38:
     - conda update -n base -c defaults conda
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp pytest
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
 
 test win32 py38:
@@ -199,7 +200,7 @@ test win32 py38:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
@@ -221,7 +222,7 @@ test win64 py38:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
@@ -244,7 +245,7 @@ test linux py37:
     - conda update -n base -c defaults conda
   script:
     - conda install -y $CHANNEL_OPTS fcidecomp pytest
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
 
 test win32 py37:
@@ -266,7 +267,7 @@ test win32 py37:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
-    - pytest -vv
+    - pytest -vv tests
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
@@ -288,7 +289,77 @@ test win64 py37:
     - conda deactivate
     - conda activate $env:CI_JOB_ID
     - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
-    - pytest -vv
+    - pytest -vv tests
+    - conda deactivate
+    - conda env remove -n $env:CI_JOB_ID
+
+
+performance linux py39:
+  stage: performance
+  tags:
+    - linux
+  when: manual
+  image: conda/miniconda3-centos7:latest
+  dependencies:
+    - build linux
+  needs:
+    - build linux
+    - test linux py39
+  before_script:
+    - conda init bash
+    - source ~/.bashrc
+    - conda create -y --name $CI_JOB_ID python=3.9
+    - conda activate $CI_JOB_ID
+    - conda update -n base -c defaults conda
+  script:
+    - conda install -y $CHANNEL_OPTS fcidecomp pytest pytest-benchmark
+    - pytest -vv perf
+    - conda deactivate
+
+performance win32 py39:
+  stage: performance
+  tags:
+    - windows
+  when: manual
+  dependencies:
+    - build win32
+  needs:
+    - build win32
+    - test win32 py39
+  before_script:
+    - $env:CONDA_FORCE_32BIT=1
+    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - conda create -y --name $env:CI_JOB_ID python=3.9
+    - conda activate $env:CI_JOB_ID
+  script:
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest pytest-benchmark
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
+    - pytest -vv perf
+    - conda deactivate
+    - conda env remove -n $env:CI_JOB_ID
+
+performance win64 py39:
+  stage: performance
+  tags:
+    - windows
+  when: manual
+  dependencies:
+    - build win64
+  needs:
+    - build win64
+    - test win64 py39
+  before_script:
+    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - conda create -y --name $env:CI_JOB_ID python=3.9
+    - conda activate $env:CI_JOB_ID
+  script:
+    - conda install -y -c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel fcidecomp pytest pytest-benchmark
+    - conda deactivate
+    - conda activate $env:CI_JOB_ID
+    - $env:EPCT_TEST_DATA_DIR="C:\\BuildTools\test-data"
+    - pytest -vv perf
     - conda deactivate
     - conda env remove -n $env:CI_JOB_ID
 
@@ -317,6 +388,3 @@ deploy local:
     paths:
       - $CI_PROJECT_DIR/conda-channel
     expire_in: 10 days
-
-
-
