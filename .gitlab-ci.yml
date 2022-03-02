@@ -14,7 +14,6 @@
 
 variables: &variables
   BUILD_OPTS: "--output-folder $CI_PROJECT_DIR/conda-channel"
-  CONDABIN: 'C:\ProgramData\Miniconda3\Library\bin;C:\ProgramData\Miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\condabin;C:\Users\datatailor_admin\miniconda3\Scripts;C:\Users\datatailor_admin\miniconda3\Library\bin'
   CHANNEL_OPTS: "-c anaconda -c conda-forge -c file://$CI_PROJECT_DIR/conda-channel"
   CHANNEL_OPTS_WIN: "-c anaconda -c conda-forge -c $env:CI_PROJECT_DIR/conda-channel"
   EPCT_TEST_DATA_DIR: "/data/data-tailor"
@@ -69,8 +68,9 @@ build win32:
   stage: build
   tags:
     - windows
+  before_script:
+    - invoke-expression -Command C:\BuildTools\Microsoft.PowerShell_profile.ps1
   script:
-    - $env:Path = "$env:CONDABIN;$env:Path"
     - conda install -y conda-build
     - mkdir $env:CI_PROJECT_DIR\conda-channel
     - cd conda
@@ -84,8 +84,9 @@ build win64:
   stage: build
   tags:
     - windows
+  before_script:
+    - invoke-expression -Command C:\BuildTools\Microsoft.PowerShell_profile.ps1
   script:
-    - $env:Path = "$env:CONDABIN;$env:Path"
     - conda install -y conda-build
     - mkdir $env:CI_PROJECT_DIR\conda-channel
     - cd conda
@@ -126,7 +127,7 @@ test win32 py39:
     - build win32
   before_script:
     - $env:CONDA_FORCE_32BIT=1
-    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - invoke-expression -Command C:\BuildTools\Microsoft.PowerShell_profile.ps1
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
@@ -147,7 +148,7 @@ test win64 py39:
   needs:
     - build win64
   before_script:
-    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - invoke-expression -Command C:\BuildTools\Microsoft.PowerShell_profile.ps1
     - conda create -y --name $env:CI_JOB_ID python=3.9
     - conda activate $env:CI_JOB_ID
   script:
@@ -192,7 +193,7 @@ test win32 py38:
     - build win32
   before_script:
     - $env:CONDA_FORCE_32BIT=1
-    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - invoke-expression -Command C:\BuildTools\Microsoft.PowerShell_profile.ps1
     - conda create -y --name $env:CI_JOB_ID python=3.8
     - conda activate $env:CI_JOB_ID
   script:
@@ -214,7 +215,7 @@ test win64 py38:
   needs:
     - build win64
   before_script:
-    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - invoke-expression -Command C:\BuildTools\Microsoft.PowerShell_profile.ps1
     - conda create -y --name $env:CI_JOB_ID python=3.8
     - conda activate $env:CI_JOB_ID
   script:
@@ -259,7 +260,7 @@ test win32 py37:
     - build win32
   before_script:
     - $env:CONDA_FORCE_32BIT=1
-    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - invoke-expression -Command C:\BuildTools\Microsoft.PowerShell_profile.ps1
     - conda create -y --name $env:CI_JOB_ID python=3.7
     - conda activate $env:CI_JOB_ID
   script:
@@ -281,7 +282,7 @@ test win64 py37:
   needs:
     - build win64
   before_script:
-    - if (Test-Path -Path C:\Users\Admin\) {invoke-expression -Command C:\Users\Admin\Documents\WindowsPowerShell\profile.ps1}
+    - invoke-expression -Command C:\BuildTools\Microsoft.PowerShell_profile.ps1
     - conda create -y --name $env:CI_JOB_ID python=3.7
     - conda activate $env:CI_JOB_ID
   script:
