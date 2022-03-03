@@ -38,6 +38,37 @@ Applicable Documents
     - Title
     - Reference
 
+  * - [FCIDECOMP_VCD]
+
+      .. _[FCIDECOMP_VCD]:
+    - EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification Control Document
+    - `fcidecomp/documentation/verification-validation-plan-test-case-procedures/FCIDECOMP_VCD.xlsx <../../../verification-validation-test-cases-test-procedures/FCIDECOMP_VCD.xlsx>`_
+
+  * - [FCIDECOMP_VV]
+
+      .. _[FCIDECOMP_VV]:
+    - EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification & Validation Plan
+    - `fcidecomp/documentation/verification-validation-plan <../../../verification-validation-plan/_build/html/index.html>`_
+
+  * - [FCIDECOMP_WP]
+
+      .. _[FCIDECOMP_WP]:
+    - Support to CharLS decompression for MTG users - Work package description
+    - EUM/SEP/WPD/21/1244304
+
+
+Reference Documents
+~~~~~~~~~~~~~~~~~~~
+
+.. list-table:: Reference documents.
+  :header-rows: 1
+  :class: longtable
+  :widths: 23 42 35
+
+  * - #
+    - Title
+    - Reference
+
   * - [EPCT_MTG_README]
 
       .. _[EPCT_MTG_README]:
@@ -57,23 +88,6 @@ Applicable Documents
     - FCIDECOMP Softwre offline dependencies repository
     - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/offline-dependencies/-/tree/development <https://gitlab.eumetsat.int/sepdssme/fcidecomp/offline-dependencies/-/tree/development>`_
 
-  * - [FCIDECOMP_VCD]
-
-      .. _[FCIDECOMP_VCD]:
-    - EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification Control Document
-    - `fcidecomp/documentation/verification-validation-plan-test-case-procedures/FCIDECOMP_VCD.xlsx <../../../verification-validation-test-cases-test-procedures/FCIDECOMP_VCD.xlsx>`_
-
-  * - [FCIDECOMP_VV]
-
-      .. _[FCIDECOMP_VV]:
-    - EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification & Validation Plan
-    - `fcidecomp/documentation/verification-validation-plan <../../../verification-validation-plan/_build/html/index.html>`_
-
-  * - [FCIDECOMP_WP]
-
-      .. _[FCIDECOMP_WP]:
-    - Support to CharLS decompression for MTG users - Work package description
-    - EUM/SEP/WPD/21/1244304
 
   * - [TEST_DATA]
 
@@ -81,22 +95,6 @@ Applicable Documents
     - MTG FCI L1C test data
     - `https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1` <https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1>`_
 
-
-Reference Documents
-~~~~~~~~~~~~~~~~~~~
-
-.. list-table:: Reference documents.
-  :header-rows: 1
-  :class: longtable
-  :widths: 23 42 35
-
-  * - #
-    - Title
-    - Reference
-
-  * -
-    -
-    -
 
 .. _tbd:
 
