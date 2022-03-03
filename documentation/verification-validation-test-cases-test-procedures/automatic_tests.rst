@@ -4,13 +4,13 @@ Automatic Tests: Decompression via Command Line Tools and via Python
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section presents the automatic validation tests for the FCIDECOMP Software.
-These tests are run on a pipeline on EUMETSAT's Gitlab CI/CD,
+These tests are run on a CI/CD pipeline on EUMETSAT's Gitlab instance,
 on machines provided by EUMETSAT with CentOS 7, Windows 64-bit and Windows 32-bit,
-with the `fcidecomp` software installed.
+with the ``fcidecomp`` software installed.
 
 The tests can also be run on a local machine, provided:
 
-- a clone of the :ref:`FCIDECOMP Software Gitlab repository <FCIDECOMP>` is present on the machine
+- a clone of the :ref:`FCIDECOMP Software Gitlab repository <[FCIDECOMP]>` is present on the machine
 - Test data hosted at :ref:`[TEST_DATA] <[TEST_DATA]>` are present on the machine at the path
   ``$EPCT_TEST_DATA_DIR/MTG/MTGFCIL1``
 - The environment variable ``EPCT_TEST_DATA`` is set the path of ``$EPCT_TEST_DATA_DIR``
@@ -22,7 +22,6 @@ directory of the FICDECOMP Software repository:
 ``pytest -vv``
 
 :Note: The test case descriptions of the automated tests are extracted from the test files themselves.
-
 
 
 FCIDECOMP.CLI.TC.01.01: Test on decompression via command line tools

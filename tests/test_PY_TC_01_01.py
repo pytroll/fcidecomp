@@ -14,7 +14,8 @@
 
 """
 This test checks that JPEG-LS compressed MTG FCI L1C products are correctly decompressed when
-opened using the Python library `netCDF4`
+opened using the Python library `netCDF4`, by comparing bands in the decompressed file with the same bands in
+a reference output.
 """
 
 import os

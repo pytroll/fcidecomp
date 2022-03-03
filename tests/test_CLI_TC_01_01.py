@@ -14,10 +14,10 @@
 
 """
 This test checks that JPEG-LS compressed MTG FCI L1C products are correctly decompressed using the
-netCDF4 tool `nccopy`
+netCDF4 tool `nccopy` by comparing bands in the decompressed file with the same bands in
+a reference output.
 """
 
-import filecmp
 import os
 import subprocess
 
@@ -76,8 +76,5 @@ def test_decompression(tmpdir):
                 array_test = ds_test[f"data/{band}/measured/{variable}"][:]
                 array_res = ds_res[f"data/{band}/measured/{variable}"][:]
                 assert np.ma.allequal(array_test, array_res)
-
-
-
 
 
