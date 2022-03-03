@@ -8,7 +8,6 @@ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users
 
     document_info
     introduction
-    tbd
     organization_of_test_cases
     test_cases_and_procedures
     vcd
