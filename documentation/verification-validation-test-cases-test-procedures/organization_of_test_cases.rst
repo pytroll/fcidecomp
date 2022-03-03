@@ -42,14 +42,24 @@ Reference Platform and Execution Time for Test Cases
 
 As a support to the planning of test sessions, the following table
 summarizes hardware and software pre-requisites and average execution
-times for each test case category, for the reference platform with the
-following specifications:
+times for each test case category, for the reference platforms with the
+following specifications.
 
-- Number of CPU cores: -
+- Linux:
 
-- RAM: -
+    - Number of CPU cores: 2
 
-- OS: -
+    - RAM: 16 GB
+
+    - OS: Ubuntu 20.04.4 LTS
+
+- Windows:
+
+    - Number of CPU cores: -
+
+    - RAM: -
+
+    - OS: -
 
 .. list-table:: Estimated execution times for test cases under each test sub-category.
    :header-rows: 1
