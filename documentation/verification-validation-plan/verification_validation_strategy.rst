@@ -25,8 +25,7 @@ Decompression of FC1 L1c NRT data via Python is automatically tested.
 Decompression of FC1 L1c NRT data via Java (VG3)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Decompression of FC1 L1c NRT data via Java is tested manually, by demostrating that
-MTG FCI L1C files can be opened with `Panoply <https://www.giss.nasa.gov/tools/panoply/>`_
-and `HDFView <https://earth.esa.int/eogateway/tools/hdfview>`_.
+MTG FCI L1C files can be opened with `Panoply <https://www.giss.nasa.gov/tools/panoply/>`_.
 
 Decompression of FC1 L1c NRT data via the Data Tailor software (VG4)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

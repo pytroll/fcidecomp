@@ -31,5 +31,7 @@ Document Change Record
     |version|                            Add VG6.
 
                                          Add OFF test category.
+
+                                         Remove HDFView from tested software in VG3.
     ================ =========== ======= ===================================================================================================================================
 
