@@ -66,17 +66,3 @@ Reference Documents
     - OPS/TSS Working Practice on TRR_TRB
     - EUM/TSS/DOC/13/688793
 
-
-List of TBDs
-~~~~~~~~~~~~
-
-.. list-table:: Items yet to be defined.
-  :header-rows: 1
-  :widths: 50 20 30
-
-  * - Item
-    - Place in text
-    - Expected definition time
-  * - Reference document with confirmed machine specification for factory acceptance tests
-    - :ref:`software_v&v_process_and_planning`, Other Resources section
-    - As soon as tests are defined and the document populated
