@@ -54,7 +54,7 @@ Applicable Documents
   * - [FCIDECOMP_DEP_OFF]
 
       .. _[FCIDECOMP_DEP_OFF]:
-    - FCIDECOMP Softwre offline dependencies repository
+    - FCIDECOMP Software offline dependencies repository
     - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/offline-dependencies/-/tree/development <https://gitlab.eumetsat.int/sepdssme/fcidecomp/offline-dependencies/-/tree/development>`_
 
   * - [FCIDECOMP_VCD]
@@ -79,7 +79,7 @@ Applicable Documents
 
       .. _[TEST_DATA]:
     - MTG FCI L1C test data
-    - `https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1` <https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1>`_
+    - `https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1 <https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1>`_
 
 
 Reference Documents
