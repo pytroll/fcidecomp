@@ -89,14 +89,13 @@ following specifications.
      -
 
    * - FCIDECOMP.DT.TC.01.01
-     - ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in `<[EPCT_MTG_README]>`_
+     - * ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in `<[EPCT_MTG_README]>`_
+       * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      -
 
    * - FCIDECOMP.OFF.TC.01.01
-     - ``conda`` environment with
-
-       * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
-       * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
+     - * ``conda`` installed, as described in`<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>`
+       * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      -
 
 
