@@ -5,7 +5,8 @@ Automatic Tests: Decompression via Command Line Tools and via Python
 
 This section presents the automatic validation tests for the FCIDECOMP Software.
 These tests are run on a CI/CD pipeline on EUMETSAT's Gitlab instance,
-on machines provided by EUMETSAT with CentOS 7, Windows 64-bit and Windows 32-bit,
+on machines provided by EUMETSAT with CentOS 7 64-bit (run in Docker container), Windows 10 64-bit and
+Windows 10 32-bit,
 with the ``fcidecomp`` software installed.
 
 The tests can also be run on a local machine, provided:

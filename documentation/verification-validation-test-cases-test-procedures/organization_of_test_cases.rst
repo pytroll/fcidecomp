@@ -140,7 +140,7 @@ and respective tests to meet these goals defined herein:
 
    * - DTWS-FCI-030
      - VG1, VG3
-     - FCIDECOMP.CLI.TC.01.01, FCIDECOMP.PY.TC.01.01
+     - FCIDECOMP.CLI.TC.01.01, FCIDECOMP.PY.TC.01.01, FCIDECOMP.JAVA.TC.01.01
 
    * - DTWS-FCI-040
      - VG5, VG6
