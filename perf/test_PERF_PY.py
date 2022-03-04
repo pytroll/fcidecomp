@@ -23,7 +23,7 @@ DECOMP_FILEPATH = [os.path.join(INPUT_PATH, file_name) for file_name in (
 )]
 
 
-def cli_decompression(comp_file):
+def py_decompression(comp_file):
 
     ds = nc.Dataset(comp_file, "r")
     band = ds['data']['vis_04']['measured']['effective_radiance'][:]
@@ -32,9 +32,6 @@ def cli_decompression(comp_file):
     return band
 
 
-@pytest.mark.skipif(
-    "HDF5_PLUGIN_PATH" not in os.environ.keys(), reason="requires HDF5_PLUGIN_PATH in env"
-)
 @pytest.mark.parametrize(
     "test_input,expected",
     [(test, exp) for (test, exp) in zip(COMP_FILEPATH, DECOMP_FILEPATH)],
@@ -42,7 +39,9 @@ def cli_decompression(comp_file):
 )
 def test_decomp_py(benchmark, test_input, expected):
 
-    band_test = benchmark(cli_decompression, test_input)
+    assert "HDF5_PLUGIN_PATH" in os.environ.keys()
+
+    band_test = benchmark(py_decompression, test_input)
     ds_exp = nc.Dataset(expected, 'r')
     band_exp = ds_exp['data']['vis_04']['measured']['effective_radiance'][:]
 
