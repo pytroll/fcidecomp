@@ -48,7 +48,13 @@ following specifications.
 
 - Centos 7 64-bit:
 
-    - Docker Container running on
+    - Docker Container running on a machine with the following specifications:
+
+        - Processor: Intel(R) Xeon(R) Gold 6252 CPU @ 2.1 GHz, 1 Core
+
+        - RAM: 51 GB, 4 GB required (estimate)
+
+        - Disk space: 4 GB required
 
 - Ubuntu 20.04 LTS 64-bit:
 
