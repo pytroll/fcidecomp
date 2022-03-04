@@ -88,11 +88,11 @@ The following table lists the test types, their scope and the event which trigge
           :ref:`test_specification_design` for test case identification).
           Validation tests need the test data package to be downloaded on the runner machine.
 
-The reports for Validation tests are accessed directly in GitLab, in the section "CI/CI->Pipelines",
+The reports for Validation tests are accessed directly in GitLab, in the section "CI/CD->Pipelines",
 clicking on the pipeline identifier, then on the "Tests" section.
 
 They can be downloaded as Junit XML files as
-artifacts from the "Artifacts" section of the test job ("CI/CI->Pipelines",
+artifacts from the "Artifacts" section of the test job ("CI/CD->Pipelines",
 clicking on the pipeline identifier, then on "Jobs"), to be attached to test reports if needed.
 
 Automated tests are used for the V&V of:
