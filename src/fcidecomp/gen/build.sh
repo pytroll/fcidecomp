@@ -40,6 +40,10 @@
 #     -DCMAKE_INSTALL_PREFIX=/usr/local
 #
 
+# AUTHORS:
+# - THALES Services
+# - B-Open Solutions srl
+
 set -o nounset
 set -o errexit
 

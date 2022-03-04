@@ -16,5 +16,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - EUMETSAT
+# - B-Open Solutions srl
+
 export HDF5_PLUGIN_PATH_EXT=${HDF5_PLUGIN_PATH}
 export HDF5_PLUGIN_PATH="${CONDA_PREFIX}/hdf5/lib/plugin/"

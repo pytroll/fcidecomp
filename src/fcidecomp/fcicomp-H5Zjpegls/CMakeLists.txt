@@ -15,7 +15,11 @@
 # limitations under the License.
 #
 # =============================================================
- 
+
+# AUTHORS:
+# - THALES Services
+# - B-Open Solutions srl
+
 # Build the HDF5 JPEG-LS compression-decompression filter.
 #
 # To provide the module with a hint about where to find your FCICOMP_JPEGLS

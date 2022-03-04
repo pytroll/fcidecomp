@@ -16,6 +16,9 @@
 //
 // =============================================================
 
+// AUTHORS:
+// - THALES Services
+
 /*! \file
 
  This file define the errors message of fcicomp.

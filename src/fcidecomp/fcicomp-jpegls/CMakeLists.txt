@@ -15,7 +15,11 @@
 # limitations under the License.
 #
 # =============================================================
- 
+
+# AUTHORS:
+# - THALES Services
+# - B-Open Solutions srl
+
 # Build the facade between CharLS software and the FCICOMP software.
 #
 # This CMake script makes use of the FindCHARLS.cmake script to find

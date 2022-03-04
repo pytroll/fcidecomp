@@ -16,6 +16,10 @@
 ::
 :: =============================================================
 
+:: AUTHORS:
+:: - EUMETSAT
+:: - B-Open Solutions srl
+
 @echo ON
 setlocal enabledelayedexpansion
 

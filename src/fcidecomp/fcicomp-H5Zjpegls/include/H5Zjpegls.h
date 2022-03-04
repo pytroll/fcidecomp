@@ -16,6 +16,9 @@
 //
 // =============================================================
 
+// AUTHORS:
+// - THALES Services
+
 #ifndef H5ZJPEGLS_H_
 #define H5ZJPEGLS_H_
 

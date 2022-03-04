@@ -16,6 +16,9 @@
 //
 // =============================================================
 
+// AUTHORS:
+// - THALES Services
+
 /*! \file
 
  This file define the error messages printed by H5Zjpegls.

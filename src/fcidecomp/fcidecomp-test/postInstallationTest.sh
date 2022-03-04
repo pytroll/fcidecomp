@@ -17,6 +17,10 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+# - B-Open Solutions srl
+
 set -o nounset
 set -o errexit
 

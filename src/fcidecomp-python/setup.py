@@ -1,3 +1,5 @@
+# =============================================================
+#
 # Copyright 2021-2022, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,6 +13,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
+# =============================================================
+
+# AUTHORS:
+# - EUMETSAT
+# - B-Open Solutions srl
 
 import os
 from setuptools import setup, find_packages

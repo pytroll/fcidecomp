@@ -15,6 +15,10 @@
 // limitations under the License.
 //
 // =============================================================
+
+// AUTHORS:
+// - THALES Services
+
 #include <stdlib.h>
 #include <stdio.h>
 

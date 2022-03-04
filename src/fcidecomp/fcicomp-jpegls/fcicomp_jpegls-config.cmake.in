@@ -16,6 +16,10 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+# - B-Open Solutions srl
+
 # - Config file for the FCICOMP_JPEGLS package
 # It defines the following variables
 #  FCICOMP_JPEGLS_INCLUDE_DIR  - include directories for fcicomp_jpegls

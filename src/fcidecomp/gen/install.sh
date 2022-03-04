@@ -17,6 +17,10 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+# - B-Open Solutions srl
+
 # Script to install a module of the FCICOMP software.
 # 
 # Usage: ./install.sh [module]

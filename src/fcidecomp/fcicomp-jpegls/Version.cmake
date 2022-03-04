@@ -16,6 +16,10 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+# - B-Open Solutions srl
+
 # Set the version of the module
 SET(FCICOMP_JPEGLS_MAJOR_VERSION 1)
 SET(FCICOMP_JPEGLS_MINOR_VERSION 0)

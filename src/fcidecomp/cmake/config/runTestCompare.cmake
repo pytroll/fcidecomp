@@ -16,6 +16,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+
 # runTestCompare.cmake executes a command that generates an output
 # file. The output file is then compared against a reference file. Exit
 # status of command can also be checked.

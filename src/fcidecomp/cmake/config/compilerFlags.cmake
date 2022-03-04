@@ -16,6 +16,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+
 STRING( TOUPPER "${CMAKE_BUILD_TYPE}" CMAKE_BUILD_TYPE )
 IF("${CMAKE_BUILD_TYPE}" STREQUAL "RELEASE")
   SET(RELEASE ON)

@@ -16,6 +16,9 @@
 ::
 :: =============================================================
 
+:: AUTHORS:
+:: - B-Open Solutions srl
+
 @echo on
 :: Get the module to build
 SET MODULE=%1

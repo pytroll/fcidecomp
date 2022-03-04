@@ -16,6 +16,9 @@
 //
 // =============================================================
 
+// AUTHORS:
+// - THALES Services
+
 #include <stdlib.h>
 #include <H5PLextern.h>
 #include <fcicomp_jpegls.h>

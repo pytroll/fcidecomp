@@ -16,6 +16,9 @@
 ::
 :: =============================================================
 
+:: AUTHORS:
+:: - B-Open Solutions srl
+
 :: get module to build, mode and following cmake options
 @echo off
 for /f "tokens=1-2*" %%a in ("%*") do (

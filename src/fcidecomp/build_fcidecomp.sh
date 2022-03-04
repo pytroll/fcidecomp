@@ -17,6 +17,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+
 # This script is intended to be run by Hudson continuous integration
 # system to build the FCIDECOMP software.
 # 

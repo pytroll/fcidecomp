@@ -16,5 +16,9 @@
 ::
 :: =============================================================
 
+:: AUTHORS:
+:: - EUMETSAT
+:: - B-Open Solutions srl
+
 set HDF5_PLUGIN_PATH_EXT=%HDF5_PLUGIN_PATH%
 set HDF5_PLUGIN_PATH="%CONDA_PREFIX%\Library\bin"

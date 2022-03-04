@@ -16,6 +16,9 @@
 //
 // =============================================================
 
+// AUTHORS:
+// - THALES Services
+
 #include <stdio.h>
 #include <stdarg.h>
 #include "fcicomp_log.h"

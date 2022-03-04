@@ -16,6 +16,9 @@
 //
 // =============================================================
 
+// AUTHORS:
+// - THALES Services
+
 /*! \file
 
  This file define the logging function of fcicomp.

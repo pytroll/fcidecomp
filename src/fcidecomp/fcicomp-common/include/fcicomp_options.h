@@ -16,6 +16,9 @@
 //
 // =============================================================
 
+// AUTHORS:
+// - THALES Services
+
 /*! \file
 
  This file define the options and separators for fcicomp.

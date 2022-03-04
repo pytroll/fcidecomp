@@ -16,6 +16,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+
 # Set the version of the module
 SET(H5ZJPEGLS_MAJOR_VERSION 2)
 SET(H5ZJPEGLS_MINOR_VERSION 0)

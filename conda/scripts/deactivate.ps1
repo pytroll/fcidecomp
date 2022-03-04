@@ -16,5 +16,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - EUMETSAT
+# - B-Open Solutions srl
+
 $env:HDF5_PLUGIN_PATH=$env:HDF5_PLUGIN_PATH_EXT
 $env:HDF5_PLUGIN_PATH_EXT=""

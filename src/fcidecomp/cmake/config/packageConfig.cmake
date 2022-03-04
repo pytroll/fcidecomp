@@ -16,6 +16,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+
 INCLUDE (CMakePackageConfigHelpers)
 
 SET (PACKAGE_CONFIG_DIR "share/cmake")

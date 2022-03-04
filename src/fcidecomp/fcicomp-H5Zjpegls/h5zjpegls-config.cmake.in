@@ -16,6 +16,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+
 # - Config file for the H5ZJPEGLS package
 # It defines the following variables
 #  H5ZJPEGLS_INCLUDE_DIR  - include directories for fcicomp_jpegls

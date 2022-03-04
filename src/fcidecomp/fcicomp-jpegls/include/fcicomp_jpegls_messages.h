@@ -16,6 +16,9 @@
 //
 // =============================================================
 
+// AUTHORS:
+// - THALES Services
+
 /*! \file
 
  This file define the error messages printed by fcicomp_jpegls.

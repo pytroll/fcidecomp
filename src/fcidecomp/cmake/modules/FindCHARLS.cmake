@@ -16,6 +16,9 @@
 #
 # =============================================================
 
+# AUTHORS:
+# - THALES Services
+# - B-Open Solutions srl
 
 # - Find CharLS, an optimized JPEG-LS compression library
 #
