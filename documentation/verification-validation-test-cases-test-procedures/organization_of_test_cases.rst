@@ -31,8 +31,9 @@ Procedures:
 
 For validation purposes, reference platform are:
 
-- Centos 7, Windows 64-bit and Windows 32-bit for FCIDECOMP.CLI.TC.01.01 and FCIDECOMP.PY.TC.01.01
-- **TBD**
+- Centos 7 64-bit, Windows 10 64-bit and Windows 10 32-bit for FCIDECOMP.CLI.TC.01.01 and FCIDECOMP.PY.TC.01.01
+- Ubuntu 20.04 LTS 64-bit and Windows 10 64-bit for FCIDECOMP.JAVA.TC.01.01, FCIDECOMP.DT.TC.01.0 and
+  FCIDECOMP.OFF.TC.01.01
 
 
 .. _reference_platform:
@@ -45,21 +46,26 @@ summarizes hardware and software pre-requisites and average execution
 times for each test case category, for the reference platforms with the
 following specifications.
 
-- Linux:
+- Centos 7 64-bit:
 
-    - Number of CPU cores: 2
+    - Docker Container running on
 
-    - RAM: 16 GB
+- Ubuntu 20.04 LTS 64-bit:
 
-    - OS: Ubuntu 20.04.4 LTS
+    - Processor: Intel® Core™ i7-10510U CPU @ 1.80GHz × 8 (2 cores, 4 threads)
 
-- Windows:
+    - RAM: 16 GB, 4 GB required (estimate)
 
-    - Number of CPU cores: -
+    - Disk space: 4 GB required
 
-    - RAM: -
+- Windows 10 64-bit/32-bit:
 
-    - OS: -
+    - Processor: Intel(R) Xeon(R) Gold 6132 CPU @ 2.60GHz (2 processors)
+
+    - RAM: 32 GB installed, 4 GB required (estimate)
+
+    - Disk space: 4 GB required
+
 
 .. list-table:: Estimated execution times for test cases under each test sub-category.
    :header-rows: 1
@@ -74,29 +80,33 @@ following specifications.
 
        * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
        * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
-     -
+
+       Requirements satisfied by the GitLab CI/CD environment in which the test is run.
+     - < 1 min
 
    * - FCIDECOMP.PY.TC.01.01
      - ``conda`` environment with
 
        * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
        * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
-     -
+
+       Requirements satisfied by the GitLab CI/CD environment in which the test is run.
+     - < 1 min
 
    * - FCIDECOMP.JAVA.TC.01.01
      - * ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
        * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
-     -
+     - 5 min
 
    * - FCIDECOMP.DT.TC.01.01
      - * ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in `<[EPCT_MTG_README]>`_
        * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
-     -
+     - 5 min
 
    * - FCIDECOMP.OFF.TC.01.01
      - * ``conda`` installed, as described in`<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>`
        * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
-     -
+     - 5 min
 
 
 Requirements and Validation Goals addressed by Test Cases
