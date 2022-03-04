@@ -26,15 +26,14 @@ def cli_decompression(comp_file, decomp_file):
     return process
 
 
-@pytest.mark.skipif(
-    "HDF5_PLUGIN_PATH" not in os.environ.keys(), reason="requires HDF5_PLUGIN_PATH in env"
-)
 @pytest.mark.parametrize(
     "test_input,test_output",
     [(test, exp) for (test, exp) in zip(COMP_FILEPATH, DECOMP_FILEPATH)],
     ids=[f"{os.path.getsize(comp_file) / (1024 * 1024):.2f} Mb" for comp_file in COMP_FILEPATH]
 )
 def test_decomp_cli(benchmark, tmpdir, test_input, test_output):
+
+    assert "HDF5_PLUGIN_PATH" in os.environ.keys()
 
     decomp_res_file = os.path.join(tmpdir, os.path.basename(test_output))
     result = benchmark(cli_decompression, test_input, decomp_res_file)
