@@ -87,7 +87,7 @@ following specifications.
        * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
        * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
 
-       Requirements satisfied by the GitLab CI/CD environment in which the test is run.
+       NOTE: all requirements satisfied by the GitLab CI/CD environment in which the test is run.
      - < 1 min
 
    * - FCIDECOMP.PY.TC.01.01
@@ -96,7 +96,7 @@ following specifications.
        * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
        * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
 
-       Requirements satisfied by the GitLab CI/CD environment in which the test is run.
+       NOTE: all requirements satisfied by the GitLab CI/CD environment in which the test is run.
      - < 1 min
 
    * - FCIDECOMP.JAVA.TC.01.01
