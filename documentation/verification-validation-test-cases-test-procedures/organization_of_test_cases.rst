@@ -7,14 +7,14 @@ Organization of Test Cases and Order of Execution
 Automatic test cases (FCIDECOMP.CLI.TC.01.01 and FCIDECOMP.PY.TC.01.01) test
 the FCIDECOMP software can be used to decompress FC1 L1c NRT data
 via command line tools and via Python.
-The netCDF4 `nccopy` tool is taken as reference for command line tools,
-and the `netCDF4` Python library is taken as reference for use via Python.
+The netCDF4 ``nccopy`` tool is taken as reference for command line tools,
+and the ``netCDF4`` Python library is taken as reference for use via Python.
 
 Manual test cases test the FCIDECOMP software
 can be used to decompress FC1 L1c NRT data
-via selected Java Software and via the Data Tailor Software (FICDECOMP.JAVA.TC.01.01 and FCIDECOMP.JAVA.TP.01.01),
-and that it can be installed using the offline dependencies repository hosted at **TBD** (FCIDECOMP.OFF.TP.01.01).
-`Panoply` is taken as reference for decompression via Java Software
+via selected Java Software and via the Data Tailor Software (FICDECOMP.JAVA.TC.01.01 and FCIDECOMP.DT.TC.01.01),
+and that it can be installed using the offline dependencies repository hosted at `<[FCIDECOMP_DEP_OFF]>`_ (FCIDECOMP.OFF.TC.01.01).
+``Panoply`` is taken as reference for decompression via Java Software
 
 .. _organization_of_test_cases_conventions:
 
@@ -48,7 +48,7 @@ following specifications.
 
 - Centos 7 64-bit:
 
-    - Docker Container running on a machine with the following specifications:
+    - Docker container running on a machine with the following specifications:
 
         - Processor: Intel(R) Xeon(R) Gold 6252 CPU @ 2.1 GHz, 1 Core
 
@@ -71,7 +71,6 @@ following specifications.
     - RAM: 32 GB installed, 4 GB required (estimate)
 
     - Disk space: 4 GB required
-
 
 .. list-table:: Estimated execution times for test cases under each test sub-category.
    :header-rows: 1

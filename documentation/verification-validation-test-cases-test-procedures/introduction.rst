@@ -16,9 +16,10 @@ Scope
 Objective of this document is indicate the procedures to validate
 the ability of the FCIDECOMP software to decompress FC1 L1c NRT data,
 meeting the goals defined in the :ref:`Verification & Validation Plan <[FCIDECOMP_VV]>`.
+
 These aim to verify a working installation of the EUMETSAT FCIDECOMP software and
-its ability to decompress FC1 L1c NRT data
-via the EUMETSAT Data Tailor Software and via selected Java Software.
+its ability to decompress FC1 L1c NRT data via selected CLI tools, Python,
+the EUMETSAT Data Tailor Software and selected Java Software.
 
 It is addressed at:
 
@@ -79,7 +80,7 @@ Reference Documents
 
       .. _[FCIDECOMP]:
     - FCIDECOMP Software repository
-    - `ttps://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development <ttps://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development>`_
+    - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development <https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development>`_
 
 
   * - [FCIDECOMP_DEP_OFF]
@@ -93,6 +94,6 @@ Reference Documents
 
       .. _[TEST_DATA]:
     - MTG FCI L1C test data
-    - `https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1` <https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1>`_
+    - `https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1 <https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1>`_
 
 

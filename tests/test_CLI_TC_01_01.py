@@ -14,7 +14,7 @@
 
 """
 This test checks that JPEG-LS compressed MTG FCI L1C products are correctly decompressed using the
-netCDF4 tool `nccopy` by comparing bands in the decompressed file with the same bands in
+netCDF4 tool ``nccopy`` by comparing bands in the decompressed file with the same bands in
 a reference output.
 """
 

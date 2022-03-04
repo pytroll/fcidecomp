@@ -21,10 +21,10 @@ Tests reported in this section use the following test data files, all hosted at 
      - File name
    * - TD.COMP.01
      - JPEG-LS compressed MTG FCI L1C body file
-     - W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N_JLS_T_0073_0015.nc
+     - W_XX-EUMETSAT-Darmstadt_IMG+SAT_MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY--DIS-NC4E_C_EUMT_20200405000845_GTT_DEV_20200405000330_20200405000345_N_JLS_T_0001_0015.nc
    * - TD.DECOMP.01
      - Decompressed MTG FCI L1C body file
-     - W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---NC4E_C_EUMT_20130804120845_GTT_DEV_20130804120330_20130804120345_N__T_0073_0015.nc
+     - W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---NC4E_C_EUMT_20200405000845_GTT_DEV_20200405000330_20200405000345_N__T_0001_0015.nc
 
 
 FCIDECOMP.JAVA.TC.01.01: decompression via Java Software
@@ -57,7 +57,7 @@ FCIDECOMP.JAVA.TP.01.01: decompression via Java Software
        :ref:`[FCIDECOMP]> <[FCIDECOMP]>`
      - \-
    * - 1.
-     - Open TD.COMP.01 in Panoply and create a plot using the `/data/ir_105/measured/effective_radiance` variable
+     - Open TD.COMP.01 in Panoply and create a plot using the ``/data/ir_105/measured/effective_radiance`` variable
      - Plot is generated
 
 
@@ -72,7 +72,7 @@ FCIDECOMP.DT.TC.01.01: decompression via the EUMETSAT Data Tailor Software
    * - Input data
      - TD.COMP.01
    * - Pass/Fail criteria
-     - The `epct_plugin_mtg` plugin is correctly installed
+     - The ``epct_plugin_mtg`` plugin is correctly installed
 
        The plugin successfully generates a decompressed netCDF output product.
 
@@ -90,9 +90,10 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor Software
      - Expected output
 
    * - 0.
-     - Install the `epct` and `epct_plugin_mtg` packages as described in :ref:`[EPCT_MTG_README] <[EPCT_MTG_README]>`
+     - Install the ``epct`` and ``epct_plugin_mtg`` packages as described in
+       :ref:`[EPCT_MTG_README] <[EPCT_MTG_README]>`
 
-       Check the `epct_plugin_mtg` si correctly installed, running the command:
+       Check the ``epct_plugin_mtg`` si correctly installed, running the command:
 
        ``epct info``
      - The output of the command reports ``epct_mtg`` under the ``registered_backends`` key
@@ -173,7 +174,7 @@ FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP Software using the offline
      - The command runs without errors.
    * - 3.
      - Check that the output product has been correctly decompressed, by opening it with Panoply (after reverting step 0
-       of `FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the `/data/ir_105/measured/effective_radiance`
+       of `FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the ``/data/ir_105/measured/effective_radiance``
      - Plot is generated.
 
 

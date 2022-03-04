@@ -7,7 +7,7 @@ This section presents the automatic validation tests for the FCIDECOMP Software.
 These tests are run on a CI/CD pipeline on EUMETSAT's Gitlab instance,
 on machines provided by EUMETSAT with CentOS 7 64-bit (run in Docker container), Windows 10 64-bit and
 Windows 10 32-bit,
-with the ``fcidecomp`` software installed.
+with all requirements described in :ref:`reference_platform` satisfied.
 
 The tests can also be run on a local machine, provided:
 
