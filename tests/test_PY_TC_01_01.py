@@ -50,10 +50,9 @@ VARIABLES = [
 ]
 
 
-@pytest.mark.skipif(
-    "HDF5_PLUGIN_PATH" not in os.environ.keys(), reason="requires HDF5_PLUGIN_PATH in env"
-)
 def test_decompression():
+
+    assert "HDF5_PLUGIN_PATH" in os.environ.keys()
 
     for (comp_test_file, decomp_test_file) in zip(COMP_FILEPATH, DECOMP_FILEPATH):
 
