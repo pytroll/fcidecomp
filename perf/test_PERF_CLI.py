@@ -1,3 +1,8 @@
+"""
+This test measures speed performances of JPEG-LS compressed MTG FCI L1C products decompression
+through the netCDF4 tool `nccopy`.
+"""
+
 import os
 import subprocess
 
