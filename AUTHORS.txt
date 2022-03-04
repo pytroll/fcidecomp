@@ -1,6 +1,6 @@
 # Copyright holder
 EUMETSAT
-# Developed by B-Open Solutions srl for EUMETSAT under contract EUM/CO/21/4600002541/DaL
-Maurizio Bottaccio <m.bottaccio@bopen.eu>
-Marco Cucchi <m.cucchi@bopen.eu>
-Alessio Siniscalchi <a.siniscalchi@bopen.eu>
+# Authors
+EUMETSAT
+B-Open Solutions srl
+THALES Services
