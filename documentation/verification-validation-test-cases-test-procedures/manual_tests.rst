@@ -120,7 +120,7 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor Software
 
    * - 3.
      - Check that the output product has been correctly decompressed, by opening it with Panoply (after reverting step 0
-       of :ref:`FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the `/data/ir_105/measured/effective_radiance`
+       of `FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the `/data/ir_105/measured/effective_radiance`
      - Plot is generated.
 
 
@@ -164,7 +164,7 @@ FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP Software using the offline
      - Activate the ``conda`` environment in which the FCIDECOMP Software has been installed, and run the following
        command:
 
-       ``nccopy -F none $TO_TD.COMP.01_PATH $DECOMPRESSED_OUTPUT_PATH
+       ``nccopy -F none $TO_TD.COMP.01_PATH $DECOMPRESSED_OUTPUT_PATH``
 
        where:
 
@@ -173,7 +173,7 @@ FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP Software using the offline
      - The command runs without errors.
    * - 3.
      - Check that the output product has been correctly decompressed, by opening it with Panoply (after reverting step 0
-       of :ref:`FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the `/data/ir_105/measured/effective_radiance`
+       of `FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the `/data/ir_105/measured/effective_radiance`
      - Plot is generated.
 
 
