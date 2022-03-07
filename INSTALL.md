@@ -71,9 +71,6 @@ Execute (replace `CONDACHANNELPATH` with the path to the directory, including `c
 
     conda install -y -c anaconda -c conda-forge -c CONDACHANNELPATH fcidecomp
 
-For example, on Linux:
-
-    conda install -y -c anaconda -c conda-forge -c /home/user1/Desktop/conda/conda-channel fcidecomp
 
 ## Installation from the Conda recipe
 
