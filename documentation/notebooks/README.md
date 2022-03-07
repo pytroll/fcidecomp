@@ -16,14 +16,14 @@ The available Jupyter notebooks provide examples on the different ways in which 
   These data should be placed in a directories tree structured as follows (replace $EPCT_TEST_DATA_DIR
   with any chosen name):
 
-```BASH
-|_$EPCT_TEST_DATA_DIR
-  |_MTG
-    |_MTGFCIL1
-      |_<test_file_1>
-      |_<test_file_2>
-      |_ ...
-```
+  ```BASH
+  |_$EPCT_TEST_DATA_DIR
+    |_MTG
+      |_MTGFCIL1
+        |_<test_file_1>
+        |_<test_file_2>
+        |_ ...
+  ```
 
   Once this is done, the environment variable `EPCT_TEST_DATA_DIR` should be set to the full path to $EPCT_TEST_DATA_DIR
 
