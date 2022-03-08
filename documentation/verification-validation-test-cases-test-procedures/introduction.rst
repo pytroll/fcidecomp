@@ -42,18 +42,21 @@ Applicable Documents
   * - [FCIDECOMP_VCD]
 
       .. _[FCIDECOMP_VCD]:
+
     - EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification Control Document
     - `fcidecomp/documentation/verification-validation-plan-test-case-procedures/FCIDECOMP_VCD.xlsx <../../../verification-validation-test-cases-test-procedures/FCIDECOMP_VCD.xlsx>`_
 
   * - [FCIDECOMP_VV]
 
       .. _[FCIDECOMP_VV]:
+
     - EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification & Validation Plan
     - `fcidecomp/documentation/verification-validation-plan <../../../verification-validation-plan/_build/html/index.html>`_
 
   * - [FCIDECOMP_WP]
 
       .. _[FCIDECOMP_WP]:
+
     - Support to CharLS decompression for MTG users - Work package description
     - EUM/SEP/WPD/21/1244304
 
@@ -70,30 +73,41 @@ Reference Documents
     - Title
     - Reference
 
-  * - [EPCT_MTG_README]
+  * - [EPCT_MTG]
 
-      .. _[EPCT_MTG_README]:
-    - ``epct_plugin_mtg`` Gitlab repository README
-    - `https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/README.md <https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/README.md>`_
+      .. _[EPCT_MTG]:
+
+    - ``epct_plugin_mtg`` software GitLab repository
+    - `https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/ <https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/>`_
 
   * - [FCIDECOMP]
 
       .. _[FCIDECOMP]:
 
-    - FCIDECOMP Software repository
+    - FCIDECOMP software GitLab repository
     - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development <https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development>`_
 
 
   * - [FCIDECOMP_DEP_OFF]
 
       .. _[FCIDECOMP_DEP_OFF]:
+
     - FCIDECOMP Softwre offline dependencies repository
     - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/offline-dependencies/-/tree/development <https://gitlab.eumetsat.int/sepdssme/fcidecomp/offline-dependencies/-/tree/development>`_
+
+
+  * - [FCIDECOMP_PIPELINES]
+
+      .. _[FCIDECOMP_PIPELINES]:
+
+    - FCIDECOMP project's CI/CD pipelines
+    - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/pipelines <https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/pipelines>`_
 
 
   * - [TEST_DATA]
 
       .. _[TEST_DATA]:
+
     - MTG FCI L1C test data
     - `https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1 <https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1>`_
 

@@ -1,16 +1,16 @@
-Manual Tests: Decompression via Java Software and via the EUMETSAT Data Tailor Software, and installation with offline dependencies repository
+Manual Tests: Decompression via Java software and via the EUMETSAT Data Tailor software, and installation with offline dependencies repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes the test cases and procedures to validate:
 
-- Opening and inspecting a JPEG-LS compressed MTG FCI L1C product via Panoply (reference Java Software)
-- Decompression a JPEG-LS compressed MTG FCI L1C product via the EUMETSAT Data Tailor Software
-- Installing the FCIDECOMP Software without a connection to Internet (uses the :ref:`offline dependencies
-  repository <[FCIDECOMP_DEP_OFF]>` hosted at EUMETSAT Gitlab)
+- Opening and inspection of a JPEG-LS compressed MTG FCI L1C product via Panoply (reference Java software)
+- Decompression of a JPEG-LS compressed MTG FCI L1C product via the EUMETSAT Data Tailor software
+- Installation of the FCIDECOMP software without a connection to Internet (uses the offline dependencies
+  repository :ref:`[FCIDECOMP_DEP_OFF] <[FCIDECOMP_DEP_OFF]>` hosted at EUMETSAT GitLab)
 
 .. _test_data:
 
-Tests reported in this section use the following test data files, all hosted at `<[TEST_DATA]>`_:
+Tests reported in this section use the following MTG FCI L1C test data files :ref:`[TEST_DATA] <[TEST_DATA]>`:
 
 .. list-table:: Test data
    :header-rows: 1
@@ -27,7 +27,9 @@ Tests reported in this section use the following test data files, all hosted at 
      - W_XX-EUMETSAT-Darmstadt,IMG+SAT,MTI1+FCI-1C-RRAD-FDHSI-FD--CHK-BODY---NC4E_C_EUMT_20200405000845_GTT_DEV_20200405000330_20200405000345_N__T_0001_0015.nc
 
 
-FCIDECOMP.JAVA.TC.01.01: decompression via Java Software
+.. _FCIDECOMP.JAVA.TC.01.01:
+
+FCIDECOMP.JAVA.TC.01.01: decompression via Java software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
    :header-rows: 0
@@ -38,12 +40,12 @@ FCIDECOMP.JAVA.TC.01.01: decompression via Java Software
    * - Input data
      - TD.COMP.01
    * - Pass/Fail criteria
-     - Data contained in the TD.COMP.01 can be plotted with Panoply
+     - Data contained in the TD.COMP.01 file can be plotted with Panoply
 
 
 .. _FCIDECOMP.JAVA.TP.01.01:
 
-FCIDECOMP.JAVA.TP.01.01: decompression via Java Software
+FCIDECOMP.JAVA.TP.01.01: decompression via Java software
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 .. list-table::
    :header-rows: 1
@@ -53,22 +55,25 @@ FCIDECOMP.JAVA.TP.01.01: decompression via Java Software
      - Description
      - Expected output
    * - 0.
-     - Configure Panoply to use the netCDF4-C library, following instructions reported in the README file at
-       :ref:`[FCIDECOMP]> <[FCIDECOMP]>`
+     - Configure Panoply to use the netCDF4-C library, following instructions reported in the README file hosted in the
+       FCIDECOMP software GitLab repository :ref:`[FCIDECOMP] <[FCIDECOMP]>`
      - \-
    * - 1.
      - Open TD.COMP.01 in Panoply and create a plot using the ``/data/ir_105/measured/effective_radiance`` variable
      - Plot is generated
 
 
-FCIDECOMP.DT.TC.01.01: decompression via the EUMETSAT Data Tailor Software
+.. _FCIDECOMP.DT.TC.01.01:
+
+FCIDECOMP.DT.TC.01.01: decompression via the EUMETSAT Data Tailor software
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
    :header-rows: 0
    :widths: 20 80
 
    * - Goal
-     - Validate the ability to decompress JPEG-LS compressed MTG FCI L1C products using the EUMETSAT Data Tailor Software
+     - Validate the ability to decompress JPEG-LS compressed MTG FCI L1C products using the EUMETSAT Data Tailor
+       software
    * - Input data
      - TD.COMP.01
    * - Pass/Fail criteria
@@ -79,7 +84,7 @@ FCIDECOMP.DT.TC.01.01: decompression via the EUMETSAT Data Tailor Software
 
 .. _FCIDECOMP.DT.TP.01.01:
 
-FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor Software
+FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor software
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 .. list-table::
    :header-rows: 1
@@ -90,8 +95,8 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor Software
      - Expected output
 
    * - 0.
-     - Install the ``epct`` and ``epct_plugin_mtg`` packages as described in
-       :ref:`[EPCT_MTG_README] <[EPCT_MTG_README]>`
+     - Install the ``epct`` and ``epct_plugin_mtg`` packages as described in the README file hosted in the
+       ``epct_plugin_mtg`` software GitLab repository :ref:`[EPCT_MTG] <[EPCT_MTG]>`
 
        Check the ``epct_plugin_mtg`` si correctly installed, running the command:
 
@@ -125,26 +130,28 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor Software
      - Plot is generated.
 
 
-FCIDECOMP.OFF.TC.01.01: installation of the FCIDECOMP Software using the offline dependencies repository
+.. _FCIDECOMP.OFF.TC.01.01:
+
+FCIDECOMP.OFF.TC.01.01: installation of the FCIDECOMP software using the offline dependencies repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. list-table::
    :header-rows: 0
    :widths: 20 80
 
    * - Goal
-     - Validate the possibility to install the FCIDECOMP Software using the offline dependencies repository hosted at
-       `<[FCIDECOMP_DEP_OFF]>`_
+     - Validate the possibility to install the FCIDECOMP software using the offline dependencies repository
+       :ref:`[FCIDECOMP_DEP_OFF] <[FCIDECOMP_DEP_OFF]>`
    * - Input data
      - TD.COMP.01
    * - Pass/Fail criteria
-     - The FCIDECOMP Software is correctly installed
+     - The FCIDECOMP software is correctly installed
 
        The plugin can be used to successfully generates a decompressed netCDF output product
 
 
 .. _FCIDECOMP.OFF.TP.01.01:
 
-FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP Software using the offline dependencies repository
+FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP software using the offline dependencies repository
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. list-table::
@@ -155,14 +162,14 @@ FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP Software using the offline
      - Description
      - Expected output
    * - 0.
-     - Install the FCIDECOMP Software following instructions reported in the README file at :ref:`[FCIDECOMP_DEP_OFF]
+     - Install the FCIDECOMP software following instructions reported in the README file at :ref:`[FCIDECOMP_DEP_OFF]
        <[FCIDECOMP_DEP_OFF]>`
      - The installation completes without errors.
    * - 1.
      - Download in a local directory test file TD.COMP.01
      - Test files are successfully downloaded
    * - 2.
-     - Activate the ``conda`` environment in which the FCIDECOMP Software has been installed, and run the following
+     - Activate the ``conda`` environment in which the FCIDECOMP software has been installed, and run the following
        command:
 
        ``nccopy -F none $TO_TD.COMP.01_PATH $DECOMPRESSED_OUTPUT_PATH``

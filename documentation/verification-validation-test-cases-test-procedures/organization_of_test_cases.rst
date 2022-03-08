@@ -13,7 +13,8 @@ and the ``netCDF4`` Python library is taken as reference for use via Python.
 Manual test cases test the FCIDECOMP software
 can be used to decompress FC1 L1c NRT data
 via selected Java Software and via the Data Tailor Software (FICDECOMP.JAVA.TC.01.01 and FCIDECOMP.DT.TC.01.01),
-and that it can be installed using the offline dependencies repository hosted at `<[FCIDECOMP_DEP_OFF]>`_ (FCIDECOMP.OFF.TC.01.01).
+and that it can be installed using the offline dependencies repository
+:ref:`[FCIDECOMP_DEP_OFF] <[FCIDECOMP_DEP_OFF]>` (FCIDECOMP.OFF.TC.01.01).
 ``Panoply`` is taken as reference for decompression via Java Software
 
 .. _organization_of_test_cases_conventions:
@@ -80,48 +81,56 @@ following specifications.
      - Software pre-requisites
      - Average execution time in seconds
 
-   * - FCIDECOMP.CLI.TC.01.01
+   * - :ref:`FCIDECOMP.CLI.TC.01.01 <FCIDECOMP.CLI.TC.01.01>`
+
      - ``conda`` environment with
 
-       * ``fcidecomp`` installed, as described in the INSTALL file at :ref:`[FCIDECOMP] <[FCIDECOMP]>`
-       * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
-
-       NOTE: all requirements are satisfied by the GitLab CI/CD environment in which the test is run.
-     - < 1 min
-
-   * - FCIDECOMP.PY.TC.01.01
-     - ``conda`` environment with
-
-       * ``fcidecomp`` installed, as described in the INSTALL file at :ref:`[FCIDECOMP] <[FCIDECOMP]>`
-       * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
-
-       NOTE: all requirements are satisfied by the GitLab CI/CD environment in which the test is run.
-     - < 1 min
-
-   * - FCIDECOMP.JAVA.TC.01.01
-     - * ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file at
+       * ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP software GitLab repository
          :ref:`[FCIDECOMP] <[FCIDECOMP]>`
-       * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
+       * ``pytest`` installed, as described at `<https://anaconda.org/anaconda/pytest>`_
+
+       NOTE: all requirements are satisfied by the GitLab CI/CD environment in which the test is run.
+     - < 1 min
+
+   * - :ref:`FCIDECOMP.PY.TC.01.01 <FCIDECOMP.PY.TC.01.01>`
+
+     - ``conda`` environment with
+
+       * ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP software GitLab repository
+         :ref:`[FCIDECOMP] <[FCIDECOMP]>`
+       * ``pytest`` installed, as described at `<https://anaconda.org/anaconda/pytest>`_
+
+       NOTE: all requirements are satisfied by the GitLab CI/CD environment in which the test is run.
+     - < 1 min
+
+   * - :ref:`FCIDECOMP.JAVA.TC.01.01 <FCIDECOMP.JAVA.TC.01.01>`
+
+     - * ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP
+         software GitLab repository :ref:`[FCIDECOMP] <[FCIDECOMP]>`
+       * ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 
-   * - FCIDECOMP.DT.TC.01.01
-     - * ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in
-         :ref:`[EPCT_MTG_README] <[EPCT_MTG_README]>`
-       * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
+   * - :ref:`FCIDECOMP.DT.TC.01.01 <FCIDECOMP.DT.TC.01.01>`
+
+     - * ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in the README file hosted
+         in the ``epct_plugin_mtg`` GitLab repository :ref:`[EPCT_MTG] <[EPCT_MTG]>`
+       * ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 
-   * - FCIDECOMP.OFF.TC.01.01
-     - * ``conda`` installed, as described in
+   * - :ref:`FCIDECOMP.OFF.TC.01.01 <FCIDECOMP.OFF.TC.01.01>`
+
+     - * ``conda`` installed, as described at
          `<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>`_
-       * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
+       * ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 
 
 Requirements and Validation Goals addressed by Test Cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following table maps the requirements detailed in the :ref:`Work package description <[FCIDECOMP_WP]>` with the
-validation goals defined in the :ref:`FCIDECOMP Verification and Validation Plan <[FCIDECOMP_VV]>`
+The following table maps the requirements detailed in the Work Package description
+:ref:`[FCIDECOMP_WP] <[FCIDECOMP_WP]>` with the validation goals defined in the
+FCIDECOMP Verification and Validation Plan:ref:`[FCIDECOMP_VV] <[FCIDECOMP_VV]>`
 and respective tests to meet these goals defined herein:
 
 .. list-table:: Requirements and validation goals addressed by the test cases defined in this document.
