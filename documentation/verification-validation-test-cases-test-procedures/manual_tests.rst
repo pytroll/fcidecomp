@@ -79,7 +79,7 @@ FCIDECOMP.DT.TC.01.01: decompression via the EUMETSAT Data Tailor software
    * - Pass/Fail criteria
      - The ``epct_plugin_mtg`` plugin is correctly installed
 
-       The plugin successfully generates a decompressed netCDF output product.
+       The plugin successfully generates a decompressed netCDF output product
 
 
 .. _FCIDECOMP.DT.TP.01.01:
@@ -110,7 +110,7 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor software
 
        where
 
-       * ``$OUTPUT_DIR`` is the path to the directory where the decompressed file will be writte,
+       * ``$OUTPUT_DIR`` is the path to the directory where the decompressed file will be written,
          which should be different from the directory containing TD.COMP.01
        * ``$COMPRESSED_PRODUCT`` is the path to TD.COMP.01
      - The output of the command reports ``*** STOP PROCESSING - Status DONE ***``
@@ -122,12 +122,13 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor software
 
        where ``$OUTPUT_PRODUCT`` is the path to the decompressed output product, reported in the printed output of
        step 1
-     - The output of the command is empty.
+     - The output of the command is empty
 
    * - 3.
      - Check that the output product has been correctly decompressed, by opening it with Panoply (after reverting step 0
-       of `FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the `/data/ir_105/measured/effective_radiance`
-     - Plot is generated.
+       of `FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the ``/data/ir_105/measured/effective_radiance``
+       variable
+     - Plot is generated
 
 
 .. _FCIDECOMP.OFF.TC.01.01:
@@ -164,11 +165,8 @@ FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP software using the offline
    * - 0.
      - Install the FCIDECOMP software following instructions reported in the README file at :ref:`[FCIDECOMP_DEP_OFF]
        <[FCIDECOMP_DEP_OFF]>`
-     - The installation completes without errors.
+     - The installation completes without errors
    * - 1.
-     - Download in a local directory test file TD.COMP.01
-     - Test files are successfully downloaded
-   * - 2.
      - Activate the ``conda`` environment in which the FCIDECOMP software has been installed, and run the following
        command:
 
@@ -178,10 +176,10 @@ FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP software using the offline
 
        * ``$TD.COMP.01_PATH`` is the path to the TD.COMP.01 test file
        * ``$DECOMPRESSED_OUTPUT_PATH`` is the path to the decompressed output
-     - The command runs without errors.
-   * - 3.
+     - The command runs without errors
+   * - 2.
      - Check that the output product has been correctly decompressed, by opening it with Panoply (after reverting step 0
        of `FCIDECOMP.JAVA.TP.01.01`_) and creating a plot using the ``/data/ir_105/measured/effective_radiance``
-     - Plot is generated.
+     - Plot is generated
 
 
