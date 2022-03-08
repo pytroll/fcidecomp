@@ -3,11 +3,11 @@
 This document describes how to install the EUMETSAT FCIDECOMP software.
 The following Operating Systems are supported:
 
-- Linux CentOS 7 64bit
-- Linux Ubuntu 18.04 LTS
-- Linux Ubuntu 20.04 LTS
-- Windows 10 64bit
-- Windows 10 32bit
+- Linux CentOS 7 64-bit
+- Linux Ubuntu 18.04 LTS 64-bit
+- Linux Ubuntu 20.04 LTS 64-bit
+- Windows 10 64-bit
+- Windows 10 32-bit
 
 There are three ways to install the EUMETSAT FCIDECOMP software:
 

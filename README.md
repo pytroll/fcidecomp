@@ -5,8 +5,8 @@
 The FCIDECOMP software can be installed on:
 
 - Linux CentOS 7 64bit
-- Linux Ubuntu 18.04 LTS
-- Linux Ubuntu 20.04 LTS
+- Linux Ubuntu 18.04 LTS 64-bit
+- Linux Ubuntu 20.04 LTS 64-bit
 - Windows 10 64bit
 - Windows 10 32bit
 
