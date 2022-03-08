@@ -25,7 +25,7 @@ directory of the FICDECOMP Software repository:
 :Note: The test case descriptions of the automated tests are extracted from the test files themselves.
 
 
-FCIDECOMP.CLI.TC.01.01: Test on decompression via command line tools
+FCIDECOMP.CLI.TC.01.01: decompression via command line tools
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. automodule:: test_CLI_TC_01_01
@@ -33,7 +33,7 @@ FCIDECOMP.CLI.TC.01.01: Test on decompression via command line tools
     :undoc-members:
     :show-inheritance:
 
-FCIDECOMP.PY.TC.01.01: Test on decompression via Python
+FCIDECOMP.PY.TC.01.01: decompression via Python
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. automodule:: test_PY_TC_01_01
