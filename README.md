@@ -72,7 +72,8 @@ of NetCDF-Java) for reading purposes. In Linux, it is possible to enable this fe
       </Netcdf4Clibrary>
     </nj22Config>
 
-where `$PATH_TO_NETCDF_LIB_DIR` is the path to the directory containing the `netcdf4` library. 
+where `$PATH_TO_NETCDF_LIB_DIR` is the path to the directory containing the `netcdf4` library: in Linux, it is equal 
+to `$PATH_TO_CONDA_ENV/lib`, where `$PATH_TO_CONDA_ENV` is the path to the `conda` environment in which `fcidecomp` is 
+installed.
 
-In Linux, `$PATH_TO_NETCDF_LIB_DIR` should be equal to `$PATH_TO_CONDA_ENV/lib`, where `$PATH_TO_CONDA_ENV` is the path
-to the `conda` environment in which `fcidecomp` is installed.
+This feature is not currently available for Windows.
