@@ -32,8 +32,8 @@ Procedures:
 For validation purposes, reference platform are:
 
 - Centos 7 64-bit, Windows 10 64-bit and Windows 10 32-bit for FCIDECOMP.CLI.TC.01.01 and FCIDECOMP.PY.TC.01.01
-- Ubuntu 20.04 LTS 64-bit and Windows 10 64-bit for FCIDECOMP.JAVA.TC.01.01, FCIDECOMP.DT.TC.01.0 and
-  FCIDECOMP.OFF.TC.01.01
+- Ubuntu 20.04 LTS 64-bit FCIDECOMP.JAVA.TC.01.01,
+- Ubuntu 20.04 LTS 64-bit and Windows 10 64-bit for FCIDECOMP.DT.TC.01.0 and FCIDECOMP.OFF.TC.01.01
 
 
 .. _reference_platform:
@@ -83,7 +83,7 @@ following specifications.
    * - FCIDECOMP.CLI.TC.01.01
      - ``conda`` environment with
 
-       * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
+       * ``fcidecomp`` installed, as described in the INSTALL file at :ref:`[FCIDECOMP] <[FCIDECOMP]>`
        * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
 
        NOTE: all requirements satisfied by the GitLab CI/CD environment in which the test is run.
@@ -92,24 +92,27 @@ following specifications.
    * - FCIDECOMP.PY.TC.01.01
      - ``conda`` environment with
 
-       * ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
+       * ``fcidecomp`` installed, as described in the INSTALL file at :ref:`[FCIDECOMP] <[FCIDECOMP]>`
        * ``pytest`` installed, as described `here <https://anaconda.org/anaconda/pytest>`_
 
        NOTE: all requirements satisfied by the GitLab CI/CD environment in which the test is run.
      - < 1 min
 
    * - FCIDECOMP.JAVA.TC.01.01
-     - * ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file at `<[FCIDECOMP]>`_
+     - * ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file at
+         :ref:`[FCIDECOMP] <[FCIDECOMP]>`
        * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 
    * - FCIDECOMP.DT.TC.01.01
-     - * ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in `<[EPCT_MTG_README]>`_
+     - * ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in
+         :ref:`[EPCT_MTG_README] <[EPCT_MTG_README]>`
        * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 
    * - FCIDECOMP.OFF.TC.01.01
-     - * ``conda`` installed, as described in`<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>`
+     - * ``conda`` installed, as described in
+         `<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>`_
        * ``panoply`` installed, as described in `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 

@@ -73,12 +73,13 @@ Reference Documents
   * - [EPCT_MTG_README]
 
       .. _[EPCT_MTG_README]:
-    - `epct_plugin_mtg` Gitlab repository README
+    - ``epct_plugin_mtg`` Gitlab repository README
     - `https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/README.md <https://gitlab.eumetsat.int/data-tailor/epct_plugin_mtg/-/blob/development/README.md>`_
 
   * - [FCIDECOMP]
 
       .. _[FCIDECOMP]:
+
     - FCIDECOMP Software repository
     - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development <https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/tree/development>`_
 
