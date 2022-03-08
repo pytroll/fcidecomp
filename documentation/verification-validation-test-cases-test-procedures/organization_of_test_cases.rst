@@ -33,7 +33,7 @@ Procedures:
 For validation purposes, reference platform are:
 
 - Centos 7 64-bit, Windows 10 64-bit and Windows 10 32-bit for FCIDECOMP.CLI.TC.01.01 and FCIDECOMP.PY.TC.01.01
-- Ubuntu 20.04 LTS 64-bit FCIDECOMP.JAVA.TC.01.01,
+- Ubuntu 20.04 LTS 64-bit for FCIDECOMP.JAVA.TC.01.01
 - Ubuntu 20.04 LTS 64-bit and Windows 10 64-bit for FCIDECOMP.DT.TC.01.0 and FCIDECOMP.OFF.TC.01.01
 
 
@@ -45,7 +45,7 @@ Reference Platform and Execution Time for Test Cases
 As a support to the planning of test sessions, the following table
 summarizes hardware and software pre-requisites and average execution
 times for each test case category, for the reference platforms with the
-following specifications.
+following specifications:
 
 - Centos 7 64-bit:
 
@@ -79,49 +79,54 @@ following specifications.
 
    * - Category ID
      - Software pre-requisites
-     - Average execution time in seconds
+     - Average execution time in minutes
 
    * - :ref:`FCIDECOMP.CLI.TC.01.01 <FCIDECOMP.CLI.TC.01.01>`
 
-     - ``conda`` environment with
+     - - OS: Centos 7 64-bit, Windows 10 64-bit and Windows 10 32-bit
+       - ``conda`` environment with
 
-       * ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP software GitLab repository
-         :ref:`[FCIDECOMP] <[FCIDECOMP]>`
-       * ``pytest`` installed, as described at `<https://anaconda.org/anaconda/pytest>`_
+         * ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP software GitLab repository
+           :ref:`[FCIDECOMP] <[FCIDECOMP]>`
+         * ``pytest`` installed, as described at `<https://anaconda.org/anaconda/pytest>`_
 
-       NOTE: all requirements are satisfied by the GitLab CI/CD environment in which the test is run.
+       :Note: all requirements are satisfied by the GitLab CI/CD environment in which the test is run.
      - < 1 min
 
    * - :ref:`FCIDECOMP.PY.TC.01.01 <FCIDECOMP.PY.TC.01.01>`
 
-     - ``conda`` environment with
+     - - OS: Centos 7 64-bit, Windows 10 64-bit and Windows 10 32-bit
+       - ``conda`` environment with
 
-       * ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP software GitLab repository
-         :ref:`[FCIDECOMP] <[FCIDECOMP]>`
-       * ``pytest`` installed, as described at `<https://anaconda.org/anaconda/pytest>`_
+         * ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP software GitLab repository
+           :ref:`[FCIDECOMP] <[FCIDECOMP]>`
+         * ``pytest`` installed, as described at `<https://anaconda.org/anaconda/pytest>`_
 
-       NOTE: all requirements are satisfied by the GitLab CI/CD environment in which the test is run.
+       :Note: all requirements are satisfied by the GitLab CI/CD environment in which the test is run.
      - < 1 min
 
    * - :ref:`FCIDECOMP.JAVA.TC.01.01 <FCIDECOMP.JAVA.TC.01.01>`
 
-     - * ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP
+     - - OS: Ubuntu 20.04 LTS 64-bit
+       - ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP
          software GitLab repository :ref:`[FCIDECOMP] <[FCIDECOMP]>`
-       * ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
+       - ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 
    * - :ref:`FCIDECOMP.DT.TC.01.01 <FCIDECOMP.DT.TC.01.01>`
 
-     - * ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in the README file hosted
+     - - OS: Ubuntu 20.04 LTS 64-bit and Windows 10 64-bit
+       - ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in the README file hosted
          in the ``epct_plugin_mtg`` GitLab repository :ref:`[EPCT_MTG] <[EPCT_MTG]>`
-       * ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
+       - ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 
    * - :ref:`FCIDECOMP.OFF.TC.01.01 <FCIDECOMP.OFF.TC.01.01>`
 
-     - * ``conda`` installed, as described at
+     - - OS: Ubuntu 20.04 LTS 64-bit and Windows 10 64-bit
+       - ``conda`` installed, as described at
          `<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>`_
-       * ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
+       - ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
      - 5 min
 
 

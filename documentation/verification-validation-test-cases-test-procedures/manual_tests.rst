@@ -113,7 +113,9 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor software
        * ``$OUTPUT_DIR`` is the path to the directory where the decompressed file will be written,
          which should be different from the directory containing TD.COMP.01
        * ``$COMPRESSED_PRODUCT`` is the path to TD.COMP.01
-     - The output of the command reports ``*** STOP PROCESSING - Status DONE ***``
+     - The output of the command reports
+
+       ``*** STOP PROCESSING - Status DONE ***``
 
    * - 2.
      - Check that the output product is actually decompressed, running the command:
