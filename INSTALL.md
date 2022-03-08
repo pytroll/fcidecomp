@@ -37,7 +37,7 @@ any valid name would do (change the following instructions accordingly):
 
     conda create -n fcidecomp python=$PYTHON_VERSION
     
-where Python versions currently supported by the FCIDECOMP Software are 3.7 <= `$PYTHON_VERSION` <= 3.9.
+where Python versions currently supported by the FCIDECOMP software are 3.7 <= `$PYTHON_VERSION` <= 3.9.
 
 Activate the environment:
 
@@ -65,7 +65,7 @@ any valid name would do (change the following instructions accordingly):
 
     conda create -n fcidecomp python=$PYTHON_VERSION
     
-where Python versions currently supported by the FCIDECOMP Software are 3.7 <= `$PYTHON_VERSION` <= 3.9.
+where Python versions currently supported by the FCIDECOMP software are 3.7 <= `$PYTHON_VERSION` <= 3.9.
 
 Activate the environment:
 
