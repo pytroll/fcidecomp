@@ -28,7 +28,7 @@ Installation requires:
 
 - `conda`, installed as described
   [here](<https://conda.io/projects/conda/en/latest/user-guide/install/index.html>)
-- a connection to the internet
+- a connection to the Internet
 
 ### Installation
 
@@ -53,8 +53,8 @@ Now execute:
 
 Installation requires:
 
-- the FCIDECOMP `conda` packages, downloaded as a single `zip` file from the one of the project's 
-  [CI/CD pipelines](<https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/pipelines>)
+- the FCIDECOMP `conda` packages, downloaded as a single `zip` artifacts file from the "deploy" job of one of the 
+  project's [CI/CD pipelines](<https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/-/pipelines>)
 - `conda`, installed as described
   [here](<https://conda.io/projects/conda/en/latest/user-guide/install/index.html>)
 
