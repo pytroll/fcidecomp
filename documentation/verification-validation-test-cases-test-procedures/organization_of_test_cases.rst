@@ -112,7 +112,7 @@ following specifications:
        - ``conda`` environment with ``fcidecomp`` installed, as described in the INSTALL file hosted in the FCIDECOMP
          software GitLab repository :ref:`[FCIDECOMP] <[FCIDECOMP]>`
        - ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
-     - 5 min
+     - 15 min
 
    * - :ref:`FCIDECOMP.DT.TC.01.01 <FCIDECOMP.DT.TC.01.01>`
 
@@ -120,7 +120,7 @@ following specifications:
        - ``conda`` environment with ``epct`` and ``epct_plugin_mtg`` installed, as described in the README file hosted
          in the ``epct_plugin_mtg`` GitLab repository :ref:`[EPCT_MTG] <[EPCT_MTG]>`
        - ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
-     - 5 min
+     - 15 min
 
    * - :ref:`FCIDECOMP.OFF.TC.01.01 <FCIDECOMP.OFF.TC.01.01>`
 
@@ -128,7 +128,7 @@ following specifications:
        - ``conda`` installed, as described at
          `<https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html>`_
        - ``panoply`` installed, as described at `<https://www.giss.nasa.gov/tools/panoply/download/>`_
-     - 5 min
+     - 15 min
 
 
 Requirements and Validation Goals addressed by Test Cases
