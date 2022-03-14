@@ -1,20 +1,23 @@
-// $Id: H5Zjpegls.h 824 2017-09-05 16:14:26Z delaunay $
 // =============================================================
 //
-// PROJECT : FCICOMP
+// Copyright 2015-2022, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)
 //
-// AUTHOR : THALES Services
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
 //
-// Copyright 2015 EUMETSAT
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 //
 // =============================================================
-// HISTORY :
-//
-// VERSION:1.0.2:NCR:FCICOMP-13:05/09/2017:Set the filter ID to 32018
-// VERSION:1.0.1:NCR:FCICOMP-8:09/03/2016:Add the copyright notice in the header
-//
-// END-HISTORY
-// =============================================================
+
+// AUTHORS:
+// - THALES Services
 
 #ifndef H5ZJPEGLS_H_
 #define H5ZJPEGLS_H_
