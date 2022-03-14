@@ -67,16 +67,17 @@ pre-requisites, and to improve clarity and maintenance of the V&V plan.
 The following categories are defined:
 
 :CLI:
-    Tests for the decompression of FC1 L1c NRT data via a command line interface (VG1)
+    Tests for the decompression of FCI L1c NRT data via a command line interface (VG1)
 
 :PY:
-    Tests for the decompression of FC1 L1c NRT data via Python (VG2)
+    Tests for the decompression of FCI L1c NRT data via Python (VG2)
 
 :JAVA:
-    Tests for the decompression of FC1 L1c NRT data via Java (VG3)
+    Tests for the decompression of FCI L1c NRT data via Java (VG3)
 
 :DT:
-    Tests for the decompression of FC1 L1c NRT data via the Data Tailor (VG4)
+    Tests for the decompression of FCI L1c NRT data via the Data Tailor (VG4)
 
 :OFF:
-    Tests for the installation of the FCIDECOMP Software using the offline dependencies repository hosted at EUMETSAT Gitlab (VG5, VG6)
+    Tests for the installation of the FCIDECOMP Software using the offline dependencies repository hosted at EUMETSAT
+    Gitlab (VG5, VG6)

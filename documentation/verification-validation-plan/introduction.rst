@@ -6,14 +6,14 @@ Introduction
 Purpose
 ~~~~~~~
 
-The document details the V&V plan for the Work Package 'Support to CharLS decompression for MTG users'
-in the context of the EUMETSAT Data Tailor Web Service.
+The document details the Verification & Validation plan for the Work Package 'Support to CharLS decompression for
+MTG users' in the context of the EUMETSAT Data Tailor Web Service.
 
 Scope
 ~~~~~
 
 Objective of this plan is define how to validate the ability of the FCIDECOMP software to decompress
-FC1 L1c NRT data, verifying its compatibility with MTG user stations.
+FCI L1c NRT data, verifying its compatibility with MTG user stations.
 
 It is addressed at:
 
