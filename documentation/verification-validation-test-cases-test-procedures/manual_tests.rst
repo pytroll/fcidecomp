@@ -104,9 +104,12 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor software
      - The output of the command reports ``epct_mtg`` under the ``registered_backends`` key
 
    * - 1.
-     - Decompress the TD.COMP.01 file, running the command:
+     - Decompress the TD.COMP.01 file. To do so, open a ``python`` terminal and run the following lines:
+       .. code-block::
 
-       ``echo -e "product: MTGFCIL1\nformat: netcdf4_satellite" | epct run-chain -y -o $OUTPUT_DIR $COMPRESSED_PRODUCT``
+       >>> from epct import api
+       >>> chain_config = {"product": "MTGFCIL1", "format": "netcdf4_satellite"}
+       >>> api.run_chain(["$COMPRESSED_PRODUCT"], chain_config=chain_config, target_dir="$OUTPUT_DIR")
 
        where
 
@@ -118,7 +121,7 @@ FCIDECOMP.DT.TP.01.01: decompression via the EUMETSAT Data Tailor software
        ``*** STOP PROCESSING - Status DONE ***``
 
    * - 2.
-     - Check that the output product is actually decompressed, running the command:
+     - Check that the output product is actually decompressed, running in the terminal the command:
 
        ``ncdump -h -s $OUTPUT_PRODUCT | grep _Filter``
 
