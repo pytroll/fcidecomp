@@ -175,7 +175,8 @@ FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP software using the offline
      - Expected output
    * - 0.
      - Install the FCIDECOMP software following instructions reported in the README file at :ref:`[FCIDECOMP_DEP_OFF]
-       <[FCIDECOMP_DEP_OFF]>`
+       <[FCIDECOMP_DEP_OFF]>`, at the "Installing the EUMETSAT FCIDECOMP software using the local Conda channel"
+       section
      - The installation completes without errors
    * - 1.
      - Activate the ``conda`` environment in which the FCIDECOMP software has been installed, and run the following
