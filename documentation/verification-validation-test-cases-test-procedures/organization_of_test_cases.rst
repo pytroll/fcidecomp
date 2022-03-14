@@ -76,6 +76,7 @@ following specifications:
 .. list-table:: Estimated execution times for test cases under each test sub-category.
    :header-rows: 1
    :widths: 20 40 40
+   :class: longtable
 
    * - Category ID
      - Software pre-requisites
