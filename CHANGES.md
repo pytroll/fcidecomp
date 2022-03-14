@@ -13,3 +13,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Linux and Windows (32/64-bit) environments and Python versions 3.7 to 3.9 (extremes included)
 - Automatic tests based on `pytest`
 - Performance tests based on `pytest` and `pytest-benchmark`
+
+### Changed
+- Adopt for FCIDECOMP source code Apache License Version 2.0
