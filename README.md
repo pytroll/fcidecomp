@@ -4,11 +4,11 @@
 
 The FCIDECOMP software can be installed on:
 
-- Linux CentOS 7 64bit
-- Linux Ubuntu 18.04 LTS
-- Linux Ubuntu 20.04 LTS
-- Windows 10 64bit
-- Windows 10 32bit
+- Linux CentOS 7 64-bit
+- Linux Ubuntu 18.04 LTS 64-bit
+- Linux Ubuntu 20.04 LTS 64-bit
+- Windows 10 64-bit
+- Windows 10 32-bit
 
 Installation procedures are in described in the INSTALL.rst file.
 
@@ -44,12 +44,12 @@ Once the `fcidecomp` Conda package is installed and the Conda environment in whi
 netCDF4-C tools should be automatically configured to decompress JPEG-LS compressed netCDF files. As an example,
 to decompress a file using `nccopy`, run the following line:
 
-    nccopy -F none <PATH_TO_COMPRESSED_FILE> <PATH_TO_DECOMPRESSED_FILE>
+    nccopy -F none $PATH_TO_COMPRESSED_FILE $PATH_TO_DECOMPRESSED_FILE
 
 where:
 
-- `<PATH_TO_COMPRESSED_FILE>` is the path to the JPEG-LS compressed file
-- `<PATH_TO_DECOMPRESSED_FILE>` is the path where the decompressed file should be saved
+- `$PATH_TO_COMPRESSED_FILE>` is the path to the JPEG-LS compressed file
+- `$PATH_TO_DECOMPRESSED_FILE>` is the path where the decompressed file should be saved
 
 ### Use with `h5py`-based Python libraries
 
@@ -66,10 +66,14 @@ of NetCDF-Java) for reading purposes. In Linux, it is possible to enable this fe
 
     <nj22Config>
       <Netcdf4Clibrary>
-        <libraryPath><PATH_TO_NETCDF_LIB_DIR></libraryPath>
+        <libraryPath>$PATH_TO_NETCDF_LIB_DIR</libraryPath>
         <libraryName>netcdf</libraryName>
         <useForReading>true</useForReading>
       </Netcdf4Clibrary>
     </nj22Config>
 
-where `<PATH_TO_NETCDF_LIB_DIR>` is the path to the directory containing the `netcdf4` library.
+where `$PATH_TO_NETCDF_LIB_DIR` is the path to the directory containing the `netcdf4` library: in Linux, it is equal 
+to `$PATH_TO_CONDA_ENV/lib`, where `$PATH_TO_CONDA_ENV` is the path to the `conda` environment in which `fcidecomp` is 
+installed.
+
+This feature is not currently available for Windows.
