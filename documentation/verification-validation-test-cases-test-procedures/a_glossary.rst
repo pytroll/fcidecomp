@@ -12,3 +12,8 @@ Definitions
 Acronyms
 ~~~~~~~~
 
+:MTG:
+    Meteosat Third Generation
+
+
+

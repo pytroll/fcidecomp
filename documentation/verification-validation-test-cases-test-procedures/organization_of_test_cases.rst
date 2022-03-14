@@ -5,13 +5,13 @@ Organization of Test Cases and Order of Execution
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Automatic test cases (FCIDECOMP.CLI.TC.01.01 and FCIDECOMP.PY.TC.01.01) test
-the FCIDECOMP software can be used to decompress FC1 L1c NRT data
+the FCIDECOMP software can be used to decompress FCI L1c NRT data
 via command line tools and via Python.
 The netCDF4 ``nccopy`` tool is taken as reference for command line tools,
 and the ``netCDF4`` Python library is taken as reference for use via Python.
 
 Manual test cases test the FCIDECOMP software
-can be used to decompress FC1 L1c NRT data
+can be used to decompress FCI L1c NRT data
 via selected Java Software and via the Data Tailor Software (FICDECOMP.JAVA.TC.01.01 and FCIDECOMP.DT.TC.01.01),
 and that it can be installed using the offline dependencies repository
 :ref:`[FCIDECOMP_DEP_OFF] <[FCIDECOMP_DEP_OFF]>` (FCIDECOMP.OFF.TC.01.01).

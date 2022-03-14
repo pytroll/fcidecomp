@@ -14,11 +14,11 @@ Scope
 ~~~~~
 
 Objective of this document is indicate the procedures to validate
-the ability of the FCIDECOMP software to decompress FC1 L1c NRT data,
+the ability of the FCIDECOMP software to decompress FCI L1c NRT data,
 meeting the goals defined in the :ref:`Verification & Validation Plan <[FCIDECOMP_VV]>`.
 
 These aim to verify a working installation of the EUMETSAT FCIDECOMP software and
-its ability to decompress FC1 L1c NRT data via selected CLI tools, Python,
+its ability to decompress FCI L1c NRT data via selected CLI tools, Python,
 the EUMETSAT Data Tailor Software and selected Java Software.
 
 It is addressed at:
