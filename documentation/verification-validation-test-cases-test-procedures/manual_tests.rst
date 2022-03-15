@@ -180,15 +180,16 @@ FCIDECOMP.OFF.TP.01.01: installation of the FCIDECOMP software using the offline
        ``$PYTHON_VERSION`` could be limited to ``3.9``
      - The installation completes without errors
    * - 1.
-     - Activate the ``conda`` environment in which the FCIDECOMP software has been installed, and run the following
-       command:
+     - Deactivate and re-activate the ``conda`` environment in which the FCIDECOMP software has been installed, and run
+       the following command:
 
        ``nccopy -F none $TO_TD.COMP.01_PATH $DECOMPRESSED_OUTPUT_PATH``
 
        where:
 
        * ``$TD.COMP.01_PATH`` is the path to the TD.COMP.01 test file
-       * ``$DECOMPRESSED_OUTPUT_PATH`` is the path to the decompressed output
+       * ``$DECOMPRESSED_OUTPUT_PATH`` is the path to the netCDF file where the decompressed output dataset will be
+         saved
      - The command runs without errors
    * - 2.
      - Check that the output product has been correctly decompressed, by opening it with Panoply (after reverting step 0
