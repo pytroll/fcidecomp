@@ -19,6 +19,12 @@
 # AUTHORS:
 # - B-Open Solutions srl
 
+"""
+This test checks that JPEG-LS compressed MTG FCI L1C products are correctly decompressed using the
+netCDF4 tool ``nccopy`` by comparing bands in the decompressed file with the same bands in
+a reference output.
+"""
+
 import os
 import subprocess
 
@@ -52,10 +58,9 @@ VARIABLES = [
 ]
 
 
-@pytest.mark.skipif(
-    "HDF5_PLUGIN_PATH" not in os.environ.keys(), reason="requires HDF5_PLUGIN_PATH in env"
-)
 def test_decompression(tmpdir):
+
+    assert "HDF5_PLUGIN_PATH" in os.environ.keys()
 
     for (comp_test_file, decomp_test_file) in zip(COMP_FILEPATH, DECOMP_FILEPATH):
 
@@ -77,8 +82,5 @@ def test_decompression(tmpdir):
                 array_test = ds_test[f"data/{band}/measured/{variable}"][:]
                 array_res = ds_res[f"data/{band}/measured/{variable}"][:]
                 assert np.ma.allequal(array_test, array_res)
-
-
-
 
 

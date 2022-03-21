@@ -14,26 +14,25 @@ and automated tests are preferred to manual tests.
 
 
 
-Decompression of FC1 L1c NRT data via command line (VG1)
+Decompression of FCI L1c NRT data via command line (VG1)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Decompression of FC1 L1c NRT data via command line is automatically tested using
+Decompression of FCI L1c NRT data via command line is automatically tested using
 
-Decompression of FC1 L1c NRT data via Python (VG2)
+Decompression of FCI L1c NRT data via Python (VG2)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Decompression of FC1 L1c NRT data via Python is automatically tested.
+Decompression of FCI L1c NRT data via Python is automatically tested.
 
-Decompression of FC1 L1c NRT data via Java (VG3)
+Decompression of FCI L1c NRT data via Java (VG3)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Decompression of FC1 L1c NRT data via Java is tested manually, by demostrating that
-MTG FCI L1C files can be opened with `Panoply <https://www.giss.nasa.gov/tools/panoply/>`_
-and `HDFView <https://earth.esa.int/eogateway/tools/hdfview>`_.
+Decompression of FCI L1c NRT data via Java is tested manually, by demostrating that
+MTG FCI L1C files can be opened with `Panoply <https://www.giss.nasa.gov/tools/panoply/>`_.
 
-Decompression of FC1 L1c NRT data via the Data Tailor software (VG4)
+Decompression of FCI L1c NRT data via the Data Tailor software (VG4)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Decompression of FC1 L1c NRT data via the Data Tailor software is tested manually.
+Decompression of FCI L1c NRT data via the Data Tailor software is tested manually.
 
-Since the Data Tailor supports MTG through plugins, decompression of FC1 L1c NRT data via the Data Tailor can be
-ensured by ensuring the plugin can be installed and can customise one compressed FC1 L1c product for each Data Tailor
+Since the Data Tailor supports MTG through plugins, decompression of FCI L1c NRT data via the Data Tailor can be
+ensured by ensuring the plugin can be installed and can customise one compressed FCI L1c product for each Data Tailor
 release.
 
 Package licensed as free and open source software (VG5)

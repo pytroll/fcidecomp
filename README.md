@@ -62,7 +62,7 @@ use of the FCIDECOMP decompression libraries should be automatically enabled for
 
 To be able to open JPEG-LS compressed netCDFs with Panoply, it should be instructed to use the NetCDF-C library (instead
 of NetCDF-Java) for reading purposes. In Linux, it is possible to enable this feature by ensuring the file
-`$HOME/.unidata/nj22Config.xml` exists, and that it contains the following lines:
+`$HOME/.unidata/nj22Config.xml` exists (if it doesn't, create it), and that it contains the following lines:
 
     <nj22Config>
       <Netcdf4Clibrary>
