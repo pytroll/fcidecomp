@@ -2,12 +2,12 @@
 # - https://github.com/conda-forge/charls-feedstock/blob/master/recipe/build.sh
 # - https://github.com/mraspaud/fcidecomp-conda-recipe/blob/master/build.sh
 
-{% set version = load_setup_py_data(setup_file='../src/fcidecomp-python/setup.py', from_recipe_dir=True) %}
+{% set setup_data = load_setup_py_data(setup_file='../src/fcidecomp-python/setup.py', from_recipe_dir=True) %}
 {% set charls_version = "2.1.0" %}
 
 package:
   name: fcidecomp
-  version: "{{ version.get('version') }}"
+  version: "{{ setup_data.get('version').replace('-', '_').strip() }}"
 
 source:
   - url: https://github.com/team-charls/charls/archive/{{ charls_version }}.tar.gz # [win32]
