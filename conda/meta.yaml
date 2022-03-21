@@ -7,7 +7,7 @@
 
 package:
   name: fcidecomp
-  version: {{ version }}
+  version: "{{ version.get('version') }}"
 
 source:
   - url: https://github.com/team-charls/charls/archive/{{ charls_version }}.tar.gz # [win32]
