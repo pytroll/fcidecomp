@@ -67,6 +67,49 @@ The build system for the software binaries is drawn from the one used in the
 :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>`, and adapted from there to guarantee support for all the
 required systems. It uses ``GCC`` and ``MSVC`` to compile the binaries respectively in Linux and Windows systems.
 
+Deploying the software on supported platforms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The FCIDECOMP software is hosted on the public EUMETSAT Conda channel, and can be easily installed on supported
+platforms using Conda.
+
+Prerequisites
+=============
+
+Installation requires:
+
+- ``conda``, installed as described at :ref:`[CONDA] <[CONDA]>`
+- a connection to the Internet
+
+Installation procedure
+======================
+
+The following instructions describe the FCIDECOMP software installation procedure, and are valid for any fo the
+supported platforms:
+
+#. Create a new Conda environment. Let's call it ``fcidecomp``, but any valid name would do (change the following
+   instructions accordingly)::
+
+    conda create -n fcidecomp python=$PYTHON_VERSION
+
+   where Python versions currently supported by the FCIDECOMP software are 3.7 <= ``$PYTHON_VERSION`` <= 3.9.
+
+#. Activate the environment::
+
+    conda activate fcidecomp
+
+#. Install the FCIDECOMP software and all its dependencies (see :ref:`installing_dependencies` for more details)::
+
+    conda install -y -c anaconda -c conda-forge -c eumetsat fcidecomp
+
+
+Once installation is complete, deactivate and reactivate the Conda environment to ensure the FCIDECOMP software is
+correctly configured and ready to be used::
+
+    conda deactivate
+    conda activate fcidecomp
+
+
 .. _installing_dependencies:
 
 Installing dependencies
@@ -82,6 +125,4 @@ should become unreachable, a separate assets repository is hosted on EUMETSAT in
 This assets repository hosts ``.tar.gz`` archives and Conda packages of all the dependencies needed for each release tag
 of the FCIDECOMP software. For a possible more general solution, which is out of the scope of this project, see
 :ref:`a_improvements`.
-
-
 
