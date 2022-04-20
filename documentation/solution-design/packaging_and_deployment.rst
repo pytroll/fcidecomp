@@ -67,8 +67,8 @@ The build system for the software binaries is drawn from the one used in the
 :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>`, and adapted from there to guarantee support for all the
 required systems. It uses ``GCC`` and ``MSVC`` to compile the binaries respectively in Linux and Windows systems.
 
-Deploying the software on supported platforms
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Deploying on supported platforms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The FCIDECOMP software is hosted on the public EUMETSAT Conda channel, and can be easily installed on supported
 platforms using Conda.
