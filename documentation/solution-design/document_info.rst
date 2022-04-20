@@ -29,6 +29,10 @@ Document Change Record
 
                                          In "Packaging as a Conda package" section, add details on the role of Conda packaging in the solution long-term maintainabiliy.
 
-    |version|                            Current version
+    |version|                            Rearrange "Packaging and Deployment" chapter.
+
+                                         Fix errata.
+
+                                         Add "Deploying on supported platform" paragraph (RID AM-1)
     ================ =========== ======= ===================================================================================================================================
 
