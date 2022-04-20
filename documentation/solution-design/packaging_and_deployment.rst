@@ -7,7 +7,7 @@ Introduction
 ~~~~~~~~~~~~
 
 This section describes the strategy to build and package the FCIDECOMP software in order to ensure
-support for all the required systems.
+support for all the required systems, and how to deploy it on supported platforms.
 
 .. _supported_platforms:
 
@@ -45,10 +45,23 @@ from the Swedish Meteorological and Hydrological Institute has been used.
 
 Conda packages are uploaded to EUMETSAT Anaconda repository https://anaconda.org/Eumetsat/repo.
 
+.. _packaging_process:
+
+Packaging process
+=================
+
+Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
+
+GitLab CI/CD pipelines to compile, build, test and upload the Conda packages to EUMETSAT Anaconda repository are
+implemented. Two GitLab runners are deployed to run the pipelines: one with a Docker executor on Linux and the
+other with a Shell executor on Windows 64-bit, which is used to build both 64- and 32-bit packages
+
+See :ref:`a_runners` for details on the deployed GitLab runners.
+
 .. _building_binaries:
 
 Building the binaries from the source code
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==========================================
 
 The build system for the software binaries is drawn from the one used in the
 :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>`, and adapted from there to guarantee support for all the
@@ -69,19 +82,6 @@ should become unreachable, a separate assets repository is hosted on EUMETSAT in
 This assets repository hosts ``.tar.gz`` archives and Conda packages of all the dependencies needed for each release tag
 of the FCIDECOMP software. For a possible more general solution, which is out of the scope of this project, see
 :ref:`a_improvements`.
-
-.. _packaging_process:
-
-Packaging process
-~~~~~~~~~~~~~~~~~
-
-Three Conda packages are released: one for Linux and two for Windows (32-bit and 64-bit).
-
-GitLab CI/CD pipelines to compile, build, test and upload the Conda packages to EUMETSAT Anaconda repository are
-implemented. Two GitLab runners are deployed to run the pipelines: one with a Docker executor on Linux and the
-other with a Shell executor on Windows 64-bit, which is used to build both 64- and 32-bit packages
-
-See :ref:`a_runners` for details on the deployed GitLab runners.
 
 
 
