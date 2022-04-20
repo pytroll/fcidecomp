@@ -72,10 +72,10 @@ required systems. It uses ``GCC`` and ``MSVC`` to compile the binaries respectiv
 Installing dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-All :ref:`dependencies <dependencies>` are installed through Conda (see :ref:`conda_package`), except for ``CharLS 1.x``.
-The required ``CharLS`` version, on which the :ref:`FCIDECOMP v1.0.2 source code <[FCIDECOMP_LATEST]>` is built upon,
-is no more present on any public Conda distribution channel. It is thus compiled and installed, together with the
-FCIDECOMP software binaries, starting from the source code available at its :ref:`GitHub repository <charls_v1>`.
+All :ref:`dependencies <dependencies>` are installed through Conda (see :ref:`conda_package`) except for Windows 32-bit
+version of ``CharLS 2.1.0``: this dependency, in fact, is currently not present on any public Conda distribution
+channel. It is thus compiled and installed, together with the FCIDECOMP software binaries, starting from the source code
+available at its :ref:`GitHub repository <charls_v2>`.
 
 In order to grant the ability to install the software even in case the remote repositories hosting its dependencies
 should become unreachable, a separate assets repository is hosted on EUMETSAT infrastructure.
