@@ -17,7 +17,12 @@ Installation procedures are in described in the INSTALL.rst file.
 A set of Python unit tests is present to ensure the installed software works correctly. They should be run within the
 Conda environment in which the software has been installed.
 
-The tests depend on the presence of a set of test data, which can be downloaded
+### Prerequisites
+
+- `pytest`, installed in the Conda environment in which the software has been installed as described 
+[here](https://anaconda.org/anaconda/pytest)
+
+Also, the tests depend on the presence of a set of test data, which can be downloaded
 [here](<https://gitlab.eumetsat.int/data-tailor/epct-test-data/-/tree/development/MTG/MTGFCIL1>).
 Test files should be placed in a directories tree structured as follows (replace $EPCT_TEST_DATA_DIR
 with any chosen name):
@@ -31,10 +36,14 @@ with any chosen name):
       |_ ...
 ```
 
-Once this is done, the environment variable `EPCT_TEST_DATA_DIR` should be set to the full path to $EPCT_TEST_DATA_DIR,
-and tests can be executed running the following command from within the root directory of the repository:
+Once this is done, the environment variable `EPCT_TEST_DATA_DIR` should be set to the full path to the 
+`$EPCT_TEST_DATA_DIR` diretory.
 
-    pytest -vv
+### Running the tests
+
+Tests can be executed running the following command from within the root directory of the FCIDECOMP software repository:
+
+    pytest -vv tests
 
 ## Using the FCIDECOMP software
 
