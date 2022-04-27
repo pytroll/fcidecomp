@@ -37,7 +37,7 @@ with any chosen name):
 ```
 
 Once this is done, the environment variable `EPCT_TEST_DATA_DIR` should be set to the full path to the 
-`$EPCT_TEST_DATA_DIR` diretory.
+`$EPCT_TEST_DATA_DIR` directory.
 
 ### Running the tests
 
