@@ -10,7 +10,7 @@ The FCIDECOMP software can be installed on:
 - Windows 10 64-bit
 - Windows 10 32-bit
 
-Installation procedures are in described in the INSTALL.rst file.
+Installation procedures are described in the INSTALL file.
 
 ## Testing the FCIDECOMP software
 
