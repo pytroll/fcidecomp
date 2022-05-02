@@ -36,7 +36,7 @@ import os
 
 import re
 
-project = "EUMETSAT WP FCIDECOMP - Available software and documents analysis"
+project = "EUMETSAT WP FCIDECOMP - Installation Manual"
 copyright = (
     "2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
 )
@@ -194,8 +194,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "fcidecomp-available-software-analysis.tex",
-        "EUMETSAT WP FCIDECOMP - Available software and documents analysis",
+        "fcidecomp-installation-manual.tex",
+        "EUMETSAT WP FCIDECOMP - Installation manual",
         "EUMETSAT",
         "manual",
     ),
@@ -208,8 +208,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "fcidecomp-available-software-analysis",
-        "EUMETSAT WP FCIDECOMP - Available software and documents analysis",
+        "fcidecomp-installation-manual",
+        "EUMETSAT WP FCIDECOMP - Installation manual",
         [author],
         1,
     )
@@ -223,10 +223,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "fcidecomp-available-software-analysis",
-        "EUMETSAT WP FCIDECOMP - Available software and documents analysis",
+        "fcidecomp-installtion-manual",
+        "EUMETSAT WP FCIDECOMP - Installation manual",
         author,
-        "fcidecomp-available-software-analysis",
+        "fcidecomp-installation-manual",
         "One line description of project.",
         "Miscellaneous",
     ),

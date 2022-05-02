@@ -1,61 +1,83 @@
-Repositories
-------------
+Installing the EUMETSAT FCIDECOMP software
+------------------------------------------
 
-Here a list of the different repositories containing a version of the FCIDECOMP software is reported. Details on the
-actions taken can be found in :ref:`EUMETSAT WP FCIDECOMP - Solution design <[FCIDECOMP_DESIGN]>`
+Installation procedures have been tested for the following Operating Systems:
 
-FCIDECOPM v1.0.2 (latest)
-~~~~~~~~~~~~~~~~~~~~~~~~~
+- Linux CentOS 7 64-bit
+- Linux Ubuntu 18.04 LTS 64-bit
+- Linux Ubuntu 20.04 LTS 64-bit
+- Windows 10 64-bit
+- Windows 10 32-bit
 
-.. list-table:: FCIDECOMP source code repositories - v1.0.2
-  :header-rows: 1
-  :class: longtable
-  :widths: 15 15 30 40
+There are four ways to install the EUMETSAT FCIDECOMP software:
 
-  * - Usage
-    - Contact person / organization
-    - Proposed action
-    - URL
+- from the Conda packages hosted in the EUMETSAT Anaconda repository (requires an Internet connection),
+  as described in the :ref:`install_anaconda_repo` section;
+- using the provided Conda recipe, as described in the :ref:`install_conda_recipe` section;
+- from the Conda packages downloaded as artifacts of a CI/CD GitLab pipeline on the target machine
+  (mostly for testing purposes), as described in the :ref:`install_artifacts` section;
+- using the FCIDECOMP dependencies repository hosted at :ref:`[FCI_DEP_REPOSITORY] <[FCI_DEP_REPOSITORY]>`,
+  as described in the :ref:`install_dep_repo` section.
 
-  * - EUMETSAT sFTP
-    - EUMETSAT
-    - Replace with / redirect to canonical repository
-    - `link <https://sftp.eumetsat.int/public/folder/UsCVknVOOkSyCdgpMimJNQ/User-Materials/Test-Data/MTG/MTG_FCI_L1C_Enhanced-NonN_TD-272_May2020/FCI_Decompression_Software_V1.0.2/EUMETSAT-FCIDECOMP_V1.0.2.tar.gz>`_
+.. _install_anaconda_repo:
 
-  * - EUMETSAT FTP
-    - EUMETSAT
-    - Replace with / redirect to canonical repository
-    - `link <ftp://ftp.eumetsat.int/pub/OPS/out/test-data/Test-data-for-External-Users/MTG_FCI_Test-Data/FCI_Decompression_Software_V1.0.2/EUMETSAT-FCIDECOMP_V1.0.2.tar.gz>`_
+Installation from the Anaconda repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  * - EUMETSAT Data Tailor
-    - EUMETSAT
-    - Use Conda package to install FCIDECOMP
-    - `link <https://gitlab.eumetsat.int/data-tailor/support-to-mtg/mtg-fci1c-fcicomp-docker/-/blob/master/fcicomp_sources-V1.0.2.tar.gz>`_
+For detailed instructions on how to install the FCIDECOMP software from the public EUMETSAT Anaconda repoistory, see
+the INSTALL file in the public FCIDECOMP GitLab repository root directory at
+:ref:`[FCI_PUB_REPOSITORY] <[FCI_PUB_REPOSITORY]>`.
 
-  * - Embedded in ``hdf5plugin``
-    - silx project (silx@esrf.fr)
-    - Interact with maintainers to reduce risk of potential conflicts
-    - `link <https://github.com/silx-kit/hdf5plugin/tree/main/src/fcidecomp/FCIDECOMP_V1.0.2>`_
+.. _install_conda_recipe:
 
-Older versions
-~~~~~~~~~~~~~~
+Installation using the Conda recipe
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. list-table:: FCIDECOMP source code repositories - v1.0.1
-  :header-rows: 1
-  :class: longtable
-  :widths: 15 15 30 40
+For detailed instructions on how to install the FCIDECOMP software using its Conda recipe, see
+the INSTALL file in the development FCIDECOMP GitLab repository ``/conda`` directory at
+:ref:`[FCI_DEV_REPOSITORY] <[FCI_DEV_REPOSITORY]>`.
 
-  * - Usage
-    - Contact person / organization
-    - Proposed action
-    - URL
+.. _install_artifacts:
 
-  * - EUMETSAT FTP
-    - EUMETSAT
-    - Remove / redirect to canonical repository
-    - `link <ftp://ftp.eumetsat.int/pub/OPS/out/test-data/Test-data-for-External-Users/MTG_FCI_L1c_Compressed-Datasets_and_Decompression-Plugin_April2017/Decompression_Plugin/EUMETSAT-FCIDECOMP_V1.0.1.tar.gz>`_
+Installation using an 'artifacts' file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  * - EUMETSAT Data Tailor
-    - EUMETSAT
-    - Use Conda package to install FCIDECOMP
-    - `link <https://gitlab.eumetsat.int/data-tailor/support-to-mtg/FCI_COMPRESSOR/-/tree/develop/FCIDECOMP_SOURCES>`_
+Pre-requisites
+^^^^^^^^^^^^^^
+
+Installation requires:
+
+- the FCIDECOMP  packages, downloaded as a single ``zip`` artifacts file from the "deploy" job of the project's
+  CI/CD pipeline for the branch/tag of interest;
+- ``conda``, installed as described at
+  :ref:`[CONDA_INST_INSTR] <[CONDA_INST_INSTR]>`.
+
+Installation
+^^^^^^^^^^^^
+
+Start by creating a new Conda environment. Let's call it ``fcidecomp``, but any valid name would do (change the
+following instructions accordingly)::
+
+    conda create -n fcidecomp python=$PYTHON_VERSION
+
+where Python versions currently supported by the FCIDECOMP software are 3.7 <= ``$PYTHON_VERSION`` <= 3.9.
+
+Activate the environment::
+
+    conda activate fcidecomp
+
+Unzip the Conda packages. They end up in a directory which ends with ``conda-channel``.
+Execute (replace ``$CONDA_CHANNEL_PATH`` with the path to the directory, including ``conda-channel``)::
+
+    conda install -y -c anaconda -c conda-forge -c $CONDA_CHANNEL_PATH fcidecomp
+
+.. _install_dep_repo:
+
+Installation using the FCIDECOMP dependencies repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+An archive of the dependencies needed to install the FCIDECOMP software is hosted at
+:ref:`[FCI_DEP_REPOSITORY] <[FCI_DEP_REPOSITORY]>`, in case any of the required dependencies should be
+unavailable from public channels. For detailed instructions on how to install the FCIDECOMP software using this
+repository, see the README file in the FCIDECOMP dependencies repository root directory at
+:ref:`[FCI_DEP_REPOSITORY] <[FCI_DEP_REPOSITORY]>`.
