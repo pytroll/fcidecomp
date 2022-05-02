@@ -34,6 +34,8 @@ Now execute:
 
     conda install -y -c anaconda -c conda-forge -c eumetsat fcidecomp
 
+## Post-installation configuration
+
 Once the installation has completed, re-activate the `conda` environment running the following commands:
 
     conda deactivate
