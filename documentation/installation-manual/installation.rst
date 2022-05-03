@@ -81,3 +81,15 @@ An archive of the dependencies needed to install the FCIDECOMP software is hoste
 unavailable from public channels. For detailed instructions on how to install the FCIDECOMP software using this
 repository, see the README file in the FCIDECOMP dependencies repository root directory at
 :ref:`[FCI_DEP_REPOSITORY] <[FCI_DEP_REPOSITORY]>`.
+
+Post-installation configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the installation has completed, re-activate the Conda environment running the following commands::
+
+    conda deactivate
+    conda activate fcidecomp
+
+This last step ensures the ``HDF5_PLUGIN_PATH`` environment variable is correctly set to the directory containing the
+FCIDECOMP decompression libraries (check if that's actually the case to ensure the FCIDECOMP is correctly configured
+and ready to be used).

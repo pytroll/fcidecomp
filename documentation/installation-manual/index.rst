@@ -13,6 +13,5 @@ EUMETSAT WP FCIDECOMP - Installation manual
    document_info
    introduction
    installation
-   post_installation
    tbd
 
