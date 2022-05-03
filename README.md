@@ -49,6 +49,8 @@ Tests can be executed running the following command from within the root directo
 
 ## Using the FCIDECOMP software
 
+The FCIDECOMP decompression library can be used in different ways, described in the following sections.
+
 ### Use with netCDF4-C tools
 
 Once the `fcidecomp` Conda package is installed and the Conda environment in which it is installed is activated,
@@ -67,13 +69,19 @@ where:
 Once the `fcidecomp` Conda package is installed and the Conda environment in which it is installed is activated,
 use of the FCIDECOMP decompression libraries should be automatically enabled for `h5py`-based Python libraries.
 
-### Use with NetCDF-Java based tools
+To ensure the FCIDECOMP filter is loaded, in a Python shell execute:
 
-#### Panoply
+    import fcidecomp
+    
+Now every `h5py`-based Python library, such as `xarray`, will be able to open and read JPEG-LS compressed files without 
+further steps.
 
-To be able to open JPEG-LS compressed netCDFs with Panoply, it should be instructed to use the NetCDF-C library (instead
-of NetCDF-Java) for reading purposes. In Linux, it is possible to enable this feature by ensuring the file
-`$HOME/.unidata/nj22Config.xml` exists (if it doesn't, create it), and that it contains the following lines:
+### Use with netCDF-Java based tools
+
+Starting from netCDF-Java **TBD**, it is possible to open JPEG-LS compressed netCDFs with netCDF-Java based tools, 
+such as toolsUI and Panoply, instructing netCDF-Java to use the netCDF-C library for reading purposes. 
+It is possible to enable this feature by ensuring the file `$HOME/.unidata/nj22Config.xml` exists (if it doesn't, 
+is should be created) and that it contains the following lines:
 
     <nj22Config>
       <Netcdf4Clibrary>
@@ -83,8 +91,25 @@ of NetCDF-Java) for reading purposes. In Linux, it is possible to enable this fe
       </Netcdf4Clibrary>
     </nj22Config>
 
-where `$PATH_TO_NETCDF_LIB_DIR` is the path to the directory containing the `netcdf4` library: in Linux, it is equal 
-to `$PATH_TO_CONDA_ENV/lib`, where `$PATH_TO_CONDA_ENV` is the path to the `conda` environment in which `fcidecomp` is 
-installed.
+where `$PATH_TO_NETCDF_LIB_DIR` is the path to the directory containing the `netcdf4` library, which:
 
-This feature is not currently available for Windows.
+- in Linux, corresponds to `$PATH_TO_CONDA_ENV/lib`
+- in Windows, corresponds to `$PATH_TO_CONDA_ENV\Library\lib`
+
+with `$PATH_TO_CONDA_ENV` equal to the path to the `conda` environment in which `fcidecomp` is installed.
+
+The described feature has also been proved working for netCDF-Java 5.1.0.
+
+### Use with the EUMETSAT Data-Tailor software
+
+A plugin enabling the decompression of JPEG-LS Meteosat Third Generation (MTG) products via the FCIDECOMP software is
+available for the EUMETSAT Data-Tailor software. For further information, refer to the README of its [public GitLab
+repository](<TBD>) and the [dedicated EUMETSAT confluence page](<TBD>).
+
+## TBDs
+
+| Section     | TBD         |
+| ----------- | ----------- |
+| [Use with netCDF-Java based tools](#use-with-netcdf-java-based-tools)                       | Set version of netCDF-Java enabling described feature when available  |
+| [Use with the EUMETSAT Data-Tailor software](#use-with-the-eumetsat-data-tailor-software)   | Set URL to public MTG plugin GitLab repository, when available        |
+| [Use with the EUMETSAT Data-Tailor software](#use-with-the-eumetsat-data-tailor-software)   | Set URL to confluence MTG plugin page, when available                 |
