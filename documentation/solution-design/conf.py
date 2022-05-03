@@ -174,14 +174,14 @@ latex_elements = {
         \pagestyle{fancy}
         \fancypagestyle{normal}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{project-docs/solution-design \\ v.version, \today \\ EUMETSAT WP FCIDECOMP - Solution design}}
+        \fancyhead[RE,RO]{\bf{documentation/solution-design \\ v.version, \today \\ EUMETSAT WP FCIDECOMP - Solution design}}
         \renewcommand{\headrulewidth}{0.5pt}
         \fancyfoot{}
         \fancyfoot[C]{\thepage}
         }
         \fancypagestyle{plain}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{project-docs/solution-design \\ v.version, \today \\ EUMETSAT WP FCIDECOMP - Solution design}}
+        \fancyhead[RE,RO]{\bf{documentation/solution-design \\ v.version, \today \\ EUMETSAT WP FCIDECOMP - Solution design}}
         \fancyfoot[CO,CE]{\thepage}
         }
 

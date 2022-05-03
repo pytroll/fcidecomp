@@ -178,14 +178,14 @@ latex_elements = {
         \pagestyle{fancy}
         \fancypagestyle{normal}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{project-docs/verification-validation-plan \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Plan}}
+        \fancyhead[RE,RO]{\bf{documentation/verification-validation-plan \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Plan}}
         \renewcommand{\headrulewidth}{0.5pt}
         \fancyfoot{}
         \fancyfoot[C]{\thepage}
         }
         \fancypagestyle{plain}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{project-docs/verification-validation-plan \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Plan}}
+        \fancyhead[RE,RO]{\bf{documentation/verification-validation-plan \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Plan}}
         \fancyfoot[CO,CE]{\thepage}
         }
 
