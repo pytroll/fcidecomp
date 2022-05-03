@@ -26,5 +26,5 @@ Document Change Record
 
     0.1.0-doc        12 Jan 2022         Add EUMETSAT Data-Tailor public documentation among FCIDECOMP software references to be updated.
 
-    |version|                            Current version.
+    |version|                            Make reference to the EUMETSAT Data-Tailor public documentation to be updated more specific.
     ================ =========== ======= ===================================================================================================================================
