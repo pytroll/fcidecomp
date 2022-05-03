@@ -47,7 +47,7 @@ Pre-requisites
 
 Installation requires:
 
-- the FCIDECOMP  packages, downloaded as a single ``zip`` artifacts file from the "deploy" job of the project's
+- the FCIDECOMP Conda packages, downloaded as a single ``zip`` artifacts file from the "deploy" job of the project's
   CI/CD pipeline for the branch/tag of interest;
 - ``conda``, installed as described at
   :ref:`[CONDA_INST_INSTR] <[CONDA_INST_INSTR]>`.
@@ -66,7 +66,7 @@ Activate the environment::
 
     conda activate fcidecomp
 
-Unzip the Conda packages. They end up in a directory which ends with ``conda-channel``.
+Unzip the FCIDECOMP Conda packages. They end up in a directory which ends with ``conda-channel``.
 Execute (replace ``$CONDA_CHANNEL_PATH`` with the path to the directory, including ``conda-channel``)::
 
     conda install -y -c anaconda -c conda-forge -c $CONDA_CHANNEL_PATH fcidecomp
