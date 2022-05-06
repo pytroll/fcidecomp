@@ -29,9 +29,11 @@ Document Change Record
 
                                          In "Packaging as a Conda package" section, add details on the role of Conda packaging in the solution long-term maintainabiliy.
 
-    |version|                            Rearrange "Packaging and Deployment" chapter.
+    2.0.0-rc2        5 May 2022          Rearrange "Packaging and Deployment" chapter.
 
                                          Fix errata.
+
+                                         Explain Gitlab runner and GitLab pipelines  (RID AM-2)
 
                                          Add "Deploying on supported platform" paragraph (RID AM-1).
 
