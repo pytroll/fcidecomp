@@ -49,8 +49,8 @@ Documentation
 
   * - EUMETSAT Data Tailor documentation
     - Ben Loveday (EUMETSAT)
-    - Interact with documentation maintainers to add information and instructions on FCIDECOMP plugin installation and usage
-    - https://eumetsatspace.atlassian.net/wiki/spaces/DSDT/overview
+    - Interact with documentation maintainers to add information and instructions on FCIDECOMP plugin installation and usage, in a child of the referenced page
+    - https://eumetsatspace.atlassian.net/wiki/spaces/DSDT/pages/378273985/Installing+or+removing+customisation+plugins
 
   * - EUMETSAT Data Tailor news feed
     - EUMETSAT

@@ -36,7 +36,7 @@ import os
 
 import re
 
-project = "EUMETSAT FCIDECOMP - Solution design"
+project = "EUMETSAT WP FCIDECOMP - Installation Manual"
 copyright = (
     "2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
 )
@@ -174,14 +174,14 @@ latex_elements = {
         \pagestyle{fancy}
         \fancypagestyle{normal}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{documentation/solution-design \\ v.version, \today \\ EUMETSAT WP FCIDECOMP - Solution design}}
+        \fancyhead[RE,RO]{\bf{documentation/installation-manual \\ version, \today \\ EUMETSAT WP FCIDECOMP - Installation Manual}}
         \renewcommand{\headrulewidth}{0.5pt}
         \fancyfoot{}
         \fancyfoot[C]{\thepage}
         }
         \fancypagestyle{plain}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{documentation/solution-design \\ v.version, \today \\ EUMETSAT WP FCIDECOMP - Solution design}}
+        \fancyhead[RE,RO]{\bf{documentation/installation-manual \\ version, \today \\ EUMETSAT WP FCIDECOMP - Installation Manual}}
         \fancyfoot[CO,CE]{\thepage}
         }
 
@@ -194,8 +194,8 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "fcidecomp-solution-design.tex",
-        "EUMETSAT WP FCIDECOMP - Solution design",
+        "fcidecomp-installation-manual.tex",
+        "EUMETSAT WP FCIDECOMP - Installation manual",
         "EUMETSAT",
         "manual",
     ),
@@ -208,8 +208,8 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
-        "fcidecomp-solution-design",
-        "EUMETSAT WP FCIDECOMP - Solution design",
+        "fcidecomp-installation-manual",
+        "EUMETSAT WP FCIDECOMP - Installation manual",
         [author],
         1,
     )
@@ -223,10 +223,10 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
-        "fcidecomp-solution-design",
-        "EUMETSAT WP FCIDECOMP - Solution design",
+        "fcidecomp-installtion-manual",
+        "EUMETSAT WP FCIDECOMP - Installation manual",
         author,
-        "fcidecomp-solution-design",
+        "fcidecomp-installation-manual",
         "One line description of project.",
         "Miscellaneous",
     ),

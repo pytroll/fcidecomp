@@ -215,14 +215,14 @@ latex_elements = {
         \pagestyle{fancy}
         \fancypagestyle{normal}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{documents/verification-and-validation-test-cases-test-procedures \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures}}
+        \fancyhead[RE,RO]{\bf{documentation/verification-and-validation-test-cases-test-procedures \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures}}
         \renewcommand{\headrulewidth}{0.5pt}
         \fancyfoot{}
         \fancyfoot[C]{\thepage}
         }
         \fancypagestyle{plain}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{documents/verification-and-validation-test-cases-test-procedures \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures}}
+        \fancyhead[RE,RO]{\bf{documentation/verification-and-validation-test-cases-test-procedures \\ version, \today \\ EUMETSAT Data Tailor Web Service - Support to CharLS decompression for MTG users - Verification and Validation Test Cases and Test Procedures}}
         \fancyfoot[CO,CE]{\thepage}
         }
 

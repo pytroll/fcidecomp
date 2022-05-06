@@ -37,6 +37,12 @@ Reference Documents
     - Title
     - Reference
 
+  * - [CONDA]
+
+      .. _[CONDA]:
+    - ``conda`` installation instructions
+    - https://conda.io/projects/conda/en/latest/user-guide/install/index.html
+
   * - [CONDA_VARIANTS]
 
       .. _[CONDA_VARIANTS]:

@@ -25,6 +25,13 @@ Build on platform Windows require also:
 
   - Desktop development with C++ (with optional package "C++ CMake tools for Windows")
   - Universal Windows Platform development
+  
+#### Tested compilers
+
+The build process has been successfully tested with the following compilers:
+
+- `gcc`/`g++ 9.3.0` on Linux platforms
+- `MSVC 19.30` on Windows platforms
 
 ### Conda package build and install on Linux
 

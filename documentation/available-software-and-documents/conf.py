@@ -174,14 +174,14 @@ latex_elements = {
         \pagestyle{fancy}
         \fancypagestyle{normal}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{project-docs/available-software-and-documents \\ version, \today \\ EUMETSAT WP FCIDECOMP - Available software and documents analysis}}
+        \fancyhead[RE,RO]{\bf{documentation/available-software-and-documents \\ version, \today \\ EUMETSAT WP FCIDECOMP - Available software and documents analysis}}
         \renewcommand{\headrulewidth}{0.5pt}
         \fancyfoot{}
         \fancyfoot[C]{\thepage}
         }
         \fancypagestyle{plain}{%
         \fancyhead{}
-        \fancyhead[RE,RO]{\bf{project-docs/available-software-and-documents \\ version, \today \\ EUMETSAT WP FCIDECOMP - Available software and documents analysis}}
+        \fancyhead[RE,RO]{\bf{documentation/available-software-and-documents \\ version, \today \\ EUMETSAT WP FCIDECOMP - Available software and documents analysis}}
         \fancyfoot[CO,CE]{\thepage}
         }
 

@@ -21,9 +21,9 @@ External dipendencies of the FCIDECOMP software are listed in the following tabl
   * - Name
     - Reference
 
-      .. _charls_v1:
-  * - CharLS v1.x
-    - https://github.com/team-charls/charls/tree/1.x-master
+      .. _charls_v2:
+  * - CharLS v2.0.1
+    - https://github.com/team-charls/charls/tree/2.1.0
 
   * - zlib
     - http://zlib.net/
