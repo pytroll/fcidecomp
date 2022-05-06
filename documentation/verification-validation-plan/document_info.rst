@@ -8,6 +8,8 @@ Document Information
 +---------------------------+--------------------------------------------------------------------------+
 | Author :                  | A. Siniscalchi (B-Open Solutions)                                        |
 |                           |                                                                          |
+|                           | M. Cucchi (B-Open Solutions)                                             |
+|                           |                                                                          |
 |                           | M. Bottaccio (B-Open Solutions)                                          |
 +---------------------------+--------------------------------------------------------------------------+
 
@@ -28,10 +30,12 @@ Document Change Record
 
                                          Add details in V&V strategy for VG4.
 
-    |version|                            Add VG6.
+    2.0.0-doc        6 May 2022          Add VG6.
 
                                          Add OFF test category.
 
                                          Remove HDFView from tested software in VG3.
+
+                                         Fix RID ID: AM-5
     ================ =========== ======= ===================================================================================================================================
 
