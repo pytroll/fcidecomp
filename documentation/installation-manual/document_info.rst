@@ -7,8 +7,6 @@ Document Information
 | Version:                  | |version|                                                                |
 +---------------------------+--------------------------------------------------------------------------+
 | Authors:                  | M. Cucchi (B-Open Solutions)                                             |
-|                           |                                                                          |
-|                           | M. Bottaccio (B-Open Solutions)                                          |
 +---------------------------+--------------------------------------------------------------------------+
 
 
@@ -22,5 +20,5 @@ Document Change Record
     ================ =========== ======= ===================================================================================================================================
     Issue / Revision Date        DCN. No Changed Pages / Paragraphs
 
-    |version|        2 May 2022          Initial issue, prepared under contract EUM/SEP/WPD/21/1244304 by B-Open Solutions srl.
+    2.0.0-rc2        5 May 2022          Initial issue, prepared under contract EUM/SEP/WPD/21/1244304 by B-Open Solutions srl.
     ================ =========== ======= ===================================================================================================================================
