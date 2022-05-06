@@ -25,8 +25,8 @@ Installation from the Anaconda repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For detailed instructions on how to install the FCIDECOMP software from the public EUMETSAT Anaconda repoistory, see
-the INSTALL file in the public FCIDECOMP GitLab repository root directory at
-:ref:`[FCI_PUB_REPOSITORY] <[FCI_PUB_REPOSITORY]>`.
+the INSTALL file in the root directory of the public FCIDECOMP GitLab repository at
+:ref:`[EUM_PUB_REPOSITORY] <[EUM_PUB_REPOSITORY]>`.
 
 .. _install_conda_recipe:
 

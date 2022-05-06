@@ -40,9 +40,9 @@ Reference resources
     - Development GitLab repository for the EUMETSAT FCIDECOMP software
     - `https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp <https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp>`_
 
-  * - [FCI_PUB_REPOSITORY]
+  * - [EUM_PUB_REPOSITORY]
 
-      .. _[FCI_PUB_REPOSITORY]:
-    - Public GitLab repository for the EUMETSAT FCIDECOMP software
-    - **TBD**
+      .. _[EUM_PUB_REPOSITORY]:
+    - EUMETSAT open-source software GitLab repository
+    - `https://gitlab.eumetsat.int/open-source <https://gitlab.eumetsat.int/open-source>`_
 

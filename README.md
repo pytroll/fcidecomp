@@ -81,10 +81,10 @@ further steps.
 
 ### Use with netCDF-Java based tools
 
-Starting from netCDF-Java **TBD**, it is possible to open JPEG-LS compressed netCDFs with netCDF-Java based tools, 
-such as toolsUI and Panoply, instructing netCDF-Java to use the netCDF-C library for reading purposes. 
-It is possible to enable this feature by ensuring the file `$HOME/.unidata/nj22Config.xml` exists (if it doesn't, 
-is should be created) and that it contains the following lines:
+With netCDF-Java versions greater than 5.5.2, it is possible to open JPEG-LS compressed netCDFs with netCDF-Java based 
+tools, such as toolsUI and Panoply, instructing netCDF-Java to use the netCDF-C library for reading purposes. 
+To enable this feature ensure the file `$HOME/.unidata/nj22Config.xml` exists (if it doesn't, it should be created) and 
+that it contains the following lines:
 
     <nj22Config>
       <Netcdf4Clibrary>
@@ -107,12 +107,6 @@ The described feature has also been proved working for netCDF-Java 5.1.0.
 
 A plugin enabling the decompression of JPEG-LS Meteosat Third Generation (MTG) products via the FCIDECOMP software is
 available for the EUMETSAT Data-Tailor software. For further information, refer to the README of its [public GitLab
-repository](<TBD>) and the [dedicated EUMETSAT confluence page](<TBD>).
-
-## TBDs
-
-| Section     | TBD         |
-| ----------- | ----------- |
-| [Use with netCDF-Java based tools](#use-with-netcdf-java-based-tools)                       | Set version of netCDF-Java enabling described feature when available  |
-| [Use with the EUMETSAT Data-Tailor software](#use-with-the-eumetsat-data-tailor-software)   | Set URL to public MTG plugin GitLab repository, when available        |
-| [Use with the EUMETSAT Data-Tailor software](#use-with-the-eumetsat-data-tailor-software)   | Set URL to confluence MTG plugin page, when available                 |
+repository](<https://gitlab.eumetsat.int/open-source>) and the dedicated EUMETSAT confluence page which, once created,
+will be a subpage of the [Installing or removing customisation plugins](<https://eumetsatspace.atlassian.net/wiki/spaces/DSDT/pages/378273985/Installing+or+removing+customisation+plugins>)
+page.

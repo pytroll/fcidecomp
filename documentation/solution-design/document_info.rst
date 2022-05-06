@@ -33,6 +33,8 @@ Document Change Record
 
                                          Fix errata.
 
-                                         Add "Deploying on supported platform" paragraph (RID AM-1)
+                                         Add "Deploying on supported platform" paragraph (RID AM-1).
+
+                                         Resolve TBD on public EUMETSAT GitLab repository.
     ================ =========== ======= ===================================================================================================================================
 
