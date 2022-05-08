@@ -4,7 +4,7 @@ Repositories
 Here a list of the different repositories containing a version of the FCIDECOMP software is reported. Details on the
 actions taken can be found in :ref:`EUMETSAT WP FCIDECOMP - Solution design <[FCIDECOMP_DESIGN]>`
 
-FCIDECOPM v1.0.2 (latest)
+FCIDECOMP v1.0.2 (latest)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table:: FCIDECOMP source code repositories - v1.0.2

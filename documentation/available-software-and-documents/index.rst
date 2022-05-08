@@ -8,10 +8,9 @@ EUMETSAT WP FCIDECOMP - Available software and documents analysis
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
    document_info
    introduction
    repositories
    software_references
-

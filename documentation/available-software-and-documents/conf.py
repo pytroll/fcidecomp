@@ -38,7 +38,7 @@ import re
 
 project = "EUMETSAT WP FCIDECOMP - Available software and documents analysis"
 copyright = (
-    "2021, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
+    "2021-2022, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
 )
 author = "B-Open Solutions srl"
 
@@ -141,7 +141,6 @@ latex_elements = {
 
         \clearpage
         \pagenumbering{roman}
-        \listoftables
         \clearpage
         \pagenumbering{arabic}
 
