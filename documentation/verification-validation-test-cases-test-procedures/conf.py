@@ -180,9 +180,6 @@ latex_elements = {
         \sphinxmaketitle
 
         \clearpage
-        \pagenumbering{roman}
-        \listoftables
-        \clearpage
         \pagenumbering{arabic}
 
         """,

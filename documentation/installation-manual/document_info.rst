@@ -23,5 +23,5 @@ Document Change Record
     ================ =========== ======= ===================================================================================================================================
     Issue / Revision Date        DCN. No Changed Pages / Paragraphs
 
-    2.0.0-rc2        5 May 2022          Initial issue, prepared under contract EUM/SEP/WPD/21/1244304 by B-Open Solutions srl.
+    2.0.0-rc2        8 May 2022          Initial issue, prepared under contract EUM/SEP/WPD/21/1244304 by B-Open Solutions srl.
     ================ =========== ======= ===================================================================================================================================

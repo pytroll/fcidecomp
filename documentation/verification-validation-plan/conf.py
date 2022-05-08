@@ -143,10 +143,6 @@ latex_elements = {
         \sphinxmaketitle
 
         \clearpage
-        \pagenumbering{roman}
-        \listoffigures
-        \listoftables
-        \clearpage
         \pagenumbering{arabic}
 
         """,

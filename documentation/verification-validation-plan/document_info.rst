@@ -6,11 +6,11 @@ Document Information
 +---------------------------+--------------------------------------------------------------------------+
 | External version:         | |version|                                                                |
 +---------------------------+--------------------------------------------------------------------------+
-| Author :                  | A. Siniscalchi (B-Open Solutions)                                        |
+| Author :                  | A\. Siniscalchi (B-Open Solutions)                                       |
 |                           |                                                                          |
-|                           | M. Cucchi (B-Open Solutions)                                             |
+|                           | M\. Cucchi (B-Open Solutions)                                            |
 |                           |                                                                          |
-|                           | M. Bottaccio (B-Open Solutions)                                          |
+|                           | M\. Bottaccio (B-Open Solutions)                                         |
 +---------------------------+--------------------------------------------------------------------------+
 
 
@@ -30,7 +30,7 @@ Document Change Record
 
                                          Add details in V&V strategy for VG4.
 
-    2.0.0-doc        6 May 2022          Add VG6.
+    2.0.0-rc2        8 May 2022          Add VG6.
 
                                          Add OFF test category.
 

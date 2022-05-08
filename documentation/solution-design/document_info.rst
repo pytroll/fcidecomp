@@ -1,15 +1,18 @@
 Document Information
 ====================
 
-+--------------------------+----------------------------------------------------------------------------+
-| ID:                      | fcidecomp/documentation/solution-design                                    |
-+--------------------------+----------------------------------------------------------------------------+
-| Version:                 | |version|                                                                  |
-+--------------------------+----------------------------------------------------------------------------+
-| Authors:                 | M. Cucchi (B-Open Solutions)                                               |
-|                          |                                                                            |
-|                          | M. Bottaccio (B-Open Solutions)                                            |
-+--------------------------+----------------------------------------------------------------------------+
+.. table::
+    :widths: 30 70
+
+    +--------------------------+----------------------------------------------------------------------------+
+    | ID:                      | fcidecomp/documentation/solution-design                                    |
+    +--------------------------+----------------------------------------------------------------------------+
+    | Version:                 | |version|                                                                  |
+    +--------------------------+----------------------------------------------------------------------------+
+    | Authors:                 | M\. Cucchi (B-Open Solutions)                                              |
+    |                          |                                                                            |
+    |                          | M\. Bottaccio (B-Open Solutions)                                           |
+    +--------------------------+----------------------------------------------------------------------------+
 
 Document Change Record
 ----------------------
@@ -29,7 +32,7 @@ Document Change Record
 
                                          In "Packaging as a Conda package" section, add details on the role of Conda packaging in the solution long-term maintainabiliy.
 
-    2.0.0-rc2        5 May 2022          Rearrange "Packaging and Deployment" chapter.
+    2.0.0-rc2        8 May 2022          Rearrange "Packaging and Deployment" chapter.
 
                                          Fix errata.
 

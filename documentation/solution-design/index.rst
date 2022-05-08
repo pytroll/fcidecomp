@@ -3,7 +3,7 @@ EUMETSAT WP FCIDECOMP - Solution design
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
    document_info
    introduction
