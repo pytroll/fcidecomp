@@ -8,7 +8,7 @@ EUMETSAT WP FCIDECOMP - Installation manual
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Contents
 
    document_info
    introduction
