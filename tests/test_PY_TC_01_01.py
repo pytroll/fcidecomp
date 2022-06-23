@@ -65,12 +65,11 @@ def test_decompression():
 
     for (comp_test_file, decomp_test_file) in zip(COMP_FILEPATH, DECOMP_FILEPATH):
 
-        ds_test = nc.Dataset(decomp_test_file, "r")
-        ds_res = nc.Dataset(comp_test_file, "r")
+        with nc.Dataset(decomp_test_file, "r") as ds_test, nc.Dataset(comp_test_file, "r") as ds_res:
 
-        for band in BANDS:
-            for variable in VARIABLES:
-                array_test = ds_test[f"data/{band}/measured/{variable}"][:]
-                array_res = ds_res[f"data/{band}/measured/{variable}"][:]
-                assert np.ma.allequal(array_test, array_res)
+            for band in BANDS:
+                for variable in VARIABLES:
+                    array_test = ds_test[f"data/{band}/measured/{variable}"][:]
+                    array_res = ds_res[f"data/{band}/measured/{variable}"][:]
+                    assert np.ma.allequal(array_test, array_res)
 
