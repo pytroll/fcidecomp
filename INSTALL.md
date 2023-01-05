@@ -101,11 +101,24 @@ use this one:
 
 ### Build and install ``fcidecomp``
 
-Now we can build ``fcidecomp`` proper, with (set ``FCIDECOMP_TAG`` to the proper ``fcidecomp`` tag,
-``PATH_TO_CHARLS`` to the path where CharLS has been installed, i.e. ``/usr/local/lib`` if the defaults are used
-, and change the installation paths below as deemed appropriate) (requires credentials to access EUMETSAT GitLab):
+Now we can build ``fcidecomp`` proper.
 
-    git clone -b $FCIDECOMP_TAG https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/ && cd fcidecomp/src/fcidecomp
+Obtain the source code either from the Open Source EUMETSAT repository (set ``FCIDECOMP_TAG`` to the proper 
+``fcidecomp`` tag, e.g. `2.0.0`):
+
+     git clone -b $FCIDECOMP_TAG https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/
+
+or obtain the source code as a `tar.gz` package and uncompress it:
+
+     tar xzvf fcidecomp-$FCIDECOMP_TAG.tar.gz
+
+
+Now build and install the software as follows (set ``FCIDECOMP_TAG`` to the proper ``fcidecomp`` tag,
+``PATH_TO_CHARLS`` to the path where CharLS has been installed, i.e. ``/usr/local/lib`` if the defaults
+are used, and change the installation paths below as deemed appropriate. Note that
+install commands require super-user privileges):
+
+    cd fcidecomp/src/fcidecomp
     ./gen/build.sh fcicomp-jpegls release -DCMAKE_PREFIX_PATH=$PATH_TO_CHARLS   -DCMAKE_INSTALL_PREFIX=/usr/local/fcidecomp
     sudo ./gen/install.sh fcicomp-jpegls
     ./gen/build.sh fcicomp-H5Zjpegls release -DCMAKE_PREFIX_PATH="/usr/local/fcidecomp" -DCMAKE_INSTALL_PREFIX=/usr/local/fcidecomp
