@@ -99,7 +99,7 @@ tools, such as toolsUI and Panoply, instructing netCDF-Java to use the netCDF-C 
 To enable this feature:
 
 1. if ``fcidecomp`` has been installed from the source, install the netCDF4 library package (``netcdf-4.7.0``
-   on RockyLinux 8)
+   on RockyLinux 8, ``libnetcdf-c++4`` on UbuntuLinux 20..04)
 2. ensure the file `$HOME/.unidata/nj22Config.xml` exists (if it doesn't, it should be created) and 
    that it contains the following lines:
 
@@ -117,7 +117,8 @@ To enable this feature:
       with `$PATH_TO_CONDA_ENV` equal to the path to the `conda` environment in which `fcidecomp` is installed.
     - in Windows (conda install), corresponds to `$PATH_TO_CONDA_ENV\Library\lib`
       with `$PATH_TO_CONDA_ENV` equal to the path to the `conda` environment in which `fcidecomp` is installed.
-    - in Linux (install from source), corresponds to `/usr/lib64`
+    - in RockyLinux (install from source), corresponds to `/usr/lib64`
+    - in Ubuntu 20.04 (install from source), corresponds to `/usr/lib/x86_64-linux-gnu/`
 
 Tested with ToolsUI 5.5.3 on Windows, Panoply 5.1.1 on Linux (known as not working for Panoply for that version in Windows due to a 
 Panoply issue).

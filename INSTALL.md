@@ -79,16 +79,14 @@ the ``epel-release`` repository is needed as well, so execute the following:
 
 #### Ubuntu Linux 20.04 64-bit
 
-Instructions in this section need to be executed with ``sudo`` if not building
-as super-user.
 First, install the software required to build the binaries (common for ``CharLS`` and ``fcidecomp``):
 
-    apt install -y git 
-    apt-get install -y git cmake gcc=4:9.3.0-1ubuntu2 g++ 
+    sudo apt install -y git 
+    sudo apt-get install -y cmake gcc=4:9.3.0-1ubuntu2 g++ 
 
 Then, let's install some ``fcidecomp``-specific dependency packages:
 
-    apt install -y zlib1g-dev libhdf5-dev
+    sudo apt install -y zlib1g-dev libhdf5-dev
 
   
 ### Build CharLS
@@ -99,21 +97,19 @@ use this one:
     git clone -b 2.1.0 https://github.com/team-charls/charls.git && cd charls 
     mkdir release && cd release
     cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=On ..
-    make && make install
+    make && sudo make install
 
 ### Build and install ``fcidecomp``
 
-Now we can build ``fcidecomp`` proper, with (set ``FCIDECOMP_TAG`` to the proper fcidecomp tag,
-``PATH_TO_CHARLS`` to the path where CharLS has been installed, and
-change the installation paths below as deemed appropriate):
+Now we can build ``fcidecomp`` proper, with (set ``FCIDECOMP_TAG`` to the proper ``fcidecomp`` tag,
+``PATH_TO_CHARLS`` to the path where CharLS has been installed, i.e. ``/usr/local/lib`` if the defaults are used
+, and change the installation paths below as deemed appropriate) (requires credentials to access EUMETSAT GitLab):
 
     git clone -b $FCIDECOMP_TAG https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/ && cd fcidecomp/src/fcidecomp
     ./gen/build.sh fcicomp-jpegls release -DCMAKE_PREFIX_PATH=$PATH_TO_CHARLS   -DCMAKE_INSTALL_PREFIX=/usr/local/fcidecomp
-    ./gen/build.sh fcicomp-jpegls test 
-    ./gen/install.sh fcicomp-jpegls
+    sudo ./gen/install.sh fcicomp-jpegls
     ./gen/build.sh fcicomp-H5Zjpegls release -DCMAKE_PREFIX_PATH="/usr/local/fcidecomp" -DCMAKE_INSTALL_PREFIX=/usr/local/fcidecomp
-    ./gen/build.sh fcicomp-H5Zjpegls test # 4 failures
-    ./gen/install.sh fcicomp-H5Zjpegls
+    sudo ./gen/install.sh fcicomp-H5Zjpegls
 
 Finally, set the environment variable ``HDF5_PLUGIN_PATH`` to the install path of the compiled HDF5 plugin
 specified above (following the instructions above, it is ``/usr/local/fcidecomp/hdf5/lib/plugin/``):
