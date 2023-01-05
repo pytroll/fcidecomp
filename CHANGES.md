@@ -4,7 +4,7 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0-rc1]
+## [2.0.0] - 2023-01-05
 
 ### Added
 - Restructured FCIDECOMP software source code, for compilation in Linux and Windows (32/64-bit) environments
@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Linux and Windows (32/64-bit) environments and Python versions 3.7 to 3.9 (extremes included)
 - Automatic tests based on `pytest`
 - Performance tests based on `pytest` and `pytest-benchmark`
+- Instructions to build and install the software from the source code (Ubuntu 20.04 and RockyLinux 8) 
 
 ### Changed
 - Adopts Apache License Version 2.0 for FCIDECOMP source code
