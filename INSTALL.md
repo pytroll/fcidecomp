@@ -106,7 +106,7 @@ Now we can build ``fcidecomp`` proper.
 Obtain the source code either from the Open Source EUMETSAT repository (set ``FCIDECOMP_TAG`` to the proper 
 ``fcidecomp`` tag, e.g. `2.0.0`):
 
-     git clone -b $FCIDECOMP_TAG https://gitlab.eumetsat.int/sepdssme/fcidecomp/fcidecomp/
+     git clone -b $FCIDECOMP_TAG https://gitlab.eumetsat.int/open-source/fcidecomp/
 
 or obtain the source code as a `tar.gz` package and uncompress it:
 
