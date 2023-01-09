@@ -6,7 +6,7 @@ $Id: generation.txt 840 2017-09-07 09:07:16Z delaunay $
                    #                                         #
                    ###########################################
 
-Copyright 2015 EUMETSAT
+Copyright 2015-2023 EUMETSAT
 
 1-Prerequisites
 ---------------

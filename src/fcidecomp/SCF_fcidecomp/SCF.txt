@@ -8,7 +8,7 @@
 -----------------
 $Id: SCF.txt 844 2017-09-11 09:17:48Z delaunay $
 
-Copyright 2015 EUMETSAT
+Copyright 2015-2023 EUMETSAT
 
 Author : THALES Services
 Date   : 2017-09-11
