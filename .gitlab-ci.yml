@@ -284,7 +284,7 @@ test win32 py37:
     - conda env remove -n $env:CI_JOB_ID
 
 test win64 py37:
-  stage: test
+  stage: test 64
   tags:
     - windows
   when: manual
