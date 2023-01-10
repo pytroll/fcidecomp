@@ -29,8 +29,11 @@ variables: &variables
 
 stages:
   - docs
-  - build
-  - test
+  - build 32
+  - build 64
+  - test linux
+  - test 32
+  - test 64
   - performance
   - deploy
 
@@ -57,7 +60,7 @@ pdf docs:
     expire_in: 7 days
 
 build linux:
-  stage: build
+  stage: build 32
   tags:
     - linux
   image: conda/miniconda3-centos7:latest
@@ -73,7 +76,7 @@ build linux:
     expire_in: 10 days
 
 build win32:
-  stage: build
+  stage: build 32
   tags:
     - windows
   before_script:
@@ -89,7 +92,7 @@ build win32:
     expire_in: 10 days
 
 build win64:
-  stage: build
+  stage: build 64
   tags:
     - windows
   before_script:
@@ -106,7 +109,7 @@ build win64:
 
 
 test linux py39:
-  stage: test
+  stage: test linux
   tags:
     - linux
   image: conda/miniconda3-centos7:latest
@@ -126,7 +129,7 @@ test linux py39:
     - conda deactivate
 
 test win32 py39:
-  stage: test
+  stage: test 32
   tags:
     - windows
   dependencies:
@@ -148,7 +151,7 @@ test win32 py39:
     - conda env remove -n $env:CI_JOB_ID
 
 test win64 py39:
-  stage: test
+  stage: test 64
   tags:
     - windows
   dependencies:
@@ -170,7 +173,7 @@ test win64 py39:
 
 
 test linux py38:
-  stage: test
+  stage: test linux
   tags:
     - linux
   image: conda/miniconda3-centos7:latest
@@ -191,7 +194,7 @@ test linux py38:
     - conda deactivate
 
 test win32 py38:
-  stage: test
+  stage: test 32
   tags:
     - windows
   when: manual
@@ -214,7 +217,7 @@ test win32 py38:
     - conda env remove -n $env:CI_JOB_ID
 
 test win64 py38:
-  stage: test
+  stage: test 64
   tags:
     - windows
   when: manual
@@ -237,7 +240,7 @@ test win64 py38:
 
 
 test linux py37:
-  stage: test
+  stage: test linux
   tags:
     - linux
   image: conda/miniconda3-centos7:latest
@@ -258,7 +261,7 @@ test linux py37:
     - conda deactivate
 
 test win32 py37:
-  stage: test
+  stage: test 32
   tags:
     - windows
   when: manual
