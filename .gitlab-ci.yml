@@ -93,6 +93,7 @@ build win32:
 
 build win64:
   stage: build 64
+  dependencies: []
   tags:
     - windows
   before_script:
