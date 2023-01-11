@@ -1,17 +1,3 @@
-# Copyright 2021-2023, European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
 # EUMETSAT ``fcidecomp`` software
 
 The ``fcidecomp`` software enables decompression of JEPG-LS netCDF files via netCDF-C and netCDF-Java based softwares,
@@ -144,3 +130,9 @@ available for the EUMETSAT Data-Tailor software. For further information, refer 
 repository](<https://gitlab.eumetsat.int/open-source>) and the dedicated EUMETSAT confluence page which, once created,
 will be a subpage of the [Installing or removing customisation plugins](<https://eumetsatspace.atlassian.net/wiki/spaces/DSDT/pages/378273985/Installing+or+removing+customisation+plugins>)
 page.
+
+Inventory Notice
+----------------
+
+Licenses and copyright information for software dependencies up to version 2.0.0
+is documented within the ``inventory`` folder.
