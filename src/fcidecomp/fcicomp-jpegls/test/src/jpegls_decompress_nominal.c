@@ -37,7 +37,7 @@ int jpeglsDecompressNominal(int argc, char* argv[]) {
 
 	// Check the number of input arguments
 	if (argc != FCI_THREE) {
-		ERR_TEST(EXIT_FAILURE, INVALID_NUMBER_ARGUMENTS)
+		ERR_TEST(EXIT_FAILURE, INVALID_NUMBER_ARGUMENTS);
 	}
 
 	// Get the input arguments

@@ -28,7 +28,7 @@
 #ifndef FCICOMP_ERRORS
 #define FCICOMP_ERRORS
 
-void ERR_TEST(int e, char * msg) {fputs((msg), stderr); return (e);}
+static int ERR_TEST(int e, char * msg) {fputs((msg), stderr); return (e);}
 
 //#define ERR_TEST(e, msg) {fputs((msg), stderr); return (e);}
 
