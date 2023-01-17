@@ -66,11 +66,13 @@ void fcicomp_log(msg_severity_t severity, const char *fmt, ...);
 #else /* LOGGING */
 
 /* This definition will be used unless LOGGING is defined. */
-#define LOG(s, ...)
+// #define LOG(s, ...)
+static void LOG (msg_severity_t s, ...)
 
 #endif /* LOGGING */
 
 /* Handle errors by printing an error message and exiting with a non-zero status. */
-#define ERR(e, msg) {LOG(ERROR_SEVERITY, (msg)); return (e);}
+// #define ERR(e, msg) {LOG(ERROR_SEVERITY, (msg)); return (e);}
+static int ERR(int e, char * msg) {LOG(ERROR_SEVERITY, (msg)); return (e);}
 
 #endif /* FCICOMP_LOG_H_ */

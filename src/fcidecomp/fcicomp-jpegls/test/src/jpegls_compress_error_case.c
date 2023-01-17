@@ -37,7 +37,7 @@ int jpeglsCompressErrorCase(int argc, char* argv[]) {
 
 	// Check the number of input arguments
 	if (argc != 6) {
-		ERR_TEST(EXIT_FAILURE, INVALID_NUMBER_ARGUMENTS)
+		ERR_TEST(EXIT_FAILURE, INVALID_NUMBER_ARGUMENTS);
 	}
 
 	// Get the input arguments

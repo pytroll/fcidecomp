@@ -28,7 +28,9 @@
 #ifndef FCICOMP_ERRORS
 #define FCICOMP_ERRORS
 
-#define ERR_TEST(e, msg) {fputs((msg), stderr); return (e);}
+static int ERR_TEST(int e, char * msg) {fputs((msg), stderr); return (e);}
+
+//#define ERR_TEST(e, msg) {fputs((msg), stderr); return (e);}
 
 #define INVALID_NUMBER_ARGUMENTS 			  	"Invalid number of arguments !\n"
 #define TOO_MANY_ARGUMENTS 				  	"Too many input arguments.\n"
