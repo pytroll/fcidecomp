@@ -131,8 +131,10 @@ repository](<https://gitlab.eumetsat.int/open-source>) and the dedicated EUMETSA
 will be a subpage of the [Installing or removing customisation plugins](<https://eumetsatspace.atlassian.net/wiki/spaces/DSDT/pages/378273985/Installing+or+removing+customisation+plugins>)
 page.
 
-Inventory Notice
-----------------
+Inventory Notices
+-----------------
 
 Licenses and copyright information for software dependencies up to version 2.0.0
 is documented within the ``inventory`` folder.
+
+Files listed under `inventory/items/data_proprietary.ABOUT` are licensed under EUMETSAT Proprietary license.
