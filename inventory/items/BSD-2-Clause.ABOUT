@@ -12,9 +12,4 @@ about_resource: documentation/installation-manual/Makefile
 about_resource: documentation/solution-design/Makefile
 about_resource: documentation/verification-validation-plan/Makefile
 about_resource: documentation/verification-validation-test-cases-test-procedures/Makefile
-about_resource: documentation/available-software-and-documents/conf.py
-about_resource: documentation/installation-manual/conf.py
-about_resource: documentation/solution-design/conf.py
-about_resource: documentation/verification-validation-plan/conf.py
-about_resource: documentation/verification-validation-test-cases-test-procedures/conf.py
 about_resource: documentation/notebooks/*

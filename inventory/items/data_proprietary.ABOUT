@@ -7,7 +7,9 @@ copyright: EUMETSAT
 version: 2.0.0
 date: 2023-01-09
 
-about_resource: /src/fcidecomp/fcidecomp-H5Zjpegls/test/**
-about_resource: /src/fcidecomp/fcidecomp-jpegls/test/**
+about_resource: /src/fcidecomp/fcidecomp-H5Zjpegls/test/*
+about_resource: /src/fcidecomp/fcidecomp-H5Zjpegls/test/data/*
+about_resource: /src/fcidecomp/fcidecomp-jpegls/test/*
+about_resource: /src/fcidecomp/fcidecomp-jpegls/test/data/*
 about_resource: /src/fcidecomp/fcidecomp-test/data/*
 

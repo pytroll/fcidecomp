@@ -16,9 +16,10 @@ about_resource: /.gitignore
 about_resource: /.gitlab-ci.yml
 about_resource: /inventory/**
 about_resource: /documentation/*
-about_resource: /documentatiobn/*/*.csv
+about_resource: /documentation/*/*.csv
 about_resource: /documentation/*/*.rst
 about_resource: /documentation/*/*images/*
+about_resource: /documentation/*/*/*.css
 about_resource: /conda/scripts/*
 about_resource: /conda/*
 about_resource: /src/fcidecomp/*.sh
