@@ -143,8 +143,6 @@ Files listed under `inventory/items/data_proprietary.ABOUT` are licensed under E
 The following dependencies are not included in the package but are required and they will be downloaded at build or compilation time:
 * component name, version, SPDX license id, copyright, home_url, comments
 * cmake, 3.22.1, BSD 3-Clause, - , https://cmake.org/, - .
-* m2-patch, 2.7.5-2, GPL, - , https://savannah.gnu.org/projects/patch/, - .
-* make, 4.2.1, GPL, - , https://www.gnu.org/software/make/, - .
 * ninja, 1.10.2, - , - , https://ninja-build.org/, - .
 * charls, 2.1.0, BSD 3-Clause, - , https://github.com/team-charls/charls, - .
 * hdf5, 1.10.*, license_id, - , https://www.h5py.org/, - .

@@ -5,4 +5,4 @@ license_spdx: BSD-3-Clause
 version: 2.0.0
 date: 2023-01-09
 
-about_resource: conda
+about_resource: conda, version 4.6.11, https://docs.conda.io, copyright and license information at https://docs.conda.io/en/latest/license.html
