@@ -142,10 +142,8 @@ Files listed under `inventory/items/data_proprietary.ABOUT` are licensed under E
 #### Dependencies
 The following dependencies are not included in the package but are required and they will be downloaded at build or compilation time:
 * component name, version, SPDX license id, copyright, home_url, comments
-* cmake, 3.22.1, BSD 3-Clause, - , https://cmake.org/, - .
-* ninja, 1.10.2, - , - , https://ninja-build.org/, - .
 * charls, 2.1.0, BSD 3-Clause, - , https://github.com/team-charls/charls, - .
-* hdf5, 1.10.*, license_id, - , https://www.h5py.org/, - .
+* hdf5, 1.10.*, BSD 3-Clause, - , https://www.h5py.org/, - .
 * h5py, 2.* and 3.6.0, BSD 3-Clause, - , https://www.h5py.org/, - .
 * python, 3.8.16, see https://docs.python.org/3/license.html, - , https://www.python.org/, - .
 * zlib, 1.2.13, zlib (http://zlib.net/zlib_license.html), - , https://zlib.net/, - .
