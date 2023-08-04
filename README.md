@@ -122,13 +122,6 @@ To enable this feature:
 Tested with ToolsUI 5.5.3 on Windows, Panoply 5.1.1 on Linux (known as not working for Panoply for that version in Windows due to a 
 Panoply issue).
 
-### Use with the EUMETSAT Data-Tailor software
-
-A plugin enabling the decompression of JPEG-LS Meteosat Third Generation (MTG) products via the ``fcidecomp`` software is
-available for the EUMETSAT Data-Tailor software. For further information, refer to the README of its [public GitLab
-repository](<https://gitlab.eumetsat.int/open-source>) and the dedicated EUMETSAT confluence page which, once created,
-will be a subpage of the [Installing or removing customisation plugins](<https://eumetsatspace.atlassian.net/wiki/spaces/DSDT/pages/378273985/Installing+or+removing+customisation+plugins>)
-page.
 
 Inventory Notices
 -----------------
