@@ -1,7 +1,6 @@
 # EUMETSAT ``fcidecomp`` software
 
-The ``fcidecomp`` software enables decompression of JEPG-LS netCDF files via netCDF-C and netCDF-Java based softwares,
-various Python libraries and the EUMETSAT Data-Tailor software.
+The ``fcidecomp`` software enables decompression of near real-time spectral imagery data from the EUMETSAT Meteosat Third Generation (MTG) FCI instrument that are disseminated in compressed format (JPEG-LS netCDF). The decompression of files is possible via source code, netCDF-C and netCDF-Java based softwares, and various Python libraries
 
 ## Supported platforms and installation
 
