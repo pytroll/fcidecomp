@@ -75,7 +75,7 @@ To install from the locally build conda package:
     mamba install fcidecomp -c local
 
 
-## Build and installation of the librabies from the source code
+## Build and installation of the libraries from the source code
 
 ### Install pre-requisite packages
 
