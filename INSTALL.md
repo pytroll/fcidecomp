@@ -32,7 +32,7 @@ Start by creating a new `conda` environment. Let's call it `fcidecomp`, but
 any valid name would do (change the following instructions accordingly):
 
     conda create -n fcidecomp python=$PYTHON_VERSION
-    
+
 where Python versions currently supported by ``fcidecomp`` are 3.7 <= `$PYTHON_VERSION` <= 3.9.
 
 Activate the environment:
@@ -49,12 +49,33 @@ Once the installation has completed, re-activate the `conda` environment running
 
     conda deactivate
     conda activate fcidecomp
-    
+
 This last step ensures the `HDF5_PLUGIN_PATH` environment variable is correctly set to the directory containing the
 FCIDECOMP decompression libraries.
 
 
-## Build and installation from the source code
+## Build and local installation of the conda package
+
+This allows to skip the next section
+
+### Prerequisites
+
+Make sure you have a conda environment to work in. Also, `boa` needs to be installed.
+
+### Building
+
+To start the build from the `fcidecomp` directory:
+
+    conda mambabuild .
+
+### Installing
+
+To install from the locally build conda package:
+
+    mamba install fcidecomp -c local
+
+
+## Build and installation of the libraries from the source code
 
 ### Install pre-requisite packages
 
@@ -81,20 +102,20 @@ the ``epel-release`` repository is needed as well, so execute the following:
 
 First, install the software required to build the binaries (common for ``CharLS`` and ``fcidecomp``):
 
-    sudo apt install -y git 
-    sudo apt-get install -y cmake gcc=4:9.3.0-1ubuntu2 g++ 
+    sudo apt install -y git
+    sudo apt-get install -y cmake gcc=4:9.3.0-1ubuntu2 g++
 
 Then, let's install some ``fcidecomp``-specific dependency packages:
 
     sudo apt install -y zlib1g-dev libhdf5-dev
 
-  
+
 ### Build CharLS
 
 Next step is to build and install CharLS. `fcidecomp` has been tested with CharLS version ``2.1.0``, so let's
 use this one:
 
-    git clone -b 2.1.0 https://github.com/team-charls/charls.git && cd charls 
+    git clone -b 2.1.0 https://github.com/team-charls/charls.git && cd charls
     mkdir release && cd release
     cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=On ..
     make && sudo make install
@@ -105,7 +126,7 @@ Now we can build ``fcidecomp`` proper.
 
 Go to one folder up.
 
-Obtain the source code either from the Open Source EUMETSAT repository (set ``FCIDECOMP_TAG`` to the proper 
+Obtain the source code either from the Open Source EUMETSAT repository (set ``FCIDECOMP_TAG`` to the proper
 ``fcidecomp`` tag, e.g. `2.0.1`):
 
      git clone -b $FCIDECOMP_TAG https://gitlab.eumetsat.int/open-source/fcidecomp/
@@ -130,4 +151,3 @@ Finally, set the environment variable ``HDF5_PLUGIN_PATH`` to the install path o
 specified above (following the instructions above, it is ``/usr/local/fcidecomp/hdf5/lib/plugin/`` (for Ubuntu20.04)):
 
     export HDF5_PLUGIN_PATH=/usr/local/fcidecomp/hdf5/lib/plugin/
-

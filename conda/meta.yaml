@@ -3,7 +3,7 @@
 # - https://github.com/mraspaud/fcidecomp-conda-recipe/blob/master/build.sh
 
 {% set setup_data = load_setup_py_data(setup_file='../src/fcidecomp-python/setup.py', from_recipe_dir=True) %}
-{% set charls_version = "2.1.0" %}
+{% set charls_version = "2.4.2" %}
 
 package:
   name: fcidecomp
@@ -25,17 +25,13 @@ requirements:
     - make                  # [not win]
     - ninja                 # [win]
   host:
-    - charls=2.1.0          # [not win32]
-    - hdf5=1.10.*
-    - h5py=2.*              # [not win]
-    - h5py=3.6.0            # [win]
+    - charls>=2.1.0          # [not win32]
+    - h5py>=3.6.0            # [win]
     - python  {{ python }}
     - zlib
   run:
-    - charls=2.1.0          # [not win32]
-    - hdf5=1.10.*
-    - h5py=2.*              # [not win]
-    - h5py=3.6.0            # [win]
+    - charls>=2.1.0          # [not win32]
+    - h5py>=3.6.0            # [win]
     - libnetcdf!=4.8.0      # [win]
     - libssh2               # [win]
     - netcdf4
