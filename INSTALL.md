@@ -66,7 +66,7 @@ Make sure you have a conda environment to work in. Also, `boa` needs to be insta
 
 To start the build from the `fcidecomp` directory:
 
-    conda mambabuild . --python 3.11
+    conda mambabuild .
 
 ### Installing
 
